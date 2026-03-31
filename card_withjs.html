@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Museum of Movie Locations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <span class="site-title">Live Museum of Movie Locations</span>
+        <span class="site-sub">Explore iconic movie locations around the world</span>
+    </header>
+
+    <div class="filter-bar">
+        <button class="pill active">All genres</button>
+        <button class="pill">Action</button>
+        <button class="pill">Comedy</button>
+        <button class="pill">Drama</button>
+        <button class="pill">Sci-fi</button>
+        <button class="pill">Horror</button>
+        <button class="pill">Romance</button>
+        <button class="pill">Adventure</button>
+        <button class="pill">Fantasy</button>
+    </div>
+
+    <div class="main">
+
+        <div class="map" id="map"></div>
+
+        <div class ="card-list">
+
+            <div class="card" data-lat="44.517866" data-lng="11.354173">
+                <p class="label">Movie Title - Year of publication</p>
+                <h2>Name of Location</h2>
+                <div class="meta">
+                    <span>Name of Country</span>
+                    <span class="badge">Genre</span>
+                </div>
+                <hr>
+                <p class="description">Description of the location and its significance in the movie.</p>
+                <p class="footer">Touristic information</p>
+            </div>
+
+            <div class="card" data-lat="45.517866" data-lng="12.354173">
+                <p class="label">Movie Title - Year of publication</p>
+                <h2>Name of Location</h2>
+                <div class="meta">
+                    <span>Name of Country</span>
+                    <span class="badge drama">Drama</span>
+                </div>
+                <hr>
+                <p class="description">Description of the location and its significance in the movie.</p>
+                <p class="footer">Touristic information</p>
+            </div>
+
+            <div class="card" data-lat="46.517866" data-lng="13.354173">
+                <p class="label">Movie Title - Year of publication</p>
+                <h2>Name of Location</h2>
+                <div class="meta">
+                    <span>Name of Country</span>
+                    <span class="badge">Genre</span>
+                </div>
+                <hr>
+                <p class="description">Description of the location and its significance in the movie.</p>
+                <p class="footer">Touristic information</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</head>
+</html>
