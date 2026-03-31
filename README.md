@@ -3,43 +3,66 @@ Github Repository about Lima Live Cinema Museum Project
 🎬 Films Made in Lima (with Locations)
 
 🏙️ Classic & Iconic Urban Cinema
-I Lost My Heart in Lima
+
+Yo perdí mi corazón en Lima (1933)
 Locations: Historic Center of Lima, Santa Beatriz Hippodrome
-The City and the Dogs
+
+La ciudad y los perros (1985)
 Locations: Leoncio Prado Military Academy (Callao), urban areas
-Gregorio
+
+Gregorio (1984)
 Locations: Downtown Lima, shantytowns, markets
-Juliana
+
+Juliana (1989)
 Locations: City center streets, public transport
+
 🌆 Contemporary / Realistic Lima
-Days of Santiago
+
+Días de Santiago (2004)
+
 Locations: Callao, busy avenues, working-class neighborhoods
-Red Ink (Tinta Roja)
+
+Tinta roja (2000)
 Locations: Newsrooms, streets, hospitals
-City of M
+
+Ciudad de M (2000)
 Locations: Miraflores, Barranco, nightlife areas
-The Gospel of the Flesh
+
+El evangelio de la carne (2013)
 Locations: Lord of Miracles procession, downtown Lima
+
 🌊 Coastal Lima & Social Contrasts
-The Milk of Sorrow
+
+La teta asustada (2009)
 Locations: Peripheral neighborhoods, southern Lima
-Paradise
+
+Paraíso (2009)
 Locations: Villa María del Triunfo (informal settlements)
-Old Friends
+
+Viejos amigos (2014)
 Locations: Miraflores boardwalk, Callao, beaches
-Magallanes
+
+Magallanes (2015)
 Locations: Central streets, taxis, traditional neighborhoods
+
 🎭 Popular / Commercial Cinema
-Asu Mare!
+
+¡Asu Mare! (2013)
 Locations: Working-class districts, theaters, modern Lima
-Av. Larco
+
+Av. Larco (2017)
 Locations: Miraflores (Larco Avenue), concert venues, streets
-Don’t Tell Anyone
+
+No se lo digas a nadie (1998)
 Locations: Barranco, Miraflores, upper-class spaces
+
 🧠 Independent / Auteur Cinema
-The Pink House
+
+La casa rosada (2017)
 Locations: Urban Lima, military-related settings
-The Devil’s Little Apple
+
+La manzanita del diablo (2004)
 Locations: Lima + other regions (Nazca, Cusco)
-Uchpa: The Movie
+
+Uchpa, la película (2017)
 Locations: Lima + Andean regions
