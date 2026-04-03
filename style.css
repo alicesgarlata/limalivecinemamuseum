@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f4f0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background:white;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.site-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.site-sub {
+    font-size: 11px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filter-bar {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.pill {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color, #ddd);
+    background: transparent;
+    color: var(--color, #888);
+    cursor: pointer;
+}
+
+.pill:hover {
+    border-color: #bbb;
+    box-shadow: 3px  3px 3px #dedede,
+    -3px -3px 3px #dedede,
+    3px -3px 3px #dedede,
+    -3px  3px 3px #dedede;
+
+}
+
+.pill.active {
+    color: white;
+    border-color: var(--color, #1a1a1a);
+    background: var(--color, #1a1a1a);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: 0;
+}
+
+.map {
+    flex: 1;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.card-list {
+    width: 300px;
+    flex-shrink: 0;
+    border-left: 1px solid #ddd;
+    background: white;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.card.active {
+    border: 2px solid #1a1a1a;
+}
+
+.card:hover {
+    border-color: #bbb;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #eeedfe;
+    color: #3C3489;
+    font-weight: 500;
+}
+
+.badge.action {
+    background: #e0f7fa;
+    color: #006064;
+}
+
+.badge.comedy {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.badge.drama {
+    background: #faeeda;
+    color: #633806;
+}
+
+.badge.sci-fi {
+    background: #e0f2fe;
+    color: #075985;
+}
+
+.badge.horror {
+    background: #f3e8ff;
+    color: #6b21a8;
+}
+
+.badge.romance {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.badge.adventure {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge.fantasy {
+    background: #eeedfe;
+    color: #3C3489;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.detail {
+    display: none;
+}
+
+.card.open .detail {
+    display: block;
+}
+
+.access {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 6px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 2px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: white;
+    border-right: 1px solid #ddd;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #888;
+}
+
+.menu-link {
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #eee;
+}
+
+.menu-link.active {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.menu-link:hover {
+    color: #1a1a1a;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.menu-overlay.open {
+    display: block;
+}
+
+.extra {
+    display: none;
+    margin-top: 8px;
+}
+
+.extra.open {
+    display: block;
+}
+
+.btn-more {
+     margin-top: 8px;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.btn-more:hover {
+    border-color: #bbb;
+    color: #444;
+}
+
+.btn-evenmore {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-evenmore:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+.location-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.back-link {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.back-link:hover {
+    color: #1a1a1a;
+}
+
+.location-header {
+    margin-bottom: 1.5rem;
+}
+
+.location-header h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 6px 0 8px 0;
+}
+
+.tone-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.tone-btn {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.tone-btn.active {
+    background: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.loc-description {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+}

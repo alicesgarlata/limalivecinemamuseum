@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location - Lima Live Museum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+         <span class="site-title">Lima Live Museum of Movie Locations</span>
+        <span class="site-sub">Explore iconic movie locations around the world</span>
+    </header>
+
+    <nav class="side-menu" id="side-menu">
+        <div class="menu-header">
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <a href="index.html" class="menu-link">Home- Map</a>
+        <a href="about.html" class="menu-link">About</a>
+    </nav>
+
+    <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
+    <div class="location-page">
+        <a href="index.html" class="back-link">← Back to map</a>
+        <div class="location-header">
+            <p class="label" id="loc-movie"></p>
+            <h1 id="loc-name"></h1>
+            <div class="meta">
+                <span id="loc-country"></span>
+                <span class="badge" id="loc-badge"></span>
+            </div>
+        </div>
+
+        <div class="tone-bar">
+            <button class="tone-btn active" onclick="setTone('young', this)">Young</button>
+            <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
+            <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
+        </div>
+        <div class="location-body">
+            <div id="loc-description" class="loc-description"></div>
+        </div>
+    </div>
+
+    <script>
+        const filming = [
+            {
+                movie: "Gladiator",
+                year: 2000,
+                name: "Plaza de roba",
+                country: "Peru",
+                genre: "Drama",
+                description: "The Colosseum",
+                access: "Public - book tickets online in advance",
+                lat: -12.0464,
+                lng: -77.0428
+            },
+            {
+                movie: "Game of Thrones",
+                year: 2011,
+                name: "Via a caso",
+                country: "Peru",
+                genre: "Fantasy",
+                description: "King's Landing was shot here",
+                access: "Public - best visited outside peak season.",
+                lat: -12.1200,
+                lng: -77.0300
+            },
+            {
+                movie: "Movie Title",
+                year: 1997,
+                name: "Name of Location",
+                country: "Name of country",
+                genre: "Comedy",
+                description: "blablabla",
+                access: "blablabla"
+            }
+        ]
+
+        const params = new URLSearchParams(window.location.search)
+        const locationName = params.get('name')
+        const loc = filming.find(function(l) { return l.name === locationName })
+
+        if (loc) {
+            document.getElementById('loc-movie').textContent = loc.movie + ' · ' + loc.year
+            document.getElementById('loc-name').textContent = loc.name
+            document.getElementById('loc-country').textContent = loc.country
+            const badge = document.getElementById('loc-badge')
+            badge.textContent = loc.genre
+            badge.className = 'badge ' + loc.genre.toLowerCase()
+            document.getElementById('loc-description').textContent = loc.description
+        }
+
+        let currentTone = 'young'
+
+        async function setTone(tone, btn) {
+            document.querySelectorAll('.tone-btn').forEach(function(b) {
+                b.classList.remove('active')
+            })
+            btn.classList.add('active')
+            currentTone = tone
+
+            const descEl = document.getElementById('loc-description')
+            descEl.textContent = 'Generating description...'
+
+            const toneInstructions = {
+                'young': 'Use casual, energetic language aimed at teenagers and young adults. Be enthusiastic and fun.',
+                'adult': 'Use clear, engaging language for a general adult audience. Be informative but conversational.',
+                'professional': 'Use formal, academic language suited for film scholars and professionals. Be precise and detailed.'
+            }
+
+            try {
+                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                    model: 'claude-sonnet-4-20250514',
+                    max_tokens: 1000,
+                    messages: [
+                        {
+                            role: 'user',
+                            content: `Write a description of the filming location "${loc.name}" in ${loc.country}, used in the ${loc.genre} film "${loc.movie}" (${loc.year}). 
+                        
+Basic description: ${loc.description}
+
+${toneInstructions[tone]}
+
+Write 2-3 paragraphs. Do not include any introduction like "Sure!" or "Here is...". Just write the description directly.`
+                    }
+                ]
+            })
+        })
+
+        const data = await response.json()
+        descEl.textContent = data.content[0].text
+
+    } catch (error) {
+        descEl.textContent = 'Could not generate description. Please try again.'
+    }
+}
+
+
+
+        function toggleMenu() {
+            document.getElementById('side-menu').classList.toggle('open')
+            document.getElementById('menu-overlay').classList.toggle('open')
+        }
+    </script>
+</body>
+</html>
