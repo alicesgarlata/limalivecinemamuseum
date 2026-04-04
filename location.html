@@ -127,6 +127,7 @@
                 descEl.textContent = data.text
 
             } catch (error) {
+                console.log('Errore:', error)
                 descEl.textContent = 'Could not generate description. Please try again.'
             }
         }
