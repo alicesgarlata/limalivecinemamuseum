@@ -98,6 +98,7 @@
         let currentTone = 'young'
 
         async function setTone(tone, btn) {
+            console.log('setTone called with tone:', tone)
             document.querySelectorAll('.tone-btn').forEach(function(b) {
                 b.classList.remove('active')
             })
