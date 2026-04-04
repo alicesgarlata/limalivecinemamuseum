@@ -107,43 +107,28 @@
             const descEl = document.getElementById('loc-description')
             descEl.textContent = 'Generating description...'
 
-            const toneInstructions = {
-                'young': 'Use casual, energetic language aimed at teenagers and young adults. Be enthusiastic and fun.',
-                'adult': 'Use clear, engaging language for a general adult audience. Be informative but conversational.',
-                'professional': 'Use formal, academic language suited for film scholars and professionals. Be precise and detailed.'
-            }
-
             try {
-                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                const response = await fetch('limacinemamuseum.alicesgarlata01.workers.dev', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                    model: 'claude-sonnet-4-20250514',
-                    max_tokens: 1000,
-                    messages: [
-                        {
-                            role: 'user',
-                            content: `Write a description of the filming location "${loc.name}" in ${loc.country}, used in the ${loc.genre} film "${loc.movie}" (${loc.year}). 
-                        
-Basic description: ${loc.description}
+                        name: loc.name,
+                        movie: loc.movie,
+                        year: loc.year,
+                        genre: loc.genre,
+                        country: loc.country,
+                        description: loc.description,
+                        tone: tone
+                    })
+                })
 
-${toneInstructions[tone]}
+                const data = await response.json()
+                descEl.textContent = data.text
 
-Write 2-3 paragraphs. Do not include any introduction like "Sure!" or "Here is...". Just write the description directly.`
-                    }
-                ]
-            })
-        })
-
-        const data = await response.json()
-        descEl.textContent = data.content[0].text
-
-    } catch (error) {
-        descEl.textContent = 'Could not generate description. Please try again.'
-    }
-}
+            } catch (error) {
+                descEl.textContent = 'Could not generate description. Please try again.'
+            }
+        }
 
 
 
