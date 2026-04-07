@@ -410,3 +410,23 @@ hr {
     color: #444;
     line-height: 1.8;
 }
+
+.hero {
+    background: #f0f4f8; /* puoi sostituire con un’immagine con background-image */
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
