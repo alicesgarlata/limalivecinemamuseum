@@ -88,7 +88,7 @@
                     young: "blablabla",
                     adult: "blablabla",
                     professional: "blablabla"
-                }
+                },
                 access: "blablabla"
             }
         ]
@@ -106,12 +106,14 @@
             badge.textContent = loc.genre
             badge.className = 'badge ' + loc.genre.toLowerCase()
             
-            document.getElementById('loc-description').textContent = loc.description
+            document.getElementById('loc-description').textContent = loc.description.young
         }
 
         let currentTone = 'young'
 
         function setTone(tone, btn) {
+            if (!loc) return; 
+            
             document.querySelectorAll('.tone-btn').forEach(function(b) {
                 b.classList.remove('active')
             })
