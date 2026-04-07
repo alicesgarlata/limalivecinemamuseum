@@ -12,7 +12,7 @@
             <span></span>
             <span></span>
         </button>
-         <span class="site-title">Lima Live Museum of Movie Locations</span>
+        <span class="site-title">Lima Live Museum of Movie Locations</span>
         <span class="site-sub">Explore iconic movie locations around the world</span>
     </header>
 
@@ -20,19 +20,20 @@
         <div class="menu-header">
             <button class="close-btn" onclick="toggleMenu()">✕</button>
         </div>
-        <a href="index.html" class="menu-link">Home- Map</a>
+        <a href="index.html" class="menu-link">Home - Map</a>
         <a href="about.html" class="menu-link">About</a>
     </nav>
 
     <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
+
     <div class="location-page">
         <a href="index.html" class="back-link">← Back to map</a>
         <div class="location-header">
-            <p class="label" id="loc-movie"></p>
-            <h1 id="loc-name"></h1>
+            <p class="label" id="loc-movie">Movie Title · Year</p>
+            <h1 id="loc-name">Location Name</h1>
             <div class="meta">
-                <span id="loc-country"></span>
-                <span class="badge" id="loc-badge"></span>
+                <span id="loc-country">Country</span>
+                <span class="badge" id="loc-badge">Genre</span>
             </div>
         </div>
 
@@ -41,98 +42,52 @@
             <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
             <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
         </div>
+
         <div class="location-body">
             <div id="loc-description" class="loc-description"></div>
         </div>
     </div>
 
     <script>
-        const filming = [
-            {
-                movie: "Gladiator",
-                year: 2000,
-                name: "Plaza de roba",
-                country: "Peru",
-                genre: "Drama",
-                descriptions: {
-                    young: "Okay, this place feels straight out of an epic movie. Imagine walking here and thinking about gladiators fighting for glory. It’s dramatic, intense, and honestly kind of surreal.",
-                    adult: "This location evokes the grandeur and intensity of historical cinema, offering visitors a tangible connection to the atmosphere portrayed in the film.",
-                    professional: "The site functions as a cinematic reconstruction of historical space, where visual storytelling amplifies themes of power, spectacle, and collective memory."
-                },
-                access: "Public - book tickets online in advance",
-                lat: -12.0464,
-                lng: -77.0428
-            },
-            {
-                movie: "Game of Thrones",
-                year: 2011,
-                name: "Via a caso",
-                country: "Peru",
-                genre: "Fantasy",
-                descriptions: {
-                    young: "This is literally giving King's Landing vibes. You can almost picture dragons flying overhead and political drama happening in every corner.",
-                    adult: "The location captures the layered atmosphere of intrigue and power seen in the series, blending architecture with narrative tension.",
-                    professional: "This space exemplifies the transformation of real environments into fictional political geographies through audiovisual narration."
-                },
-                access: "Public - best visited outside peak season.",
-                lat: -12.1200,
-                lng: -77.0300
-            },
-            {
-                movie: "Movie Title",
-                year: 1997,
-                name: "Name of Location",
-                country: "Name of country",
-                genre: "Comedy",
-                description: {
-                    young: "blablabla",
-                    adult: "blablabla",
-                    professional: "blablabla"
-                },
-                access: "blablabla"
+        // Dati della location
+        const loc = {
+            movie: "Gladiator",
+            year: 2000,
+            name: "Plaza de roba",
+            country: "Peru",
+            genre: "Drama",
+            descriptions: {
+                young: "Okay, this place feels straight out of an epic movie. Imagine walking here and thinking about gladiators fighting for glory. It’s dramatic, intense, and honestly kind of surreal.",
+                adult: "This location evokes the grandeur and intensity of historical cinema, offering visitors a tangible connection to the atmosphere portrayed in the film.",
+                professional: "The site functions as a cinematic reconstruction of historical space, where visual storytelling amplifies themes of power, spectacle, and collective memory."
             }
-        ]
+        };
 
-        const params = new URLSearchParams(window.location.search)
-        const locationName = params.get('name')
-        const loc = filming.find(function(l) { return l.name === locationName })
+        // Inserisci i dati della location nella pagina
+        document.getElementById('loc-movie').textContent = loc.movie + ' · ' + loc.year;
+        document.getElementById('loc-name').textContent = loc.name;
+        document.getElementById('loc-country').textContent = loc.country;
+        const badge = document.getElementById('loc-badge');
+        badge.textContent = loc.genre;
+        badge.className = 'badge ' + loc.genre.toLowerCase();
 
-        if (loc) {
-            document.getElementById('loc-movie').textContent = loc.movie + ' · ' + loc.year
-            document.getElementById('loc-name').textContent = loc.name
-            document.getElementById('loc-country').textContent = loc.country
-            
-            const badge = document.getElementById('loc-badge')
-            badge.textContent = loc.genre
-            badge.className = 'badge ' + loc.genre.toLowerCase()
-            
-            document.getElementById('loc-description').textContent = loc.description.young
-        }
+        // Mostra descrizione iniziale
+        document.getElementById('loc-description').textContent = loc.descriptions.young;
 
-        let currentTone = 'young'
-
+        // Funzione per cambiare tono
         function setTone(tone, btn) {
-            if (!loc) return; 
-            
-            document.querySelectorAll('.tone-btn').forEach(function(b) {
-                b.classList.remove('active')
-            })
-            btn.classList.add('active')
-            currentTone = tone
+            // Aggiorna lo stato dei bottoni
+            document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-            const descEl = document.getElementById('loc-description')
-            
-            descEl.style.opacity = 0
-            
-            setTimeout(() => {
-                descEl.textContent = loc.descriptions[tone]
-                descEl.style.opacity = 1
-            }, 150)
+            // Cambia descrizione
+            document.getElementById('loc-description').textContent = loc.descriptions[tone];
         }
 
+        // Funzione per aprire/chiudere menu laterale
         function toggleMenu() {
-            document.getElementById('side-menu').classList.toggle('open')
-            document.getElementById('menu-overlay').classList.toggle('open')
+            document.getElementById('side-menu').classList.toggle('open');
+            document.getElementById('menu-overlay').classList.toggle('open');
         }
     </script>
 </body>
