@@ -398,6 +398,10 @@ hr {
 }
 
 .loc-description {
+    transition: opacity 0.2s ease;
+}
+
+.loc-description {
     font-size: 15px;
     color: #444;
     line-height: 1.8;
