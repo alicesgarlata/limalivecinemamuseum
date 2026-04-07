@@ -111,8 +111,7 @@
 
         let currentTone = 'young'
 
-        async function setTone(tone, btn) {
-            console.log('setTone called with tone:', tone)
+        function setTone(tone, btn) {
             document.querySelectorAll('.tone-btn').forEach(function(b) {
                 b.classList.remove('active')
             })
@@ -120,7 +119,13 @@
             currentTone = tone
 
             const descEl = document.getElementById('loc-description')
-            descEl.textContent = loc.descriptions[tone]
+            
+            descEl.style.opacity = 0
+            
+            setTimeout(() => {
+                descEl.textContent = loc.descriptions[tone]
+                descEl.style.opacity = 1
+            }, 150)
         }
 
         function toggleMenu() {
