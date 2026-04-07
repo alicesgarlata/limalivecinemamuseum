@@ -384,6 +384,8 @@ hr {
     display: flex;
     gap: 8px;
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .tone-btn {
