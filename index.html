@@ -30,7 +30,7 @@
     <section class="hero">
         <h1>Welcome to the Lima Live Museum</h1>
         <p>Discover iconic movie locations around the world through maps, stories, and photos!</p>
-        <button class="hero-cta" onclick="document.querySelector('.main').scrollIntoView({behavior:'smooth'})">Explore Locations</button>
+        <button class="hero-cta" id="heroBtn">Explore Locations</button>
     </section>
 
     <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
@@ -212,6 +212,13 @@
         document.getElementById('side-menu').classList.toggle('open')
         document.getElementById('menu-overlay').classList.toggle('open')
     }
+
+    document.getElementById('heroBtn').addEventListener('click', function() {
+    const mainSection = document.querySelector('.main');
+    if(mainSection){
+        mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
 
     </script>
 </body>
