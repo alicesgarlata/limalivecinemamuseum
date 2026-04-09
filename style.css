@@ -29,11 +29,26 @@ header {
     flex-shrink: 0;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
 .nav-logo a {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: #1a1a1a;
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-sub {
+    font-size: 11px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -54,13 +69,6 @@ header {
 .site-title {
     font-size: 18px;
     font-weight: 500;
-}
-
-.site-sub {
-    font-size: 11px;
-    color: #aaa;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .filter-bar {
@@ -360,7 +368,12 @@ hr {
 }
 
 .hero {
-    background: #f0f4f8;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ), url('images/limaseashore.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     padding: 100px 20px 60px;
 }
