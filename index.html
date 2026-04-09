@@ -20,21 +20,11 @@
         </nav>
     </header>
 
-    <nav class="side-menu" id="side-menu">        
-        <div class="menu-header">
-            <button class="close-btn" onclick="toggleMenu()">✕</button>
-        </div>
-        <a href="index.html" class="menu-link active">Home - Map</a>
-        <a href="disclaimer_page.html" class="menu-link">About</a>
-    </nav>
-
     <section class="hero">
         <h1>Welcome to the Lima Live Museum</h1>
         <p>Discover iconic movie locations around the world through maps, stories, and photos!</p>
         <button class="hero-cta" id="heroBtn">Explore Locations</button>
     </section>
-
-    <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
 
     <div class="filter-bar">
        <button class="pill active" onclick="filterByGenre('All')">All genres</button>
@@ -207,11 +197,6 @@
         const extra = btn.nextElementSibling
         extra.classList.toggle('open')
         btn.textContent = extra.classList.contains('open') ? 'Tell me less' : 'Tell me more'
-    }
-
-    function toggleMenu() {
-        document.getElementById('side-menu').classList.toggle('open')
-        document.getElementById('menu-overlay').classList.toggle('open')
     }
 
     document.getElementById('heroBtn').addEventListener('click', function() {
