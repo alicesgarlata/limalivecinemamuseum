@@ -403,7 +403,7 @@ hr {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 0 20px;
 }
 
 .hero h1 {
