@@ -370,7 +370,8 @@ hr {
 .hero {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
+        rgba(0, 0, 0, 0.45),
+        opacity: 0.6,
     ), url('images/limashore.jpg');
     background-size: cover;
     background-position: center;
