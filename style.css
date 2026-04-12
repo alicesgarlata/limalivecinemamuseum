@@ -391,6 +391,11 @@ hr {
 }
 
 .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.45),
         rgba(0, 0, 0, 0.45)
