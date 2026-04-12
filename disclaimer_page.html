@@ -6,29 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header comune -->
+  
     <header>
-        <button class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <span class="site-title">Lima Live Museum of Movie Locations</span>
-        <span class="site-sub">Explore iconic movie locations around the world</span>
+       <div class="nav-logo">
+            <a href="index.html">Lima Live Museum of Movie Locations</a>
+            <span class="site-sub">Explore iconic movie locations around the world</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Map</a>
+            <a href="disclaimer_page.html" class="nav-link">About</a>
+        </nav>
     </header>
 
-    <!-- Menu laterale -->
-    <nav class="side-menu" id="side-menu">
-        <div class="menu-header">
-            <button class="close-btn" onclick="toggleMenu()">✕</button>
-        </div>
-        <a href="index.html" class="menu-link">Home - Map</a>
-        <a href="disclaimer_page.html" class="menu-link active">Disclaimer</a>
-    </nav>
-    <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
-
-    <!-- Contenuto principale -->
-    <div class="location-page">
+    <div class="disclaimer-page">
         <h1>Disclaimers & About this Project</h1>
         <p>
             The purpose of this web site is to explore various types of typographic and visual elements that can be used to create a compelling and informative presentation of movie locations. The site is designed to provide users with an engaging and interactive experience, allowing them to discover iconic movie locations around the world through a combination of text, images, and maps. By utilizing different typographic styles and visual elements, the site aims to enhance the storytelling aspect of the movie locations and provide users with a deeper understanding of their significance in the context of the films they were featured in.
@@ -49,13 +39,6 @@
             Copyright and related rights on the content remain with their original owners. Copyright on the typographic and layout choices are 2026 © XY.
         </p>
     </div>
-
-    <!-- Script menu -->
-    <script>
-        function toggleMenu() {
-            document.getElementById('side-menu').classList.toggle('open')
-            document.getElementById('menu-overlay').classList.toggle('open')
-        }
-    </script>
+    <script src="map.js"></script>
 </body>
 </html>
