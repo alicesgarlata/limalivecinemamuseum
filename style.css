@@ -391,12 +391,6 @@ hr {
 }
 
 .hero {
-    height: calc(100vh - 52px);
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.45),
         rgba(0, 0, 0, 0.45)
@@ -404,7 +398,7 @@ hr {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 600px 20px 60px;
 }
 
 .hero h1 {
