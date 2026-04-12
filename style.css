@@ -443,3 +443,57 @@ hr {
     background: #f0f0f0;
     color: #555;
 }
+
+.about-page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-section h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.about-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.about-section p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.credits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.credits-list li {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    gap: 12px;
+}
+
+.credit-role {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #aaa;
+    min-width: 120px;
+    padding-top: 2px;
+}
