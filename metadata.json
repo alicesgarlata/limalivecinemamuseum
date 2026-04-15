@@ -1,4 +1,6 @@
-[ { "title": "Las Sicodélicas", 
+[ {
+"comment": "films" 
+"title": "Las Sicodélicas", 
 "year": 1968, 
 "wikidata_id": "Q5971307", 
 "wikidata_url": "https://www.wikidata.org/wiki/Q5971307", 
@@ -193,3 +195,226 @@
  "cast": ["Giovanni Ciccia", "Melania Urbina"], 
  "production": [], 
  "release_date": "2002-06-26" } ]
+
+
+
+[ 
+ {      comment: "locations"
+        name: "Parque John F. Kennedy",
+        address: "Av Diagonal, Miraflores 15074, Perù",
+        district: "Miraflores",
+        movies: [{ title: "Gladiator", year: 2000 }],
+        description: "The Colosseum inspired all the visual aesthetics. Some scenes were shot here.",
+        access: "Public - book tickets online in advance",
+        lat: -12.121701218863464,
+        lng: -77.0303628643947
+    },
+    {
+        name: "San Martin Square",
+        address: "Av. Nicolas de Piérola cdra. 9, Lima 15001",
+        district: "Centro Historico",
+        movies: [{ title: "Game of Thrones", year: 2011 }],
+        description: "King's Landing was shot almost entirely in the Old Town.",
+        access: "Public",
+        lat: -12.050801747218538,
+        lng: -77.03449670489425
+    },
+    {
+        name: "Malecon de Miraflores",
+        address: "Mal. de la Reserva 275, Miraflores 15074, Perù",
+        district: "Miraflores",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.124333888711332,
+        lng: -77.03836640674605
+    },
+    {
+        name: "Muelle Sur del Callao",
+        address: "Constitucion 340, Callao 07021, Perù",
+        district: "Callao",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.055384127368942,
+        lng: -77.1506180858518
+    },
+    {
+        name: "Playa Agua Dulce",
+        address: "RXPF+R55, Chorrillos, Perù",
+        district: "Chorrillos",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.162789787144682,
+        lng: -77.02697982995775
+    },
+    {
+        name: "Bridge of Sighs - Puente de Los Suspiros",
+        address: "Jr. Batallón 271, Barranco 15063, Perù",
+        district: "Barranco",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.148642839701377,
+        lng: -77.02247030601738
+    },
+    {
+        name: "Magdalena Market - Mercado de Magdalena",
+        address: "Jr. Bolognesi 504, Magdalena del Mar 15086, Perù",
+        district: "Magdalena del Mar",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.090168055532995,
+        lng: -77.07310081413262
+    },
+    {
+        name: "Calle Tarata",
+        address: "C. Tarata, Miraflores 15074, Perù",
+        district: "Miraflores",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.123488301294946,
+        lng: -77.0287904161149
+    },
+    {
+        name: "Avenida Brasil",
+        address: "Av. Brasil, Lima 15084, Perù",
+        district: ["Breña", "Jesús María", "Pueblo Libre", "Magdalena del Mar"],
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.078385714156722,
+        lng: -77.05694122354882
+    },
+    {
+        name: "Jirón de la Unión",
+        address: "Jirón de la Unión, Lima 15001, Perù",
+        district: "Lima",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.04958142862287,
+        lng: -77.03413897419874
+    },
+    {
+        name: "Parque de las Leyendas",
+        address: "Av. Parque de las Leyendas 580, San Miguel 15088, Perù",
+        district: "San Miguel",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.066965354455284,
+        lng: -77.08691083427522
+    },
+    {
+        name: "Institución Educativa 3004 España",
+        address: "XX7F+855, Rímac 15093, Perù",
+        district: "Rimac",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.03668676454872,
+        lng: -77.02701301478236
+    },
+    {
+        name: "Rio Rimac - Rimac River",
+        district: "Lima",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.043923,
+        lng: -77.020982
+    },
+    {
+        name: "Isla El Frontón",
+        district: "Las Islas",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.116534193316653,
+        lng: -77.1813689770822
+    },
+    {
+        name: "Lima Golf Club",
+        address: "Av. Camino Real 770, San Isidro 15073, Perù",
+        district: "San Isidro",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.101500033881788,
+        lng: -77.03853518755118
+    },
+    {
+        name: "Estadio Lolo Fernandez",
+        address: "668 Jirón Zorritos, Lima 15001, Perù",
+        district: "Lima",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.04958142862287,
+        lng: -77.03413897419874
+    },
+    {
+        name: "Residencial San Felipe",
+        address: "Jesús María District, 15076 Perù",
+        district: "Jesús María",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.089083634210999,
+        lng: -77.0546443877374
+    },
+    {
+        name: "Universidad Nacional Mayor de San Marcos",
+        address: "Av. Óscar R. Benavides 5737, Callao 07006, Perù",
+        district: ["Lima", "Callao"],
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.050621401377771,
+        lng: -77.08645051563546
+    },
+    {
+        name: "Pontificia Universidad Católica del Perù",
+        address: "Av. Universitaria 1801, San Miguel 15088, Perú",
+        district: "San Miguel",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.06900469530343,
+        lng: -77.07819466909773
+    },
+    {
+        name: "Larcomar",
+        address: "Mal. de la Reserva 610, Miraflores 15074, Perù",
+        district: "Miraflores",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.1318722790964,
+        lng: -77.03047475216545
+    },
+    {
+        name: "Plaza Agustín Gutiérrez",
+        address: "Óvalo Gutiérrez, Miraflores 15073, Perù",
+        district: "Miraflores",
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.11031660293372,
+        lng: -77.03690308601313
+    },
+    {
+        name: "Bosque El Olivar",
+        address: "Av. Paz Soldán, San Isidro, Lima 15073, Perù",
+        district: ["Lima", "San Isidro"],
+        movies: [{ title: "Movie Title", year: 1997 }],
+        description: "blablabla",
+        access: "blablabla",
+        lat: -12.10211544904528,
+        lng: -77.03524796521171
+    }
+]
