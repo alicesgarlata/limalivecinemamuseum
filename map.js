@@ -293,9 +293,10 @@ function showCard(data) {
                 <div class="detail">
                     <hr>
                     <p class="description">${loc.description}</p>
+                    <button class="btn-more" onclick="expandCard(event, this)">Tell me more</button>
                     <p class="access">${loc.access}</p>
                     <div class="extra">
-                        <a class="btn-evenmore" href="location.html?name=${encodeURIComponent(loc.name)}">Tell me more</a>
+                        <a class="btn-evenmore" href="location.html?name=${encodeURIComponent(loc.name)}">Tell me even more</a>
                     </div>
                 </div>
             </div>
