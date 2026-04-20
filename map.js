@@ -7,7 +7,8 @@ const filming = [
         description: "The Colosseum inspired all the visual aesthetics. Some scenes were shot here.",
         access: "Public - book tickets online in advance",
         lat: -12.121701218863464,
-        lng: -77.0303628643947
+        lng: -77.0303628643947,
+        location_in_movie: "Un grupo de mujeres aparentemente sofisticadas es en realidad parte de una red criminal. La historia mezcla humor negro con intriga mientras se revelan engaños, identidades ocultas y crímenes en un ambiente psicodélico y provocador."
     },
     {
         name: "San Martin Square",
