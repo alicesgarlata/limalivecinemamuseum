@@ -8,7 +8,9 @@
 "countries": ["México", "Perú"], 
 "genres": ["Comedia negra", "Thriller"], 
 "cast": ["Maura Monti", "Amedée Chabot", "Isela Vega", "Elizabeth Campbell", "Rogelio Guerra"], 
-"production": ["Filmadora Peruana", "Producciones Rodríguez"], "release_date": "1968-08-29" }, 
+"production": ["Filmadora Peruana", "Producciones Rodríguez"], "release_date": "1968-08-29" 
+"description": ["Un grupo de mujeres aparentemente sofisticadas es en realidad parte de una red criminal. La historia mezcla humor negro con intriga mientras se revelan engaños, identidades ocultas y crímenes en un ambiente psicodélico y provocador."]
+},
 
 { "title": "Tarata", 
 "year": 2009, 
