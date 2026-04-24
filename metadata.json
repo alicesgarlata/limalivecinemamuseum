@@ -9,7 +9,7 @@
 "genres": ["Comedia negra", "Thriller"], 
 "cast": ["Maura Monti", "Amedée Chabot", "Isela Vega", "Elizabeth Campbell", "Rogelio Guerra"], 
 "production": ["Filmadora Peruana", "Producciones Rodríguez"], "release_date": "1968-08-29" 
-"description": ["Un grupo de mujeres aparentemente sofisticadas es en realidad parte de una red criminal. La historia mezcla humor negro con intriga mientras se revelan engaños, identidades ocultas y crímenes en un ambiente psicodélico y provocador."]
+"description": ["A group of seemingly sophisticated women are actually part of a criminal network. The story blends dark comedy with intrigue, revealing deception, hidden identities, and crimes within a psychedelic and provocative atmosphere."]
 },
 
 { "title": "Tarata", 
@@ -21,7 +21,8 @@
 "genres": ["Drama"], 
 "cast": ["Gisela Valcárcel", "Miguel Iza", "Ricardo Ota", "Silvana Cañote"], 
 "production": ["Luna Llena Films"], 
-"release_date": "2009-09-01" }, 
+"description": ["Depicts the impact of the Sendero Luminoso terrorist attack on Tarata Street (Miraflores, 1992), showing how violence disrupts everyday life and exposes the social trauma of the time."]
+},
 
 { "title": "Gregorio", 
 "year": 1984, 
@@ -32,7 +33,8 @@
 "genres": ["Drama"], 
 "cast": ["Marino León", "Vetzy Pérez", "Augusto Varillas"], 
 "production": ["Grupo Chaski"], 
-"release_date": "1984-01-01" }, 
+"description":  ["Follows an Andean boy who migrates to Lima seeking a better life, only to face poverty, exploitation, and abandonment, portraying the harsh reality of street children."]
+},
 
 { "title": "La Hora Final",
 "year": 2017, 
@@ -42,7 +44,8 @@
 "countries": ["Perú"], 
 "genres": ["Drama", "Thriller policial"], 
 "cast": ["Pietro Sibille", "Nidia Bermejo", "Toño Vega"], 
-"production": ["DAFO"], "release_date": "2017-09-01" }, 
+"production": ["DAFO"],
+"description": ["Recounts the police operation that led to the capture of Abimael Guzmán, focusing on intelligence work carried out by a special police unit in the 1990s."]},
  
 { "title": "Palomillas del Rímac", 
 "year": 1938, 
@@ -53,7 +56,7 @@
 "genres": ["Comedia", "Musical"], 
 "cast": ["Edmundo Moreau", "María Manuela", "Jesús Vásquez"], 
 "production": ["Amauta Films"], 
-"release_date": "1938-12-01" }, 
+"description":["A costumbrista comedy portraying popular life in Lima, with Creole characters and humorous situations that reflect traditions, music, and urban culture of the time."]}, 
  
 { "title": "¡Asu Mare!", 
  "year": 2013, 
@@ -64,7 +67,7 @@
  "genres": ["Comedia", "Biográfico"], 
  "cast": ["Carlos Alcántara", "Emilia Drago", "Carlos Carlín"], 
  "production": ["Tondero Producciones"], 
- "release_date": "2013-04-11" },
+ "description": ["Based on the life of comedian Carlos Alcántara, it follows his humble childhood, dreams, and journey to success, combining humor with emotional moments."]},
  
   { "title": "Juliana", 
  "year": 1989, 
@@ -75,7 +78,7 @@
  "genres": ["Drama"], 
  "cast": ["Rosa Isabel Morffino", "Julio Vega"], 
  "production": ["Grupo Chaski"], 
- "release_date": "1989-03-23" }, 
+ "description": ["Tells the story of a girl who disguises herself as a boy to survive on the streets of Lima, facing abuse and exploitation within a gang of working children."]},
  
  { "title": "Alias La Gringa", 
  "year": 1991, 
@@ -86,7 +89,7 @@
  "genres": ["Acción", "Drama"], 
  "cast": ["Germán González", "Elsa Olivero"], 
  "production": ["Channel Four Films", "ICAIC"], 
- "release_date": "1991-01-01" }, 
+ "description": ["Set in a Peruvian prison, it follows inmates’ lives and internal tensions, highlighting corruption, violence, and power dynamics within the penitentiary system."]}, 
  
  { "title": "Metal y Melancolía", 
  "year": 1993, 
@@ -95,9 +98,8 @@
  "director": ["Heddy Honigmann"], 
  "countries": ["Países Bajos", "Perú"], 
  "genres": ["Documental"], 
- "cast": [], 
  "production": ["Ariel Film Production"], 
- "release_date": "1993-01-01" }, 
+ "description": ["A documentary observing taxi drivers in Lima during an economic crisis, revealing their personal stories, frustrations, and resilience in a chaotic city."]},
  
  { "title": "Lima 13", 
  "year": 2012, 
@@ -108,7 +110,7 @@
  "genres": ["Drama"], 
  "cast": ["Ubaldo Huamán", "Norma Martínez"], 
  "production": [], 
- "release_date": "2012-11-22" }, 
+ "description": ["A multi-narrative film that follows several characters during one night in Lima, exploring their personal conflicts, excesses, and life-changing decisions."]},
  
  { "title": "Esta es la U", 
  "year": 2024, 
@@ -119,7 +121,7 @@
  "genres": ["Documental deportivo"], 
  "cast": [], 
  "production": ["La Gorda Films"], 
- "release_date": "2024-12-12" }, 
+ "description": ["A documentary celebrating the 100th anniversary of Universitario de Deportes, revisiting its history, achievements, and emotional connection with fans."] }, 
  
  { "title": "Utopía", 
  "year": 2018, 
@@ -130,7 +132,7 @@
  "genres": ["Drama"], 
  "cast": ["Renzo Schuller", "Natalia Salas"], 
  "production": ["Sinargollas Producciones"], 
- "release_date": "2018-09-27" }, 
+ "description": ["Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster."]}, 
  
  { "title": "Caídos del Cielo", 
  "year": 1990, 
@@ -141,7 +143,7 @@
  "genres": ["Drama"], 
  "cast": ["Gustavo Bueno", "Marisol Palacios"], 
  "production": ["Inca Films"], 
- "release_date": "1990-11-01" }, 
+ "description": [Interwoven stories of marginalized characters in Lima, inspired by works of Julio Ramón Ribeyro, exploring loneliness, fate, and existential struggle.]}, 
  
  { "title": "La Luz en el Cerro", 
  "year": 2016, 
@@ -152,7 +154,7 @@
  "genres": ["Thriller", "Misterio"], 
  "cast": ["Manuel Gold", "Emilram Cossío"], 
  "production": ["Caudal Films"], 
- "release_date": "2017-10-01" }, 
+ "description": [A group of friends travels to an Andean village where strange events occur, blending mystery, horror, and supernatural elements.]},
  
  { "title": "Viaje a Tombuctú", 
  "year": 2014, 
@@ -162,8 +164,7 @@
  "countries": ["Perú", "Argentina"], 
  "genres": ["Drama"], 
  "cast": ["Andrea Patriau", "Jair García"], 
- "production": [], 
- "release_date": "2014-05-29" }, 
+ "description": [A woman returns to Peru and revisits her youth in the 1980s, confronting memories, loss, and the passage of time within a complex social context.]}, 
  
  { "title": "Muero por Muriel", 
  "year": 2007, 
@@ -174,7 +175,7 @@
  "genres": ["Drama", "Thriller"], 
  "cast": ["Andrea Montenegro", "Diego Bertie"], 
  "production": ["Iguana Producciones"], 
- "release_date": "2007-01-01" }, 
+ "description":[A story of romantic obsession where a man becomes involved in an intense relationship that leads to dangerous and emotionally destructive situations.]},
  
  { "title": "No Se Lo Digas a Nadie", 
  "year": 1998, 
@@ -185,7 +186,7 @@
  "genres": ["Drama"], 
  "cast": ["Santiago Magill", "Christian Meier"], 
  "production": ["Inca Films"], 
- "release_date": "1998-01-01" }, 
+ "description":[Follows a young upper-class man struggling with his identity and sexual orientation in a conservative society.]},
  
  { "title": "Django: La Otra Cara", 
  "year": 2002, 
@@ -195,228 +196,190 @@
  "countries": ["Perú"], 
  "genres": ["Acción", "Crimen"], 
  "cast": ["Giovanni Ciccia", "Melania Urbina"], 
- "production": [], 
- "release_date": "2002-06-26" } ]
+ "description": [Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence.]},
+ {
+  "title": "Lady Nazca",
+  "year": 2025,
+  "wikidata_id": "Q135474677",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q135474677",
+  "director": ["Damien Dorsaz"],
+  "countries": ["Alemania", "Francia", "Suiza", "Perú"],
+  "genres": ["Drama histórico", "Biográfico"],
+  "cast": ["Devrim Lingnau", "Guillaume Gallienne", "Olivia Ross", "Javier Valdés"],
+  "description": ["Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage."]},
 
-
-
-[ 
- {      comment: "locations"
-        name: "Parque John F. Kennedy",
-        address: "Av Diagonal, Miraflores 15074, Perù",
-        district: "Miraflores",
-        movies: [{ title: "Gladiator", year: 2000 }],
-        description: "The Colosseum inspired all the visual aesthetics. Some scenes were shot here.",
-        access: "Public - book tickets online in advance",
-        lat: -12.121701218863464,
-        lng: -77.0303628643947
-    },
-    {
-        name: "San Martin Square",
-        address: "Av. Nicolas de Piérola cdra. 9, Lima 15001",
-        district: "Centro Historico",
-        movies: [{ title: "Game of Thrones", year: 2011 }],
-        description: "King's Landing was shot almost entirely in the Old Town.",
-        access: "Public",
-        lat: -12.050801747218538,
-        lng: -77.03449670489425
-    },
-    {
-        name: "Malecon de Miraflores",
-        address: "Mal. de la Reserva 275, Miraflores 15074, Perù",
-        district: "Miraflores",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.124333888711332,
-        lng: -77.03836640674605
-    },
-    {
-        name: "Muelle Sur del Callao",
-        address: "Constitucion 340, Callao 07021, Perù",
-        district: "Callao",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.055384127368942,
-        lng: -77.1506180858518
-    },
-    {
-        name: "Playa Agua Dulce",
-        address: "RXPF+R55, Chorrillos, Perù",
-        district: "Chorrillos",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.162789787144682,
-        lng: -77.02697982995775
-    },
-    {
-        name: "Bridge of Sighs - Puente de Los Suspiros",
-        address: "Jr. Batallón 271, Barranco 15063, Perù",
-        district: "Barranco",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.148642839701377,
-        lng: -77.02247030601738
-    },
-    {
-        name: "Magdalena Market - Mercado de Magdalena",
-        address: "Jr. Bolognesi 504, Magdalena del Mar 15086, Perù",
-        district: "Magdalena del Mar",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.090168055532995,
-        lng: -77.07310081413262
-    },
-    {
-        name: "Calle Tarata",
-        address: "C. Tarata, Miraflores 15074, Perù",
-        district: "Miraflores",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.123488301294946,
-        lng: -77.0287904161149
-    },
-    {
-        name: "Avenida Brasil",
-        address: "Av. Brasil, Lima 15084, Perù",
-        district: ["Breña", "Jesús María", "Pueblo Libre", "Magdalena del Mar"],
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.078385714156722,
-        lng: -77.05694122354882
-    },
-    {
-        name: "Jirón de la Unión",
-        address: "Jirón de la Unión, Lima 15001, Perù",
-        district: "Lima",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.04958142862287,
-        lng: -77.03413897419874
-    },
-    {
-        name: "Parque de las Leyendas",
-        address: "Av. Parque de las Leyendas 580, San Miguel 15088, Perù",
-        district: "San Miguel",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.066965354455284,
-        lng: -77.08691083427522
-    },
-    {
-        name: "Institución Educativa 3004 España",
-        address: "XX7F+855, Rímac 15093, Perù",
-        district: "Rimac",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.03668676454872,
-        lng: -77.02701301478236
-    },
-    {
-        name: "Rio Rimac - Rimac River",
-        district: "Lima",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.043923,
-        lng: -77.020982
-    },
-    {
-        name: "Isla El Frontón",
-        district: "Las Islas",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.116534193316653,
-        lng: -77.1813689770822
-    },
-    {
-        name: "Lima Golf Club",
-        address: "Av. Camino Real 770, San Isidro 15073, Perù",
-        district: "San Isidro",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.101500033881788,
-        lng: -77.03853518755118
-    },
-    {
-        name: "Estadio Lolo Fernandez",
-        address: "668 Jirón Zorritos, Lima 15001, Perù",
-        district: "Lima",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.04958142862287,
-        lng: -77.03413897419874
-    },
-    {
-        name: "Residencial San Felipe",
-        address: "Jesús María District, 15076 Perù",
-        district: "Jesús María",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.089083634210999,
-        lng: -77.0546443877374
-    },
-    {
-        name: "Universidad Nacional Mayor de San Marcos",
-        address: "Av. Óscar R. Benavides 5737, Callao 07006, Perù",
-        district: ["Lima", "Callao"],
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.050621401377771,
-        lng: -77.08645051563546
-    },
-    {
-        name: "Pontificia Universidad Católica del Perù",
-        address: "Av. Universitaria 1801, San Miguel 15088, Perú",
-        district: "San Miguel",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.06900469530343,
-        lng: -77.07819466909773
-    },
-    {
-        name: "Larcomar",
-        address: "Mal. de la Reserva 610, Miraflores 15074, Perù",
-        district: "Miraflores",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.1318722790964,
-        lng: -77.03047475216545
-    },
-    {
-        name: "Plaza Agustín Gutiérrez",
-        address: "Óvalo Gutiérrez, Miraflores 15073, Perù",
-        district: "Miraflores",
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.11031660293372,
-        lng: -77.03690308601313
-    },
-    {
-        name: "Bosque El Olivar",
-        address: "Av. Paz Soldán, San Isidro, Lima 15073, Perù",
-        district: ["Lima", "San Isidro"],
-        movies: [{ title: "Movie Title", year: 1997 }],
-        description: "blablabla",
-        access: "blablabla",
-        lat: -12.10211544904528,
-        lng: -77.03524796521171
-    }
-]
+{
+    comment: "locations",
+    name: "Parque John F. Kennedy",
+    address: "Av Diagonal, Miraflores 15074, Perù",
+    district: "Miraflores",
+    movies: [{ title: "Gladiator", year: 2000 }],
+    description: "A central public park in Miraflores, known for its cultural activity, street artists, and as a social gathering point. It represents modern urban Lima and is frequently used in films to portray daily life and tourism.",
+    access: "Public - free access"
+},
+{
+    name: "San Martin Square",
+    address: "Av. Nicolas de Piérola cdra. 9, Lima 15001",
+    district: "Centro Historico",
+    movies: [{ title: "Game of Thrones", year: 2011 }],
+    description: "One of Lima’s most iconic historical squares, surrounded by republican-era architecture. It symbolizes political history and urban identity, often used to represent Lima’s historic center.",
+    access: "Public - free access"
+},
+{
+    name: "Malecon de Miraflores",
+    address: "Mal. de la Reserva 275, Miraflores 15074, Perù",
+    district: "Miraflores",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A scenic coastal walkway overlooking the Pacific Ocean, frequently used in films to represent Lima’s modern and romantic atmosphere.",
+    access: "Public - free access"
+},
+{
+    name: "Muelle Sur del Callao",
+    address: "Constitucion 340, Callao 07021, Perù",
+    district: "Callao",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A port and industrial maritime area representing Lima’s economic and logistical activity, often associated with shipping and trade.",
+    access: "Restricted - port authority area, limited access"
+},
+{
+    name: "Playa Agua Dulce",
+    address: "RXPF+R55, Chorrillos, Perù",
+    district: "Chorrillos",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "One of Lima’s most popular beaches, known for summer tourism and local culture, often used to depict coastal life.",
+    access: "Public - free access"
+},
+{
+    name: "Bridge of Sighs - Puente de Los Suspiros",
+    address: "Jr. Batallón 271, Barranco 15063, Perù",
+    district: "Barranco",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A historic wooden bridge in Barranco, symbolizing romance and artistic culture, frequently featured in visual media.",
+    access: "Public - free access"
+},
+{
+    name: "Magdalena Market - Mercado de Magdalena",
+    address: "Jr. Bolognesi 504, Magdalena del Mar 15086, Perù",
+    district: "Magdalena del Mar",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A traditional local market reflecting everyday commerce and Peruvian gastronomy, often used to portray authentic neighborhood life.",
+    access: "Public - free access"
+},
+{
+    name: "Calle Tarata",
+    address: "C. Tarata, Miraflores 15074, Perù",
+    district: "Miraflores",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A well-known street in Miraflores, historically significant due to the 1992 terrorist attack, representing memory and resilience in urban Lima.",
+    access: "Public - free access"
+},
+{
+    name: "Avenida Brasil",
+    address: "Av. Brasil, Lima 15084, Perù",
+    district: ["Breña", "Jesús María", "Pueblo Libre", "Magdalena del Mar"],
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A major avenue connecting multiple districts, representing the flow of everyday urban life and middle-class Lima.",
+    access: "Public - free access"
+},
+{
+    name: "Jirón de la Unión",
+    address: "Jirón de la Unión, Lima 15001, Perù",
+    district: "Lima",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A historic pedestrian street in downtown Lima, known for commerce and social activity, often used to depict urban movement.",
+    access: "Public - free access"
+},
+{
+    name: "Parque de las Leyendas",
+    address: "Av. Parque de las Leyendas 580, San Miguel 15088, Perù",
+    district: "San Miguel",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A large zoo and archaeological park that combines recreation with history, showing Peru’s biodiversity and pre-Columbian heritage.",
+    access: "Public - paid entry required"
+},
+{
+    name: "Institución Educativa 3004 España",
+    address: "XX7F+855, Rímac 15093, Perù",
+    district: "Rimac",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A public school located in a traditional district, representing educational infrastructure and community life.",
+    access: "Restricted - educational institution"
+},
+{
+    name: "Rio Rimac - Rimac River",
+    district: "Lima",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "The main river crossing Lima, historically dividing the city and symbolizing social and economic contrasts.",
+    access: "Public - open natural area"
+},
+{
+    name: "Isla El Frontón",
+    district: "Las Islas",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "An island off the coast of Callao, historically known for its former prison and political events.",
+    access: "Restricted - limited access, requires authorization"
+},
+{
+    name: "Lima Golf Club",
+    address: "Av. Camino Real 770, San Isidro 15073, Perù",
+    district: "San Isidro",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "An exclusive private golf club representing Lima’s upper-class lifestyle.",
+    access: "Private - members only"
+},
+{
+    name: "Estadio Lolo Fernandez",
+    address: "668 Jirón Zorritos, Lima 15001, Perù",
+    district: "Lima",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "Historic football stadium associated with Universitario de Deportes, representing sports culture.",
+    access: "Restricted - event-based access"
+},
+{
+    name: "Residencial San Felipe",
+    address: "Jesús María District, 15076 Perù",
+    district: "Jesús María",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A modernist residential complex from the 20th century, symbolizing middle-class urban planning.",
+    access: "Semi-public - residential area"
+},
+{
+    name: "Universidad Nacional Mayor de San Marcos",
+    address: "Av. Óscar R. Benavides 5737, Callao 07006, Perù",
+    district: ["Lima", "Callao"],
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "The oldest university in the Americas, representing academic tradition and intellectual life.",
+    access: "Semi-public - campus access with restrictions"
+},
+{
+    name: "Pontificia Universidad Católica del Perù",
+    address: "Av. Universitaria 1801, San Miguel 15088, Perú",
+    district: "San Miguel",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A major private university known for its academic and cultural influence in Peru.",
+    access: "Semi-public - controlled campus access"
+},
+{
+    name: "Larcomar",
+    address: "Mal. de la Reserva 610, Miraflores 15074, Perù",
+    district: "Miraflores",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A modern shopping center built into the cliffs, offering ocean views and representing Lima’s commercial lifestyle.",
+    access: "Public - free access"
+},
+{
+    name: "Plaza Agustín Gutiérrez",
+    address: "Óvalo Gutiérrez, Miraflores 15073, Perù",
+    district: "Miraflores",
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A busy urban intersection and commercial area connecting Miraflores and San Isidro.",
+    access: "Public - free access"
+},
+{
+    name: "Bosque El Olivar",
+    address: "Av. Paz Soldán, San Isidro, Lima 15073, Perù",
+    district: ["Lima", "San Isidro"],
+    movies: [{ title: "Movie Title", year: 1997 }],
+    description: "A historic olive tree park, representing tranquility and heritage within a modern district.",
+    access: "Public - free access"
+}
