@@ -143,7 +143,7 @@
  "genres": ["Drama"], 
  "cast": ["Gustavo Bueno", "Marisol Palacios"], 
  "production": ["Inca Films"], 
- "description": [Interwoven stories of marginalized characters in Lima, inspired by works of Julio Ramón Ribeyro, exploring loneliness, fate, and existential struggle.]}, 
+ "description": ["Interwoven stories of marginalized characters in Lima, inspired by works of Julio Ramón Ribeyro, exploring loneliness, fate, and existential struggle."]}, 
  
  { "title": "La Luz en el Cerro", 
  "year": 2016, 
@@ -154,7 +154,7 @@
  "genres": ["Thriller", "Misterio"], 
  "cast": ["Manuel Gold", "Emilram Cossío"], 
  "production": ["Caudal Films"], 
- "description": [A group of friends travels to an Andean village where strange events occur, blending mystery, horror, and supernatural elements.]},
+ "description": ["A group of friends travels to an Andean village where strange events occur, blending mystery, horror, and supernatural elements."]},
  
  { "title": "Viaje a Tombuctú", 
  "year": 2014, 
@@ -164,7 +164,7 @@
  "countries": ["Perú", "Argentina"], 
  "genres": ["Drama"], 
  "cast": ["Andrea Patriau", "Jair García"], 
- "description": [A woman returns to Peru and revisits her youth in the 1980s, confronting memories, loss, and the passage of time within a complex social context.]}, 
+ "description": ["A woman returns to Peru and revisits her youth in the 1980s, confronting memories, loss, and the passage of time within a complex social context."]}, 
  
  { "title": "Muero por Muriel", 
  "year": 2007, 
@@ -175,7 +175,7 @@
  "genres": ["Drama", "Thriller"], 
  "cast": ["Andrea Montenegro", "Diego Bertie"], 
  "production": ["Iguana Producciones"], 
- "description":[A story of romantic obsession where a man becomes involved in an intense relationship that leads to dangerous and emotionally destructive situations.]},
+ "description":["A story of romantic obsession where a man becomes involved in an intense relationship that leads to dangerous and emotionally destructive situations."]},
  
  { "title": "No Se Lo Digas a Nadie", 
  "year": 1998, 
@@ -186,7 +186,7 @@
  "genres": ["Drama"], 
  "cast": ["Santiago Magill", "Christian Meier"], 
  "production": ["Inca Films"], 
- "description":[Follows a young upper-class man struggling with his identity and sexual orientation in a conservative society.]},
+ "description":["Follows a young upper-class man struggling with his identity and sexual orientation in a conservative society."]},
  
  { "title": "Django: La Otra Cara", 
  "year": 2002, 
@@ -196,7 +196,7 @@
  "countries": ["Perú"], 
  "genres": ["Acción", "Crimen"], 
  "cast": ["Giovanni Ciccia", "Melania Urbina"], 
- "description": [Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence.]},
+ "description": ["Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence."]},
  {
   "title": "Lady Nazca",
   "year": 2025,
