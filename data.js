@@ -1,3 +1,20 @@
+const districtColors = {
+    'Lima':              '#9b1c1c',
+    'Miraflores':        '#166534',
+    'Centro Historico':  '#854d0e',
+    'Callao':            '#1e40af',
+    'Chorrillos':        '#633806',
+    'Barranco':          '#6b21a8',
+    'Magdalena del Mar': '#0f766e',
+    'Breña':             '#9d174d',
+    'Jesús María':       '#075985',
+    'Pueblo Libre':      '#3f6212',
+    'San Miguel':        '#9a3412',
+    'Rimac':             '#334155',
+    'Las Islas':         '#164e63',
+    'San Isidro':        '#86198f'
+}
+
 const locations = [
   {
     name: "Parque John F. Kennedy",
