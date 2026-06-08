@@ -504,3 +504,109 @@ hr {
     min-width: 120px;
     padding-top: 2px;
 }
+
+/* location page */
+
+.loc-address {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.loc-access {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+    margin-bottom: 2rem;
+}
+
+.films-heading {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.loc-films {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 2rem;
+}
+
+.film-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    background: white;
+}
+
+.film-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.film-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.film-year {
+    font-size: 11px;
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.film-genres {
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+}
+
+.film-wiki {
+    font-size: 11px;
+    color: #888;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.film-wiki:hover {
+    color: #1a1a1a;
+}
+
+.film-description {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.film-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+.film-meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #aaa;
+    margin-right: 4px;
+}
+
+.no-films {
+    font-size: 13px;
+    color: #aaa;
+    font-style: italic;
+}
