@@ -3,7 +3,7 @@
   const mapActive  = (page === 'index.html'  || page === 'location.html' || page === '')
   const aboutActive  = (page === 'disclaimer_page.html')
 
-  const nav = document.creativeElement('nav')
+  const nav = document.createElement('nav')
   nav.className = 'navbar navbar-expand-md bg-white border-bottom site-navbar'
   nav.innerHTML = `
         <div class="container-fluid px-4">
