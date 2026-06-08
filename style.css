@@ -2,6 +2,27 @@
     box-sizing: border-box;
 }
 
+/* scrollbar styling — Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* scrollbar styling — Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
 body {
     font-family: sans-serif;
     background: #f5f4f0;
@@ -17,7 +38,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
 }
 
 /* solid state — default for non-hero pages */
@@ -50,6 +71,11 @@ body {
 .navbar .nav-link.active {
     color: #1a1a1a;
     font-weight: 500;
+}
+
+/* slides the navbar off the top of the screen once the hero is gone */
+.site-navbar.nav-hidden {
+    transform: translateY(-100%);
 }
 
 /* transparent state — applied by navbar.js when hero is visible */
@@ -627,4 +653,46 @@ hr {
     font-size: 13px;
     color: #aaa;
     font-style: italic;
+}
+
+/* footer */
+
+.site-footer {
+    background: white;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.site-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #888;
+}
+
+.site-footer-title {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.site-footer-divider {
+    color: #ddd;
+}
+
+.site-footer-credits {
+    font-size: 11px;
+}
+
+.site-footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #1a1a1a;
 }
