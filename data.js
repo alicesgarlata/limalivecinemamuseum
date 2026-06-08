@@ -93,7 +93,11 @@ const locations = [
     name: "Playa Agua Dulce",
     address: "RXPF+R55, Chorrillos, Perú",
     district: "Chorrillos",
-    movies: [],
+    movies: [
+          movies: [
+      { title: "¡Asu Mare!", year: 2013 },
+    ],
+    ],
     descriptions: {
       young: "Agua Dulce is Lima's go-to beach — packed on weekends, full of limeño summer energy, and one of the few spots where everyone from every background shows up together.",
       adult: "One of Lima's most popular public beaches, associated with summer recreation, local culture, and the coastal dimension of everyday city life.",
@@ -107,7 +111,9 @@ const locations = [
     name: "Bridge of Sighs - Puente de Los Suspiros",
     address: "Jr. Batallón 271, Barranco 15063, Perú",
     district: "Barranco",
-    movies: [],
+    movies: [
+       {title: "La última tarde", year: 2016},
+    ],
     descriptions: {
       young: "The Bridge of Sighs in Barranco is the most romantic spot in Lima — a wooden bridge surrounded by old colorful houses, street musicians, and the sound of the ocean in the distance. Very photogenic, but genuinely beautiful.",
       adult: "A historic wooden bridge in Barranco, symbolic of the district's bohemian, artistic, and romantic identity. Barranco has long been Lima's artistic quarter, and this bridge is its most iconic landmark.",
@@ -207,7 +213,9 @@ const locations = [
     name: "Institución Educativa 3004 España",
     address: "XX7F+855, Rímac 15093, Perú",
     district: "Rimac",
-    movies: [],
+    movies: [
+            { title: "La hora final", year: 2017 },
+    ],
     descriptions: {
       young: "A public school in Rímac, one of Lima's oldest and most historically rich districts. Schools like this appear in films about childhood, education, and the realities of public life across the city.",
       adult: "A public educational institution in the Rímac district, representative of Lima's public school infrastructure and the community life of one of the city's most historic neighborhoods.",
