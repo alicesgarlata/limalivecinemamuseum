@@ -1,11 +1,11 @@
 (function () {
-  const page = window.location.pathname.split('/').pop()
-  const mapActive  = (page === 'index.html'  || page === 'location.html' || page === '')
-  const aboutActive  = (page === 'disclaimer_page.html')
+    const page = window.location.pathname.split('/').pop()
+    const mapActive   = (page === 'index.html' || page === 'location.html' || page === '')
+    const aboutActive = (page === 'disclaimer_page.html')
 
-  const nav = document.createElement('nav')
-  nav.className = 'navbar navbar-expand-md bg-white border-bottom site-navbar'
-  nav.innerHTML = `
+    const nav = document.createElement('nav')
+    nav.className = 'navbar navbar-expand-md bg-white border-bottom site-navbar'
+    nav.innerHTML = `
         <div class="container-fluid px-4">
             <a class="navbar-brand site-brand" href="index.html">
                 Lima Live Museum of Movie Locations
@@ -29,6 +29,7 @@
             </div>
         </div>
     `
-  const placeholder = document.getElementById('navbar-placeholder')
-  placeholder.replaceWith(nav)
+
+    const placeholder = document.getElementById('navbar-placeholder')
+    placeholder.replaceWith(nav)
 })()
