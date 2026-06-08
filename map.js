@@ -161,5 +161,5 @@ locations.forEach(function (loc) {
 showCard(locations)
 
 document.getElementById('heroBtn').addEventListener('click', function () {
-    document.querySelector('.main').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.querySelector('.filter-bar').scrollIntoView({ behavior: 'smooth', block: 'start' })
 })
