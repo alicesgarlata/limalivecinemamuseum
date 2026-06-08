@@ -1,6 +1,24 @@
 const list = document.getElementById('list')
 const markers = []
 
+// ── filter pills (built from districtColors in data.js) ──────────────────────
+const filterBar = document.getElementById('filter-bar')
+
+const allBtn = document.createElement('button')
+allBtn.className = 'pill active'
+allBtn.textContent = 'All'
+allBtn.addEventListener('click', function (e) { filterByDistrict(e, 'All') })
+filterBar.appendChild(allBtn)
+
+Object.entries(districtColors).forEach(function ([district, color]) {
+    const btn = document.createElement('button')
+    btn.className = 'pill'
+    btn.style.setProperty('--color', color)
+    btn.textContent = district
+    btn.addEventListener('click', function (e) { filterByDistrict(e, district) })
+    filterBar.appendChild(btn)
+})
+
 // ── helpers ──────────────────────────────────────────────────────────────────
 
 function slugify(str) {
