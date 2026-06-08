@@ -1,9 +1,11 @@
-const list = document.getElementById("list")
+const list = document.getElementById('list')
 const markers = []
 
-function districtClass(district) {
-    const d = Array.isArray(district) ? district[0] : district
-    return d.toLowerCase()
+// ── helpers ──────────────────────────────────────────────────────────────────
+
+function slugify(str) {
+    const s = Array.isArray(str) ? str[0] : str
+    return s.toLowerCase()
         .replace(/\s+/g, '-')
         .replace(/[àáâ]/g, 'a')
         .replace(/[èéê]/g, 'e')
@@ -12,37 +14,29 @@ function districtClass(district) {
         .replace(/[ñ]/g, 'n')
 }
 
-function getDistrictColor(district) {
-    const d = Array.isArray(district) ? district[0] : district
-    const colors = {
-        'Lima':              '#9b1c1c',
-        'Miraflores':        '#166534',
-        'Centro Historico':  '#854d0e',
-        'Callao':            '#1e40af',
-        'Chorrillos':        '#633806',
-        'Barranco':          '#6b21a8',
-        'Magdalena del Mar': '#0f766e',
-        'Breña':             '#9d174d',
-        'Jesús María':       '#075985',
-        'Pueblo Libre':      '#3f6212',
-        'San Miguel':        '#9a3412',
-        'Rimac':             '#334155',
-        'Las Islas':         '#164e63',
-        'San Isidro':        '#86198f'
-    }
-    return colors[d] || '#444'
+function districtLabel(district) {
+    return Array.isArray(district) ? district.join(', ') : district
 }
 
+function districtColor(district) {
+    const d = Array.isArray(district) ? district[0] : district
+    return districtColors[d] || '#444'
+}
+
+function locationSlug(name) {
+    return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
+
+// ── map pin ───────────────────────────────────────────────────────────────────
+
 function createPin(district) {
-    const color = getDistrictColor(district)
+    const color = districtColor(district)
     return L.divIcon({
         className: '',
         html: `<div style="
-            width: 14px; height: 14px;
-            border-radius: 50%;
-            background: ${color};
-            border: 2px solid white;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+            width:14px; height:14px; border-radius:50%;
+            background:${color}; border:2px solid white;
+            box-shadow:0 1px 4px rgba(0,0,0,0.3);
         "></div>`,
         iconSize: [14, 14],
         iconAnchor: [7, 7],
@@ -50,54 +44,72 @@ function createPin(district) {
     })
 }
 
-function getDistrictLabel(district) {
-    return Array.isArray(district) ? district.join(', ') : district
-}
+// ── card rendering (uses <template id="card-template"> from index.html) ───────
 
 function showCard(data) {
-    list.innerHTML = ""
-    data.forEach(function(loc) {
-        const movieList = loc.movies.map(function(m) {
-            return `<span class="movie-tag">${m.title} (${m.year})</span>`
-        }).join('')
+    list.innerHTML = ''
+    const template = document.getElementById('card-template')
 
-        const safeName = loc.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
+    data.forEach(function (loc) {
+        // clone the template — gives us a fresh copy of the card skeleton
+        const card = template.content.cloneNode(true).firstElementChild
 
-        list.innerHTML += `
-            <div class="card" onclick="toggleDetail(this, '${safeName}', ${loc.lat || 'null'}, ${loc.lng || 'null'})">
-                <h2>${loc.name}</h2>
-                <div class="meta">
-                    <span class="badge ${districtClass(loc.district)}">${getDistrictLabel(loc.district)}</span>
-                </div>
-                <div class="movies-list">${movieList}</div>
-                <div class="detail">
-                    <hr>
-                    <p class="description">${loc.descriptions.adult}</p>
-                    <button class="btn-more" onclick="expandCard(event, this)">Tell me more…</button>
-                    <div class="extra">
-                        <p class="access">${loc.access}</p>
-                        <a class="btn-evenmore" href="location.html?name=${encodeURIComponent(loc.name)}">Tell me even more →</a>
-                    </div>
-                </div>
-            </div>
-        `
+        // unique identifier on the card element itself
+        card.dataset.location = locationSlug(loc.name)
+
+        // fill in text values using DOM methods, no string concatenation
+        card.querySelector('[data-field="name"]').textContent = loc.name
+
+        const badge = card.querySelector('[data-field="badge"]')
+        badge.textContent = districtLabel(loc.district)
+        badge.classList.add(slugify(loc.district))
+
+        // build movie tags
+        const moviesList = card.querySelector('[data-field="movies"]')
+        loc.movies.forEach(function (m) {
+            const tag = document.createElement('span')
+            tag.className = 'movie-tag'
+            // unique data-id so we could target this exact tag later if needed
+            tag.dataset.id = `movie-${locationSlug(loc.name)}-${m.year}`
+            tag.textContent = `${m.title} (${m.year})`
+            moviesList.appendChild(tag)
+        })
+
+        card.querySelector('[data-field="description"]').textContent = loc.descriptions.adult
+        card.querySelector('[data-field="access"]').textContent = loc.access
+
+        const link = card.querySelector('[data-field="link"]')
+        link.href = `location.html?name=${encodeURIComponent(loc.name)}`
+
+        // attach event listeners directly — no onclick attributes in HTML
+        card.querySelector('.btn-more').addEventListener('click', function (e) {
+            expandCard(e, this)
+        })
+        card.addEventListener('click', function () {
+            toggleDetail(this, loc.name, loc.lat, loc.lng)
+        })
+
+        list.appendChild(card)
     })
 }
 
+// ── card interactions ─────────────────────────────────────────────────────────
+
 function toggleDetail(card, locName, lat, lng) {
-    const isOpen = card.classList.contains("open")
-    document.querySelectorAll('.card').forEach(function(c) {
-        c.classList.remove("open")
-        const extra = c.querySelector('.extra')
-        const btn = c.querySelector('.btn-more')
-        if (extra) extra.classList.remove("open")
-        if (btn) btn.textContent = "Tell me more…"
+    const isOpen = card.classList.contains('open')
+
+    // close all cards first
+    document.querySelectorAll('.card').forEach(function (c) {
+        c.classList.remove('open')
+        c.querySelector('.extra').classList.remove('open')
+        c.querySelector('.btn-more').textContent = 'Tell me more…'
     })
+
     if (!isOpen) {
-        card.classList.add("open")
+        card.classList.add('open')
         if (lat && lng) {
             map.flyTo([lat, lng], 15)
-            markers.forEach(function(m) {
+            markers.forEach(function (m) {
                 if (m.name === locName) m.marker.openPopup()
             })
         }
@@ -107,20 +119,22 @@ function toggleDetail(card, locName, lat, lng) {
 function expandCard(e, btn) {
     e.stopPropagation()
     const extra = btn.nextElementSibling
-    const isOpen = extra.classList.contains("open")
-    extra.classList.toggle("open")
-    btn.textContent = isOpen ? "Tell me more…" : "Tell me less"
+    const isOpen = extra.classList.contains('open')
+    extra.classList.toggle('open')
+    btn.textContent = isOpen ? 'Tell me more…' : 'Tell me less'
 }
 
-function filterByDistrict(e, district) {
-    document.querySelectorAll(".pill").forEach(function(pill) {
-        pill.classList.remove("active")
-    })
-    e.target.classList.add("active")
+// ── district filter ───────────────────────────────────────────────────────────
 
-    const filtered = district === "All"
+function filterByDistrict(e, district) {
+    document.querySelectorAll('.pill').forEach(function (pill) {
+        pill.classList.remove('active')
+    })
+    e.target.classList.add('active')
+
+    const filtered = district === 'All'
         ? locations
-        : locations.filter(function(loc) {
+        : locations.filter(function (loc) {
             return Array.isArray(loc.district)
                 ? loc.district.includes(district)
                 : loc.district === district
@@ -128,25 +142,24 @@ function filterByDistrict(e, district) {
     showCard(filtered)
 }
 
+// ── map init ──────────────────────────────────────────────────────────────────
+
 const map = L.map('map').setView([-12.0464, -77.0428], 12)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map)
 
-locations.forEach(function(loc) {
-    if (loc.lat && loc.lng) {
-        const movieTitles = loc.movies.map(function(m) {
-            return `${m.title} (${m.year})`
-        }).join('<br>')
-        const marker = L.marker([loc.lat, loc.lng], { icon: createPin(loc.district) })
-            .addTo(map)
-            .bindPopup(`<b>${loc.name}</b><br>${movieTitles || '<i>no films listed yet</i>'}`)
-        markers.push({ name: loc.name, marker: marker })
-    }
+locations.forEach(function (loc) {
+    if (!loc.lat || !loc.lng) return
+    const movieTitles = loc.movies.map(m => `${m.title} (${m.year})`).join('<br>') || '<i>no films listed yet</i>'
+    const marker = L.marker([loc.lat, loc.lng], { icon: createPin(loc.district) })
+        .addTo(map)
+        .bindPopup(`<b>${loc.name}</b><br>${movieTitles}`)
+    markers.push({ name: loc.name, marker: marker })
 })
 
 showCard(locations)
 
-document.getElementById('heroBtn').addEventListener('click', function() {
+document.getElementById('heroBtn').addEventListener('click', function () {
     document.querySelector('.main').scrollIntoView({ behavior: 'smooth', block: 'start' })
 })
