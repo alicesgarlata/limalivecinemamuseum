@@ -33,6 +33,28 @@
     const placeholder = document.getElementById('navbar-placeholder')
     placeholder.replaceWith(nav)
 
+    const footer = document.createElement('footer')
+    footer.className = 'site-footer'
+    footer.innerHTML = `
+        <div class="site-footer-inner">
+            <span class="site-footer-title">Lima Live Museum of Movie Locations</span>
+            <span class="site-footer-divider">·</span>
+            <span>A project by Alice Sgarlata</span>
+            <span class="site-footer-divider">·</span>
+            <span>Information Modeling and Web Technologies — Prof. Fabio Vitali, Università di Bologna</span>
+        </div>
+        <div class="site-footer-inner site-footer-credits">
+            <span>© 2026</span>
+            <span class="site-footer-divider">·</span>
+            <span>Map: <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> + <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></span>
+            <span class="site-footer-divider">·</span>
+            <span>Film data: <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a></span>
+        </div>
+    `
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.appendChild(footer)
+    })
+
     // Transparent-to-solid scroll effect.
     // We wait for DOMContentLoaded because navbar.js runs before the rest of
     // the page HTML is parsed — the .hero element doesn't exist yet at this point.
@@ -45,11 +67,10 @@
         nav.classList.add('nav-transparent')
 
         function updateNav() {
-            // getBoundingClientRect().bottom tells us how many px of the hero
-            // are still visible below the top of the viewport.
-            // When it drops to 0 the hero has fully scrolled away.
             const heroStillVisible = hero.getBoundingClientRect().bottom > 0
             nav.classList.toggle('nav-transparent', heroStillVisible)
+            // slide navbar off-screen once the hero is gone
+            nav.classList.toggle('nav-hidden', !heroStillVisible)
         }
 
         window.addEventListener('scroll', updateNav, { passive: true })
