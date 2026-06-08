@@ -92,7 +92,7 @@
     "director": ["Heddy Honigmann"], 
     "countries": ["Países Bajos", "Perú"], 
     "genres": ["Documental"], 
-    "cast": [], 
+    "cast": ["Victor Talledo, Señor English, Mercedes Aguilar"], 
     "production": ["Ariel Film Production"], 
     "release_date": "1993-01-01" }, 
  
@@ -104,7 +104,7 @@
     "countries": ["Perú"], 
     "genres": ["Drama"], 
     "cast": ["Ubaldo Huamán", "Norma Martínez"], 
-    "production": [], 
+    "production": ["Luna Llena Films"], 
     "release_date": "2012-11-22" }, 
     
  { "title": "Esta es la U", 
@@ -114,7 +114,7 @@
     "director": ["Daniel Farfán"], 
     "countries": ["Perú"], 
     "genres": ["Documental deportivo"], 
-    "cast": [], 
+    "cast": ["Héctor Chumpitaz, Guillermo del Solar, José Luis Carranza, Edison Flores, Aldo Corzo, Eduardo Rey Muñoz, Antenor Guerra, Eloy Seclén, Juan Carlos Oblitas"], 
     "production": ["La Gorda Films"], 
     "release_date": "2024-12-12" }, 
  
@@ -159,7 +159,7 @@
     "countries": ["Perú", "Argentina"], 
     "genres": ["Drama"], 
     "cast": ["Andrea Patriau", "Jair García"], 
-    "production": [], 
+    "production": ["Tombuktu Films, Machaco Films"], 
     "release_date": "2014-05-29" }, 
  
  { "title": "Muero por Muriel", 
@@ -192,5 +192,29 @@
     "countries": ["Perú"], 
     "genres": ["Acción", "Crimen"], 
     "cast": ["Giovanni Ciccia", "Melania Urbina"], 
-    "production": [], 
+    "production": ["Inca Films"], 
     "release_date": "2002-06-26" } ]
+{
+  "title": "La última tarde",
+  "year": 2016,
+  "wikidata_id": "Q80655243",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q80655243",
+  "director": ["Joel Calero"],
+  "countries": ["Perú", "Colombia"],
+  "genres": ["Drama"],
+  "cast": ["Katerina D'Onofrio", "Lucho Cáceres"],
+  "production": ["Habanero Films"],
+  "release_date": "2016"
+}
+{
+  "title": "Cholo",
+  "year": 1972,
+  "wikidata_id": "Q100276603",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q100276603",
+  "director": ["Bernardo Batievsky"],
+  "countries": ["Perú"],
+  "genres": ["Película biográfica"],
+  "cast": ["Hugo Sotil"],
+  "production": ["Procine S.A."],
+  "release_date": "1972"
+}
