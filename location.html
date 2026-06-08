@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,307 +18,102 @@
         </nav>
     </header>
 
-    <!-- LOCATION PAGE -->
     <div class="location-page">
         <a href="index.html" class="back-link">← Back to map</a>
-        
+
         <div class="location-header">
-            <p class="label" id="loc-movie"></p>
             <h1 id="loc-name"></h1>
             <div class="meta">
-                <span id="loc-country"></span>
                 <span class="badge" id="loc-badge"></span>
+                <span class="loc-address" id="loc-address"></span>
             </div>
         </div>
 
-        <!-- TONE BUTTONS -->
         <div class="tone-bar">
             <button class="tone-btn active" onclick="setTone('young', this)">Young</button>
             <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
             <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
         </div>
 
-        <!-- DESCRIPTION -->
-        <div class="location-body">
-            <div id="loc-description" class="loc-description"></div>
-        </div>
+        <p id="loc-description" class="loc-description"></p>
+
+        <p class="loc-access" id="loc-access"></p>
+
+        <div id="loc-films" class="loc-films"></div>
     </div>
 
-    <!-- SCRIPT -->
+    <script src="data.js"></script>
     <script>
-        const filming = [
-            {
-                movie: "Gladiator",
-                year: 2000,
-                name: "Parque John F. Kennedy",
-                address: "Av Diagonal, Miraflores 15074, Perù",
-                district: "Miraflores",
-                description: "The Colosseum inspired all the visual aesthetics. Some scenes were shot here.",
-                access: "Public - book tickets online in advance",
-                lat: -12.121701218863464,
-                lng: -77.0303628643947 
-            },
-            {
-                movie: "Game of Thrones",
-                year: 2011,
-                name: "San Martin Square",
-                address: "Av. Nicolas de Piérola cdra. 9, Lima 15001",
-                district: "Centro Historico",
-                description: "King's Landing was shot almost entirely in the Old Town. Its walls and the harbor appear in plenty of scenes.",
-                access: "Public - book tickets online in advance",
-                lat: -12.050801747218538,
-                lng: -77.03449670489425 
-            },
-            {
-                movie: "Movie Title",
-                year: 1997,
-                name: "Malecon de Miraflores",
-                address: "Mal. de la Reserva 275, Miraflores 15074, Perù",
-                district: "Miraflores",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.124333888711332, 
-                lng: -77.03836640674605
-            }
-            {
-                movie: "Movie Title",
-                year: 1997,
-                name: "Muelle Sur del Callao",
-                address: "Constitucion 340, Callao 07021, Perù",
-                district: "Callao",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.055384127368942,
-                lng: -77.1506180858518
-            }
-            {
-                movie: "Movie Title",
-                year: 1997,
-                name: "Playa Agua Dulce",
-                address: "RXPF+R55, Chorrillos, Perù",
-                district: "Chorrillos",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.162789787144682,
-                lng: -77.02697982995775
-            }
-           
-            {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Bridge of Sighs - Puente de Los Suspiros",
-                address: "Jr. Batallón 271, Barranco 15063, Perù",
-                district: "Barranco",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.148642839701377,
-                lng: -77.02247030601738
-            }
-            {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Magdalena Market - Mercado de Magdalena",
-                address: "Jr. Bolognesi 504, Magdalena del Mar 15086, Perù",
-                district: "Magdalena del Mar",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.090168055532995,
-                lng: -77.07310081413262
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Calle Tarata",
-                address: "C. Tarata, Miraflores 15074, Perù",
-                district: "Miraflores",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.123488301294946, 
-                lng: -77.0287904161149
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Avenida Brasil",
-                address: "Av. Brasil, Lima 15084, Perù",
-                district: "Lima", "Breña", "Jesús María", "Pueblo Libre", "Magdalena del Mar",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.078385714156722,
-                lng: -77.05694122354882
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Jirón de la Unión",
-                address: "Jirón de la Unión, Lima 15001, Perù",
-                district: "Lima",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.04958142862287,
-                lng: -77.03413897419874
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Parque de las Leyendas - Park of the Legends",
-                address: "Av. Parque de las Leyendas 580, San Miguel 15088, Perù",
-                district: "San Miguel",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.066965354455284,
-                lng: -77.08691083427522
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Institución Educativa 3004 España",
-                address: "XX7F+855, Rímac 15093, Perù",
-                district: "Rimac",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.03668676454872, 
-                lng: -77.02701301478236
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Rio Rimac - Rimac River",
-                district: "Lima",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.043923, 
-                lng: -77.020982 
+        const params = new URLSearchParams(window.location.search)
+        const locationName = params.get('name')
+        const loc = locations.find(l => l.name === locationName) || locations[0]
 
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Isla El Frontón",
-                district: "Islas",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.116534193316653,
-                lng: -77.1813689770822
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Lima Golf Club",
-                address: "Av. Camino Real 770, San Isidro 15073, Perù",
-                district: "San Isidro",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.101500033881788, 
-                lng: -77.03853518755118
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Estadio Lolo Fernandez",
-                address: "668 Jirón Zorritos, Lima 15001, Perù",
-                district: "Lima", 
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.04958142862287,
-                lng: -77.03413897419874
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Residencial San Felipe",
-                address: "Jesús María District, 15076 Perù",
-                district: "Jesús María",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.089083634210999,
-                lng: -77.0546443877374
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Universidad Nacional Mayor de San Marcos",
-                address: "Av. Óscar R. Benavides 5737, Callao 07006, Perù",
-                district: "Lima", "Callao"
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.050621401377771,
-                lng: -77.08645051563546
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Pontificia Universidad Catolica del Perù",
-                address: "Av. Universitaria 1801, San Miguel 15088, Perú",
-                district: "San Miguel",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.06900469530343,
-                lng: -77.07819466909773
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Larcomar",
-                address: "Mal. de la Reserva 610, Miraflores 15074, Perù",
-                district: "Miraflores",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.1318722790964,
-                lng: -77.03047475216545
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Plaza Agustín Gutiérrez",
-                address: "Óvalo Gutiérrez, Miraflores 15073, Perù",
-                district: "Miraflores",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.11031660293372,
-                lng: -77.03690308601313
-            }
-        {    
-                movie: "Movie Title",
-                year: 1997,
-                name: "Bosque El Olivar",
-                address: "Av. Paz Soldán, La Republica y, C. Ántero Aspíllaga, Lima 15073, Perù",
-                district: "Lima", "San Isidro",
-                description: "blablabla",
-                access: "blablabla",
-                lat: -12.10211544904528,
-                lng: -77.03524796521171
-            }
-        ]
+        let currentTone = 'young'
 
-        // Prende il parametro dalla URL
-        const params = new URLSearchParams(window.location.search);
-        const locationName = params.get('name');
-        const loc = filming.find(l => l.name === locationName) || filming[0]; // fallback alla prima location
+        document.getElementById('loc-name').textContent = loc.name
 
-        // Mostra dati della location
-        document.getElementById('loc-movie').textContent = loc.movie + ' · ' + loc.year;
-        document.getElementById('loc-name').textContent = loc.name;
-        document.getElementById('loc-country').textContent = loc.country;
+        const badge = document.getElementById('loc-badge')
+        const districtLabel = Array.isArray(loc.district) ? loc.district.join(', ') : loc.district
+        const districtClass = districtLabel.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[àáâ]/g, 'a')
+            .replace(/[èéê]/g, 'e')
+            .replace(/[ùú]/g, 'u')
+            .replace(/[íì]/g, 'i')
+            .replace(/[ñ]/g, 'n')
+            .split(',')[0].trim()
+        badge.textContent = districtLabel
+        badge.className = 'badge ' + districtClass
 
-        const badge = document.getElementById('loc-badge');
-        badge.textContent = loc.genre;
-        badge.className = 'badge ' + loc.genre.toLowerCase();
-
-        const descEl = document.getElementById('loc-description');
-        descEl.textContent = loc.descriptions.young;
-
-        // Funzione per cambiare tono
-        function setTone(tone, btn) {
-            document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            descEl.textContent = loc.descriptions[tone];
+        if (loc.address) {
+            document.getElementById('loc-address').textContent = loc.address
         }
 
-        // Menu hamburger
-        function toggleMenu() {
-            document.getElementById('side-menu').classList.toggle('open');
-            document.getElementById('menu-overlay').classList.toggle('open');
+        const descEl = document.getElementById('loc-description')
+        descEl.textContent = loc.descriptions.young
+
+        document.getElementById('loc-access').textContent = loc.access
+
+        function setTone(tone, btn) {
+            currentTone = tone
+            document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'))
+            btn.classList.add('active')
+            descEl.textContent = loc.descriptions[tone]
+        }
+
+        const filmsContainer = document.getElementById('loc-films')
+        if (loc.movies.length === 0) {
+            filmsContainer.innerHTML = '<p class="no-films">No films catalogued for this location yet.</p>'
+        } else {
+            filmsContainer.innerHTML = '<h2 class="films-heading">Films shot here</h2>'
+            loc.movies.forEach(function(movieRef) {
+                const film = films.find(f => f.title === movieRef.title && f.year === movieRef.year)
+                if (!film) return
+
+                const genres = film.genres ? film.genres.join(', ') : ''
+                const directors = film.director ? film.director.join(', ') : ''
+                const cast = film.cast && film.cast.length ? film.cast.slice(0, 4).join(', ') : ''
+                const countries = film.countries ? film.countries.join(', ') : ''
+
+                filmsContainer.innerHTML += `
+                    <div class="film-card">
+                        <div class="film-card-header">
+                            <div>
+                                <h3 class="film-title">${film.title}</h3>
+                                <span class="film-year">${film.year}</span>
+                                ${genres ? `<span class="film-genres">${genres}</span>` : ''}
+                            </div>
+                            ${film.wikidata_url ? `<a class="film-wiki" href="${film.wikidata_url}" target="_blank" rel="noopener">Wikidata ↗</a>` : ''}
+                        </div>
+                        <p class="film-description">${film.description}</p>
+                        <div class="film-meta">
+                            ${directors ? `<span><span class="film-meta-label">Dir.</span> ${directors}</span>` : ''}
+                            ${cast ? `<span><span class="film-meta-label">Cast</span> ${cast}</span>` : ''}
+                            ${countries ? `<span><span class="film-meta-label">Countries</span> ${countries}</span>` : ''}
+                        </div>
+                    </div>
+                `
+            })
         }
     </script>
 </body>
