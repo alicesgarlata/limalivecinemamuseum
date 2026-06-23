@@ -588,12 +588,17 @@ hr {
 .location-films-col {
     position: sticky;
     top: 88px;
+    max-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
 }
 
 .loc-films {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    overflow-y: auto;
+    padding-right: 6px;
 }
 
 .film-card {
