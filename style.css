@@ -696,3 +696,14 @@ hr {
 .site-footer a:hover {
     color: #1a1a1a;
 }
+
+.loc-scheda { ... }
+.scheda-heading { ... }
+.scheda-tab-bar { ... }
+.scheda-tab-btn { ... }
+.scheda-tab-btn.active { ... }
+.scheda-tab-content { ... }
+.scheda-tab-content p { ... }
+.scheda-tab-content a { ... }
+.scheda-tab-content ul { ... }
+.scheda-tab-content li { ... }
