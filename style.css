@@ -38,6 +38,8 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
     transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
 }
 
@@ -73,12 +75,12 @@ body {
     font-weight: 500;
 }
 
-/* slides the navbar off the top of the screen once the hero is gone */
+/* slides the navbar off the top of the screen once the hero is gone (home page only) */
 .site-navbar.nav-hidden {
     transform: translateY(-100%);
 }
 
-/* transparent state — applied by navbar.js when hero is visible */
+/* transparent-over-hero state — applied by navbar.js on the home page while the hero is visible */
 .site-navbar.nav-transparent {
     background-color: transparent !important;
     border-bottom-color: transparent !important;
@@ -108,6 +110,13 @@ body {
 
 .site-navbar.nav-transparent .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2c255%2c255%2c0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* always-transparent, dark-text state — pages with no hero (location, about) */
+.site-navbar.nav-flat {
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
 }
 
 /* pages without a hero need top padding so content doesn't hide behind fixed navbar */
@@ -380,7 +389,10 @@ hr {
 .location-page {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 72px;
+    padding-bottom: 2rem;
 }
 
 .location-grid {
@@ -511,7 +523,10 @@ hr {
 .about-page {
     max-width: 680px;
     margin: 0 auto;
-    padding: 48px 24px 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 72px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     gap: 40px;
