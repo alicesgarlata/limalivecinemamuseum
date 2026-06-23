@@ -33,9 +33,12 @@
         <p class="loc-access" id="loc-access"></p>
 
         <div id="loc-films" class="loc-films"></div>
+        
+        <div id="loc-scheda" class="loc-scheda"></div>
     </div>
 
     <script src="data.js"></script>
+    <script src="schede.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search)
@@ -108,6 +111,51 @@
                     </div>
                 `
             })
+        }
+        const schedaData = (typeof schede !== 'undefined') ? schede[loc.name} : null
+        const schedaContainer = docuemnt.getElementById('loc-scheda')
+
+        if (schedaData) {
+            const tabs = [
+                { key: 'Introduction', label: 'Introduction' },
+                { key: 'General Information and Location' label: 'General Info' },
+                { key: 'History of the Place', label: 'History' },
+                { key: 'Highlighted Curiosity', label: 'Curiosity' },
+                { key: 'Cultural and Urban Importance', label: 'Cultural Importance' },
+                { key: 'Sources', label: 'Sources' }
+            ].filter(tab => schedaData[tab.key] && schedaData[tab.key].trim() !== '')
+        
+            if (tabs.length > 0) {
+                const tabBar = document.createElement('div')
+                tabBar.className = 'scheda-tab-bar'
+
+                const tabContent = document.createElement('div')
+                tabContent.className = 'scheda-tab-content'
+
+                function selectTab(key, btn) {
+                    tabBar.querySelectorAll('.scheda-tab-btn').forEach(b => b.classList.remove('active'))
+                    btn.classList.add('active')
+                    tabContent.innerHTML = schedaData[key]
+                }
+
+                tabs.forEach(function (tab, i) {
+                    const btn = document.createElement('button')
+                    btn.className = 'scheda-tab-btn' + (i === 0 ? ' active' : '')
+                    btn.textContent = tab.label
+                    btn.addEventListener('click', function () { selectTab(tab.key, btn) })
+                    tabBar.appendChild(btn)
+                })
+
+                const heading = document.createElement('h2')
+                heading.className = 'scheda-heading'
+                heading.textContent = 'Learn more'
+
+                schedaContainer.appendChild(heading)
+                schedaContainer.appendChild(tabBar)
+                schedaContainer.appendChild(tabContent)
+
+                tabContent.innerHTML = schedaData[tabs[0].key]
+            }
         }
     </script>
 </body>
