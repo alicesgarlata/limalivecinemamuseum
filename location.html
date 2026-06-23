@@ -22,19 +22,25 @@
             </div>
         </div>
 
-        <div class="tone-bar">
-            <button class="tone-btn active" onclick="setTone('young', this)">Young</button>
-            <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
-            <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
+        <div class="location-grid">
+            <div class="location-main">
+                <div class="tone-bar">
+                    <button class="tone-btn active" onclick="setTone('young', this)">Young</button>
+                    <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
+                    <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
+                </div>
+
+                <p id="loc-description" class="loc-description"></p>
+
+                <p class="loc-access" id="loc-access"></p>
+
+                <div id="loc-scheda" class="loc-scheda"></div>
+            </div>
+
+            <aside class="location-films-col">
+                <div id="loc-films" class="loc-films"></div>
+            </aside>
         </div>
-
-        <p id="loc-description" class="loc-description"></p>
-
-        <p class="loc-access" id="loc-access"></p>
-
-        <div id="loc-films" class="loc-films"></div>
-        
-        <div id="loc-scheda" class="loc-scheda"></div>
     </div>
 
     <script src="data.js"></script>
@@ -112,6 +118,9 @@
                 `
             })
         }
+
+        // ── scheda estesa (Introduction / History / Curiosity / ecc.) ──────────
+        // Non tutte le location hanno una scheda: se manca, non mostriamo nulla.
         const schedaData = (typeof schede !== 'undefined') ? schede[loc.name] : null
         const schedaContainer = document.getElementById('loc-scheda')
 
@@ -124,7 +133,7 @@
                 { key: 'Cultural and Urban Importance', label: 'Cultural Importance' },
                 { key: 'Sources', label: 'Sources' }
             ].filter(tab => schedaData[tab.key] && schedaData[tab.key].trim() !== '')
-        
+
             if (tabs.length > 0) {
                 const tabBar = document.createElement('div')
                 tabBar.className = 'scheda-tab-bar'
