@@ -94,9 +94,7 @@ const locations = [
     address: "RXPF+R55, Chorrillos, Perú",
     district: "Chorrillos",
     movies: [
-          movies: [
       { title: "¡Asu Mare!", year: 2013 },
-    ],
     ],
     descriptions: {
       young: "Agua Dulce is Lima's go-to beach — packed on weekends, full of limeño summer energy, and one of the few spots where everyone from every background shows up together.",
