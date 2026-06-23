@@ -55,13 +55,14 @@
         document.body.appendChild(footer)
     })
 
-    // Transparent-to-solid scroll effect.
-    // We wait for DOMContentLoaded because navbar.js runs before the rest of
-    // the page HTML is parsed — the .hero element doesn't exist yet at this point.
     document.addEventListener('DOMContentLoaded', function () {
         const hero = document.querySelector('.hero')
 
-        if (!hero) return  // no hero on this page → navbar stays solid, nothing to do
+        if (!hero) {
+            // no hero on this page → always transparent, dark text, no scroll effect
+            nav.classList.add('nav-flat')
+            return
+        }
 
         // start transparent
         nav.classList.add('nav-transparent')
