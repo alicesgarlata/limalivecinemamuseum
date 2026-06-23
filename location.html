@@ -38,6 +38,7 @@
             </div>
 
             <aside class="location-films-col">
+                <h2 class="films-heading" id="loc-films-heading"></h2>
                 <div id="loc-films" class="loc-films"></div>
             </aside>
         </div>
@@ -85,10 +86,13 @@
         }
 
         const filmsContainer = document.getElementById('loc-films')
+        const filmsHeading = document.getElementById('loc-films-heading')
         if (loc.movies.length === 0) {
+            filmsHeading.style.display = 'none'
             filmsContainer.innerHTML = '<p class="no-films">No films catalogued for this location yet.</p>'
         } else {
-            filmsContainer.innerHTML = '<h2 class="films-heading">Films shot here</h2>'
+            filmsHeading.textContent = 'Films shot here'
+            filmsContainer.innerHTML = ''
             loc.movies.forEach(function(movieRef) {
                 const film = films.find(f => f.title === movieRef.title && f.year === movieRef.year)
                 if (!film) return
