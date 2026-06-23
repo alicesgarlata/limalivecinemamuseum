@@ -112,13 +112,13 @@
                 `
             })
         }
-        const schedaData = (typeof schede !== 'undefined') ? schede[loc.name} : null
-        const schedaContainer = docuemnt.getElementById('loc-scheda')
+        const schedaData = (typeof schede !== 'undefined') ? schede[loc.name] : null
+        const schedaContainer = document.getElementById('loc-scheda')
 
         if (schedaData) {
             const tabs = [
                 { key: 'Introduction', label: 'Introduction' },
-                { key: 'General Information and Location' label: 'General Info' },
+                { key: 'General Information and Location', label: 'General Info' },
                 { key: 'History of the Place', label: 'History' },
                 { key: 'Highlighted Curiosity', label: 'Curiosity' },
                 { key: 'Cultural and Urban Importance', label: 'Cultural Importance' },
