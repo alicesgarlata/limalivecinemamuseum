@@ -507,10 +507,14 @@ hr {
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 54px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
     margin-bottom: 16px;
-    font-weight: 500;
     color: white;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 .hero p {
@@ -933,14 +937,17 @@ hr {
     text-transform: uppercase;
     color: rgba(255,255,255,0.7);
     margin-bottom: 1rem;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
 .hero-intro {
     max-width: 640px;
     font-size: 15px;
-    line-height: 1.75;
-    color: rgba(255,255,255,0.85);
+    line-height: 1.85;
+    color: rgba(255,255,255,0.92);
     margin: 0 auto 2rem;
+    text-align: justify;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55), 0 2px 24px rgba(0,0,0,0.35);
 }
 
 .hero-actions {
