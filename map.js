@@ -93,7 +93,8 @@ function showCard(data) {
             moviesList.appendChild(tag)
         })
 
-        card.querySelector('[data-field="description"]').textContent = loc.descriptions.adult
+        card.querySelector('[data-field="description"]').textContent = loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
+        card.querySelector('[data-field="description-long"]').textContent = loc.cardDescription ? loc.cardDescription.long : ''
         card.querySelector('[data-field="access"]').textContent = loc.access
 
         const link = card.querySelector('[data-field="link"]')
