@@ -924,3 +924,318 @@ hr {
     margin-bottom: 12px;
     display: none;
 }
+
+/* ── Hero intro (index.html) ──────────────────────────────────────────────── */
+
+.hero-sub {
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+}
+
+.hero-intro {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.85);
+    margin: 0 auto 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.hero-link {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-link:hover {
+    color: white;
+    border-color: white;
+}
+
+/* ── Narratives page (itineraries.html) ───────────────────────────────────── */
+
+.narrative-page {
+    max-width: 780px;
+}
+
+.narrative-switcher {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 0;
+}
+
+.narrative-tab {
+    font-size: 13px;
+    font-weight: 500;
+    color: #aaa;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+    margin-bottom: -1px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.narrative-tab.active {
+    color: #1a1a1a;
+    border-bottom-color: #1a1a1a;
+}
+
+.narrative-content {
+    display: none;
+}
+
+.narrative-content.active {
+    display: block;
+}
+
+.narrative-subtitle {
+    font-size: 13px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: -8px;
+    margin-bottom: 1rem;
+}
+
+.narrative-intro h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.chapter-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.narrative-chapter h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.chapter-dates {
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.chapter-intro {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.narrative-transition {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid #e5e5e5;
+    background: #fafaf8;
+    border-radius: 0 8px 8px 0;
+}
+
+.narrative-transition p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.75;
+    margin: 0;
+    font-style: italic;
+}
+
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.timeline-year {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding-top: 2px;
+}
+
+.timeline-location {
+    font-size: 12px;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+
+.timeline-location a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.timeline-location a:hover {
+    border-color: #1a1a1a;
+}
+
+.timeline-district {
+    font-weight: 400;
+    color: #aaa;
+}
+
+.timeline-body p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* ── Itinerary stops ──────────────────────────────────────────────────────── */
+
+.itinerary-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.itinerary-stop {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.stop-number {
+    width: 28px;
+    height: 28px;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.stop-location {
+    font-size: 12px;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+
+.stop-location a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.stop-location a:hover { border-color: #1a1a1a; }
+
+.stop-body p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* ── Previous / Next (location.html) ─────────────────────────────────────── */
+
+.prev-next-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    gap: 1rem;
+}
+
+.prev-next-btn {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    max-width: 38%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.15s;
+}
+
+.prev-next-btn:hover { color: #1a1a1a; }
+
+.prev-next-disabled {
+    font-size: 12px;
+    color: #ccc;
+    max-width: 38%;
+}
+
+.prev-next-home {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.prev-next-home:hover { color: #1a1a1a; }
+
+/* ── Card prev/next (map cards) ───────────────────────────────────────────── */
+
+.card-prev-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 4px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.card-nav-btn {
+    font-size: 11px;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    max-width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-nav-btn:hover { color: #1a1a1a; }
+
+.card-nav-next { text-align: right; }
