@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation — Lima Live Museum of Movie Locations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <script src="navbar.js"></script>
+
+    <div class="about-page">
+
+        <section class="about-section">
+            <h1>Documentation</h1>
+            <p>This page provides a detailed account of the design choices made in building Lima Live Museum of Movie Locations — the conceptual decisions behind the collection, the technical architecture of the site, and the reasoning behind the interface design.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>1. Concept and Scope</h2>
+            <p>[To be completed — describe the conceptual framework of the exhibition: why Lima, why cinema, why these locations, and what the collection aims to communicate.]</p>
+        </section>
+
+        <section class="about-section">
+            <h2>2. Collection Criteria</h2>
+            <p>[To be completed — explain how the 22 locations were selected: what criteria determined inclusion (number of films, historical significance, geographic spread, thematic relevance), and what was deliberately excluded.]</p>
+        </section>
+
+        <section class="about-section">
+            <h2>3. Text Grid Design</h2>
+            <p>[To be completed — describe the rationale behind the 3×3 grid of texts (tone × length × competence): why these three axes, how the texts were written for each cell, and how the interface exposes them to visitors.]</p>
+            <ul class="doc-list">
+                <li><strong>Tone axis</strong> (Young / Adult / Professional): [explanation]</li>
+                <li><strong>Length axis</strong> (Brief / Mid / Long): [explanation]</li>
+                <li><strong>Competence axis</strong> (Too difficult ↔ Too simple): [explanation]</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>4. Narrative Structure</h2>
+            <p>[To be completed — discuss the two narrative itineraries: the historical timeline and the thematic day-journey. Explain how transition texts function between chapters and how the narratives relate to the individual location pages.]</p>
+        </section>
+
+        <section class="about-section">
+            <h2>5. Visual and Graphic Design</h2>
+            <p>[To be completed — describe the graphic themes available in the site, the typography choices, the colour palette, and the visual logic of the interface. Discuss how the design supports the exhibition content without dominating it.]</p>
+        </section>
+
+        <section class="about-section">
+            <h2>6. Technical Architecture</h2>
+            <p>[To be completed — describe the technical stack: HTML/CSS/JS, Leaflet.js for the map, Bootstrap for layout, data stored in data.js, schede.js for extended content. Discuss the decision to use a static site without a backend.]</p>
+            <ul class="doc-list">
+                <li><strong>Map</strong>: Leaflet.js + OpenStreetMap / CartoDB tiles</li>
+                <li><strong>Data</strong>: <code>data.js</code> (locations, films, districtColors), <code>schede.js</code> (extended textual content)</li>
+                <li><strong>Layout</strong>: Bootstrap 5.3 + custom CSS</li>
+                <li><strong>External data</strong>: Film metadata from Wikidata</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>7. Data Sources</h2>
+            <p>[To be completed — list and discuss the sources used for location data, film metadata, historical information, and images. Acknowledge limitations and gaps in the data.]</p>
+            <ul class="doc-list">
+                <li><strong>Film data</strong>: Wikidata (directors, cast, genres, descriptions)</li>
+                <li><strong>Location data</strong>: OpenStreetMap, Google Maps, original research</li>
+                <li><strong>Historical texts</strong>: Original writing by Alice Sgarlata and Adriana Alborian</li>
+                <li><strong>Photography</strong>: [sources to be listed]</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>8. Known Limitations</h2>
+            <p>[To be completed — be honest about what the site does not do well: gaps in the film collection, locations without images, texts not yet written for all grid cells, missing narratives, etc.]</p>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
