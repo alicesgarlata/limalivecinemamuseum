@@ -14,11 +14,14 @@
     <div class="location-page">
         <a href="index.html" class="back-link">← Back to map</a>
 
-        <div class="location-header">
-            <h1 id="loc-name"></h1>
-            <div class="meta">
-                <span class="badge" id="loc-badge"></span>
-                <span class="loc-address" id="loc-address"></span>
+        <div class="location-header" id="loc-header">
+            <div class="location-header-overlay"></div>
+            <div class="location-header-content">
+                <h1 id="loc-name"></h1>
+                <div class="meta">
+                    <span class="badge" id="loc-badge"></span>
+                    <span class="loc-address" id="loc-address"></span>
+                </div>
             </div>
         </div>
 
@@ -55,6 +58,14 @@
         let currentTone = 'young'
 
         document.getElementById('loc-name').textContent = loc.name
+
+        // banner image
+        const header = document.getElementById('loc-header')
+        if (loc.image) {
+            header.style.backgroundImage = `url('${loc.image}')`
+        } else {
+            header.classList.add('no-image')
+        }
 
         const badge = document.getElementById('loc-badge')
         const districtLabel = Array.isArray(loc.district) ? loc.district.join(', ') : loc.district
