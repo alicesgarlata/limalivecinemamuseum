@@ -47,7 +47,7 @@
         <div class="site-footer-inner">
             <span class="site-footer-title">Lima Live Museum of Movie Locations</span>
             <span class="site-footer-divider">·</span>
-            <span>A project by Alice Sgarlata and Adriana Alborian</span>
+            <span>A project by Alice Sgarlata and Adriana Villafuerte</span>
             <span class="site-footer-divider">·</span>
             <span>Information Modeling and Web Technologies — Prof. Fabio Vitali, Università di Bologna</span>
         </div>
