@@ -169,10 +169,31 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 
 locations.forEach(function (loc) {
     if (!loc.lat || !loc.lng) return
-    const movieTitles = loc.movies.map(m => `${m.title} (${m.year})`).join('<br>') || '<i>no films listed yet</i>'
+
+    const movieTitles = loc.movies.length
+        ? loc.movies.map(m => `<span class="popup-film">${m.title} <span class="popup-film-year">(${m.year})</span></span>`).join('')
+        : '<span class="popup-no-films">No films listed yet</span>'
+
+    const imgHtml = loc.image
+        ? `<div class="popup-img-wrap"><img src="${loc.image}" alt="${loc.name}" class="popup-img"></div>`
+        : `<div class="popup-img-placeholder"></div>`
+
+    const districtColor = districtColors[Array.isArray(loc.district) ? loc.district[0] : loc.district] || '#888'
+
+    const popupHtml = `
+        <div class="popup-card">
+            ${imgHtml}
+            <div class="popup-body">
+                <div class="popup-district" style="color:${districtColor}">${Array.isArray(loc.district) ? loc.district.join(', ') : loc.district}</div>
+                <div class="popup-name">${loc.name}</div>
+                <div class="popup-films">${movieTitles}</div>
+                <a class="popup-link" href="location.html?name=${encodeURIComponent(loc.name)}">Tell me more →</a>
+            </div>
+        </div>`
+
     const marker = L.marker([loc.lat, loc.lng], { icon: createPin(loc.district) })
         .addTo(map)
-        .bindPopup(`<b>${loc.name}</b><br>${movieTitles}`)
+        .bindPopup(popupHtml, { maxWidth: 240, className: 'custom-popup' })
     markers.push({ name: loc.name, marker: marker })
 })
 
