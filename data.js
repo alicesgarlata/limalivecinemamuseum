@@ -49,7 +49,11 @@ const locations = [
     },
     "access": "Public — free access",
     "lat": -12.121701218863464,
-    "lng": -77.0303628643947
+    "lng": -77.0303628643947,
+    "cardDescription": {
+      "short": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
+      "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Five Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
+    }
   },
   {
     "name": "San Martin Square",
@@ -77,7 +81,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.050801747218538,
     "lng": -77.03449670489425,
-    "image": "images/Plaza_Mayor_de_Lima-1.jpg"
+    "image": "images/Plaza_Mayor_de_Lima-1.jpg",
+    "cardDescription": {
+      "short": "One of Lima's most iconic historic squares, surrounded by republican-era architecture that has anchored the city's identity for over a century.",
+      "long": "Plaza San Martín is the formal heart of Lima's Centro Histórico — grand colonnaded buildings, open sky, and the constant movement of city life below. It has appeared in Peruvian cinema since the 1930s, used across nearly a century to represent downtown Lima at different political and social moments. From populist comedies of the 1930s to the socially critical dramas of the 1990s, the square has remained a consistent visual shorthand for the city's civic memory."
+    }
   },
   {
     "name": "Malecon de Miraflores",
@@ -105,7 +113,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.124333888711332,
     "lng": -77.03836640674605,
-    "image": "images/limashore.jpg"
+    "image": "images/limashore.jpg",
+    "cardDescription": {
+      "short": "A clifftop walkway above the Pacific — one of Lima's most cinematic and melancholic views.",
+      "long": "The Malecón stretches along the edge of Miraflores, with the Pacific Ocean far below and paragliders drifting overhead. It's both beautiful and bittersweet — a boundary between the prosperous district behind it and the vastness of the sea. Filmmakers have used it to represent the aspirational, modern face of Lima, but also its loneliness. It appears in films spanning political drama, intimate personal stories, and documentary portraits of the city."
+    }
   },
   {
     "name": "Muelle Sur del Callao",
@@ -128,7 +140,11 @@ const locations = [
     },
     "access": "Restricted — port authority area, authorization required",
     "lat": -12.055384127368942,
-    "lng": -77.1506180858518
+    "lng": -77.1506180858518,
+    "cardDescription": {
+      "short": "The industrial port of Callao — raw, working-class, and far removed from the polished image of Miraflores.",
+      "long": "Callao's southern pier is where Lima's maritime economy operates, away from tourist routes and upscale neighborhoods. Its warehouses, loading docks, and working waterfront have made it a natural setting for films exploring crime, social marginality, and the rougher edges of the city. The port represents a Lima that rarely makes it into postcard images — gritty, functional, and deeply tied to the lives of those who work the docks."
+    }
   },
   {
     "name": "Playa Agua Dulce",
@@ -147,7 +163,11 @@ const locations = [
     },
     "access": "Public — free access",
     "lat": -12.162789787144682,
-    "lng": -77.02697982995775
+    "lng": -77.02697982995775,
+    "cardDescription": {
+      "short": "Lima's most democratic beach — packed, loud, and full of the city's summer energy.",
+      "long": "Agua Dulce is where Lima goes to the beach. Unlike the private clubs of Miraflores, this public shore draws people from across the city and across economic backgrounds, making it one of the rare spaces where the social mix of Lima becomes truly visible. Its crowded weekends and limeño summer atmosphere have made it a recurring reference in films that want to show the city not as an architectural stage, but as a living, breathing community."
+    }
   },
   {
     "name": "Bridge of Sighs - Puente de Los Suspiros",
@@ -166,7 +186,11 @@ const locations = [
     },
     "access": "Public — free access",
     "lat": -12.148642839701377,
-    "lng": -77.02247030601738
+    "lng": -77.02247030601738,
+    "cardDescription": {
+      "short": "A historic wooden bridge in Barranco — the most romantic landmark in Lima's artistic quarter.",
+      "long": "Puente de Los Suspiros is one of Lima's most photographed and most storied locations. Set in the bohemian district of Barranco, surrounded by colorful colonial houses and within earshot of the ocean, it carries the weight of over a century of love stories, art, and local legend. For Peruvian cinema, it represents a Lima of beauty and melancholy — a place that feels apart from the rest of the city, suspended somewhere between past and present."
+    }
   },
   {
     "name": "Magdalena Market - Mercado de Magdalena",
@@ -190,7 +214,11 @@ const locations = [
     "access": "Public — free access during market hours",
     "lat": -12.090168055532995,
     "lng": -77.07310081413262,
-    "image": "images/Mercado_de_Magdalena.jpg"
+    "image": "images/Mercado_de_Magdalena.jpg",
+    "cardDescription": {
+      "short": "A traditional neighborhood market where Lima's everyday life — food, noise, color, and community — plays out in full.",
+      "long": "Mercado de Magdalena is the kind of place that tells you more about how Lima works than any tourist itinerary could. Vendors, fresh produce, street food, and the constant negotiation of daily commerce fill its narrow aisles. Two films by Grupo Chaski — the collective known for their unflinching portraits of Lima's working-class and marginalized communities — used this market to frame stories about child poverty and life on the street, grounding fiction in the textures of real urban life."
+    }
   },
   {
     "name": "Calle Tarata",
@@ -210,7 +238,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.123488301294946,
     "lng": -77.0287904161149,
-    "image": "images/calle_tarata.jpg"
+    "image": "images/calle_tarata.jpg",
+    "cardDescription": {
+      "short": "A quiet Miraflores street marked forever by the 1992 Sendero Luminoso bombing that killed 25 civilians.",
+      "long": "Calle Tarata looks like many other residential streets in Miraflores — until you know its history. On the night of July 16, 1992, a car bomb planted by Sendero Luminoso exploded here, killing 25 people and injuring hundreds more. The attack became one of the defining events of Peru's internal conflict. Fabrizio Aguilar's 2009 film takes the street's name as its title, reconstructing that night to examine the human cost of political violence on ordinary lives."
+    }
   },
   {
     "name": "Avenida Brasil",
@@ -247,7 +279,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.078385714156722,
     "lng": -77.05694122354882,
-    "image": "images/avenida_brasil.jpg"
+    "image": "images/avenida_brasil.jpg",
+    "cardDescription": {
+      "short": "A major Lima avenue that crosses the city like a vein — busy, unglamorous, and completely alive.",
+      "long": "Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city."
+    }
   },
   {
     "name": "Jirón de la Unión",
@@ -283,7 +319,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.04958142862287,
     "lng": -77.03413897419874,
-    "image": "images/jiron_de_la_union.jpg"
+    "image": "images/jiron_de_la_union.jpg",
+    "cardDescription": {
+      "short": "Lima's main pedestrian street — the commercial and social spine of the Centro Histórico.",
+      "long": "Jirón de la Unión has been the pulse of downtown Lima for generations. Lined with shops, food stalls, street sellers, and passersby from every part of the country, it concentrates the movement and contradictions of the Centro Histórico in a single walkable artery. Five films across three decades have used it — from the social comedies of the 1960s to the urban dramas of the 1990s — consistently returning to this street as a visual index of how the city's center has changed, and what has stayed the same."
+    }
   },
   {
     "name": "Parque de las Leyendas",
@@ -297,7 +337,11 @@ const locations = [
     },
     "access": "Public — paid entry required",
     "lat": -12.066965354455284,
-    "lng": -77.08691083427522
+    "lng": -77.08691083427522,
+    "cardDescription": {
+      "short": "Part zoo, part archaeological site — one of Lima's most genuinely unusual public spaces.",
+      "long": "Parque de las Leyendas combines a zoo with the pre-Columbian ruins of the Maranga complex, creating a public space unlike anything else in the city. Families come for the animals; the grounds hold centuries of Andean history beneath them. It represents the layered nature of Lima itself — a modern city built over and alongside ancient civilization, where children can encounter llamas and Inca walls in the same afternoon."
+    }
   },
   {
     "name": "Institución Educativa 3004 España",
@@ -316,7 +360,11 @@ const locations = [
     },
     "access": "Restricted — educational institution",
     "lat": -12.03668676454872,
-    "lng": -77.02701301478236
+    "lng": -77.02701301478236,
+    "cardDescription": {
+      "short": "A public school in Rímac, one of Lima's oldest districts — a setting for stories about childhood and community.",
+      "long": "Schools like IE 3004 España are where Lima's public life begins for most of its residents. Located in Rímac — a district with deep roots in the city's colonial and republican history — the school represents the infrastructure of everyday urban childhood, far from elite institutions. Its appearance in film reflects a broader interest in the realities of public education and community life in Lima's older, working-class neighborhoods."
+    }
   },
   {
     "name": "Rio Rimac - Rimac River",
@@ -352,7 +400,11 @@ const locations = [
     "access": "Public — open natural area",
     "lat": -12.043923,
     "lng": -77.020982,
-    "image": "images/rio_rimac.jpg"
+    "image": "images/rio_rimac.jpg",
+    "cardDescription": {
+      "short": "Lima's ancient river — geographically central, socially divided, and cinematically charged.",
+      "long": "The Rímac gives the city one of its oldest names and one of its sharpest social boundaries. Historically, crossing the river meant crossing into a different Lima — one associated with marginality, poverty, and the urban struggles that more prosperous districts preferred not to see. Five films have used the river to explore exactly that divide: the Rímac as a threshold between two cities that exist side by side but rarely look at each other."
+    }
   },
   {
     "name": "Isla El Frontón",
@@ -372,7 +424,11 @@ const locations = [
     "access": "Restricted — limited access, authorization required",
     "lat": -12.116534193316653,
     "lng": -77.1813689770822,
-    "image": "images/El_Fronton.jpg"
+    "image": "images/El_Fronton.jpg",
+    "cardDescription": {
+      "short": "A decommissioned island prison off Callao — the site of a 1986 massacre and a symbol of state violence.",
+      "long": "El Frontón was one of Peru's most feared maximum-security prisons, housing Shining Path and MRTA prisoners during the country's internal conflict. In June 1986, during a coordinated prison uprising, Peruvian security forces stormed the island and killed hundreds of inmates. The event became one of the defining human rights scandals of the period. In Alias La Gringa, the island frames the story of a man released from Frontón who must navigate a city that has no place for him."
+    }
   },
   {
     "name": "Lima Golf Club",
@@ -400,7 +456,11 @@ const locations = [
     "access": "Private — members and guests only",
     "lat": -12.101500033881788,
     "lng": -77.03853518755118,
-    "image": "images/Lima_Golf_Club.jpg"
+    "image": "images/Lima_Golf_Club.jpg",
+    "cardDescription": {
+      "short": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
+      "long": "The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
+    }
   },
   {
     "name": "Estadio Lolo Fernandez",
@@ -420,7 +480,11 @@ const locations = [
     "access": "Restricted — event-based access",
     "lat": -12.04958142862287,
     "lng": -77.03413897419874,
-    "image": "images/estadio_lol_fernandez.jpg"
+    "image": "images/estadio_lol_fernandez.jpg",
+    "cardDescription": {
+      "short": "The home of Universitario de Deportes — Peru's most beloved football club and a symbol of national sporting identity.",
+      "long": "Estadio Lolo Fernández carries over a century of football history. Home to 'La U', one of Peru's most supported clubs, it is a space of collective memory, passion, and community for fans across the country. The 2024 documentary Esta es la U was filmed here in full to mark the club's centenary — a celebration of not just sporting achievement, but of what football means to Peruvian cultural identity."
+    }
   },
   {
     "name": "Residencial San Felipe",
@@ -440,7 +504,11 @@ const locations = [
     "access": "Semi-public — residential area, respect private zones",
     "lat": -12.089083634210999,
     "lng": -77.0546443877374,
-    "image": "images/Residencial_San_Felipe.jpg"
+    "image": "images/Residencial_San_Felipe.jpg",
+    "cardDescription": {
+      "short": "A landmark modernist housing complex from the 1960s — an emblem of Lima's mid-century urban ambitions.",
+      "long": "Built between 1960 and 1972, Residencial San Felipe was one of Lima's boldest urban planning experiments: a large-scale modernist residential complex in Jesús María, designed to house a new professional middle class. Its distinctive brutalist architecture remains recognizable across the city's skyline. In La Hora Final, the complex serves as a setting for the clandestine police operations of the early 1990s — its rationalist geometry providing a cold backdrop for the film's portrait of state violence."
+    }
   },
   {
     "name": "Universidad Nacional Mayor de San Marcos",
@@ -467,7 +535,11 @@ const locations = [
     "access": "Semi-public — controlled campus access",
     "lat": -12.050621401377771,
     "lng": -77.08645051563546,
-    "image": "images/UNMSM.jpg"
+    "image": "images/UNMSM.jpg",
+    "cardDescription": {
+      "short": "The oldest university in the Americas, founded in 1551 — a historic center of Peruvian intellectual and political life.",
+      "long": "San Marcos is not just a university; it is an institution that has shaped Peruvian history for nearly five centuries. During the internal conflict of the 1980s and 1990s, its campus was a focal point of political tension, associated with radical student movements and state surveillance. La Hora Final draws on this history directly, using UNMSM as a location tied to the political violence of the era. The university has also appeared in films about Peruvian sports culture, reflecting the breadth of its public significance."
+    }
   },
   {
     "name": "Pontificia Universidad Católica del Perú",
@@ -487,7 +559,11 @@ const locations = [
     "access": "Semi-public — controlled campus access",
     "lat": -12.06900469530343,
     "lng": -77.07819466909773,
-    "image": "images/Universidad_Catolica.jpg"
+    "image": "images/Universidad_Catolica.jpg",
+    "cardDescription": {
+      "short": "One of Peru's most prestigious private universities — a setting that evokes Lima's educated middle class and the 1980s.",
+      "long": "PUCP has shaped Lima's intellectual and professional landscape for over a century. Its leafy campus in San Miguel represents a particular social world — that of Lima's educated, urban middle class, with its cultural references, political debates, and social codes. In Viaje a Tombuctú, the university appears as part of a personal geography: the Lima a woman remembers from her youth in the 1980s, before leaving and building another life elsewhere."
+    }
   },
   {
     "name": "Larcomar",
@@ -519,7 +595,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.1318722790964,
     "lng": -77.03047475216545,
-    "image": "images/Larcomar.jpg"
+    "image": "images/Larcomar.jpg",
+    "cardDescription": {
+      "short": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
+      "long": "Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
+    }
   },
   {
     "name": "Plaza Agustín Gutiérrez",
@@ -547,7 +627,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.11031660293372,
     "lng": -77.03690308601313,
-    "image": "images/ovalo_gutierrez.jpg"
+    "image": "images/ovalo_gutierrez.jpg",
+    "cardDescription": {
+      "short": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
+      "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
+    }
   },
   {
     "name": "Bosque El Olivar",
@@ -565,7 +649,11 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.10211544904528,
     "lng": -77.03524796521171,
-    "image": "images/bosque_el_olivar.jpg"
+    "image": "images/bosque_el_olivar.jpg",
+    "cardDescription": {
+      "short": "An ancient grove of olive trees in San Isidro — one of Lima's most peaceful and unexpected corners.",
+      "long": "El Olivar is one of Lima's oldest green spaces, planted with olive trees brought from Spain in the 16th century. In the middle of San Isidro's corporate and diplomatic district, the park offers something rare in the capital: genuine quiet, shade, and the feeling of being somewhere that predates the city around it. Its historic and sensory qualities have made it a natural choice for films that need a Lima that feels removed from urban noise — a space that carries time differently from the rest of the city."
+    }
   }
 ];
 
