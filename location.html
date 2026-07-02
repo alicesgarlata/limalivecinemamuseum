@@ -257,6 +257,24 @@
                 tabContent.innerHTML = schedaData[tabs[0].key]
             }
         }
+
+        // ── previous / next location ──────────────────────────────────────────
+        const locIndex = locations.findIndex(l => l.name === loc.name)
+        const prevLoc  = locIndex > 0 ? locations[locIndex - 1] : null
+        const nextLoc  = locIndex < locations.length - 1 ? locations[locIndex + 1] : null
+
+        const prevNextBar = document.createElement('div')
+        prevNextBar.className = 'prev-next-bar'
+        prevNextBar.innerHTML = `
+            ${prevLoc
+                ? `<a class="prev-next-btn prev-next-prev" href="location.html?name=${encodeURIComponent(prevLoc.name)}">← ${prevLoc.name}</a>`
+                : `<span class="prev-next-btn prev-next-disabled">← First location</span>`}
+            <a class="prev-next-home" href="index.html">↑ Map</a>
+            ${nextLoc
+                ? `<a class="prev-next-btn prev-next-next" href="location.html?name=${encodeURIComponent(nextLoc.name)}">${nextLoc.name} →</a>`
+                : `<span class="prev-next-btn prev-next-disabled">Last location →</span>`}
+        `
+        document.querySelector('.location-page').appendChild(prevNextBar)
     </script>
 </body>
 </html>
