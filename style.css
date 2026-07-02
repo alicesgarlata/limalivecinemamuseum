@@ -297,6 +297,16 @@ hr {
     margin-bottom: 8px;
 }
 
+.description-long {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
 .pelicula {
     font-size: 13px;
     color: #555;
