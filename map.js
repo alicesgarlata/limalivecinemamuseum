@@ -122,6 +122,9 @@ function toggleDetail(card, locName, lat, lng) {
         c.classList.remove('open')
         c.querySelector('.extra').classList.remove('open')
         c.querySelector('.btn-more').textContent = 'Tell me more…'
+        // remove any prev/next bar previously injected
+        const bar = c.querySelector('.card-prev-next')
+        if (bar) bar.remove()
     })
 
     if (!isOpen) {
@@ -132,6 +135,41 @@ function toggleDetail(card, locName, lat, lng) {
                 if (m.name === locName) m.marker.openPopup()
             })
         }
+
+        // inject prev/next navigation into the open card
+        const allCards = Array.from(document.querySelectorAll('.card'))
+        const idx = allCards.indexOf(card)
+        const prevCard = idx > 0 ? allCards[idx - 1] : null
+        const nextCard = idx < allCards.length - 1 ? allCards[idx + 1] : null
+
+        const bar = document.createElement('div')
+        bar.className = 'card-prev-next'
+        if (prevCard) {
+            const prevBtn = document.createElement('button')
+            prevBtn.className = 'card-nav-btn'
+            prevBtn.textContent = '← ' + prevCard.querySelector('[data-field="name"]').textContent
+            prevBtn.addEventListener('click', function (e) {
+                e.stopPropagation()
+                prevCard.click()
+                prevCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+            })
+            bar.appendChild(prevBtn)
+        } else {
+            const spacer = document.createElement('span')
+            bar.appendChild(spacer)
+        }
+        if (nextCard) {
+            const nextBtn = document.createElement('button')
+            nextBtn.className = 'card-nav-btn card-nav-next'
+            nextBtn.textContent = nextCard.querySelector('[data-field="name"]').textContent + ' →'
+            nextBtn.addEventListener('click', function (e) {
+                e.stopPropagation()
+                nextCard.click()
+                nextCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+            })
+            bar.appendChild(nextBtn)
+        }
+        card.appendChild(bar)
     }
 }
 
