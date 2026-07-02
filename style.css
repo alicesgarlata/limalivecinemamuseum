@@ -903,3 +903,55 @@ hr {
     padding: 8px 10px;
     line-height: 1.3;
 }
+
+/* ── text grid controls (location.html) ─────────────────────────────────────── */
+
+.text-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.difficulty-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.difficulty-label {
+    font-size: 11px;
+    color: #aaa;
+    min-width: 72px;
+    text-align: center;
+}
+
+.difficulty-btn {
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.difficulty-btn:hover:not(:disabled) {
+    border-color: #aaa;
+    color: #1a1a1a;
+}
+
+.difficulty-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.loc-fallback-note {
+    font-size: 11px;
+    color: #bbb;
+    font-style: italic;
+    margin-top: -8px;
+    margin-bottom: 12px;
+    display: none;
+}
