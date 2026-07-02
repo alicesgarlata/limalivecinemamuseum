@@ -483,30 +483,6 @@ hr {
     display: none;
 }
 
-.tone-bar {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-}
-
-.tone-btn {
-    font-size: 12px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    border: 1px solid #ddd;
-    background: transparent;
-    color: #888;
-    cursor: pointer;
-}
-
-.tone-btn.active {
-    background: #1a1a1a;
-    color: white;
-    border-color: #1a1a1a;
-}
-
 .loc-description {
     transition: opacity 0.2s ease;
     font-size: 15px;
@@ -905,13 +881,6 @@ hr {
 }
 
 /* ── text grid controls (location.html) ─────────────────────────────────────── */
-
-.text-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 1.25rem;
-}
 
 .difficulty-bar {
     display: flex;
