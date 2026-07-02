@@ -28,14 +28,6 @@
         <div class="location-grid">
             <div class="location-main">
 
-                <div class="text-controls">
-                    <div class="tone-bar">
-                        <button class="tone-btn active" data-tone="young">Young</button>
-                        <button class="tone-btn" data-tone="adult">Adult</button>
-                        <button class="tone-btn" data-tone="professional">Professional</button>
-                    </div>
-                </div>
-
                 <div class="difficulty-bar">
                     <button class="difficulty-btn" id="btn-simpler">← Too difficult</button>
                     <span class="difficulty-label" id="difficulty-label">Adult</span>
@@ -138,16 +130,6 @@
             btnShorter.disabled = lengthIdx === 0
             btnLonger.disabled  = lengthIdx === LENGTHS.length - 1
         }
-
-        // ── tone controls (pill buttons) ──────────────────────────────────────
-        document.querySelectorAll('.tone-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                currentTone = this.dataset.tone
-                document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'))
-                this.classList.add('active')
-                renderDescription()
-            })
-        })
 
         // ── difficulty (competence) arrow controls ────────────────────────────
         btnSimpler.addEventListener('click', function () {
