@@ -34,17 +34,18 @@
                         <button class="tone-btn" data-tone="adult">Adult</button>
                         <button class="tone-btn" data-tone="professional">Professional</button>
                     </div>
-                    <div class="length-bar">
-                        <button class="length-btn active" data-length="mid">Mid</button>
-                        <button class="length-btn" data-length="brief">Brief</button>
-                        <button class="length-btn" data-length="long">Long</button>
-                    </div>
                 </div>
 
                 <div class="difficulty-bar">
                     <button class="difficulty-btn" id="btn-simpler">← Too difficult</button>
                     <span class="difficulty-label" id="difficulty-label">Adult</span>
                     <button class="difficulty-btn" id="btn-harder">Too simple →</button>
+                </div>
+
+                <div class="difficulty-bar">
+                    <button class="difficulty-btn" id="btn-shorter">← Too long</button>
+                    <span class="difficulty-label" id="length-label">Mid</span>
+                    <button class="difficulty-btn" id="btn-longer">Too short →</button>
                 </div>
 
                 <p id="loc-description" class="loc-description"></p>
@@ -108,26 +109,37 @@
         }
 
         // ── render description ────────────────────────────────────────────────
-        const descEl     = document.getElementById('loc-description')
-        const noteEl     = document.getElementById('loc-fallback-note')
-        const labelEl    = document.getElementById('difficulty-label')
-        const btnSimpler = document.getElementById('btn-simpler')
-        const btnHarder  = document.getElementById('btn-harder')
+        const descEl      = document.getElementById('loc-description')
+        const noteEl      = document.getElementById('loc-fallback-note')
+        const labelEl     = document.getElementById('difficulty-label')
+        const lengthLbl   = document.getElementById('length-label')
+        const btnSimpler  = document.getElementById('btn-simpler')
+        const btnHarder   = document.getElementById('btn-harder')
+        const btnShorter  = document.getElementById('btn-shorter')
+        const btnLonger   = document.getElementById('btn-longer')
+
+        const LENGTH_LABELS = { brief: 'Brief', mid: 'Mid', long: 'Long' }
 
         function renderDescription() {
             const { text, fallback } = resolveText(currentTone, currentLength)
             descEl.textContent = text
 
-            noteEl.textContent  = fallback ? '(Full version for this level coming soon)' : ''
+            noteEl.textContent   = fallback ? '(Full version for this level coming soon)' : ''
             noteEl.style.display = fallback ? 'block' : 'none'
 
-            const toneIdx = TONES.indexOf(currentTone)
-            labelEl.textContent = currentTone.charAt(0).toUpperCase() + currentTone.slice(1)
+            const toneIdx   = TONES.indexOf(currentTone)
+            const lengthIdx = LENGTHS.indexOf(currentLength)
+
+            labelEl.textContent   = currentTone.charAt(0).toUpperCase() + currentTone.slice(1)
+            lengthLbl.textContent = LENGTH_LABELS[currentLength]
+
             btnSimpler.disabled = toneIdx === 0
             btnHarder.disabled  = toneIdx === TONES.length - 1
+            btnShorter.disabled = lengthIdx === 0
+            btnLonger.disabled  = lengthIdx === LENGTHS.length - 1
         }
 
-        // ── tone controls ─────────────────────────────────────────────────────
+        // ── tone controls (pill buttons) ──────────────────────────────────────
         document.querySelectorAll('.tone-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 currentTone = this.dataset.tone
@@ -137,17 +149,7 @@
             })
         })
 
-        // ── length controls ───────────────────────────────────────────────────
-        document.querySelectorAll('.length-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                currentLength = this.dataset.length
-                document.querySelectorAll('.length-btn').forEach(b => b.classList.remove('active'))
-                this.classList.add('active')
-                renderDescription()
-            })
-        })
-
-        // ── difficulty (competence) controls ──────────────────────────────────
+        // ── difficulty (competence) arrow controls ────────────────────────────
         btnSimpler.addEventListener('click', function () {
             const idx = TONES.indexOf(currentTone)
             if (idx > 0) {
@@ -165,6 +167,22 @@
                 document.querySelectorAll('.tone-btn').forEach(b => {
                     b.classList.toggle('active', b.dataset.tone === currentTone)
                 })
+                renderDescription()
+            }
+        })
+
+        // ── length arrow controls ─────────────────────────────────────────────
+        btnShorter.addEventListener('click', function () {
+            const idx = LENGTHS.indexOf(currentLength)
+            if (idx > 0) {
+                currentLength = LENGTHS[idx - 1]
+                renderDescription()
+            }
+        })
+        btnLonger.addEventListener('click', function () {
+            const idx = LENGTHS.indexOf(currentLength)
+            if (idx < LENGTHS.length - 1) {
+                currentLength = LENGTHS[idx + 1]
                 renderDescription()
             }
         })
