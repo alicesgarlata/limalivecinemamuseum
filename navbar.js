@@ -1,6 +1,8 @@
 (function () {
     const page = window.location.pathname.split('/').pop()
     const mapActive   = (page === 'index.html' || page === 'location.html' || page === '')
+    const narActive   = (page === 'itineraries.html')
+    const docActive   = (page === 'documentation.html')
     const aboutActive = (page === 'disclaimer_page.html')
 
     const nav = document.createElement('nav')
@@ -21,6 +23,12 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link ${mapActive ? 'active' : ''}" href="index.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ${narActive ? 'active' : ''}" href="itineraries.html">Narratives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ${docActive ? 'active' : ''}" href="documentation.html">Documentation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${aboutActive ? 'active' : ''}" href="disclaimer_page.html">About</a>
@@ -55,6 +63,9 @@
         document.body.appendChild(footer)
     })
 
+    // Transparent-to-solid scroll effect (home page only).
+    // We wait for DOMContentLoaded because navbar.js runs before the rest of
+    // the page HTML is parsed — the .hero element doesn't exist yet at this point.
     document.addEventListener('DOMContentLoaded', function () {
         const hero = document.querySelector('.hero')
 
