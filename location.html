@@ -27,13 +27,28 @@
 
         <div class="location-grid">
             <div class="location-main">
-                <div class="tone-bar">
-                    <button class="tone-btn active" onclick="setTone('young', this)">Young</button>
-                    <button class="tone-btn" onclick="setTone('adult', this)">Adult</button>
-                    <button class="tone-btn" onclick="setTone('professional', this)">Professional</button>
+
+                <div class="text-controls">
+                    <div class="tone-bar">
+                        <button class="tone-btn active" data-tone="young">Young</button>
+                        <button class="tone-btn" data-tone="adult">Adult</button>
+                        <button class="tone-btn" data-tone="professional">Professional</button>
+                    </div>
+                    <div class="length-bar">
+                        <button class="length-btn active" data-length="mid">Mid</button>
+                        <button class="length-btn" data-length="brief">Brief</button>
+                        <button class="length-btn" data-length="long">Long</button>
+                    </div>
+                </div>
+
+                <div class="difficulty-bar">
+                    <button class="difficulty-btn" id="btn-simpler">← Too difficult</button>
+                    <span class="difficulty-label" id="difficulty-label">Adult</span>
+                    <button class="difficulty-btn" id="btn-harder">Too simple →</button>
                 </div>
 
                 <p id="loc-description" class="loc-description"></p>
+                <p class="loc-fallback-note" id="loc-fallback-note"></p>
 
                 <p class="loc-access" id="loc-access"></p>
 
@@ -55,11 +70,14 @@
         const locationName = params.get('name')
         const loc = locations.find(l => l.name === locationName) || locations[0]
 
-        let currentTone = 'young'
+        // ── state ─────────────────────────────────────────────────────────────
+        const TONES   = ['young', 'adult', 'professional']
+        const LENGTHS = ['brief', 'mid', 'long']
+        let currentTone   = 'adult'
+        let currentLength = 'mid'
 
+        // ── banner ────────────────────────────────────────────────────────────
         document.getElementById('loc-name').textContent = loc.name
-
-        // banner image
         const header = document.getElementById('loc-header')
         if (loc.image) {
             header.style.backgroundImage = `url('${loc.image}')`
@@ -70,31 +88,89 @@
         const badge = document.getElementById('loc-badge')
         const districtLabel = Array.isArray(loc.district) ? loc.district.join(', ') : loc.district
         const districtClass = districtLabel.toLowerCase()
-            .replace(/\s+/g, '-')
-            .replace(/[àáâ]/g, 'a')
-            .replace(/[èéê]/g, 'e')
-            .replace(/[ùú]/g, 'u')
-            .replace(/[íì]/g, 'i')
-            .replace(/[ñ]/g, 'n')
+            .replace(/\s+/g, '-').replace(/[àáâ]/g, 'a').replace(/[èéê]/g, 'e')
+            .replace(/[ùú]/g, 'u').replace(/[íì]/g, 'i').replace(/[ñ]/g, 'n')
             .split(',')[0].trim()
         badge.textContent = districtLabel
         badge.className = 'badge ' + districtClass
-
-        if (loc.address) {
-            document.getElementById('loc-address').textContent = loc.address
-        }
-
-        const descEl = document.getElementById('loc-description')
-        descEl.textContent = loc.descriptions.young
-
+        if (loc.address) document.getElementById('loc-address').textContent = loc.address
         document.getElementById('loc-access').textContent = loc.access
 
-        function setTone(tone, btn) {
-            currentTone = tone
-            document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'))
-            btn.classList.add('active')
-            descEl.textContent = loc.descriptions[tone]
+        // ── text grid resolver ────────────────────────────────────────────────
+        // Returns { text, fallback: bool } for the current tone+length combination.
+        // Falls back to mid of same tone if the exact cell is missing.
+        function resolveText(tone, length) {
+            const t = loc.texts && loc.texts[tone]
+            if (!t) return { text: loc.descriptions ? loc.descriptions[tone] || '' : '', fallback: false }
+            if (t[length]) return { text: t[length], fallback: false }
+            if (t['mid'])  return { text: t['mid'], fallback: true }
+            return { text: '', fallback: true }
         }
+
+        // ── render description ────────────────────────────────────────────────
+        const descEl     = document.getElementById('loc-description')
+        const noteEl     = document.getElementById('loc-fallback-note')
+        const labelEl    = document.getElementById('difficulty-label')
+        const btnSimpler = document.getElementById('btn-simpler')
+        const btnHarder  = document.getElementById('btn-harder')
+
+        function renderDescription() {
+            const { text, fallback } = resolveText(currentTone, currentLength)
+            descEl.textContent = text
+
+            noteEl.textContent  = fallback ? '(Full version for this level coming soon)' : ''
+            noteEl.style.display = fallback ? 'block' : 'none'
+
+            const toneIdx = TONES.indexOf(currentTone)
+            labelEl.textContent = currentTone.charAt(0).toUpperCase() + currentTone.slice(1)
+            btnSimpler.disabled = toneIdx === 0
+            btnHarder.disabled  = toneIdx === TONES.length - 1
+        }
+
+        // ── tone controls ─────────────────────────────────────────────────────
+        document.querySelectorAll('.tone-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                currentTone = this.dataset.tone
+                document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'))
+                this.classList.add('active')
+                renderDescription()
+            })
+        })
+
+        // ── length controls ───────────────────────────────────────────────────
+        document.querySelectorAll('.length-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                currentLength = this.dataset.length
+                document.querySelectorAll('.length-btn').forEach(b => b.classList.remove('active'))
+                this.classList.add('active')
+                renderDescription()
+            })
+        })
+
+        // ── difficulty (competence) controls ──────────────────────────────────
+        btnSimpler.addEventListener('click', function () {
+            const idx = TONES.indexOf(currentTone)
+            if (idx > 0) {
+                currentTone = TONES[idx - 1]
+                document.querySelectorAll('.tone-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.tone === currentTone)
+                })
+                renderDescription()
+            }
+        })
+        btnHarder.addEventListener('click', function () {
+            const idx = TONES.indexOf(currentTone)
+            if (idx < TONES.length - 1) {
+                currentTone = TONES[idx + 1]
+                document.querySelectorAll('.tone-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.tone === currentTone)
+                })
+                renderDescription()
+            }
+        })
+
+        // ── initial render ────────────────────────────────────────────────────
+        renderDescription()
 
         const filmsContainer = document.getElementById('loc-films')
         const filmsHeading = document.getElementById('loc-films-heading')
