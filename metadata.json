@@ -95,7 +95,20 @@
     "cast": ["Victor Talledo, Señor English, Mercedes Aguilar"], 
     "production": ["Ariel Film Production"], 
     "release_date": "1993-01-01" }, 
- 
+ {
+  "title": "Viejos amigos",
+  "year": 2014,
+  "wikidata_id": "Q60825921",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q60825921",
+  "director": ["Fernando Villarán Luján"],
+  "countries": ["Perú"],
+  "genres": ["Comedia"],
+  "cast": [
+    "Ricardo Blume", "Carlos Gassols", "Enrique Victoria Fernández",
+  ],
+  "production": ["Mama Okllo Films"],
+  "release_date": "2014-08-14"
+},
  { "title": "Lima 13", 
     "year": 2012, 
     "wikidata_id": "Q104161925", 
@@ -118,16 +131,19 @@
     "production": ["La Gorda Films"], 
     "release_date": "2024-12-12" }, 
  
- { "title": "Utopía", 
-    "year": 2018, 
-    "wikidata_id": "Q56886991", 
-    "wikidata_url": "https://www.wikidata.org/wiki/Q56886991", 
-    "director": ["Gino Tassara", "Jorge Vilela"], 
-    "countries": ["Perú"], 
-    "genres": ["Drama"], 
-    "cast": ["Renzo Schuller", "Natalia Salas"], 
-    "production": ["Sinargollas Producciones"], 
-    "release_date": "2018-09-27" }, 
+{
+  "title": "Arde Lima",
+  "year": 2023,
+  "wikidata_id": "Q123509455",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q123509455",
+  "director": ["Alberto Castro"],
+  "countries": ["Perú"],
+  "genres": ["Documental"],
+  "cast": [
+    "Tany de la Riva", "Georgia Hart", "La Langosta", "Harmonik Minaj",  ],
+  "production": ["Arde Lima Cine"],
+  "release_date": "2023-11-15",
+}, 
     
  { "title": "Caídos del Cielo", 
     "year": 1990, 
@@ -139,7 +155,27 @@
     "cast": ["Gustavo Bueno", "Marisol Palacios"], 
     "production": ["Inca Films"], 
     "release_date": "1990-11-01" }, 
- 
+
+{
+  "title": "Un mundo para Julius",
+  "year": 2021,
+  "wikidata_id": "Q110816454",
+  "wikidata_url": "https://www.wikidata.org/wiki/Q110816454",
+  "director": ["Rossana Díaz Costa"],
+  "countries": ["Perú", "Argentina", "España"],
+  "genres": ["Drama"],
+  "cast": [
+    "Augusto Linares",
+    "Rodrigo Barba",
+    "Pamela Saco Polini",
+    "Fiorella de Ferrari",
+    "Mayella Lloclla",
+    "Nacho Fresneda",
+    "Camila Mac Lennan", ],
+  "production": ["RTVE", "VisionaTV", "Tombuktú Films", "Machaco Films"],
+  "release_date": "2021-10-15",
+},
+    
  { "title": "La Luz en el Cerro", 
     "year": 2016, 
     "wikidata_id": "Q123483054", 
@@ -161,6 +197,21 @@
     "cast": ["Andrea Patriau", "Jair García"], 
     "production": ["Tombuktu Films, Machaco Films"], 
     "release_date": "2014-05-29" }, 
+
+{
+  "title": "El embajador y yo",
+  "year": 1966,
+  "wikidata_id": null,
+  "wikidata_url": null,
+  "director": ["Óscar Kantor"],
+  "countries": ["Perú"],
+  "genres": [drama],
+  "cast": [
+    "Kiko Ledgard", "Saby Kamalich",  "Patricia Aspíllaga", "Enrique Victoria Fernández",  "Manie Rey","Gladys Arista"
+  ],
+  "production": [],
+  "release_date": null,
+},
  
  { "title": "Muero por Muriel", 
     "year": 2007, 
