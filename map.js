@@ -185,51 +185,26 @@ function toggleDetail(card, locName, lat, lng) {
 
 function expandCard(e, btn) {
     e.stopPropagation()
-    const extra = btn.nextElementSibling
-    const card  = btn.closest('.card')
+    const extra  = btn.nextElementSibling
+    const card   = btn.closest('.card')
     const descEl = card.querySelector('.description')
     const isOpen = extra.classList.contains('open')
 
-    if (isOpen) {
-        // ── Tell me less: dissolvenza → testo breve ───────────────────────
-        descEl.style.transition = 'opacity 0.25s'
-        descEl.style.opacity = '0'
-        setTimeout(function () {
-            descEl.textContent = card.dataset.textShort
-            descEl.style.opacity = '1'
-        }, 250)
-        extra.classList.remove('open')
-        btn.textContent = 'Tell me more…'
-    } else {
-        // ── Tell me more: effetto macchina da scrivere ────────────────────
-        extra.classList.add('open')
-        btn.textContent = 'Tell me less'
+    const nextText = isOpen ? card.dataset.textShort : card.dataset.textLong
 
-        const fullText = card.dataset.textLong || card.dataset.textShort
-        descEl.textContent = ''
-        descEl.style.transition = 'none'
+    descEl.style.transition = 'opacity 0.25s'
+    descEl.style.opacity = '0'
+    setTimeout(function () {
+        descEl.textContent = nextText
         descEl.style.opacity = '1'
-
-        let i = 0
-        const speed = 12   // ms per carattere — regola qui se vuoi più lento/veloce
-
-        // aggiungo un cursore lampeggiante durante la scrittura
-        const cursor = document.createElement('span')
-        cursor.className = 'typewriter-cursor'
-        cursor.textContent = '|'
-        descEl.appendChild(cursor)
-
-        function type() {
-            if (i < fullText.length) {
-                cursor.insertAdjacentText('beforebegin', fullText[i])
-                i++
-                setTimeout(type, speed)
-            } else {
-                cursor.remove()
-            }
+        if (isOpen) {
+            extra.classList.remove('open')
+            btn.textContent = 'Tell me more…'
+        } else {
+            extra.classList.add('open')
+            btn.textContent = 'Tell me less'
         }
-        type()
-    }
+    }, 250)
 }
 
 // ── district filter ───────────────────────────────────────────────────────────
