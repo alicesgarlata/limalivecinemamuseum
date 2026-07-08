@@ -94,7 +94,8 @@ function showCard(data) {
         })
 
         card.querySelector('[data-field="description"]').textContent = loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
-        card.querySelector('[data-field="description-long"]').textContent = loc.cardDescription ? loc.cardDescription.long : ''
+        card.dataset.textShort = loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
+        card.dataset.textLong  = loc.cardDescription ? loc.cardDescription.long  : (loc.descriptions.adult || '')
         card.querySelector('[data-field="access"]').textContent = loc.access
 
         const link = card.querySelector('[data-field="link"]')
@@ -122,6 +123,15 @@ function toggleDetail(card, locName, lat, lng) {
         c.classList.remove('open')
         c.querySelector('.extra').classList.remove('open')
         c.querySelector('.btn-more').textContent = 'Tell me more…'
+        // reset descrizione al testo breve e rimuovi eventuale cursore typewriter
+        const descEl = c.querySelector('.description')
+        const cursor = descEl && descEl.querySelector('.typewriter-cursor')
+        if (cursor) cursor.remove()
+        if (descEl && c.dataset.textShort) {
+            descEl.style.transition = 'none'
+            descEl.style.opacity = '1'
+            descEl.textContent = c.dataset.textShort
+        }
         // remove any prev/next bar previously injected
         const bar = c.querySelector('.card-prev-next')
         if (bar) bar.remove()
@@ -176,9 +186,50 @@ function toggleDetail(card, locName, lat, lng) {
 function expandCard(e, btn) {
     e.stopPropagation()
     const extra = btn.nextElementSibling
+    const card  = btn.closest('.card')
+    const descEl = card.querySelector('.description')
     const isOpen = extra.classList.contains('open')
-    extra.classList.toggle('open')
-    btn.textContent = isOpen ? 'Tell me more…' : 'Tell me less'
+
+    if (isOpen) {
+        // ── Tell me less: dissolvenza → testo breve ───────────────────────
+        descEl.style.transition = 'opacity 0.25s'
+        descEl.style.opacity = '0'
+        setTimeout(function () {
+            descEl.textContent = card.dataset.textShort
+            descEl.style.opacity = '1'
+        }, 250)
+        extra.classList.remove('open')
+        btn.textContent = 'Tell me more…'
+    } else {
+        // ── Tell me more: effetto macchina da scrivere ────────────────────
+        extra.classList.add('open')
+        btn.textContent = 'Tell me less'
+
+        const fullText = card.dataset.textLong || card.dataset.textShort
+        descEl.textContent = ''
+        descEl.style.transition = 'none'
+        descEl.style.opacity = '1'
+
+        let i = 0
+        const speed = 12   // ms per carattere — regola qui se vuoi più lento/veloce
+
+        // aggiungo un cursore lampeggiante durante la scrittura
+        const cursor = document.createElement('span')
+        cursor.className = 'typewriter-cursor'
+        cursor.textContent = '|'
+        descEl.appendChild(cursor)
+
+        function type() {
+            if (i < fullText.length) {
+                cursor.insertAdjacentText('beforebegin', fullText[i])
+                i++
+                setTimeout(type, speed)
+            } else {
+                cursor.remove()
+            }
+        }
+        type()
+    }
 }
 
 // ── district filter ───────────────────────────────────────────────────────────
