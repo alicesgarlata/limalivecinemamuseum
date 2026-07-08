@@ -33,14 +33,6 @@
         <div class="card-list" id="list"></div>
     </div>
 
-    <!--
-        CARD TEMPLATE
-        This block is invisible to the browser — it's just a reusable skeleton.
-        map.js clones it once per location, fills in the values, then appends
-        the result to #list. No HTML is built as a string in JavaScript.
-
-        data-field="..." marks each slot that JS needs to fill in.
-    -->
     <template id="card-template">
         <div class="card">
             <h2 data-field="name"></h2>
@@ -53,7 +45,6 @@
                 <p class="description" data-field="description"></p>
                 <button class="btn-more">Tell me more…</button>
                 <div class="extra">
-                    <p class="description-long" data-field="description-long"></p>
                     <p class="access" data-field="access"></p>
                     <a class="btn-evenmore" data-field="link">Tell me even more →</a>
                 </div>
