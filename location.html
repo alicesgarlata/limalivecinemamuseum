@@ -57,6 +57,7 @@
 
     <script src="data.js"></script>
     <script src="schede.js"></script>
+    <script src="film_profiles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search)
@@ -189,6 +190,20 @@
                 const cast = film.cast && film.cast.length ? film.cast.slice(0, 4).join(', ') : ''
                 const countries = film.countries ? film.countries.join(', ') : ''
 
+                const profile = (typeof filmProfiles !== 'undefined') ? filmProfiles[film.title] : null
+
+                const profileHtml = profile ? `
+                    <button class="film-profile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">About this film ↓</button>
+                    <div class="film-profile">
+                        <p class="film-profile-text">${profile.description}</p>
+                        <h4 class="film-profile-label">What it is about</h4>
+                        <p class="film-profile-text">${profile.about}</p>
+                        <h4 class="film-profile-label">Main themes</h4>
+                        <p class="film-profile-text film-profile-themes">${profile.themes}</p>
+                        <h4 class="film-profile-label">Why this location</h4>
+                        <p class="film-profile-text">${profile.value}</p>
+                    </div>` : ''
+
                 filmsContainer.innerHTML += `
                     <div class="film-card">
                         <div class="film-card-header">
@@ -205,6 +220,7 @@
                             ${cast ? `<span><span class="film-meta-label">Cast</span> ${cast}</span>` : ''}
                             ${countries ? `<span><span class="film-meta-label">Countries</span> ${countries}</span>` : ''}
                         </div>
+                        ${profileHtml}
                     </div>
                 `
             })
