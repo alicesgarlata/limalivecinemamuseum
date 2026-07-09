@@ -258,7 +258,6 @@ const locations = [
     }
   }
   },
-  
   {
     "name": "Playa Agua Dulce",
     "address": "RXPF+R55, Chorrillos, Perú",
