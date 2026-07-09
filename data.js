@@ -256,8 +256,7 @@ const locations = [
       "mid": "Playa Cantolao operates as a representative coastal space within La Punta, Callao. Its physical features — pebble beach, sheltered waters, boats, waterfront promenades, and views toward San Lorenzo and El Frontón — create a visual setting linked to recreation, fishing, navigation, and the historical maritime identity of the port city.",
       "long": "Playa Cantolao should be understood as a coastal and cultural landscape rather than simply a recreational beach. Located in La Punta, facing the bay and visually connected to San Lorenzo and El Frontón islands, it condenses several layers of Callao’s identity: port memory, nautical activity, family recreation, fishing practices, and residential seaside life. Its pebble shoreline, calm waters, boats, waterfront infrastructure, and proximity to the Peruvian Naval School make it a visually distinctive location for audiovisual narratives. In cinematic terms, Cantolao offers a quieter and more contemplative image of Callao, different from the industrial port or dense urban streets, but still deeply connected to the sea, movement, memory, and local everyday life."
     }
-  }
-}
+  },
   
   {
     "name": "Playa Agua Dulce",
