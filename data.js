@@ -33,10 +33,7 @@ const locations = [
         "title": "Lima 13",
         "year": 2012
       },
-      {
-        "title": "Utopía",
-        "year": 2018
-      },
+     
       {
         "title": "Viaje a Tombuctú",
         "year": 2014
@@ -692,8 +689,8 @@ const locations = [
         "year": 1998
       },
       {
-        "title": "Muero por Muriel",
-        "year": 2007
+        "title": "Un mundo para Julius",
+        "year": 2021
       }
     ],
     "descriptions": {
@@ -768,47 +765,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Residencial San Felipe",
-    "address": "Jesús María District, 15076, Perú",
-    "district": "Jesús María",
-    "movies": [
-      {
-        "title": "La Hora Final",
-        "year": 2017
-      }
-    ],
-    "descriptions": {
-      "young": "Residencial San Felipe is one of the most recognizable modernist housing complexes in Lima — a big, planned neighborhood from the 1960s that represents a certain vision of urban progress. It appears in La Hora Final as part of the film's portrait of Lima in the early 1990s.",
-      "adult": "A notable modernist residential complex in Jesús María, built in the 1960s as part of Lima's urban modernization program. It appears in La Hora Final as a setting for the clandestine police operations portrayed in the film.",
-      "professional": "Residencial San Felipe represents a significant monument of Lima's mid-twentieth-century urban modernism, its planned residential architecture reflecting developmentalist ideals of the era. Its use in La Hora Final (2017) invests its domestic architecture with political significance as a backdrop for the clandestine counter-terrorism operations of the early 1990s."
-    },
-    "access": "Semi-public — residential area, respect private zones",
-    "lat": -12.089083634210999,
-    "lng": -77.0546443877374,
-    "image": "images/Residencial_San_Felipe.jpg",
-    "cardDescription": {
-      "short": "A landmark modernist housing complex from the 1960s — an emblem of Lima's mid-century urban ambitions.",
-      "long": "Built between 1960 and 1972, Residencial San Felipe was one of Lima's boldest urban planning experiments: a large-scale modernist residential complex in Jesús María, designed to house a new professional middle class. Its distinctive brutalist architecture remains recognizable across the city's skyline. In La Hora Final, the complex serves as a setting for the clandestine police operations of the early 1990s — its rationalist geometry providing a cold backdrop for the film's portrait of state violence."
-    },
-    "texts": {
-      "young": {
-        "brief": "One of Lima's most famous modernist housing complexes — a 1960s neighbourhood that represents a certain idea of progress and urban planning.",
-        "mid": "Residencial San Felipe is one of the most recognisable modernist housing complexes in Lima — a big, planned neighbourhood from the 1960s that represents a certain vision of urban progress. It appears in La Hora Final as part of the film's portrait of Lima in the early 1990s.",
-        "long": "Residencial San Felipe is one of those places in Lima that you can recognise from a distance — the scale is different, the architecture is deliberate, and it carries the feeling of something that was built with a specific idea in mind. Constructed between 1960 and 1972, it was one of the most ambitious urban planning projects of its era: a large modernist complex in Jesús María, designed to house a professional middle class that was just beginning to emerge. Its brutalist towers are still a landmark. In La Hora Final, the complex appears as a setting for the clandestine police operations of the early 1990s — its rational, orderly geometry contrasting with the violence happening inside it."
-      },
-      "adult": {
-        "brief": "A landmark modernist housing complex from the 1960s — an emblem of Lima's mid-century urban ambitions.",
-        "mid": "A notable modernist residential complex in Jesús María, built in the 1960s as part of Lima's urban modernisation program. It appears in La Hora Final as a setting for the clandestine police operations portrayed in the film.",
-        "long": "Built between 1960 and 1972, Residencial San Felipe was one of Lima's boldest urban planning experiments: a large-scale modernist residential complex in Jesús María, designed to house a new professional middle class. Its distinctive brutalist architecture remains recognisable across the city's skyline. In La Hora Final, the complex serves as a setting for the clandestine police operations of the early 1990s — its rationalist geometry providing a cold backdrop for the film's portrait of state violence."
-      },
-      "professional": {
-        "brief": "Residencial San Felipe: a monument of Lima's mid-century urban modernism, used in La Hora Final as a site of political violence and institutional secrecy.",
-        "mid": "Residencial San Felipe represents a significant monument of Lima's mid-twentieth-century urban modernism. Its use in La Hora Final (2017) invests its domestic architecture with political significance as a backdrop for the clandestine counter-terrorism operations of the early 1990s.",
-        "long": "Residencial San Felipe constitutes a significant document of Lima's mid-twentieth-century urban modernism, its construction between 1960 and 1972 reflecting the developmentalist ideals of the Belaúnde administration and the international influence of CIAM urbanism on Peruvian housing policy. The complex's rationalist architectural language — characterised by large residential towers, open public spaces, and a deliberate separation of pedestrian and vehicular circulation — embodies an urban utopian vision whose social outcomes have been subject to considerable retrospective critique. In La Hora Final (2017), the complex's architecture is mobilised to different ends: its ordered geometry and residential anonymity serve as a setting for the clandestine DINCOTE operations of the early 1990s, investing the modernist domestic space with a disturbing political subtext."
-      }
-    }
-  },
+  
   {
     "name": "Universidad Nacional Mayor de San Marcos",
     "address": "Av. Óscar R. Benavides 5737, Lima 15081, Perú",
@@ -866,6 +823,10 @@ const locations = [
         "title": "Viaje a Tombuctú",
         "year": 2014
       }
+       {
+        "title": "No Se Lo Digas a Nadie",
+        "year": 1998
+      },
     ],
     "descriptions": {
       "young": "PUCP is one of Peru's most prestigious universities, and it appears in Viaje a Tombuctú as part of the film's portrait of a Peruvian woman returning to the Lima of her youth in the 1980s.",
@@ -910,10 +871,6 @@ const locations = [
       {
         "title": "Lima 13",
         "year": 2012
-      },
-      {
-        "title": "Utopía",
-        "year": 2018
       },
       {
         "title": "No Se Lo Digas a Nadie",
@@ -961,13 +918,9 @@ const locations = [
         "year": 2012
       },
       {
-        "title": "Utopía",
-        "year": 2018
+        "title": "No Se Lo Digas a Nadie",
+        "year": 1998
       },
-      {
-        "title": "Muero por Muriel",
-        "year": 2007
-      }
     ],
     "descriptions": {
       "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
@@ -1007,7 +960,12 @@ const locations = [
       "Lima",
       "San Isidro"
     ],
-    "movies": [],
+    "movies": [
+       {
+        "title": "La última tarde",
+        "year": 2016
+      },
+    ],
     "descriptions": {
       "young": "El Olivar is a genuinely peaceful urban forest in San Isidro — ancient olive trees, lakes, winding paths, and a very different mood from the rest of the city. One of those hidden corners of Lima that feels completely out of time.",
       "adult": "A historic park of centuries-old olive trees in San Isidro, offering a quiet, heritage-rich contrast to the surrounding commercial district. It represents the more tranquil and historic face of one of Lima's wealthiest areas.",
