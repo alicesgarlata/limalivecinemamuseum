@@ -171,13 +171,13 @@ const locations = [
     }
   },
   {
-    "name": "Muelle Sur del Callao",
-    "address": "Constitución 340, Callao 07021, Perú",
+    "name": "Monumental Callao",
+    "address": "Jiron Constitucion 250, Callao 07021, Perú",
     "district": "Callao",
     "movies": [
       {
-        "title": "Alias \"La Gringa\"",
-        "year": 1991
+        "title": "Viejos Amigos",
+        "year": 2014
       },
       {
         "title": "Django: La Otra Cara",
