@@ -171,49 +171,94 @@ const locations = [
     }
   },
   {
-    "name": "Monumental Callao",
-    "address": "Jiron Constitucion 250, Callao 07021, Perú",
-    "district": "Callao",
-    "movies": [
-      {
-        "title": "Viejos Amigos",
-        "year": 2014
-      },
-      {
-        "title": "Django: La Otra Cara",
-        "year": 2002
-      }
-    ],
-    "descriptions": {
-      "young": "The port of Callao has this raw, industrial energy that makes it perfect for gritty films. It's appeared in crime and action movies as the rough, working-class side of Lima that contrasts sharply with the tourist spots.",
-      "adult": "A port and industrial maritime area linked to commercial activity, crime narratives, and Callao's distinctive urban atmosphere. It has served as backdrop for films exploring social marginality and criminal worlds.",
-      "professional": "The Muelle Sur del Callao constitutes a cinematographic space of economic and social marginality, its industrial port infrastructure serving as a visual counterpoint to Lima's affluent districts in films that engage with themes of crime, survival, and institutional corruption."
+  "name": "Monumental Callao",
+  "address": "Jirón Constitución 250, Callao 07021, Perú",
+  "district": "Callao",
+  "movies": [
+    {
+      "title": "Viejos Amigos",
+      "year": 2014
     },
-    "access": "Restricted — port authority area, authorization required",
-    "lat": -12.055384127368942,
-    "lng": -77.1506180858518,
-    "cardDescription": {
-      "short": "The industrial port of Callao — raw, working-class, and far removed from the polished image of Miraflores.",
-      "long": "Callao's southern pier is where Lima's maritime economy operates, away from tourist routes and upscale neighborhoods. Its warehouses, loading docks, and working waterfront have made it a natural setting for films exploring crime, social marginality, and the rougher edges of the city. The port represents a Lima that rarely makes it into postcard images — gritty, functional, and deeply tied to the lives of those who work the docks."
-    },
-    "texts": {
-      "young": {
-        "brief": "The working port of Callao — industrial, gritty, and a world away from the tourist Lima of Miraflores.",
-        "mid": "The port of Callao has this raw, industrial energy that makes it perfect for gritty films. It's appeared in crime and action movies as the rough, working-class side of Lima that contrasts sharply with the tourist spots.",
-        "long": "If you want to understand Lima's other face — the one that doesn't appear in travel magazines — the port of Callao is a good place to look. Warehouses, cranes, cargo ships, and the smell of salt and diesel. It's a fully functional industrial port, and films that need a Lima that feels hard and unpolished have come here. Crime movies, action films, stories about the working waterfront — this is where they're set. The contrast with Miraflores, just a few kilometres away, couldn't be sharper."
-      },
-      "adult": {
-        "brief": "The industrial port of Callao — raw, working-class, and far removed from the polished image of Miraflores.",
-        "mid": "A port and industrial maritime area linked to commercial activity, crime narratives, and Callao's distinctive urban atmosphere. It has served as backdrop for films exploring social marginality and criminal worlds.",
-        "long": "Callao's southern pier is where Lima's maritime economy operates, away from tourist routes and upscale neighborhoods. Its warehouses, loading docks, and working waterfront have made it a natural setting for films exploring crime, social marginality, and the rougher edges of the city. The port represents a Lima that rarely makes it into postcard images — gritty, functional, and deeply tied to the lives of those who work the docks."
-      },
-      "professional": {
-        "brief": "Muelle Sur del Callao: an industrial port space functioning as a cinematographic locus of social marginality and urban counternarrative.",
-        "mid": "The Muelle Sur del Callao constitutes a cinematographic space of economic and social marginality, its industrial port infrastructure serving as a visual counterpoint to Lima's affluent districts in films that engage with themes of crime, survival, and institutional corruption.",
-        "long": "The Muelle Sur del Callao operates in Peruvian cinema as a site of productive spatial contrast with the aspirational geographies of Miraflores and San Isidro. Its industrial port infrastructure — loading docks, warehouses, maritime traffic — provides a visual grammar of labour, economic precarity, and institutional opacity that lends itself to crime and social realist narratives. The port's historical association with Callao's working-class and immigrant communities further deepens its cinematographic resonance, positioning it as a space where the city's economic dependencies become visible in ways they rarely do elsewhere."
-      }
+    {
+      "title": "Django: La Otra Cara",
+      "year": 2002
     }
+  ],
+  "descriptions": {
+    "young": "Monumental Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
+    "adult": "A culture-driven urban regeneration area located in Callao's historic center, centered around Casa Fugaz and the surrounding heritage streets. Monumental Callao brings together urban art, galleries, restored architecture, gastronomy, rooftop views, local memory, and community projects, offering a renewed reading of one of Lima's most historically important port districts.",
+    "professional": "Monumental Callao functions as a contemporary cultural and urban regeneration node within the historic center of Callao. Through Casa Fugaz, the Ronald Building, mural interventions, galleries, artist studios, gastronomic spaces, and heritage routes, the area reframes the port city as a site of visual production, collective memory, architectural recovery, and community-based cultural transformation."
   },
+  "access": "Public cultural area — Casa Fugaz and guided tours available Tuesday to Sunday, 11:00 a.m. to 6:00 p.m.; some indoor spaces or rooftop activities may require reservation",
+  "lat": -12.06085,
+  "lng": -77.14645,
+  "cardDescription": {
+    "short": "A revitalized cultural district in Callao’s historic center, known for murals, galleries, heritage buildings, music, food, and urban art.",
+    "long": "Monumental Callao is not the restricted industrial port, but a cultural and artistic district in the historic center of Callao. Around Casa Fugaz, Jirón Constitución, Plaza Matriz, Plaza Gálvez, Plaza Grau, and the old Ronald Building, the area combines restored republican architecture, street art, galleries, artist studios, gastronomy, music, and community projects. It offers a visual counterpoint to Lima’s more polished districts by showing Callao as a place of memory, creativity, port identity, and urban transformation."
+  },
+  "texts": {
+    "young": {
+      "brief": "A colorful art district in historic Callao, full of murals, galleries, music, food, and restored old buildings.",
+      "mid": "Monumental Callao is one of the most creative urban spaces in the port city. Instead of cranes and warehouses, here you find murals, galleries, rooftops, artist studios, food spots, and old republican buildings brought back to life.",
+      "long": "Monumental Callao is the side of Callao where history and street art meet. Around Casa Fugaz and the old streets of the historic center, walls have become murals, old buildings have become galleries, and public spaces have turned into places for music, food, workshops, and cultural events. It still feels urban and very connected to the port, but its energy is now more creative than industrial: colorful façades, local stories, rooftop views, and a strong sense of neighborhood identity."
+    },
+    "adult": {
+      "brief": "A revitalized cultural district in Callao’s historic center, shaped by art, heritage, gastronomy, and community life.",
+      "mid": "Monumental Callao is a culture-led regeneration area centered around Casa Fugaz and the heritage streets of the old port district. It brings together urban murals, galleries, restored architecture, local gastronomy, and historical routes through places such as Plaza Matriz, Plaza Gálvez, Plaza Grau, and the Ronald Building.",
+      "long": "Monumental Callao represents the transformation of part of Callao’s historic center into a cultural, artistic, and tourist-oriented district. Its streets preserve traces of the old port city through republican buildings, traditional plazas, balconies, and narrow urban passages, while contemporary murals, galleries, artist studios, restaurants, music spaces, and rooftop venues give the area a new public life. Rather than functioning as a restricted port zone, it is a walkable cultural route that connects heritage, local memory, urban art, and the social identity of Callao."
+    },
+    "professional": {
+      "brief": "Monumental Callao: a culture-led urban regeneration district in the historic port center, articulated through art, heritage architecture, and community activation.",
+      "mid": "Monumental Callao operates as a contemporary urban regeneration project within the historic center of Callao. Centered on Casa Fugaz, the Ronald Building, public murals, galleries, studios, cultural programming, and heritage routes, it transforms the port city’s architectural and social memory into a platform for visual culture, tourism, and community-based cultural production.",
+      "long": "Monumental Callao should be understood not as an industrial port facility but as a cultural and spatial reactivation of Callao’s historic center. Its value lies in the encounter between republican architecture, port memory, public art, creative industries, gastronomy, and community-oriented cultural management. The district uses restored buildings, mural interventions, gallery spaces, artist studios, rooftop programming, and guided routes through Plaza Matriz, Plaza Gálvez, Plaza Grau, Jirón Constitución, and Casa Fugaz to reframe Callao as a site of heritage, visual experimentation, and urban transformation. For audiovisual narratives, it offers a layered setting where historical architecture, street art, local identity, and social renewal coexist within the symbolic geography of Peru’s main port city."
+    }
+  }
+},
+{
+  "name": "Playa Cantolao",
+  "address": "Malecón Figueredo, La Punta, Callao, Perú",
+  "district": "La Punta",
+  "movies": [
+    {
+      "title": "Viaje a Tombuctú",
+      "year": 2014
+    },
+    {
+      "title": "Viejos Amigos",
+      "year": 2014
+    }
+  ],
+  "descriptions": {
+    "young": "Playa Cantolao is one of the most traditional beaches in Callao, located in La Punta. Instead of sand, it has a rocky shoreline, calm waters, boats, views of San Lorenzo Island, and a relaxed seaside atmosphere that feels closely connected to the port city’s maritime identity.",
+    "adult": "A historic pebble beach in La Punta, Callao, facing the Pacific Ocean and located near the Malecón Figueredo and the Peruvian Naval School. Cantolao is known for its calm waters, nautical activities, views of San Lorenzo and El Frontón islands, and its role as a traditional recreational space for families, visitors, fishermen, and local residents.",
+    "professional": "Playa Cantolao functions as a coastal and maritime landscape within the district of La Punta, Callao. Its pebble shoreline, calm bay waters, proximity to the Naval School, visual connection with San Lorenzo and El Frontón islands, and relationship with fishing, boating, swimming, and local recreation make it a significant audiovisual and urban setting for representing Callao’s seaside identity."
+  },
+  "access": "Public beach — free entry; recommended visiting hours are 9:00 a.m. to 6:00 p.m.; access may depend on weather, sea conditions, or temporary municipal restrictions",
+  "lat": -12.0681,
+  "lng": -77.1626,
+  "cardDescription": {
+    "short": "A traditional pebble beach in La Punta, Callao, with calm waters, boats, island views, and strong maritime identity.",
+    "long": "Playa Cantolao is one of Callao’s most traditional coastal spaces. Located in La Punta, near the Malecón Figueredo and the Peruvian Naval School, it is known for its pebble shoreline, calm waters, nautical atmosphere, and views of San Lorenzo and El Frontón islands. The beach connects recreation, fishing, boating, family visits, and local memory, offering a quieter and more maritime image of Callao than the industrial port or the urban center."
+  },
+  "texts": {
+    "young": {
+      "brief": "A calm pebble beach in La Punta, with boats, island views, and a relaxed Callao seaside atmosphere.",
+      "mid": "Playa Cantolao is one of the most recognizable beaches in La Punta. It has stones instead of sand, calm water, small boats, views of San Lorenzo Island, and a coastal mood that feels very different from the beaches of central Lima.",
+      "long": "Playa Cantolao is the kind of place where Callao feels closer to the sea than to the city. The beach is made of rounded stones, the water is usually calmer than on the open coast, and the view opens toward San Lorenzo and El Frontón islands. You can see boats, families, swimmers, and people walking along the waterfront. It is not a luxury beach or a tourist postcard beach; it is more local, maritime, and connected to the everyday life of La Punta."
+    },
+    "adult": {
+      "brief": "A traditional beach in La Punta, Callao, known for its pebble shore, calm bay waters, boats, and island views.",
+      "mid": "Playa Cantolao is a historic coastal space in La Punta, located near the Malecón Figueredo and the Peruvian Naval School. Its calm waters, pebble shoreline, fishing activity, boat rides, and views of San Lorenzo and El Frontón give it a strong maritime character.",
+      "long": "Playa Cantolao is one of the most traditional beaches in Callao and an important part of La Punta’s coastal identity. Unlike many sandy beaches in Lima, Cantolao is defined by its stone-covered shore, calm bay waters, nearby boats, and direct visual relationship with San Lorenzo Island and El Frontón. Historically, it has functioned as a recreational meeting place for local families, visitors, fishermen, and people connected to nautical activities. Its atmosphere combines leisure, maritime tradition, residential life, and the memory of Callao as Peru’s main port city."
+    },
+    "professional": {
+      "brief": "Playa Cantolao: a traditional coastal landscape in La Punta, shaped by pebble shorelines, calm bay waters, nautical activity, and Callao’s maritime memory.",
+      "mid": "Playa Cantolao operates as a representative coastal space within La Punta, Callao. Its physical features — pebble beach, sheltered waters, boats, waterfront promenades, and views toward San Lorenzo and El Frontón — create a visual setting linked to recreation, fishing, navigation, and the historical maritime identity of the port city.",
+      "long": "Playa Cantolao should be understood as a coastal and cultural landscape rather than simply a recreational beach. Located in La Punta, facing the bay and visually connected to San Lorenzo and El Frontón islands, it condenses several layers of Callao’s identity: port memory, nautical activity, family recreation, fishing practices, and residential seaside life. Its pebble shoreline, calm waters, boats, waterfront infrastructure, and proximity to the Peruvian Naval School make it a visually distinctive location for audiovisual narratives. In cinematic terms, Cantolao offers a quieter and more contemplative image of Callao, different from the industrial port or dense urban streets, but still deeply connected to the sea, movement, memory, and local everyday life."
+    }
+  }
+}
+  
   {
     "name": "Playa Agua Dulce",
     "address": "RXPF+R55, Chorrillos, Perú",
@@ -495,41 +540,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Parque de las Leyendas",
-    "address": "Av. Parque de las Leyendas 580, San Miguel 15088, Perú",
-    "district": "San Miguel",
-    "movies": [],
-    "descriptions": {
-      "young": "Part zoo, part archaeological site — Parque de las Leyendas is genuinely unique. You can see llamas and ancient Peruvian ruins in the same afternoon. Very Lima.",
-      "adult": "A large public park combining a zoo with pre-Columbian archaeological remains, showcasing Peru's biodiversity and Andean heritage within the city of Lima.",
-      "professional": "Parque de las Leyendas occupies a distinctive position in Lima's urban landscape as a site that superimposes archaeological heritage upon contemporary recreational infrastructure, reflecting broader tensions between conservation, accessibility, and the popularization of pre-Columbian history."
-    },
-    "access": "Public — paid entry required",
-    "lat": -12.066965354455284,
-    "lng": -77.08691083427522,
-    "cardDescription": {
-      "short": "Part zoo, part archaeological site — one of Lima's most genuinely unusual public spaces.",
-      "long": "Parque de las Leyendas combines a zoo with the pre-Columbian ruins of the Maranga complex, creating a public space unlike anything else in the city. Families come for the animals; the grounds hold centuries of Andean history beneath them. It represents the layered nature of Lima itself — a modern city built over and alongside ancient civilization, where children can encounter llamas and Inca walls in the same afternoon."
-    },
-    "texts": {
-      "young": {
-        "brief": "A zoo and archaeological park in one — you can see llamas and Inca ruins on the same afternoon.",
-        "mid": "Part zoo, part archaeological site — Parque de las Leyendas is genuinely unique. You can see llamas and ancient Peruvian ruins in the same afternoon. Very Lima.",
-        "long": "Parque de las Leyendas is one of those places that doesn't quite fit into a single category, which is part of what makes it interesting. It's a zoo — but also an archaeological park, built around the ruins of the pre-Columbian site of Maranga. Walking through it, you move between animal enclosures and ancient walls, between llamas and centuries-old structures, in a combination that feels completely natural once you're there. It's a Lima thing: the ancient and the contemporary layered together without apology. Families come for the animals, but you leave with the feeling of having touched something older than the city around it."
-      },
-      "adult": {
-        "brief": "Part zoo, part archaeological site — one of Lima's most genuinely unusual public spaces.",
-        "mid": "A large public park combining a zoo with pre-Columbian archaeological remains, showcasing Peru's biodiversity and Andean heritage within the city of Lima.",
-        "long": "Parque de las Leyendas combines a zoo with the pre-Columbian ruins of the Maranga complex, creating a public space unlike anything else in the city. Families come for the animals; the grounds hold centuries of Andean history beneath them. It represents the layered nature of Lima itself — a modern city built over and alongside ancient civilization, where children can encounter llamas and Inca walls in the same afternoon."
-      },
-      "professional": {
-        "brief": "Parque de las Leyendas: a hybrid public space combining zoological and archaeological functions within Lima's urban fabric.",
-        "mid": "Parque de las Leyendas occupies a distinctive position in Lima's urban landscape as a site that superimposes archaeological heritage upon contemporary recreational infrastructure, reflecting broader tensions between conservation, accessibility, and the popularization of pre-Columbian history.",
-        "long": "Parque de las Leyendas constitutes a significant case study in the management of urban archaeological heritage within a contemporary public recreational context. The park's grounds encompass the pre-Columbian site of Maranga — one of the most extensive ancient urban complexes on the Peruvian coast — which is incorporated into a zoological park serving Lima's general public. This spatial arrangement raises questions about the pedagogical framing of pre-Columbian heritage for popular audiences, the tensions between preservation imperatives and accessibility, and the ways in which ancient sites are rendered legible within contemporary urban leisure frameworks. Its cinematic appearances reflect these tensions, positioning the park as a space of popular cultural mediation between Peru's Andean heritage and its urban present."
-      }
-    }
-  },
+  
   {
     "name": "Institución Educativa 3004 España",
     "address": "XX7F+855, Rímac 15093, Perú",
