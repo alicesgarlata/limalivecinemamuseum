@@ -22,21 +22,12 @@ const locations = [
     "district": "Miraflores",
     "movies": [
       {
-        "title": "Tarata",
-        "year": 2009
-      },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      },
-      {
         "title": "Lima 13",
         "year": 2012
       },
-     
       {
-        "title": "Viaje a Tombuctú",
-        "year": 2014
+        "title": "Gregorio",
+        "year": 1984
       }
     ],
     "descriptions": {
@@ -79,12 +70,8 @@ const locations = [
         "year": 1968
       },
       {
-        "title": "Palomillas del Rímac",
-        "year": 1938
-      },
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
+        "title": "Gregorio",
+        "year": 1984
       }
     ],
     "descriptions": {
@@ -124,16 +111,12 @@ const locations = [
     "district": "Miraflores",
     "movies": [
       {
-        "title": "Tarata",
-        "year": 2009
+        "title": "Caídos del Cielo",
+        "year": 1990
       },
       {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
+        "title": "Lima 13",
+        "year": 2012
       }
     ],
     "descriptions": {
@@ -171,16 +154,16 @@ const locations = [
   "name": "Monumental Callao",
   "address": "Jirón Constitución 250, Callao 07021, Perú",
   "district": "Callao",
-  "movies": [
-    {
-      "title": "Viejos Amigos",
-      "year": 2014
-    },
-    {
-      "title": "Django: La Otra Cara",
-      "year": 2002
-    }
-  ],
+    "movies": [
+      {
+        "title": "Viejos amigos",
+        "year": 2014
+      },
+      {
+        "title": "Django: La Otra Cara",
+        "year": 2002
+      }
+    ],
   "descriptions": {
     "young": "Monumental Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
     "adult": "A culture-driven urban regeneration area located in Callao's historic center, centered around Casa Fugaz and the surrounding heritage streets. Monumental Callao brings together urban art, galleries, restored architecture, gastronomy, rooftop views, local memory, and community projects, offering a renewed reading of one of Lima's most historically important port districts.",
@@ -215,16 +198,16 @@ const locations = [
   "name": "Playa Cantolao",
   "address": "Malecón Figueredo, La Punta, Callao, Perú",
   "district": "La Punta",
-  "movies": [
-    {
-      "title": "Viaje a Tombuctú",
-      "year": 2014
-    },
-    {
-      "title": "Viejos Amigos",
-      "year": 2014
-    }
-  ],
+    "movies": [
+      {
+        "title": "Viaje a Tombuctú",
+        "year": 2014
+      },
+      {
+        "title": "Viejos amigos",
+        "year": 2014
+      }
+    ],
   "descriptions": {
     "young": "Playa Cantolao is one of the most traditional beaches in Callao, located in La Punta. Instead of sand, it has a rocky shoreline, calm waters, boats, views of San Lorenzo Island, and a relaxed seaside atmosphere that feels closely connected to the port city’s maritime identity.",
     "adult": "A historic pebble beach in La Punta, Callao, facing the Pacific Ocean and located near the Malecón Figueredo and the Peruvian Naval School. Cantolao is known for its calm waters, nautical activities, views of San Lorenzo and El Frontón islands, and its role as a traditional recreational space for families, visitors, fishermen, and local residents.",
@@ -261,8 +244,12 @@ const locations = [
     "district": "Chorrillos",
     "movies": [
       {
-        "title": "¡Asu Mare!",
-        "year": 2013
+        "title": "Caídos del Cielo",
+        "year": 1990
+      },
+      {
+        "title": "Metal y Melancolía",
+        "year": 1993
       }
     ],
     "descriptions": {
@@ -303,6 +290,10 @@ const locations = [
       {
         "title": "La última tarde",
         "year": 2016
+      },
+      {
+        "title": "Muero por Muriel",
+        "year": 2007
       }
     ],
     "descriptions": {
@@ -432,20 +423,12 @@ const locations = [
     ],
     "movies": [
       {
-        "title": "La Hora Final",
-        "year": 2017
+        "title": "Esta es la U",
+        "year": 2024
       },
       {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
-      {
-        "title": "Django: La Otra Cara",
-        "year": 2002
+        "title": "Cholo",
+        "year": 1972
       }
     ],
     "descriptions": {
@@ -485,24 +468,12 @@ const locations = [
     "district": "Lima",
     "movies": [
       {
-        "title": "Las Sicodélicas",
-        "year": 1968
-      },
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Juliana",
-        "year": 1989
+        "title": "Palomillas del Rímac",
+        "year": 1938
       },
       {
         "title": "Metal y Melancolía",
         "year": 1993
-      },
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
       }
     ],
     "descriptions": {
@@ -543,8 +514,12 @@ const locations = [
     "district": "Rimac",
     "movies": [
       {
-        "title": "La hora final",
-        "year": 2017
+        "title": "Gregorio",
+        "year": 1984
+      },
+      {
+        "title": "Juliana",
+        "year": 1989
       }
     ],
     "descriptions": {
@@ -583,24 +558,12 @@ const locations = [
     "district": "Lima",
     "movies": [
       {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Juliana",
-        "year": 1989
+        "title": "Palomillas del Rímac",
+        "year": 1938
       },
       {
         "title": "Metal y Melancolía",
         "year": 1993
-      },
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      },
-      {
-        "title": "Django: La Otra Cara",
-        "year": 2002
       }
     ],
     "descriptions": {
@@ -681,16 +644,16 @@ const locations = [
     "district": "San Isidro",
     "movies": [
       {
-        "title": "¡Asu Mare!",
-        "year": 2013
+        "title": "Un mundo para Julius",
+        "year": 2021
       },
       {
         "title": "No Se Lo Digas a Nadie",
         "year": 1998
       },
       {
-        "title": "Un mundo para Julius",
-        "year": 2021
+        "title": "El embajador y yo",
+        "year": 1966
       }
     ],
     "descriptions": {
@@ -732,6 +695,10 @@ const locations = [
       {
         "title": "Esta es la U",
         "year": 2024
+      },
+      {
+        "title": "Cholo",
+        "year": 1972
       }
     ],
     "descriptions": {
@@ -779,8 +746,8 @@ const locations = [
         "year": 2017
       },
       {
-        "title": "Esta es la U",
-        "year": 2024
+        "title": "Tarata",
+        "year": 2009
       }
     ],
     "descriptions": {
@@ -820,13 +787,13 @@ const locations = [
     "district": "San Miguel",
     "movies": [
       {
-        "title": "Viaje a Tombuctú",
-        "year": 2014
-      }
-       {
         "title": "No Se Lo Digas a Nadie",
         "year": 1998
       },
+      {
+        "title": "Un mundo para Julius",
+        "year": 2021
+      }
     ],
     "descriptions": {
       "young": "PUCP is one of Peru's most prestigious universities, and it appears in Viaje a Tombuctú as part of the film's portrait of a Peruvian woman returning to the Lima of her youth in the 1980s.",
@@ -865,16 +832,16 @@ const locations = [
     "district": "Miraflores",
     "movies": [
       {
-        "title": "¡Asu Mare!",
-        "year": 2013
+        "title": "Caídos del Cielo",
+        "year": 1990
+      },
+      {
+        "title": "Gregorio",
+        "year": 1984
       },
       {
         "title": "Lima 13",
         "year": 2012
-      },
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
       }
     ],
     "descriptions": {
@@ -914,13 +881,17 @@ const locations = [
     "district": "Miraflores",
     "movies": [
       {
-        "title": "Lima 13",
-        "year": 2012
-      },
-      {
         "title": "No Se Lo Digas a Nadie",
         "year": 1998
       },
+      {
+        "title": "El embajador y yo",
+        "year": 1966
+      },
+      {
+        "title": "Un mundo para Julius",
+        "year": 2021
+      }
     ],
     "descriptions": {
       "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
@@ -961,10 +932,14 @@ const locations = [
       "San Isidro"
     ],
     "movies": [
-       {
+      {
         "title": "La última tarde",
         "year": 2016
       },
+      {
+        "title": "Un mundo para Julius",
+        "year": 2021
+      }
     ],
     "descriptions": {
       "young": "El Olivar is a genuinely peaceful urban forest in San Isidro — ancient olive trees, lakes, winding paths, and a very different mood from the rest of the city. One of those hidden corners of Lima that feels completely out of time.",
