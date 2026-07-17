@@ -152,3 +152,9 @@ const filmProfiles = {
     "value": "The film can be related to Estadio Lolo Fernández, Avenida Brasil, and other spaces connected to football culture and popular urban memory in Lima."
   }
 };
+"Las chicas del Jirón de la Unión": {
+  "description": "Las chicas del Jirón de la Unión is a Peruvian silent romantic melodrama directed by Alberto Santana and released in 1930. The film portrays everyday life on the Jirón de la Unión, one of the most important commercial and social streets in Lima during the early twentieth century.",
+  "about": "The film follows a group of urban characters, particularly young women, whose relationships and daily experiences unfold around the Jirón de la Unión. Although a detailed plot summary is no longer widely available, the film uses romance and local melodrama to represent the customs, encounters, and social atmosphere of central Lima.",
+  "themes": "Urban daily life, romance, women in the city, popular customs, social encounters, modernity, and Lima identity.",
+  "value": "The film is directly connected to the Jirón de la Unión and the Historic Center of Lima. It is valuable for tourist and cultural routes because it presents a cinematic representation of one of Lima’s most emblematic streets during the final period of Peruvian silent cinema."
+}
