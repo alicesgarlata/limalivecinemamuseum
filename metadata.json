@@ -176,16 +176,7 @@
   "release_date": "2021-10-15",
 },
     
- { "title": "La Luz en el Cerro", 
-    "year": 2016, 
-    "wikidata_id": "Q123483054", 
-    "wikidata_url": "https://www.wikidata.org/wiki/Q123483054", 
-    "director": ["Ricardo Velarde"], 
-    "countries": ["Perú"], 
-    "genres": ["Thriller", "Misterio"], 
-    "cast": ["Manuel Gold", "Emilram Cossío"], 
-    "production": ["Caudal Films"], 
-    "release_date": "2017-10-01" }, 
+
  
  { "title": "Viaje a Tombuctú", 
     "year": 2014, 
@@ -269,3 +260,22 @@
   "production": ["Procine S.A."],
   "release_date": "1972"
 }
+{
+  "title": "Las chicas del Jirón de la Unión",
+  "year": 1930,
+  "wikidata_id": null,
+  "wikidata_url": null,
+  "director": ["Alberto Santana"],
+  "countries": ["Perú"],
+  "genres": ["Melodrama", "Romance", "Película muda"],
+  "cast": [
+    "Olga Ortega",
+    "José Zavala",
+    "Jorge Plascencia",
+    "Ena Souza",
+    "Máximo Serrano"
+  ],
+  "production": ["Patria Film"],
+  "release_date": "1930-06-27"
+}
+
