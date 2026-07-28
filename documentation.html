@@ -26,7 +26,7 @@
 
         <section class="about-section">
             <h2>2. Collection Criteria</h2>
-            <p>[To be completed — explain how the 22 locations were selected: what criteria determined inclusion (number of films, historical significance, geographic spread, thematic relevance), and what was deliberately excluded.]</p>
+            <p>[To be completed — explain how the locations were selected: what criteria determined inclusion (number of films, historical significance, geographic spread, thematic relevance), and what was deliberately excluded.]</p>
         </section>
 
         <section class="about-section">
@@ -54,7 +54,8 @@
             <p>[To be completed — describe the technical stack: HTML/CSS/JS, Leaflet.js for the map, Bootstrap for layout, data stored in data.js, schede.js for extended content. Discuss the decision to use a static site without a backend.]</p>
             <ul class="doc-list">
                 <li><strong>Map</strong>: Leaflet.js + OpenStreetMap / CartoDB tiles</li>
-                <li><strong>Data</strong>: <code>data.js</code> (locations, films, districtColors), <code>schede.js</code> (extended textual content)</li>
+                <li><strong>Runtime data</strong>: <code>data.js</code> (locations, films, districtColors), <code>schede.js</code> (extended location content), <code>film_profiles.js</code> (extended film content)</li>
+                <li><strong>Editorial source material</strong>: <code>schede.html</code>, <code>film.html</code>, and <code>metadata.json</code> preserve the research material; changes intended for the interface must also be reflected in the runtime data files above.</li>
                 <li><strong>Layout</strong>: Bootstrap 5.3 + custom CSS</li>
                 <li><strong>External data</strong>: Film metadata from Wikidata</li>
             </ul>
