@@ -1,6 +1,11 @@
 const list = document.getElementById('list')
 const markers = []
 
+const locationCount = document.getElementById('location-count')
+const filmCount = document.getElementById('film-count')
+if (locationCount) locationCount.textContent = locations.length
+if (filmCount) filmCount.textContent = films.length
+
 // ── filter pills (built from districtColors in data.js) ──────────────────────
 const filterBar = document.getElementById('filter-bar')
 
