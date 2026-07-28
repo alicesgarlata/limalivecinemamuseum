@@ -62,7 +62,15 @@
     <script>
         const params = new URLSearchParams(window.location.search)
         const locationName = params.get('name')
-        const loc = locations.find(l => l.name === locationName) || locations[0]
+        const loc = locations.find(l => l.name === locationName)
+        if (!loc) {
+            const page = document.querySelector('.location-page')
+            const notice = document.createElement('div')
+            notice.className = 'location-not-found'
+            notice.innerHTML = '<h1>Location not found</h1><p>This location is not available in the museum catalogue.</p><p><a href="index.html">← Return to the map</a></p>'
+            if (page) page.replaceChildren(notice)
+            throw new Error('Unknown location requested')
+        }
 
         // ── state ─────────────────────────────────────────────────────────────
         const TONES   = ['young', 'adult', 'professional']
