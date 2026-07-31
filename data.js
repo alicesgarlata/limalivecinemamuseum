@@ -29,10 +29,7 @@ const locations = [
         "title": "Gregorio",
         "year": 1984
       },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      }
+  
     ],
     "descriptions": {
       "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Five Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
@@ -114,14 +111,14 @@ const locations = [
     "address": "Mal. de la Reserva 275, Miraflores 15074, Perú",
     "district": "Miraflores",
     "movies": [
-      {
+       {
         "title": "Caídos del Cielo",
         "year": 1990
       },
       {
-        "title": "Lima 13",
-        "year": 2012
-      }
+        "title": "Metal y Melancolía",
+        "year": 1993
+      },
     ],
     "descriptions": {
       "young": "Walking along the Malecón feels cinematic on its own — cliffs, the Pacific stretched out below, paragliders above. It shows up in films as the face of Lima that's both beautiful and a bit melancholic.",
@@ -163,14 +160,7 @@ const locations = [
         "title": "Viejos amigos",
         "year": 2014
       },
-      {
-        "title": "Django: La Otra Cara",
-        "year": 2002
-      },
-      {
-        "title": "Django: Sangre de mi sangre",
-        "year": 2018
-      }
+    
     ],
     "descriptions": {
       "young": "Monumental Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
@@ -252,12 +242,12 @@ const locations = [
     "district": "Chorrillos",
     "movies": [
       {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      },
+        "title": "Juliana",
+        "year": 1989
+      }
       {
-        "title": "Metal y Melancolía",
-        "year": 1993
+        "title": "Cholo",
+        "year": 1972
       },
       {
         "title": "¡Asu Mare!",
@@ -303,10 +293,7 @@ const locations = [
         "title": "La última tarde",
         "year": 2016
       },
-      {
-        "title": "Muero por Muriel",
-        "year": 2007
-      }
+    
     ],
     "descriptions": {
       "young": "The Bridge of Sighs in Barranco is the most romantic spot in Lima — a wooden bridge surrounded by old colorful houses, street musicians, and the sound of the ocean in the distance. Very photogenic, but genuinely beautiful.",
@@ -347,10 +334,6 @@ const locations = [
         "title": "Gregorio",
         "year": 1984
       },
-      {
-        "title": "Juliana",
-        "year": 1989
-      }
     ],
     "descriptions": {
       "young": "Traditional markets like this are where you really see how Lima lives — vendors, food, noise, color. Both Gregorio and Juliana used it to show the everyday struggle of working-class kids on the streets of the city.",
@@ -424,72 +407,21 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Avenida Brasil",
-    "address": "Av. Brasil, Lima 15084, Perú",
-    "district": [
-      "Breña",
-      "Jesús María",
-      "Pueblo Libre",
-      "Magdalena del Mar"
-    ],
-    "movies": [
-      {
-        "title": "Esta es la U",
-        "year": 2024
-      },
-      {
-        "title": "Cholo",
-        "year": 1972
-      }
-    ],
-    "descriptions": {
-      "young": "Avenida Brasil runs through several Lima districts and is one of those streets that just shows the city in motion — cars, buses, everyday people. It shows up in films as a connector, a slice of the city's daily flow.",
-      "adult": "A major avenue crossing multiple districts, used in films to represent the flow of everyday urban life, middle-class Lima, and the city's spatial connections. It appears across diverse genres, from documentary to comedy to crime.",
-      "professional": "Avenida Brasil functions as a cinematographic artery of Lima's urban landscape, its cross-district extent making it a spatial marker of the city's social heterogeneity. Its use across multiple productions — from Honigmann's documentary to Maldonado's biographical comedy — reflects its role as a shared spatial reference for Lima's diverse cinematic representations."
-    },
-    "access": "Public — free access",
-    "lat": -12.078385714156722,
-    "lng": -77.05694122354882,
-    "image": "images/avenida_brasil.jpg",
-    "cardDescription": {
-      "short": "A major Lima avenue that crosses the city like a vein — busy, unglamorous, and completely alive.",
-      "long": "Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city."
-    },
-    "texts": {
-      "young": {
-        "brief": "One of Lima's main avenues — busy, everyday, and a reliable way to show the city as it actually is.",
-        "mid": "Avenida Brasil runs through several Lima districts and is one of those streets that just shows the city in motion — cars, buses, everyday people. It shows up in films as a connector, a slice of the city's daily flow.",
-        "long": "Avenida Brasil isn't a scenic street and it isn't trying to be. It's a major urban artery that runs through Breña, Jesús María, and Pueblo Libre, carrying traffic, buses, and the daily movement of middle Lima in both directions. That's exactly why filmmakers use it. When you want a shot of the city that feels honest — not beautiful, not ugly, just real — Avenida Brasil delivers. It's the Lima of bus stops and corner pharmacies and people who have somewhere to be. Several films across very different genres have used it for exactly that quality: the unglamorous, undeniable rhythm of everyday urban life."
-      },
-      "adult": {
-        "brief": "A major Lima avenue that crosses the city like a vein — busy, unglamorous, and completely alive.",
-        "mid": "A major avenue crossing multiple districts, used in films to represent the flow of everyday urban life, middle-class Lima, and the city's spatial connections. It appears across diverse genres, from documentary to comedy to crime.",
-        "long": "Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city."
-      },
-      "professional": {
-        "brief": "Avenida Brasil: a multi-district urban artery used cinematographically as a spatial marker of Lima's middle-class everyday life.",
-        "mid": "Avenida Brasil functions as a cinematographic artery of Lima's urban landscape, its cross-district extent making it a spatial marker of the city's social heterogeneity. Its use across multiple productions reflects its role as a shared spatial reference for Lima's diverse cinematic representations.",
-        "long": "Avenida Brasil's cinematic utility lies in its indexical quality: as a major arterial road crossing several of Lima's central districts, it provides a spatial reference point that grounds diverse filmic narratives in a shared urban geography. Unlike the symbolic monuments of the Centro Histórico or the aspirational architectures of Miraflores, the avenue's visual register is resolutely quotidian — traffic, commerce, transit — making it a productive site for films seeking to represent Lima's middle strata and their daily spatial practices. Its cross-generic appearances, from documentary to comedy to social drama, confirm its status as a versatile cinematographic resource for a wide range of representational purposes."
-      }
-    }
-  },
+  
   {
     "name": "Jirón de la Unión",
     "address": "Jirón de la Unión, Lima 15001, Perú",
     "district": "Lima",
     "movies": [
-      {
-        "title": "Palomillas del Rímac",
-        "year": 1938
-      },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
+     
       {
         "title": "Las chicas del Jirón de la Unión",
         "year": 1930
+      }
+
+       {
+        "title": "Las Sicodélicas",
+        "year": 1968
       }
     ],
     "descriptions": {
@@ -529,13 +461,10 @@ const locations = [
     "district": "Rimac",
     "movies": [
       {
-        "title": "Gregorio",
-        "year": 1984
+        "title": "La Hora Final",
+        "year": 2017
       },
-      {
-        "title": "Juliana",
-        "year": 1989
-      }
+      
     ],
     "descriptions": {
       "young": "A public school in Rímac, one of Lima's oldest and most historically rich districts. Schools like this appear in films about childhood, education, and the realities of public life across the city.",
@@ -576,10 +505,6 @@ const locations = [
         "title": "Palomillas del Rímac",
         "year": 1938
       },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      }
     ],
     "descriptions": {
       "young": "The Rímac River is one of Lima's most ancient landmarks — and one of its most complicated ones. Polluted, contested, and historically significant, it divides the city in both geographic and social terms. Five films used it to represent marginality and urban struggle.",
@@ -653,55 +578,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Lima Golf Club",
-    "address": "Av. Camino Real 770, San Isidro 15073, Perú",
-    "district": "San Isidro",
-    "movies": [
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      },
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
-      },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      }
-    ],
-    "descriptions": {
-      "young": "The Lima Golf Club in San Isidro is where the most exclusive side of Lima plays. Its use in films — from a biographical comedy to a psychological thriller — shows how filmmakers use elite spaces to explore class and identity.",
-      "adult": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in three films exploring class dynamics, personal identity, and social aspiration.",
-      "professional": "The Lima Golf Club functions as a cinematographic sign of Lima's upper-class habitus, its spatial exclusivity making it a productive site for exploring tensions of class, sexuality, and social performance across ¡Asu Mare!, No Se Lo Digas a Nadie, and Muero por Muriel."
-    },
-    "access": "Private — members and guests only",
-    "lat": -12.101500033881788,
-    "lng": -77.03853518755118,
-    "image": "images/Lima_Golf_Club.jpg",
-    "cardDescription": {
-      "short": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-      "long": "The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
-    },
-    "texts": {
-      "young": {
-        "brief": "The most exclusive golf club in Lima — a window into a side of the city that most people never see.",
-        "mid": "The Lima Golf Club in San Isidro is where the most exclusive side of Lima plays. Its use in films — from a biographical comedy to a psychological thriller — shows how filmmakers use elite spaces to explore class and identity.",
-        "long": "The Lima Golf Club is not a public space. It's a private institution in the middle of San Isidro — Lima's financial and diplomatic district — and it serves the city's most privileged residents. Green fairways in the middle of a dense urban neighbourhood, surrounded by embassies and corporate towers. Films have used it as a setting for stories about class, aspiration, and the rituals of Lima's elite — from the biographical comedy of ¡Asu Mare! to the darker territory of No Se Lo Digas a Nadie. It's a space where who you know and how you perform your status matter as much as anything else."
-      },
-      "adult": {
-        "brief": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-        "mid": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in three films exploring class dynamics, personal identity, and social aspiration.",
-        "long": "The Lima Golf Club sits in the centre of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinised. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
-      },
-      "professional": {
-        "brief": "Lima Golf Club: a site of elite spatial practice used cinematographically to explore class, sexuality, and social performance.",
-        "mid": "The Lima Golf Club functions as a cinematographic sign of Lima's upper-class habitus, its spatial exclusivity making it a productive site for exploring tensions of class, sexuality, and social performance across ¡Asu Mare!, No Se Lo Digas a Nadie, and Muero por Muriel.",
-        "long": "The Lima Golf Club operates in Peruvian cinema as a site of elite habitus — a space whose exclusivity, spatial arrangement, and associated social codes make it a productive setting for films that engage critically with Lima's class structure. Its appearances in ¡Asu Mare! (biographical comedy), No Se Lo Digas a Nadie (psychological drama addressing homosexuality and class), and Muero por Muriel (romantic comedy) demonstrate a consistent deployment of the club as a space where social performance, identity, and aspiration are staged and sometimes subverted. The golf club's role as a sign of Lima's upper-class world makes it particularly useful for narratives concerned with the tensions between social belonging and its exclusions."
-      }
-    }
-  },
+
   {
     "name": "Estadio Lolo Fernandez",
     "address": "Jr. Zorritos 668, Lima 15001, Perú",
@@ -711,10 +588,6 @@ const locations = [
         "title": "Esta es la U",
         "year": 2024
       },
-      {
-        "title": "Cholo",
-        "year": 1972
-      }
     ],
     "descriptions": {
       "young": "The Estadio Lolo Fernández is home to Universitario de Deportes — Peru's most famous football club. The 2024 documentary Esta es la U was shot here to celebrate the club's 100th anniversary.",
@@ -755,10 +628,7 @@ const locations = [
       "Callao"
     ],
     "movies": [
-      {
-        "title": "La Hora Final",
-        "year": 2017
-      },
+     
       {
         "title": "Tarata",
         "year": 2009
@@ -804,10 +674,7 @@ const locations = [
         "title": "No Se Lo Digas a Nadie",
         "year": 1998
       },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      }
+  
     ],
     "descriptions": {
       "young": "PUCP is one of Peru's most prestigious universities, and it appears in Viaje a Tombuctú as part of the film's portrait of a Peruvian woman returning to the Lima of her youth in the 1980s.",
@@ -840,108 +707,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Larcomar",
-    "address": "Mal. de la Reserva 610, Miraflores 15074, Perú",
-    "district": "Miraflores",
-    "movies": [
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      },
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Lima 13",
-        "year": 2012
-      },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      }
-    ],
-    "descriptions": {
-      "young": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in four films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-      "adult": "A modern shopping and entertainment center built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in four films spanning the late 1990s to the 2010s.",
-      "professional": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use — across comedy, drama, and thriller — reflects its function as a symbol of Lima's aspirational consumer modernity and its associated social contradictions."
-    },
-    "access": "Public — free access",
-    "lat": -12.1318722790964,
-    "lng": -77.03047475216545,
-    "image": "images/Larcomar.jpg",
-    "cardDescription": {
-      "short": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-      "long": "Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
-    },
-    "texts": {
-      "young": {
-        "brief": "A shopping mall built into the cliffs of Miraflores, with the Pacific directly below — one of Lima's most surreal and spectacular spaces.",
-        "mid": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in four films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-        "long": "Larcomar is the kind of place that takes a moment to process the first time you see it. It's a shopping centre — cinemas, restaurants, shops — but it's built into the cliff face of the Malecón, with the Pacific Ocean filling the horizon from every terrace. The combination of commercial space and coastal drama is uniquely limeño: glamorous and slightly absurd at the same time. Four films have used it as a location, and in all of them it carries the same meaning — Miraflores at its most aspirational, a place where lifestyle and status are performed against a backdrop of extraordinary views."
-      },
-      "adult": {
-        "brief": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-        "mid": "A modern shopping and entertainment centre built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in four films spanning the late 1990s to the 2010s.",
-        "long": "Larcomar is Lima doing something only Lima would do: carving a commercial centre into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
-      },
-      "professional": {
-        "brief": "Larcomar: a cliff-edge commercial complex functioning cinematographically as a condensed sign of Lima's aspirational consumer modernity.",
-        "mid": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use reflects its function as a symbol of Lima's aspirational consumer modernity.",
-        "long": "Larcomar's integration of commercial infrastructure into the coastal cliff face of the Malecón de Miraflores represents a significant moment in Lima's urban development, inaugurating a model of spectacular retail environment whose design exploits the city's geography as a vehicle for commercial aspiration. Its cinematic uses across four productions reflect a consistent deployment of the complex as a sign of Miraflores' consumer culture — a space where lifestyle, status, and spatial spectacle converge in ways that lend themselves equally to celebratory and critical representational framings. Larcomar's architectural syntax — open terraces, ocean views, vertical commercial layering — provides a visual grammar of aspirational modernity that is simultaneously global in its commercial logic and distinctly limeño in its spatial specificity."
-      }
-    }
-  },
-  {
-    "name": "Plaza Agustín Gutiérrez",
-    "address": "Óvalo Gutiérrez, Miraflores 15073, Perú",
-    "district": "Miraflores",
-    "movies": [
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
-      },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      }
-    ],
-    "descriptions": {
-      "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-      "adult": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in three films exploring Lima's urban social landscape.",
-      "professional": "Plaza Agustín Gutiérrez functions as a cinematographic node of upper-middle-class social life in Lima, its location at the intersection of Miraflores and San Isidro making it a spatial marker of class aspiration and leisure as depicted in Lima 13, Utopía, and Muero por Muriel."
-    },
-    "access": "Public — free access",
-    "lat": -12.11031660293372,
-    "lng": -77.03690308601313,
-    "image": "images/ovalo_gutierrez.jpg",
-    "cardDescription": {
-      "short": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-      "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
-    },
-    "texts": {
-      "young": {
-        "brief": "One of Lima's busiest intersections — surrounded by bars, restaurants, and the social life of the younger, urban middle class.",
-        "mid": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-        "long": "Ovalo Gutiérrez is one of those intersections that feels like its own ecosystem. It connects Miraflores and San Isidro, sits at the junction of several important streets, and is surrounded by the kind of bars, restaurants, and terraces where Lima's urban middle class spends its evenings. It's busy without being chaotic, social without being formal — the kind of place you end up in on a Tuesday night as much as a Saturday. Three films have used it as a setting, and all three are interested in the same thing: the social rituals of a particular class of limeño, the way people perform their lives in public, in the city, under neon lights."
-      },
-      "adult": {
-        "brief": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-        "mid": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in three films exploring Lima's urban social landscape.",
-        "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
-      },
-      "professional": {
-        "brief": "Plaza Agustín Gutiérrez: a commercial urban node at the Miraflores–San Isidro boundary, functioning as a cinematographic site of class aspiration and leisure.",
-        "mid": "Plaza Agustín Gutiérrez functions as a cinematographic node of upper-middle-class social life in Lima, its location at the intersection of Miraflores and San Isidro making it a spatial marker of class aspiration and leisure.",
-        "long": "Plaza Agustín Gutiérrez (Ovalo Gutiérrez) functions in Peruvian cinema as a spatial sign of the social rituals of Lima's upper-middle class. Its position at the boundary between Miraflores and San Isidro — the two districts most associated with the city's economic and cultural elite — makes it a productive cinematographic site for films interested in the performance of class and social aspiration. The plaza's commercial environment — characterised by restaurants, bars, and café terraces oriented toward conspicuous sociability — provides a spatial grammar of leisure and status that three productions have deployed to locate their narratives within a specific social and geographic stratum of the city."
-      }
-    }
-  },
+ 
   {
     "name": "Bosque El Olivar",
     "address": "Av. Paz Soldán, San Isidro, Lima 15073, Perú",
@@ -954,10 +720,7 @@ const locations = [
         "title": "La última tarde",
         "year": 2016
       },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      }
+      
     ],
     "descriptions": {
       "young": "El Olivar is a genuinely peaceful urban forest in San Isidro — ancient olive trees, lakes, winding paths, and a very different mood from the rest of the city. One of those hidden corners of Lima that feels completely out of time.",
@@ -990,46 +753,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Muelle Sur del Callao",
-    "address": "Port of Callao, Callao, Peru",
-    "district": "Callao",
-    "movies": [
-      {
-        "title": "Django: Sangre de mi sangre",
-        "year": 2018
-      }
-    ],
-    "descriptions": {
-      "young": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "adult": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "professional": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre ."
-    },
-    "access": "Restricted port area — access requires authorization or an organized visit",
-    "lat": -12.0554,
-    "lng": -77.1506,
-    "cardDescription": {
-      "short": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre ."
-    },
-    "texts": {
-      "young": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
-      },
-      "adult": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
-      },
-      "professional": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
-      }
-    }
-  },
+ 
   {
     "name": "Calle de las Pizzas",
     "address": "Pasaje San Ramón, Miraflores, Lima",
@@ -1119,10 +843,7 @@ const locations = [
         "title": "Un mundo para Julius",
         "year": 2021
       },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      }
+  
     ],
     "descriptions": {
       "young": "Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima. Located in San Isidro, directly opposite Lima Golf Club, it combines luxury, architecture, art, and social history. Its colonial-style façade, spacious halls, gardens, terraces, and carefully preserved interiors make it a high-value location for audiovisual productions.",
@@ -1234,46 +955,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Residencial San Felipe",
-    "address": "Avenida Gregorio Escobedo, Jesús María, Lima",
-    "district": "Jesús María",
-    "movies": [
-      {
-        "title": "La Hora Final",
-        "year": 2017
-      }
-    ],
-    "descriptions": {
-      "young": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-      "adult": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-      "professional": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development."
-    },
-    "access": "Residential area — public paths are accessible; respect private buildings",
-    "lat": -12.09,
-    "lng": -77.052,
-    "cardDescription": {
-      "short": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-      "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development."
-    },
-    "texts": {
-      "young": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
-      },
-      "adult": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
-      },
-      "professional": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
-      }
-    }
-  }
+
 ];
 
 const films = [
