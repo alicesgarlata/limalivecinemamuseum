@@ -26,12 +26,6 @@ const filmProfiles = {
     "themes": "Terrorism, police intelligence, surveillance, political violence, state investigation, fear, and historical memory.",
     "value": "This film is useful for locations related to political memory, universities, residential districts, and hidden urban networks. It helps represent Lima as a city where the internal conflict was not only visible in public events, but also hidden inside domestic and institutional spaces."
   },
-  "La hora final": {
-    "description": "La Hora Final is a Peruvian police thriller based on the intelligence operation that led to the capture of Abimael Guzmán, leader of Shining Path. The film reconstructs a crucial moment in Peru's recent history through suspense, investigation, and political tension.",
-    "about": "The story follows police agents involved in a secret investigation during the years of terrorism in Peru. Their work consists of surveillance, analysis, and patient observation rather than spectacular action. As they move through Lima, the film presents a city under suspicion, where houses, streets, universities, and ordinary neighborhoods can become part of a hidden political conflict.",
-    "themes": "Terrorism, police intelligence, surveillance, political violence, state investigation, fear, and historical memory.",
-    "value": "This film is useful for locations related to political memory, universities, residential districts, and hidden urban networks. It helps represent Lima as a city where the internal conflict was not only visible in public events, but also hidden inside domestic and institutional spaces."
-  },
   "Palomillas del Rímac": {
     "description": "Palomillas del Rímac belongs to an early stage of Peruvian sound cinema. It is important because it preserves an image of old Lima connected to criollo music, neighborhood life, comedy, and popular traditions.",
     "about": "The film portrays the daily life of a family and its social environment in the district of Rímac. Through humor, music, and neighborhood situations, it presents a Lima where collective life, popular characters, and criollo culture are central. Music is not only decoration, but part of the identity of the place and its people.",
@@ -98,12 +92,6 @@ const filmProfiles = {
     "themes": "Childhood, class inequality, aristocracy, domestic service, privilege, innocence, and social critique.",
     "value": "The film relates strongly to Lima Golf Club, Bosque El Olivar, Country Club Lima Hotel, and residential San Isidro. These spaces visually represent the social world that the film observes and questions."
   },
-  "La Luz en el Cerro": {
-    "description": "La Luz en el Cerro is a Peruvian mystery thriller. Unlike many of the films in this list, it does not focus mainly on Lima's social or historical spaces, but on atmosphere, suspense, landscape, and hidden tensions.",
-    "about": "The film develops a story marked by mystery, fear, and investigation. Its title suggests a space where something strange or unexplained appears in the landscape. The narrative uses suspense and uncertainty to create a tense relationship between people, territory, and the unknown.",
-    "themes": "Mystery, fear, landscape, secrecy, investigation, local beliefs, and psychological tension.",
-    "value": "This film is useful for expanding the project beyond urban Lima. It can be connected to locations with a mysterious, rural, peripheral, or symbolic atmosphere."
-  },
   "Viaje a Tombuctú": {
     "description": "Viaje a Tombuctú is a Peruvian drama about adolescence, love, memory, and the loss of innocence during the 1980s. The film combines an intimate coming-of-age story with the broader context of terrorism, migration, and economic crisis in Peru.",
     "about": "Ana and Lucho are two teenagers who create an imaginary country called Tombuctú as a refuge from the violence and uncertainty around them. Their relationship becomes a private world where they can preserve affection, freedom, and innocence. However, the political and social reality of Peru gradually threatens that fragile space.",
@@ -116,29 +104,11 @@ const filmProfiles = {
     "themes": "Diplomacy, social life, urban elegance, modernity, intrigue, and Lima's upper-class spaces.",
     "value": "The film can be connected to San Isidro, Lima Golf Club, and areas associated with diplomatic, residential, and elite Lima in the 1960s."
   },
-  "Muero por Muriel": {
-    "description": "Muero por Muriel is a Peruvian drama-thriller centered on emotional tension, desire, and conflict. It belongs to a group of Peruvian films from the 2000s that explored more intimate, psychological, and suspenseful stories.",
-    "about": "The film revolves around a relationship marked by attraction, obsession, and emotional conflict. The title suggests that the character of Muriel occupies the center of the protagonist's desire or crisis. The film can be read as a story where love, danger, and psychological tension become closely connected.",
-    "themes": "Desire, obsession, emotional conflict, psychological tension, love, and danger.",
-    "value": "This film can be linked interpretively to Barranco, Puente de los Suspiros, or other intimate and nocturnal spaces. The relationship should be presented as curatorial rather than as a confirmed precise location."
-  },
   "No Se Lo Digas a Nadie": {
     "description": "No se lo digas a nadie is a Peruvian drama based on the novel by Jaime Bayly. The film was significant because it openly addressed homosexuality, repression, and hypocrisy within Lima's upper class.",
     "about": "The film follows Joaquín Camino, a young man from Lima's wealthy social environment who struggles with his sexuality in a conservative and judgmental society. His family, school, religion, and social circle pressure him to hide his identity. Through his relationships and personal conflicts, the film exposes the contradictions of an elite that protects appearances while denying emotional truth.",
     "themes": "Sexual identity, homophobia, upper-class hypocrisy, family repression, religion, secrecy, and social pressure.",
     "value": "The film connects with Óvalo Gutiérrez, San Isidro, Miraflores, Lima Golf Club, and university or residential spaces associated with Lima's upper and upper-middle classes."
-  },
-  "Django: La Otra Cara": {
-    "description": "Django: La Otra Cara is a Peruvian action and crime film inspired by the figure of Orlando Hernández, known as Django, a famous bank robber. The film helped establish a criminal saga within contemporary Peruvian cinema.",
-    "about": "The film follows Django's life as a criminal, lover, fugitive, and urban legend. Through robberies, betrayals, romantic relationships, and confrontations with the police, the story presents the world of crime as both dangerous and seductive. Lima appears as a city of banks, streets, prisons, and hidden networks.",
-    "themes": "Crime, robbery, masculinity, violence, love, betrayal, police pursuit, and urban myth.",
-    "value": "The film can be connected to Callao Monumental, port-related streets, closed urban spaces, and locations associated with crime, pursuit, and tension."
-  },
-  "Django: Sangre de mi sangre": {
-    "description": "Django: Sangre de mi sangre is the sequel to Django: La Otra Cara. It returns to the character of Django after years in prison and explores the possibility of redemption in a world where violence and crime continue to shape family life.",
-    "about": "After being released from prison, Django tries to rebuild his life and reconnect with his family. However, the criminal world reappears through his son, who becomes involved with dangerous people. The film turns crime into an inherited conflict, where the father's past threatens the next generation.",
-    "themes": "Crime, family, inheritance, redemption, prison, urban violence, and generational conflict.",
-    "value": "The film can be linked to Callao Monumental, urban crime spaces, enclosed streets, and locations associated with violence, pursuit, and family tension."
   },
   "La última tarde": {
     "description": "La última tarde is an intimate Peruvian drama about memory, politics, love, and unresolved emotional wounds. The film is structured around a long conversation between two former partners who meet again after many years.",
@@ -170,16 +140,5 @@ const filmProfiles = {
     "themes": "Youth, memory, video culture, experimentation, identity, personal relationships, urban experience, and independent filmmaking.",
     "value": "The film is useful for locations connected to alternative culture, residential streets, artistic spaces, and everyday urban Lima. Its visual language adds value to an itinerary focused on how new recording technologies changed the way the city and its younger inhabitants could be represented on screen."
   },
-  "Utopía": {
-    "description": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster.",
-    "about": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster.",
-    "themes": "Drama",
-    "value": "This title is preserved in the film catalogue. A location-specific curatorial note can be added when a documented Lima location is linked."
-  },
-  "Lady Nazca": {
-    "description": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage.",
-    "about": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage.",
-    "themes": "Drama histórico, Biográfico",
-    "value": "This title is preserved in the film catalogue. A location-specific curatorial note can be added when a documented Lima location is linked."
-  }
+ 
 };
