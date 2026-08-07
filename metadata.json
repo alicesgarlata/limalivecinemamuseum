@@ -497,31 +497,7 @@
     "release_date": "1998-01-01",
     "description": "Follows a young upper-class man struggling with his identity and sexual orientation in a conservative society."
   },
-  {
-    "title": "Django: La Otra Cara",
-    "year": 2002,
-    "wikidata_id": "Q5812025",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q5812025",
-    "director": [
-      "Ricardo Velásquez"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Acción",
-      "Crimen"
-    ],
-    "cast": [
-      "Giovanni Ciccia",
-      "Melania Urbina"
-    ],
-    "production": [
-      "Inca Films"
-    ],
-    "release_date": "2002-06-26",
-    "description": "Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence."
-  },
+
   {
     "title": "La última tarde",
     "year": 2016,
@@ -600,80 +576,6 @@
     "description": "Las chicas del Jirón de la Unión is a Peruvian silent romantic melodrama directed by Alberto Santana and released in 1930. The film portrays everyday life on the Jirón de la Unión, one of the most important commercial and social streets in Lima during the early twentieth century."
   },
   {
-    "title": "Utopía",
-    "year": 2018,
-    "wikidata_id": "Q56886991",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q56886991",
-    "director": [
-      "Gino Tassara",
-      "Jorge Vilela"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Drama"
-    ],
-    "cast": [
-      "Renzo Schuller",
-      "Natalia Salas"
-    ],
-    "production": [
-      "Sinargollas Producciones"
-    ],
-    "description": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster."
-  },
-  {
-    "title": "La Luz en el Cerro",
-    "year": 2016,
-    "wikidata_id": "Q123483054",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q123483054",
-    "director": [
-      "Ricardo Velarde"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Thriller",
-      "Misterio"
-    ],
-    "cast": [
-      "Manuel Gold",
-      "Emilram Cossío"
-    ],
-    "production": [
-      "Caudal Films"
-    ],
-    "description": "A group of friends travels to an Andean village where strange events occur, blending mystery, horror, and supernatural elements."
-  },
-  {
-    "title": "Lady Nazca",
-    "year": 2025,
-    "wikidata_id": "Q135474677",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q135474677",
-    "director": [
-      "Damien Dorsaz"
-    ],
-    "countries": [
-      "Alemania",
-      "Francia",
-      "Suiza",
-      "Perú"
-    ],
-    "genres": [
-      "Drama histórico",
-      "Biográfico"
-    ],
-    "cast": [
-      "Devrim Lingnau",
-      "Guillaume Gallienne",
-      "Olivia Ross",
-      "Javier Valdés"
-    ],
-    "description": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage."
-  },
-  {
     "title": "Avenida Larco, la película",
     "year": 2017,
     "wikidata_id": null,
@@ -726,32 +628,5 @@
     "release_date": "2017-11-06",
     "description": "Gen Hi8 is a Peruvian independent film associated with youth culture, audiovisual experimentation, and the use of low-cost video technology. Its title refers to the Hi8 format, a medium closely linked to home video, personal recording, and alternative filmmaking during the transition from analog to digital images."
   },
-  {
-    "title": "Django: Sangre de mi sangre",
-    "year": 2018,
-    "wikidata_id": null,
-    "wikidata_url": null,
-    "director": [
-      "Aldo Salvini"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Acción",
-      "Crimen",
-      "Drama"
-    ],
-    "cast": [
-      "Giovanni Ciccia",
-      "Aldo Miyashiro",
-      "Melania Urbina",
-      "Emanuel Soriano",
-      "Tatiana Astengo",
-      "Sergio Galliani"
-    ],
-    "production": [],
-    "release_date": "2018",
-    "description": "Django: Sangre de mi sangre is the sequel to Django: La Otra Cara. It returns to the character of Django after years in prison and explores the possibility of redemption in a world where violence and crime continue to shape family life."
-  }
+ 
 ]
