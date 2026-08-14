@@ -1,1579 +1,219 @@
-// Contenuti testuali estesi per le location presenti nel file HTML.
-// Chiave = loc.name esatto in data.js.
-// "Related Films" non è incluso perché le relazioni film/location
-// sono gestite separatamente in data.js.
+// Extended location profiles used by location.html.
+// Keys match locations[].name in data.js; editorial additions from schede.html are included here.
 
 const schede = {
   "Parque John F. Kennedy": {
-    "Introduction": `<p>
-      In the heart of one of Lima’s most dynamic districts lies Kennedy Park, a space that combines history,
-      urban culture, and everyday life. This park is not only a meeting point, but also a symbol of the modern
-      identity of the Peruvian capital. Surrounded by restaurants, shops, street art, and constant movement,
-      it has become one of the city’s most representative locations, where the traditional and the contemporary
-      coexist naturally. Its vibrant atmosphere makes it an ideal setting for both social life and audiovisual
-      storytelling.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Kennedy Park is part of the so-called Central Park of Miraflores, located in the district of Miraflores,
-      in Lima, Peru. It is specifically located between Larco and Diagonal Avenues, very close to the Miraflores
-      Oval and the Virgen Milagrosa Church.
-      <a href="https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=3273&utm_source=chatgpt.com" target="_blank">[1]</a>
-    </p>
-
-    <p>
-      It covers an approximate area of 22,000 m² and is divided into two main sections: John F. Kennedy Park
-      and 7 de Junio Park.
-      <a href="https://es.wikipedia.org/wiki/Parque_Central_de_Miraflores?utm_source=chatgpt.com" target="_blank">[2]</a>
-    </p>
-
-    <p>
-      This space functions as the district’s main square and is considered one of the most visited points by
-      both residents and tourists. Its strategic location connects it directly with commercial, gastronomic,
-      and tourist areas, such as the Miraflores boardwalk and the well-known “Pizza Street.”
-      <a href="https://www.peruforless.com/blog/parque-kennedy/?utm_source=chatgpt.com" target="_blank">[3]</a>
-    </p>
-
-    <p>
-      In addition, the park hosts cultural spaces such as the Chabuca Granda Amphitheater, artisan fairs,
-      and large public events, consolidating it as an active center of social and cultural interaction.
-    </p>`,
-
-    "History of the Place": `<p>
-      The origin of Kennedy Park dates back to the early 20th century, when the area was known as the Central
-      Park of Miraflores. In its early stages, it was a simple urban space that gradually gained importance
-      as the district grew and became more urbanized.
-      <a href="https://www.karikuy.com/es/explorando-el-parque-kennedy-un-oasis-vibrante-en-miraflores-peru/?utm_source=chatgpt.com" target="_blank">[4]</a>
-    </p>
-
-    <p>
-      Its development was influenced by relevant historical events, such as the Battle of Miraflores during
-      the War of the Pacific in 1881, which deeply shaped the identity of the district.
-      <a href="https://freewalkingtoursperu.com/es/blog/parque-kennedy-miraflores-lima-peru/?utm_source=chatgpt.com" target="_blank">[5]</a>
-    </p>
-
-    <p>
-      Over time, the park underwent several renovations. One of the most important took place in the 1990s,
-      when the urban space was completely redesigned, incorporating pedestrian areas, gardens, and cultural
-      spaces.
-    </p>
-
-    <p>
-      The name “Kennedy Park” became popular after the installation of a bust of former U.S. President
-      John F. Kennedy, placed in 2003 as a symbol of international friendship.
-    </p>
-
-    <p>
-      Although the complex is still officially known as the Central Park of Miraflores, everyday use has
-      consolidated the name “Kennedy” as its most recognized denomination.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of Kennedy Park’s most unique features is the presence of a large population of cats that live
-      freely in its gardens. This phenomenon began in the 1990s, when neighbors started leaving cats in the
-      area to control a rodent infestation.
-    </p>
-
-    <p>
-      Over time, these animals became an essential part of the park’s identity. Today, they are cared for
-      by volunteers and have become part of the tourist attraction, to the point that the place is informally
-      known as “the park of the cats.”
-    </p>
-
-    <p>
-      This element adds a particular visual and symbolic component, reinforcing its unique character compared
-      with other urban spaces.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Kennedy Park is not only a green space, but also a cultural node within the city. Book fairs, artistic
-      events, musical performances, and civic activities are held there.
-    </p>
-
-    <p>
-      It is also a common location for social demonstrations, national celebrations, and sports activities,
-      positioning it as a representative stage for Lima’s public life.
-    </p>
-
-    <p>
-      Its immediate surroundings, filled with commerce, gastronomy, and nightlife, make it a hybrid space
-      between tourism and everyday life, a characteristic that makes it especially attractive as an audiovisual
-      location.
-    </p>`,
-
-    "Sources": `<ul>
-      <li>
-        <a href="https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=3273&utm_source=chatgpt.com" target="_blank">
-          Parque Central de Miraflores – Tourist Resources
-        </a>
-      </li>
-      <li>
-        <a href="https://es.wikipedia.org/wiki/Parque_Central_de_Miraflores" target="_blank">
-          Wikipedia – Parque Central de Miraflores
-        </a>
-      </li>
-      <li>
-        <a href="https://www.peruforless.com/blog/parque-kennedy/" target="_blank">
-          Peru For Less – Kennedy Park
-        </a>
-      </li>
-      <li>
-        <a href="https://www.karikuy.com/es/explorando-el-parque-kennedy-un-oasis-vibrante-en-miraflores-peru/" target="_blank">
-          Karikuy Tours – Kennedy Park
-        </a>
-      </li>
-      <li>
-        <a href="https://freewalkingtoursperu.com/es/blog/parque-kennedy-miraflores-lima-peru/" target="_blank">
-          Free Walking Tours Peru – Kennedy Park
-        </a>
-      </li>
-    </ul>`
+    "Introduction": "<p>\n      In the heart of one of Lima’s most dynamic districts lies Kennedy Park, a space that combines history,\n      urban culture, and everyday life. This park is not only a meeting point, but also a symbol of the modern\n      identity of the Peruvian capital. Surrounded by restaurants, shops, street art, and constant movement,\n      it has become one of the city’s most representative locations, where the traditional and the contemporary\n      coexist naturally. Its vibrant atmosphere makes it an ideal setting for both social life and audiovisual\n      storytelling.\n    </p>",
+    "General Information and Location": "<p>\n      Kennedy Park is part of the so-called Central Park of Miraflores, located in the district of Miraflores,\n      in Lima, Peru. It is specifically located between Larco and Diagonal Avenues, very close to the Miraflores\n      Oval and the Virgen Milagrosa Church.\n      <a href=\"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=3273&utm_source=chatgpt.com\" target=\"_blank\">[1]</a>\n    </p>\n\n    <p>\n      It covers an approximate area of 22,000 m² and is divided into two main sections: John F. Kennedy Park\n      and 7 de Junio Park.\n      <a href=\"https://es.wikipedia.org/wiki/Parque_Central_de_Miraflores?utm_source=chatgpt.com\" target=\"_blank\">[2]</a>\n    </p>\n\n    <p>\n      This space functions as the district’s main square and is considered one of the most visited points by\n      both residents and tourists. Its strategic location connects it directly with commercial, gastronomic,\n      and tourist areas, such as the Miraflores boardwalk and the well-known “Pizza Street.”\n      <a href=\"https://www.peruforless.com/blog/parque-kennedy/?utm_source=chatgpt.com\" target=\"_blank\">[3]</a>\n    </p>\n\n    <p>\n      In addition, the park hosts cultural spaces such as the Chabuca Granda Amphitheater, artisan fairs,\n      and large public events, consolidating it as an active center of social and cultural interaction.\n    </p>",
+    "History of the Place": "<p>\n      The origin of Kennedy Park dates back to the early 20th century, when the area was known as the Central\n      Park of Miraflores. In its early stages, it was a simple urban space that gradually gained importance\n      as the district grew and became more urbanized.\n      <a href=\"https://www.karikuy.com/es/explorando-el-parque-kennedy-un-oasis-vibrante-en-miraflores-peru/?utm_source=chatgpt.com\" target=\"_blank\">[4]</a>\n    </p>\n\n    <p>\n      Its development was influenced by relevant historical events, such as the Battle of Miraflores during\n      the War of the Pacific in 1881, which deeply shaped the identity of the district.\n      <a href=\"https://freewalkingtoursperu.com/es/blog/parque-kennedy-miraflores-lima-peru/?utm_source=chatgpt.com\" target=\"_blank\">[5]</a>\n    </p>\n\n    <p>\n      Over time, the park underwent several renovations. One of the most important took place in the 1990s,\n      when the urban space was completely redesigned, incorporating pedestrian areas, gardens, and cultural\n      spaces.\n    </p>\n\n    <p>\n      The name “Kennedy Park” became popular after the installation of a bust of former U.S. President\n      John F. Kennedy, placed in 2003 as a symbol of international friendship.\n    </p>\n\n    <p>\n      Although the complex is still officially known as the Central Park of Miraflores, everyday use has\n      consolidated the name “Kennedy” as its most recognized denomination.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of Kennedy Park’s most unique features is the presence of a large population of cats that live\n      freely in its gardens. This phenomenon began in the 1990s, when neighbors started leaving cats in the\n      area to control a rodent infestation.\n    </p>\n\n    <p>\n      Over time, these animals became an essential part of the park’s identity. Today, they are cared for\n      by volunteers and have become part of the tourist attraction, to the point that the place is informally\n      known as “the park of the cats.”\n    </p>\n\n    <p>\n      This element adds a particular visual and symbolic component, reinforcing its unique character compared\n      with other urban spaces.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Kennedy Park is not only a green space, but also a cultural node within the city. Book fairs, artistic\n      events, musical performances, and civic activities are held there.\n    </p>\n\n    <p>\n      It is also a common location for social demonstrations, national celebrations, and sports activities,\n      positioning it as a representative stage for Lima’s public life.\n    </p>\n\n    <p>\n      Its immediate surroundings, filled with commerce, gastronomy, and nightlife, make it a hybrid space\n      between tourism and everyday life, a characteristic that makes it especially attractive as an audiovisual\n      location.\n    </p>",
+    "Sources": "<ul>\n      <li>\n        <a href=\"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=3273&utm_source=chatgpt.com\" target=\"_blank\">\n          Parque Central de Miraflores – Tourist Resources\n        </a>\n      </li>\n      <li>\n        <a href=\"https://es.wikipedia.org/wiki/Parque_Central_de_Miraflores\" target=\"_blank\">\n          Wikipedia – Parque Central de Miraflores\n        </a>\n      </li>\n      <li>\n        <a href=\"https://www.peruforless.com/blog/parque-kennedy/\" target=\"_blank\">\n          Peru For Less – Kennedy Park\n        </a>\n      </li>\n      <li>\n        <a href=\"https://www.karikuy.com/es/explorando-el-parque-kennedy-un-oasis-vibrante-en-miraflores-peru/\" target=\"_blank\">\n          Karikuy Tours – Kennedy Park\n        </a>\n      </li>\n      <li>\n        <a href=\"https://freewalkingtoursperu.com/es/blog/parque-kennedy-miraflores-lima-peru/\" target=\"_blank\">\n          Free Walking Tours Peru – Kennedy Park\n        </a>\n      </li>\n    </ul>"
   },
-
   "Malecon de Miraflores": {
-    "Introduction": `<p>
-      The Miraflores Boardwalk is one of Lima’s most iconic urban spaces, where the city meets the Pacific Ocean directly.
-      Stretching for several kilometers, this scenic corridor offers a unique combination of nature, architecture, and urban life.
-      Its privileged location on the cliffs of the Costa Verde makes it a strategic point for both recreational activities and
-      audiovisual production. Its wide visual perspective, natural light, and ocean horizon position it as one of the most
-      representative locations in the Peruvian capital.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The Miraflores Boardwalk is located in Lima, specifically along the coastal area of the Miraflores district.
-      It extends approximately 5 kilometers along the cliffs bordering the Costa Verde.
-    </p>
-
-    <p>
-      It is not a single park, but a continuous set of public spaces that includes the Malecón de la Marina,
-      Malecón Cisneros, and Malecón de la Reserva. Along its route, visitors can find emblematic parks such as
-      Parque del Amor, Parque Antonio Raimondi, and Parque María Reiche.
-    </p>
-
-    <p>
-      The boardwalk features green areas, bike lanes, pedestrian paths, and natural viewpoints overlooking the Pacific Ocean.
-      It is also a well-known area for paragliding, attracting both tourists and local athletes.
-    </p>
-
-    <p>
-      Its proximity to commercial centers such as Larcomar and high-end residential areas reinforces its importance as a
-      tourist and urban axis.
-    </p>`,
-
-    "History of the Place": `<p>
-      The development of the Miraflores Boardwalk is linked to the urban expansion of the district during the 20th century.
-      Initially, the cliff area did not have consolidated urban infrastructure and was mainly seen as a natural edge of the city.
-    </p>
-
-    <p>
-      As Lima grew and Miraflores became established as a residential and tourist district, a progressive process of urbanizing
-      the coastal edge began. This process included the construction of parks, pedestrian paths, and public spaces designed to
-      take advantage of the scenic value of the coastline.
-    </p>
-
-    <p>
-      During the 1980s and 1990s, the boardwalk underwent important urban interventions aimed at improving its accessibility,
-      safety, and tourist appeal. These transformations consolidated the space as one of the city’s main recreational corridors.
-    </p>
-
-    <p>
-      Today, the boardwalk is an example of integration between the natural environment and urban design, standing out for its
-      continuous planning and maintenance.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the most distinctive features of the Miraflores Boardwalk is its use as a takeoff point for paragliding.
-      Thanks to the air currents generated by the cliffs, the area is ideal for this type of aerial activity.
-    </p>
-
-    <p>
-      This makes the boardwalk one of the few urban spaces in the world where it is possible to constantly observe paragliders
-      flying over the ocean. This activity is not only recreational, but also adds a dynamic visual element that has been used
-      in various audiovisual productions.
-    </p>
-
-    <p>
-      In addition, Parque del Amor, located within the boardwalk circuit, stands out for its sculpture “El Beso” and its mosaics
-      inspired by the style of Antoni Gaudí, adding a distinctive artistic component to the environment.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      The Miraflores Boardwalk plays a key role as a public space for recreation, tourism, and contemplation.
-      It is used daily by people who walk, run, cycle, or simply enjoy the ocean view.
-    </p>
-
-    <p>
-      It is also an important location for cultural events, photo sessions, and sports activities. Its open design and connection
-      with multiple parks make it a versatile space within the city.
-    </p>
-
-    <p>
-      From an urban perspective, it represents one of the best examples of how Lima’s coastal edge has been used, integrating
-      nature, infrastructure, and social use in a balanced way.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Miraflores_%28Lima%29" target="_blank">Wikipedia – Miraflores, Lima</a></li>
-      <li><a href="https://www.miraflores.gob.pe" target="_blank">Municipality of Miraflores</a></li>
-      <li><a href="https://www.peru.travel/es/destinos/lima/miraflores" target="_blank">Peru Travel – Miraflores</a></li>
-      <li><a href="https://www.costaverde.pe" target="_blank">Costa Verde</a></li>
-      <li><a href="https://www.promperu.gob.pe" target="_blank">PromPerú</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The Miraflores Boardwalk is one of Lima’s most iconic urban spaces, where the city meets the Pacific Ocean directly.\n      Stretching for several kilometers, this scenic corridor offers a unique combination of nature, architecture, and urban life.\n      Its privileged location on the cliffs of the Costa Verde makes it a strategic point for both recreational activities and\n      audiovisual production. Its wide visual perspective, natural light, and ocean horizon position it as one of the most\n      representative locations in the Peruvian capital.\n    </p>",
+    "General Information and Location": "<p>\n      The Miraflores Boardwalk is located in Lima, specifically along the coastal area of the Miraflores district.\n      It extends approximately 5 kilometers along the cliffs bordering the Costa Verde.\n    </p>\n\n    <p>\n      It is not a single park, but a continuous set of public spaces that includes the Malecón de la Marina,\n      Malecón Cisneros, and Malecón de la Reserva. Along its route, visitors can find emblematic parks such as\n      Parque del Amor, Parque Antonio Raimondi, and Parque María Reiche.\n    </p>\n\n    <p>\n      The boardwalk features green areas, bike lanes, pedestrian paths, and natural viewpoints overlooking the Pacific Ocean.\n      It is also a well-known area for paragliding, attracting both tourists and local athletes.\n    </p>\n\n    <p>\n      Its proximity to commercial centers such as Larcomar and high-end residential areas reinforces its importance as a\n      tourist and urban axis.\n    </p>",
+    "History of the Place": "<p>\n      The development of the Miraflores Boardwalk is linked to the urban expansion of the district during the 20th century.\n      Initially, the cliff area did not have consolidated urban infrastructure and was mainly seen as a natural edge of the city.\n    </p>\n\n    <p>\n      As Lima grew and Miraflores became established as a residential and tourist district, a progressive process of urbanizing\n      the coastal edge began. This process included the construction of parks, pedestrian paths, and public spaces designed to\n      take advantage of the scenic value of the coastline.\n    </p>\n\n    <p>\n      During the 1980s and 1990s, the boardwalk underwent important urban interventions aimed at improving its accessibility,\n      safety, and tourist appeal. These transformations consolidated the space as one of the city’s main recreational corridors.\n    </p>\n\n    <p>\n      Today, the boardwalk is an example of integration between the natural environment and urban design, standing out for its\n      continuous planning and maintenance.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the most distinctive features of the Miraflores Boardwalk is its use as a takeoff point for paragliding.\n      Thanks to the air currents generated by the cliffs, the area is ideal for this type of aerial activity.\n    </p>\n\n    <p>\n      This makes the boardwalk one of the few urban spaces in the world where it is possible to constantly observe paragliders\n      flying over the ocean. This activity is not only recreational, but also adds a dynamic visual element that has been used\n      in various audiovisual productions.\n    </p>\n\n    <p>\n      In addition, Parque del Amor, located within the boardwalk circuit, stands out for its sculpture “El Beso” and its mosaics\n      inspired by the style of Antoni Gaudí, adding a distinctive artistic component to the environment.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      The Miraflores Boardwalk plays a key role as a public space for recreation, tourism, and contemplation.\n      It is used daily by people who walk, run, cycle, or simply enjoy the ocean view.\n    </p>\n\n    <p>\n      It is also an important location for cultural events, photo sessions, and sports activities. Its open design and connection\n      with multiple parks make it a versatile space within the city.\n    </p>\n\n    <p>\n      From an urban perspective, it represents one of the best examples of how Lima’s coastal edge has been used, integrating\n      nature, infrastructure, and social use in a balanced way.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Miraflores_%28Lima%29\" target=\"_blank\">Wikipedia – Miraflores, Lima</a></li>\n      <li><a href=\"https://www.miraflores.gob.pe\" target=\"_blank\">Municipality of Miraflores</a></li>\n      <li><a href=\"https://www.peru.travel/es/destinos/lima/miraflores\" target=\"_blank\">Peru Travel – Miraflores</a></li>\n      <li><a href=\"https://www.costaverde.pe\" target=\"_blank\">Costa Verde</a></li>\n      <li><a href=\"https://www.promperu.gob.pe\" target=\"_blank\">PromPerú</a></li>\n    </ul>"
   },
-
   "Calle de las Pizzas": {
-    "Introduction": `<p>
-      Pizza Street, officially known as San Ramón Boulevard, is one of Lima’s best-known pedestrian streets and an iconic
-      part of the Miraflores district. For decades, it has been associated with nightlife, gastronomy, and tourism, serving
-      as a meeting point for both locals and international visitors. Although its identity has evolved over time, the street
-      remains a lively urban setting where restaurants, cafés, bars, and entertainment venues create a vibrant atmosphere.
-      From an audiovisual perspective, it offers an authentic representation of Lima’s contemporary nightlife and commercial
-      culture.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Pizza Street is located in the district of Miraflores, Lima, Peru. Officially named San Ramón Boulevard, it is a
-      pedestrian street situated just a few meters from Kennedy Park and Larco Avenue.
-    </p>
-
-    <p>
-      The boulevard extends for approximately two blocks and is surrounded by restaurants, cafés, bars, hotels, and
-      commercial establishments, making it one of Miraflores’ main entertainment corridors.
-    </p>
-
-    <p>
-      Although originally famous for its numerous pizzerias, today the boulevard offers a much broader gastronomic
-      experience, including Peruvian cuisine, international restaurants, cocktail bars, and cafés.
-    </p>
-
-    <p>
-      Its central location allows visitors to easily access nearby attractions such as Kennedy Park, Larcomar,
-      Miraflores Boardwalk, and the district’s shopping and cultural areas.
-    </p>`,
-
-    "History of the Place": `<p>
-      The area originally consisted of residential buildings, including houses that survived the War of the Pacific and
-      constructions dating from the 1930s and 1940s. During the 1970s and 1980s, many of these buildings were transformed
-      into restaurants, especially pizzerias, giving rise to the popular nickname “Pizza Street.”
-    </p>
-
-    <p>
-      In the 1980s, the street was converted into a pedestrian zone, which encouraged commercial growth and established it
-      as one of Lima’s most popular nightlife destinations.
-    </p>
-
-    <p>
-      During the 2000s and 2010s, the area experienced a shift toward bars and nightclubs, while many traditional pizzerias
-      disappeared. Concerns about overcrowding and public safety eventually led the Municipality of Miraflores to launch a
-      comprehensive urban renewal project.
-    </p>
-
-    <p>
-      In 2021, the area reopened as the renovated San Ramón Boulevard, designed as a safer, greener, and more family-friendly
-      public space while preserving its gastronomic identity.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the most interesting aspects of Pizza Street is that, despite its famous name, pizza is no longer the dominant
-      culinary offering. Today, visitors can find a wide variety of international restaurants, cafés, pubs, and cocktail bars.
-    </p>
-
-    <p>
-      Another distinctive feature is its transformation from one of Lima’s busiest nightlife areas into a modern pedestrian
-      boulevard emphasizing public space, landscaping, and outdoor dining.
-    </p>
-
-    <p>
-      The boulevard remains especially active during evenings and weekends, when its restaurants and entertainment venues
-      attract both residents and tourists.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Pizza Street has played an important role in the commercial and social development of Miraflores. For decades, it has
-      been one of Lima’s best-known meeting places, contributing significantly to the district’s tourism and hospitality industry.
-    </p>
-
-    <p>
-      From a cultural perspective, the boulevard reflects the evolution of Lima’s urban entertainment districts, adapting to
-      changing social trends while maintaining its reputation as a gastronomic destination.
-    </p>
-
-    <p>
-      Within the urban landscape, San Ramón Boulevard demonstrates how public space can be revitalized through pedestrian
-      design, landscaping, and mixed commercial use.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Calle_de_las_Pizzas" target="_blank">Wikipedia – Calle de las Pizzas</a></li>
-      <li><a href="https://www.miraflores.gob.pe/miraflores-inicio-construccion-de-emblematico-boulevard-de-la-calle-san-ramon-mal-llamada-calle-de-las-pizzas-y-pasaje-figari/" target="_blank">Municipality of Miraflores – Redevelopment</a></li>
-      <li><a href="https://www.miraflores.gob.pe/" target="_blank">Municipality of Miraflores</a></li>
-      <li><a href="https://www.peru.travel/en/destinations/lima" target="_blank">PROMPERÚ – Lima</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Pizza Street, officially known as San Ramón Boulevard, is one of Lima’s best-known pedestrian streets and an iconic\n      part of the Miraflores district. For decades, it has been associated with nightlife, gastronomy, and tourism, serving\n      as a meeting point for both locals and international visitors. Although its identity has evolved over time, the street\n      remains a lively urban setting where restaurants, cafés, bars, and entertainment venues create a vibrant atmosphere.\n      From an audiovisual perspective, it offers an authentic representation of Lima’s contemporary nightlife and commercial\n      culture.\n    </p>",
+    "General Information and Location": "<p>\n      Pizza Street is located in the district of Miraflores, Lima, Peru. Officially named San Ramón Boulevard, it is a\n      pedestrian street situated just a few meters from Kennedy Park and Larco Avenue.\n    </p>\n\n    <p>\n      The boulevard extends for approximately two blocks and is surrounded by restaurants, cafés, bars, hotels, and\n      commercial establishments, making it one of Miraflores’ main entertainment corridors.\n    </p>\n\n    <p>\n      Although originally famous for its numerous pizzerias, today the boulevard offers a much broader gastronomic\n      experience, including Peruvian cuisine, international restaurants, cocktail bars, and cafés.\n    </p>\n\n    <p>\n      Its central location allows visitors to easily access nearby attractions such as Kennedy Park, Larcomar,\n      Miraflores Boardwalk, and the district’s shopping and cultural areas.\n    </p>",
+    "History of the Place": "<p>\n      The area originally consisted of residential buildings, including houses that survived the War of the Pacific and\n      constructions dating from the 1930s and 1940s. During the 1970s and 1980s, many of these buildings were transformed\n      into restaurants, especially pizzerias, giving rise to the popular nickname “Pizza Street.”\n    </p>\n\n    <p>\n      In the 1980s, the street was converted into a pedestrian zone, which encouraged commercial growth and established it\n      as one of Lima’s most popular nightlife destinations.\n    </p>\n\n    <p>\n      During the 2000s and 2010s, the area experienced a shift toward bars and nightclubs, while many traditional pizzerias\n      disappeared. Concerns about overcrowding and public safety eventually led the Municipality of Miraflores to launch a\n      comprehensive urban renewal project.\n    </p>\n\n    <p>\n      In 2021, the area reopened as the renovated San Ramón Boulevard, designed as a safer, greener, and more family-friendly\n      public space while preserving its gastronomic identity.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the most interesting aspects of Pizza Street is that, despite its famous name, pizza is no longer the dominant\n      culinary offering. Today, visitors can find a wide variety of international restaurants, cafés, pubs, and cocktail bars.\n    </p>\n\n    <p>\n      Another distinctive feature is its transformation from one of Lima’s busiest nightlife areas into a modern pedestrian\n      boulevard emphasizing public space, landscaping, and outdoor dining.\n    </p>\n\n    <p>\n      The boulevard remains especially active during evenings and weekends, when its restaurants and entertainment venues\n      attract both residents and tourists.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Pizza Street has played an important role in the commercial and social development of Miraflores. For decades, it has\n      been one of Lima’s best-known meeting places, contributing significantly to the district’s tourism and hospitality industry.\n    </p>\n\n    <p>\n      From a cultural perspective, the boulevard reflects the evolution of Lima’s urban entertainment districts, adapting to\n      changing social trends while maintaining its reputation as a gastronomic destination.\n    </p>\n\n    <p>\n      Within the urban landscape, San Ramón Boulevard demonstrates how public space can be revitalized through pedestrian\n      design, landscaping, and mixed commercial use.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Calle_de_las_Pizzas\" target=\"_blank\">Wikipedia – Calle de las Pizzas</a></li>\n      <li><a href=\"https://www.miraflores.gob.pe/miraflores-inicio-construccion-de-emblematico-boulevard-de-la-calle-san-ramon-mal-llamada-calle-de-las-pizzas-y-pasaje-figari/\" target=\"_blank\">Municipality of Miraflores – Redevelopment</a></li>\n      <li><a href=\"https://www.miraflores.gob.pe/\" target=\"_blank\">Municipality of Miraflores</a></li>\n      <li><a href=\"https://www.peru.travel/en/destinations/lima\" target=\"_blank\">PROMPERÚ – Lima</a></li>\n    </ul>"
   },
-
   "Monumental Callao": {
-    "Introduction": `<p>
-      Monumental Callao is one of Peru’s most significant urban regeneration projects, transforming part of the historic
-      center of Callao into a vibrant cultural and artistic district. Colorful murals, restored republican-era buildings,
-      galleries, and public art installations have turned the neighborhood into a symbol of urban revitalization and
-      cultural innovation.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Monumental Callao is located in the historic center of Callao, Peru, approximately 15 kilometers west of downtown
-      Lima and only a few minutes from the Port of Callao.
-    </p>
-
-    <p>
-      The district was developed through a public-private urban renewal initiative led by the organization Fugaz, with the
-      objective of restoring historic buildings and promoting art, tourism, entrepreneurship, and community development.
-    </p>
-
-    <p>
-      Today, Monumental Callao is home to art galleries, cultural centers, museums, cafés, restaurants, artisan shops,
-      design studios, and exhibition spaces.
-    </p>`,
-
-    "History of the Place": `<p>
-      The historic center of Callao has long been an important commercial and maritime district due to its proximity to
-      Peru’s main seaport. During the late twentieth century, however, parts of the neighborhood experienced economic
-      decline, urban deterioration, and reduced tourism.
-    </p>
-
-    <p>
-      In 2015, the urban regeneration project Monumental Callao was officially launched with the goal of revitalizing the
-      historic center through culture and the arts.
-    </p>
-
-    <p>
-      Historic buildings were restored, abandoned spaces were transformed into cultural venues, and local artists were
-      invited to create large-scale murals throughout the neighborhood.
-    </p>
-
-    <p>
-      Today, Monumental Callao is recognized as one of Peru’s most successful cultural revitalization initiatives.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the most distinctive features of Monumental Callao is its extensive collection of large-scale murals painted
-      by Peruvian and international artists.
-    </p>
-
-    <p>
-      Many building façades have become open-air canvases, creating an outdoor gallery that visitors can explore on foot.
-    </p>
-
-    <p>
-      Historic republican-era mansions have also been converted into galleries, cafés, boutique shops, and cultural spaces.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Monumental Callao represents one of Peru’s most important examples of culture-driven urban regeneration.
-    </p>
-
-    <p>
-      The project has contributed to attracting tourism, supporting local businesses, and creating new opportunities for
-      artists and entrepreneurs.
-    </p>
-
-    <p>
-      It showcases contemporary Peruvian creativity while preserving the architectural and historical identity of Callao.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://monumentalcallao.com/" target="_blank">Monumental Callao – Official Website</a></li>
-      <li><a href="https://fugaz.pe/" target="_blank">Fugaz</a></li>
-      <li><a href="https://www.peru.travel/en/attractions/monumental-callao" target="_blank">PROMPERÚ – Monumental Callao</a></li>
-      <li><a href="https://www.gob.pe/cultura" target="_blank">Ministry of Culture of Peru</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Monumental Callao is one of Peru’s most significant urban regeneration projects, transforming part of the historic\n      center of Callao into a vibrant cultural and artistic district. Colorful murals, restored republican-era buildings,\n      galleries, and public art installations have turned the neighborhood into a symbol of urban revitalization and\n      cultural innovation.\n    </p>",
+    "General Information and Location": "<p>\n      Monumental Callao is located in the historic center of Callao, Peru, approximately 15 kilometers west of downtown\n      Lima and only a few minutes from the Port of Callao.\n    </p>\n\n    <p>\n      The district was developed through a public-private urban renewal initiative led by the organization Fugaz, with the\n      objective of restoring historic buildings and promoting art, tourism, entrepreneurship, and community development.\n    </p>\n\n    <p>\n      Today, Monumental Callao is home to art galleries, cultural centers, museums, cafés, restaurants, artisan shops,\n      design studios, and exhibition spaces.\n    </p>",
+    "History of the Place": "<p>\n      The historic center of Callao has long been an important commercial and maritime district due to its proximity to\n      Peru’s main seaport. During the late twentieth century, however, parts of the neighborhood experienced economic\n      decline, urban deterioration, and reduced tourism.\n    </p>\n\n    <p>\n      In 2015, the urban regeneration project Monumental Callao was officially launched with the goal of revitalizing the\n      historic center through culture and the arts.\n    </p>\n\n    <p>\n      Historic buildings were restored, abandoned spaces were transformed into cultural venues, and local artists were\n      invited to create large-scale murals throughout the neighborhood.\n    </p>\n\n    <p>\n      Today, Monumental Callao is recognized as one of Peru’s most successful cultural revitalization initiatives.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the most distinctive features of Monumental Callao is its extensive collection of large-scale murals painted\n      by Peruvian and international artists.\n    </p>\n\n    <p>\n      Many building façades have become open-air canvases, creating an outdoor gallery that visitors can explore on foot.\n    </p>\n\n    <p>\n      Historic republican-era mansions have also been converted into galleries, cafés, boutique shops, and cultural spaces.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Monumental Callao represents one of Peru’s most important examples of culture-driven urban regeneration.\n    </p>\n\n    <p>\n      The project has contributed to attracting tourism, supporting local businesses, and creating new opportunities for\n      artists and entrepreneurs.\n    </p>\n\n    <p>\n      It showcases contemporary Peruvian creativity while preserving the architectural and historical identity of Callao.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://monumentalcallao.com/\" target=\"_blank\">Monumental Callao – Official Website</a></li>\n      <li><a href=\"https://fugaz.pe/\" target=\"_blank\">Fugaz</a></li>\n      <li><a href=\"https://www.peru.travel/en/attractions/monumental-callao\" target=\"_blank\">PROMPERÚ – Monumental Callao</a></li>\n      <li><a href=\"https://www.gob.pe/cultura\" target=\"_blank\">Ministry of Culture of Peru</a></li>\n    </ul>"
   },
-
   "Playa Cantolao": {
-    "Introduction": `<p>
-      Cantolao Beach is one of the most distinctive coastal locations in the Constitutional Province of Callao, Peru.
-      Its rocky coastline, small harbor atmosphere, and views of San Lorenzo Island create a unique setting where everyday
-      coastal life coexists with recreational and sporting activities.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Cantolao Beach is located in the district of La Punta, within the Constitutional Province of Callao, Peru,
-      approximately 15 kilometers west of Lima’s historic center.
-    </p>
-
-    <p>
-      The beach lies along the La Punta coastline, facing the Pacific Ocean and offering views of San Lorenzo Island,
-      El Frontón Island, and nearby marine ecosystems.
-    </p>
-
-    <p>
-      Cantolao is a small pebble beach commonly used for kayaking, sailing, paddleboarding, rowing, and other water sports.
-    </p>
-
-    <p>
-      Its surroundings include residential neighborhoods, nautical facilities, fishing areas, and scenic waterfront promenades.
-    </p>`,
-
-    "History of the Place": `<p>
-      The history of Cantolao Beach is closely connected to the maritime tradition of La Punta and the Port of Callao,
-      one of the oldest and most important ports on the Pacific coast of South America.
-    </p>
-
-    <p>
-      For decades, the beach has served as a recreational area for local residents while maintaining strong links with
-      fishing and nautical activities.
-    </p>
-
-    <p>
-      Throughout the twentieth century, La Punta developed as one of Callao’s most prestigious residential areas,
-      while Cantolao Beach became an important gathering place for families and visitors.
-    </p>
-
-    <p>
-      Today, Cantolao remains one of the most representative coastal spaces of Callao.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the most remarkable features of Cantolao Beach is its privileged view of San Lorenzo Island, Peru’s
-      largest island, as well as El Frontón Island.
-    </p>
-
-    <p>
-      The beach is recognized as one of the main starting points for sailing and rowing activities in Callao.
-    </p>
-
-    <p>
-      During certain seasons, visitors can observe seabirds and marine wildlife in the surrounding waters.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Cantolao Beach plays an important role in preserving the maritime identity of Callao.
-    </p>
-
-    <p>
-      It represents the close relationship between the local community and the Pacific Ocean, reflecting traditions
-      associated with navigation, fishing, and coastal recreation.
-    </p>
-
-    <p>
-      Its combination of natural scenery and maritime infrastructure makes it an attractive location for photography
-      and audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://www.peru.travel/en/destinations/callao" target="_blank">PROMPERÚ – Callao</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/La_Punta_(Callao)" target="_blank">Wikipedia – La Punta</a></li>
-      <li><a href="https://www.gob.pe/regioncallao" target="_blank">Regional Government of Callao</a></li>
-      <li><a href="https://www.munilapunta.gob.pe/" target="_blank">Municipality of La Punta</a></li>
-      <li><a href="https://www.apn.gob.pe/" target="_blank">National Port Authority of Peru</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Cantolao Beach is one of the most distinctive coastal locations in the Constitutional Province of Callao, Peru.\n      Its rocky coastline, small harbor atmosphere, and views of San Lorenzo Island create a unique setting where everyday\n      coastal life coexists with recreational and sporting activities.\n    </p>",
+    "General Information and Location": "<p>\n      Cantolao Beach is located in the district of La Punta, within the Constitutional Province of Callao, Peru,\n      approximately 15 kilometers west of Lima’s historic center.\n    </p>\n\n    <p>\n      The beach lies along the La Punta coastline, facing the Pacific Ocean and offering views of San Lorenzo Island,\n      El Frontón Island, and nearby marine ecosystems.\n    </p>\n\n    <p>\n      Cantolao is a small pebble beach commonly used for kayaking, sailing, paddleboarding, rowing, and other water sports.\n    </p>\n\n    <p>\n      Its surroundings include residential neighborhoods, nautical facilities, fishing areas, and scenic waterfront promenades.\n    </p>",
+    "History of the Place": "<p>\n      The history of Cantolao Beach is closely connected to the maritime tradition of La Punta and the Port of Callao,\n      one of the oldest and most important ports on the Pacific coast of South America.\n    </p>\n\n    <p>\n      For decades, the beach has served as a recreational area for local residents while maintaining strong links with\n      fishing and nautical activities.\n    </p>\n\n    <p>\n      Throughout the twentieth century, La Punta developed as one of Callao’s most prestigious residential areas,\n      while Cantolao Beach became an important gathering place for families and visitors.\n    </p>\n\n    <p>\n      Today, Cantolao remains one of the most representative coastal spaces of Callao.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the most remarkable features of Cantolao Beach is its privileged view of San Lorenzo Island, Peru’s\n      largest island, as well as El Frontón Island.\n    </p>\n\n    <p>\n      The beach is recognized as one of the main starting points for sailing and rowing activities in Callao.\n    </p>\n\n    <p>\n      During certain seasons, visitors can observe seabirds and marine wildlife in the surrounding waters.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Cantolao Beach plays an important role in preserving the maritime identity of Callao.\n    </p>\n\n    <p>\n      It represents the close relationship between the local community and the Pacific Ocean, reflecting traditions\n      associated with navigation, fishing, and coastal recreation.\n    </p>\n\n    <p>\n      Its combination of natural scenery and maritime infrastructure makes it an attractive location for photography\n      and audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://www.peru.travel/en/destinations/callao\" target=\"_blank\">PROMPERÚ – Callao</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/La_Punta_(Callao)\" target=\"_blank\">Wikipedia – La Punta</a></li>\n      <li><a href=\"https://www.gob.pe/regioncallao\" target=\"_blank\">Regional Government of Callao</a></li>\n      <li><a href=\"https://www.munilapunta.gob.pe/\" target=\"_blank\">Municipality of La Punta</a></li>\n      <li><a href=\"https://www.apn.gob.pe/\" target=\"_blank\">National Port Authority of Peru</a></li>\n    </ul>"
   },
-
   "Playa Agua Dulce": {
-    "Introduction": `<p>
-      Agua Dulce Beach is one of Lima’s most traditional and visited coastal spaces. Located in Chorrillos,
-      this beach represents a direct connection between the city and the sea, where everyday life, leisure,
-      and Lima’s popular identity converge.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Agua Dulce Beach is located in the district of Chorrillos, south of the city of Lima, within the Costa Verde beach circuit.
-    </p>
-
-    <p>
-      It is a public and free-access beach, widely visited by families, groups of friends, and local tourists.
-    </p>
-
-    <p>
-      It has basic infrastructure for visitors, such as restrooms, food areas, umbrella rentals, and recreational spaces.
-    </p>
-
-    <p>
-      During the summer, it becomes one of the most crowded spots on Lima’s coastline.
-    </p>`,
-
-    "History of the Place": `<p>
-      Agua Dulce Beach has a long tradition within Lima’s urban history. Since the mid-20th century, it has been one
-      of the main summer destinations for Lima’s population.
-    </p>
-
-    <p>
-      During the 1960s and 1970s, the beach gained great popularity as a recreational space.
-    </p>
-
-    <p>
-      Over time, the beach has undergone several municipal interventions aimed at improving its infrastructure,
-      cleanliness, and safety.
-    </p>
-
-    <p>
-      Despite urban changes, Agua Dulce has preserved its essence as a massive social meeting place.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      A distinctive feature of Agua Dulce Beach is its name, which contrasts with its marine nature.
-    </p>
-
-    <p>
-      The beach is known for its high concentration of visitors during the summer, gathering thousands of people
-      in a single day.
-    </p>
-
-    <p>
-      Traditional street vendors are also part of the cultural experience of the place.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Agua Dulce Beach plays a fundamental role as an accessible recreational space in Lima.
-    </p>
-
-    <p>
-      From a cultural perspective, it represents an authentic expression of everyday life in Lima.
-    </p>
-
-    <p>
-      In urban terms, it forms part of the Costa Verde beach system and contributes to the offer of open spaces
-      in a densely populated city.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Chorrillos" target="_blank">Wikipedia – Chorrillos</a></li>
-      <li><a href="https://www.munichorrillos.gob.pe" target="_blank">Municipality of Chorrillos</a></li>
-      <li><a href="https://www.peru.travel/es/que-hacer/sol-y-playa/playas-de-lima" target="_blank">Peru Travel – Beaches of Lima</a></li>
-      <li><a href="https://www.costaverde.pe" target="_blank">Costa Verde</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Agua Dulce Beach is one of Lima’s most traditional and visited coastal spaces. Located in Chorrillos,\n      this beach represents a direct connection between the city and the sea, where everyday life, leisure,\n      and Lima’s popular identity converge.\n    </p>",
+    "General Information and Location": "<p>\n      Agua Dulce Beach is located in the district of Chorrillos, south of the city of Lima, within the Costa Verde beach circuit.\n    </p>\n\n    <p>\n      It is a public and free-access beach, widely visited by families, groups of friends, and local tourists.\n    </p>\n\n    <p>\n      It has basic infrastructure for visitors, such as restrooms, food areas, umbrella rentals, and recreational spaces.\n    </p>\n\n    <p>\n      During the summer, it becomes one of the most crowded spots on Lima’s coastline.\n    </p>",
+    "History of the Place": "<p>\n      Agua Dulce Beach has a long tradition within Lima’s urban history. Since the mid-20th century, it has been one\n      of the main summer destinations for Lima’s population.\n    </p>\n\n    <p>\n      During the 1960s and 1970s, the beach gained great popularity as a recreational space.\n    </p>\n\n    <p>\n      Over time, the beach has undergone several municipal interventions aimed at improving its infrastructure,\n      cleanliness, and safety.\n    </p>\n\n    <p>\n      Despite urban changes, Agua Dulce has preserved its essence as a massive social meeting place.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      A distinctive feature of Agua Dulce Beach is its name, which contrasts with its marine nature.\n    </p>\n\n    <p>\n      The beach is known for its high concentration of visitors during the summer, gathering thousands of people\n      in a single day.\n    </p>\n\n    <p>\n      Traditional street vendors are also part of the cultural experience of the place.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Agua Dulce Beach plays a fundamental role as an accessible recreational space in Lima.\n    </p>\n\n    <p>\n      From a cultural perspective, it represents an authentic expression of everyday life in Lima.\n    </p>\n\n    <p>\n      In urban terms, it forms part of the Costa Verde beach system and contributes to the offer of open spaces\n      in a densely populated city.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Chorrillos\" target=\"_blank\">Wikipedia – Chorrillos</a></li>\n      <li><a href=\"https://www.munichorrillos.gob.pe\" target=\"_blank\">Municipality of Chorrillos</a></li>\n      <li><a href=\"https://www.peru.travel/es/que-hacer/sol-y-playa/playas-de-lima\" target=\"_blank\">Peru Travel – Beaches of Lima</a></li>\n      <li><a href=\"https://www.costaverde.pe\" target=\"_blank\">Costa Verde</a></li>\n    </ul>"
   },
-
   "Bridge of Sighs - Puente de Los Suspiros": {
-    "Introduction": `<p>
-      The Bridge of Sighs is one of Lima’s most emblematic and symbolic spaces, located in the traditional district
-      of Barranco. Historically associated with romance, bohemian life, and artistic expression, the bridge has become
-      an identity landmark of the city.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The Bridge of Sighs is located in the district of Barranco, in the city of Lima.
-    </p>
-
-    <p>
-      It was inaugurated in 1876 and is built mainly of wood, with an approximate length of 44 meters.
-    </p>
-
-    <p>
-      It connects Ayacucho Street with the Bajada de Baños, a traditional path that leads toward the sea.
-    </p>
-
-    <p>
-      The bridge’s surroundings include narrow streets, old houses, art galleries, and cultural spaces.
-    </p>`,
-
-    "History of the Place": `<p>
-      The Bridge of Sighs was built in the 19th century as part of Barranco’s urban infrastructure.
-    </p>
-
-    <p>
-      During the War of the Pacific, in 1881, the bridge was destroyed by Chilean troops and later rebuilt.
-    </p>
-
-    <p>
-      Over time, Barranco became a meeting place for artists, writers, and musicians, and the bridge became
-      a symbol of that creative environment.
-    </p>
-
-    <p>
-      In the 20th century, the bridge was immortalized in Peruvian criollo music.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      There is a popular tradition associated with the Bridge of Sighs: it is said that if a person crosses the bridge
-      for the first time without breathing and makes a wish, that wish will come true.
-    </p>
-
-    <p>
-      The bridge is also closely linked to the song “Puente de los Suspiros” by Chabuca Granda.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      The Bridge of Sighs is one of Lima’s main cultural symbols and represents Barranco’s bohemian identity.
-    </p>
-
-    <p>
-      The area surrounding the bridge hosts cultural activities, musical performances, fairs, and events.
-    </p>
-
-    <p>
-      Its human scale and symbolic weight make it an attractive location for audiovisual productions seeking
-      to convey emotion, nostalgia, or cultural identity.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Puente_de_los_Suspiros_%28Barranco%29" target="_blank">Wikipedia – Bridge of Sighs</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Barranco_%28Lima%29" target="_blank">Wikipedia – Barranco</a></li>
-      <li><a href="https://www.munibarranco.gob.pe" target="_blank">Municipality of Barranco</a></li>
-      <li><a href="https://www.peru.travel/es/destinos/lima/barranco" target="_blank">Peru Travel – Barranco</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The Bridge of Sighs is one of Lima’s most emblematic and symbolic spaces, located in the traditional district\n      of Barranco. Historically associated with romance, bohemian life, and artistic expression, the bridge has become\n      an identity landmark of the city.\n    </p>",
+    "General Information and Location": "<p>\n      The Bridge of Sighs is located in the district of Barranco, in the city of Lima.\n    </p>\n\n    <p>\n      It was inaugurated in 1876 and is built mainly of wood, with an approximate length of 44 meters.\n    </p>\n\n    <p>\n      It connects Ayacucho Street with the Bajada de Baños, a traditional path that leads toward the sea.\n    </p>\n\n    <p>\n      The bridge’s surroundings include narrow streets, old houses, art galleries, and cultural spaces.\n    </p>",
+    "History of the Place": "<p>\n      The Bridge of Sighs was built in the 19th century as part of Barranco’s urban infrastructure.\n    </p>\n\n    <p>\n      During the War of the Pacific, in 1881, the bridge was destroyed by Chilean troops and later rebuilt.\n    </p>\n\n    <p>\n      Over time, Barranco became a meeting place for artists, writers, and musicians, and the bridge became\n      a symbol of that creative environment.\n    </p>\n\n    <p>\n      In the 20th century, the bridge was immortalized in Peruvian criollo music.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      There is a popular tradition associated with the Bridge of Sighs: it is said that if a person crosses the bridge\n      for the first time without breathing and makes a wish, that wish will come true.\n    </p>\n\n    <p>\n      The bridge is also closely linked to the song “Puente de los Suspiros” by Chabuca Granda.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      The Bridge of Sighs is one of Lima’s main cultural symbols and represents Barranco’s bohemian identity.\n    </p>\n\n    <p>\n      The area surrounding the bridge hosts cultural activities, musical performances, fairs, and events.\n    </p>\n\n    <p>\n      Its human scale and symbolic weight make it an attractive location for audiovisual productions seeking\n      to convey emotion, nostalgia, or cultural identity.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Puente_de_los_Suspiros_%28Barranco%29\" target=\"_blank\">Wikipedia – Bridge of Sighs</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Barranco_%28Lima%29\" target=\"_blank\">Wikipedia – Barranco</a></li>\n      <li><a href=\"https://www.munibarranco.gob.pe\" target=\"_blank\">Municipality of Barranco</a></li>\n      <li><a href=\"https://www.peru.travel/es/destinos/lima/barranco\" target=\"_blank\">Peru Travel – Barranco</a></li>\n    </ul>"
   },
-
   "Calle Tarata": {
-    "Introduction": `<p>
-      Tarata Street is one of the most representative urban spaces of Lima’s contemporary transformation.
-      Located in Miraflores, this pedestrian street combines commercial activity, nightlife, and historical memory.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Tarata Street is located in the district of Miraflores, in the city of Lima.
-    </p>
-
-    <p>
-      It is mainly a pedestrian street located near Larco Avenue. Its surroundings include restaurants,
-      cafés, bars, hotels, and shops.
-    </p>
-
-    <p>
-      The street forms part of Miraflores’ tourist axis and connects with Kennedy Park and the coastal boardwalk.
-    </p>`,
-
-    "History of the Place": `<p>
-      Tarata Street gained historical relevance after the bombing that occurred on July 16, 1992.
-    </p>
-
-    <p>
-      The attack was carried out by the terrorist organization Shining Path during Peru’s internal conflict.
-    </p>
-
-    <p>
-      After the attack, the area was rebuilt through a process that sought to restore the infrastructure
-      and revitalize the urban space.
-    </p>
-
-    <p>
-      The recovery of the street became a symbol of resilience and transformation.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the particular features of Tarata Street is the contrast between its historical past and its urban present.
-    </p>
-
-    <p>
-      Although it was the site of one of the most shocking attacks in Lima, today it is associated with social life,
-      tourism, and entertainment.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Tarata Street functions as a commercial and tourist axis within Miraflores.
-    </p>
-
-    <p>
-      From a cultural perspective, its history makes it a reference point within the narrative of Peru’s internal conflict.
-    </p>
-
-    <p>
-      Its pedestrian character and constant flow of people also make it visually attractive for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Atentado_de_Tarata" target="_blank">Wikipedia – Tarata Bombing</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Miraflores_%28Lima%29" target="_blank">Wikipedia – Miraflores</a></li>
-      <li><a href="https://www.cverdad.org.pe" target="_blank">Truth and Reconciliation Commission</a></li>
-      <li><a href="https://www.miraflores.gob.pe" target="_blank">Municipality of Miraflores</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Tarata Street is one of the most representative urban spaces of Lima’s contemporary transformation.\n      Located in Miraflores, this pedestrian street combines commercial activity, nightlife, and historical memory.\n    </p>",
+    "General Information and Location": "<p>\n      Tarata Street is located in the district of Miraflores, in the city of Lima.\n    </p>\n\n    <p>\n      It is mainly a pedestrian street located near Larco Avenue. Its surroundings include restaurants,\n      cafés, bars, hotels, and shops.\n    </p>\n\n    <p>\n      The street forms part of Miraflores’ tourist axis and connects with Kennedy Park and the coastal boardwalk.\n    </p>",
+    "History of the Place": "<p>\n      Tarata Street gained historical relevance after the bombing that occurred on July 16, 1992.\n    </p>\n\n    <p>\n      The attack was carried out by the terrorist organization Shining Path during Peru’s internal conflict.\n    </p>\n\n    <p>\n      After the attack, the area was rebuilt through a process that sought to restore the infrastructure\n      and revitalize the urban space.\n    </p>\n\n    <p>\n      The recovery of the street became a symbol of resilience and transformation.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the particular features of Tarata Street is the contrast between its historical past and its urban present.\n    </p>\n\n    <p>\n      Although it was the site of one of the most shocking attacks in Lima, today it is associated with social life,\n      tourism, and entertainment.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Tarata Street functions as a commercial and tourist axis within Miraflores.\n    </p>\n\n    <p>\n      From a cultural perspective, its history makes it a reference point within the narrative of Peru’s internal conflict.\n    </p>\n\n    <p>\n      Its pedestrian character and constant flow of people also make it visually attractive for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Atentado_de_Tarata\" target=\"_blank\">Wikipedia – Tarata Bombing</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Miraflores_%28Lima%29\" target=\"_blank\">Wikipedia – Miraflores</a></li>\n      <li><a href=\"https://www.cverdad.org.pe\" target=\"_blank\">Truth and Reconciliation Commission</a></li>\n      <li><a href=\"https://www.miraflores.gob.pe\" target=\"_blank\">Municipality of Miraflores</a></li>\n    </ul>"
   },
-
   "Jirón de la Unión": {
-    "Introduction": `<p>
-      Jirón de la Unión is one of Lima’s most emblematic streets, a pedestrian axis that brings together the history,
-      commerce, and urban life of the Peruvian capital.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Jirón de la Unión is located in the historic center of Lima, within the district of Cercado de Lima.
-    </p>
-
-    <p>
-      It extends for approximately 1.2 kilometers, connecting the Plaza Mayor with Plaza San Martín.
-    </p>
-
-    <p>
-      Much of the street is pedestrianized and contains shops, restaurants, galleries, banks, and historic buildings.
-    </p>`,
-
-    "History of the Place": `<p>
-      The origin of Jirón de la Unión dates back to the colonial period, when it formed part of Lima’s original urban layout.
-    </p>
-
-    <p>
-      In the 19th and early 20th centuries, the street reached its greatest splendor as a center of Lima’s social life.
-    </p>
-
-    <p>
-      In recent decades, it has been the subject of urban interventions aimed at its recovery, including pedestrianization
-      and the restoration of historic buildings.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      Jirón de la Unión went from being an exclusive space for Lima’s elite to becoming a place accessible to all sectors
-      of the population.
-    </p>
-
-    <p>
-      Along its route there are historic buildings with traditional Lima balconies.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Jirón de la Unión is a fundamental pedestrian axis within Lima’s historic center.
-    </p>
-
-    <p>
-      It represents the evolution of the city and its social dynamics, bringing together tourists, merchants,
-      and citizens in everyday activities.
-    </p>
-
-    <p>
-      Its high density of activity makes it a visually dynamic location for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Jir%C3%B3n_de_la_Uni%C3%B3n" target="_blank">Wikipedia – Jirón de la Unión</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Centro_hist%C3%B3rico_de_Lima" target="_blank">Wikipedia – Historic Centre of Lima</a></li>
-      <li><a href="https://www.munlima.gob.pe" target="_blank">Metropolitan Municipality of Lima</a></li>
-      <li><a href="https://whc.unesco.org/en/list/500" target="_blank">UNESCO – Historic Centre of Lima</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Jirón de la Unión is one of Lima’s most emblematic streets, a pedestrian axis that brings together the history,\n      commerce, and urban life of the Peruvian capital.\n    </p>",
+    "General Information and Location": "<p>\n      Jirón de la Unión is located in the historic center of Lima, within the district of Cercado de Lima.\n    </p>\n\n    <p>\n      It extends for approximately 1.2 kilometers, connecting the Plaza Mayor with Plaza San Martín.\n    </p>\n\n    <p>\n      Much of the street is pedestrianized and contains shops, restaurants, galleries, banks, and historic buildings.\n    </p>",
+    "History of the Place": "<p>\n      The origin of Jirón de la Unión dates back to the colonial period, when it formed part of Lima’s original urban layout.\n    </p>\n\n    <p>\n      In the 19th and early 20th centuries, the street reached its greatest splendor as a center of Lima’s social life.\n    </p>\n\n    <p>\n      In recent decades, it has been the subject of urban interventions aimed at its recovery, including pedestrianization\n      and the restoration of historic buildings.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      Jirón de la Unión went from being an exclusive space for Lima’s elite to becoming a place accessible to all sectors\n      of the population.\n    </p>\n\n    <p>\n      Along its route there are historic buildings with traditional Lima balconies.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Jirón de la Unión is a fundamental pedestrian axis within Lima’s historic center.\n    </p>\n\n    <p>\n      It represents the evolution of the city and its social dynamics, bringing together tourists, merchants,\n      and citizens in everyday activities.\n    </p>\n\n    <p>\n      Its high density of activity makes it a visually dynamic location for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Jir%C3%B3n_de_la_Uni%C3%B3n\" target=\"_blank\">Wikipedia – Jirón de la Unión</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Centro_hist%C3%B3rico_de_Lima\" target=\"_blank\">Wikipedia – Historic Centre of Lima</a></li>\n      <li><a href=\"https://www.munlima.gob.pe\" target=\"_blank\">Metropolitan Municipality of Lima</a></li>\n      <li><a href=\"https://whc.unesco.org/en/list/500\" target=\"_blank\">UNESCO – Historic Centre of Lima</a></li>\n    </ul>"
   },
-
   "Institución Educativa 3004 España": {
-    "Introduction": `<p>
-      Educational Institution No. 3004 “España” is a representative space of Lima’s public education system.
-      Public schools are not only centers of learning, but also spaces where social relationships, collective identities,
-      and everyday experiences are formed.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Educational Institution No. 3004 “España” is located in the city of Lima and forms part of the public education
-      system administered by the Peruvian State.
-    </p>
-
-    <p>
-      Its infrastructure includes classrooms, courtyards, administrative spaces, and recreational areas.
-    </p>
-
-    <p>
-      Like other public schools, it plays a fundamental role in guaranteeing access to education.
-    </p>`,
-
-    "History of the Place": `<p>
-      Educational institutions identified by numbers form part of a system implemented in Peru during the 20th century
-      to expand educational coverage nationwide.
-    </p>
-
-    <p>
-      These schools emerged within public policies designed to guarantee access to basic education in growing urban areas.
-    </p>
-
-    <p>
-      Over time, Educational Institution “España” has been part of the formation process of multiple generations of students.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      Public educational institutions in Lima frequently use symbolic names, such as “España,” which reflect historical,
-      cultural, or international influences.
-    </p>
-
-    <p>
-      These spaces are also commonly used for community events, elections, and civic activities.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Educational Institution No. 3004 “España” plays an essential role within the city’s social structure.
-    </p>
-
-    <p>
-      From a cultural perspective, public schools reflect Lima’s social diversity.
-    </p>
-
-    <p>
-      Their everyday atmosphere makes them relevant locations for audiovisual productions seeking to represent school life
-      and social realities.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://www.gob.pe/minedu" target="_blank">Ministry of Education of Peru</a></li>
-      <li><a href="https://www.gob.pe/educacion" target="_blank">Peruvian Education System</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Educaci%C3%B3n_en_el_Per%C3%BA" target="_blank">Wikipedia – Education in Peru</a></li>
-      <li><a href="https://www.inei.gob.pe" target="_blank">INEI</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Educational Institution No. 3004 “España” is a representative space of Lima’s public education system.\n      Public schools are not only centers of learning, but also spaces where social relationships, collective identities,\n      and everyday experiences are formed.\n    </p>",
+    "General Information and Location": "<p>\n      Educational Institution No. 3004 “España” is located in the city of Lima and forms part of the public education\n      system administered by the Peruvian State.\n    </p>\n\n    <p>\n      Its infrastructure includes classrooms, courtyards, administrative spaces, and recreational areas.\n    </p>\n\n    <p>\n      Like other public schools, it plays a fundamental role in guaranteeing access to education.\n    </p>",
+    "History of the Place": "<p>\n      Educational institutions identified by numbers form part of a system implemented in Peru during the 20th century\n      to expand educational coverage nationwide.\n    </p>\n\n    <p>\n      These schools emerged within public policies designed to guarantee access to basic education in growing urban areas.\n    </p>\n\n    <p>\n      Over time, Educational Institution “España” has been part of the formation process of multiple generations of students.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      Public educational institutions in Lima frequently use symbolic names, such as “España,” which reflect historical,\n      cultural, or international influences.\n    </p>\n\n    <p>\n      These spaces are also commonly used for community events, elections, and civic activities.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Educational Institution No. 3004 “España” plays an essential role within the city’s social structure.\n    </p>\n\n    <p>\n      From a cultural perspective, public schools reflect Lima’s social diversity.\n    </p>\n\n    <p>\n      Their everyday atmosphere makes them relevant locations for audiovisual productions seeking to represent school life\n      and social realities.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://www.gob.pe/minedu\" target=\"_blank\">Ministry of Education of Peru</a></li>\n      <li><a href=\"https://www.gob.pe/educacion\" target=\"_blank\">Peruvian Education System</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Educaci%C3%B3n_en_el_Per%C3%BA\" target=\"_blank\">Wikipedia – Education in Peru</a></li>\n      <li><a href=\"https://www.inei.gob.pe\" target=\"_blank\">INEI</a></li>\n    </ul>"
   },
-
   "Rio Rimac - Rimac River": {
-    "Introduction": `<p>
-      The Rímac River is one of the most important geographic elements in the history and development of Lima.
-      It has served as a source of water for the city and as a natural axis that has shaped its urban expansion.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The Rímac River runs through Lima from east to west until it flows into the Pacific Ocean in Callao.
-    </p>
-
-    <p>
-      It is approximately 160 kilometers long and originates in the Andes, in the Lima region.
-    </p>
-
-    <p>
-      The river is the main source of drinking water for the city.
-    </p>
-
-    <p>
-      Along its urban course, it is bordered by bridges, expressways, residential areas, and industrial zones.
-    </p>`,
-
-    "History of the Place": `<p>
-      The Rímac River has been fundamental since pre-Hispanic times, when local cultures developed irrigation systems.
-    </p>
-
-    <p>
-      During the colonial period, the river was a key element in the founding of Lima in 1535.
-    </p>
-
-    <p>
-      With the accelerated urban growth of the 20th century, the river became progressively integrated into the city’s
-      infrastructure, while also facing serious pollution problems.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      The name “Rímac” comes from Quechua and means “the one who speaks” or “the talker.”
-    </p>
-
-    <p>
-      The name refers to the sound the river produced when its flow was stronger and more natural.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      The Rímac River is a structural axis within the city and has influenced Lima’s territorial organization.
-    </p>
-
-    <p>
-      From a cultural perspective, it represents the historical origin and evolution of Lima.
-    </p>
-
-    <p>
-      It also reveals urban challenges such as pollution and the sustainable management of water resources.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/R%C3%ADo_R%C3%ADmac" target="_blank">Wikipedia – Rímac River</a></li>
-      <li><a href="https://www.sedapal.com.pe" target="_blank">SEDAPAL</a></li>
-      <li><a href="https://www.gob.pe/minam" target="_blank">Ministry of the Environment</a></li>
-      <li><a href="https://www.ana.gob.pe" target="_blank">National Water Authority</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The Rímac River is one of the most important geographic elements in the history and development of Lima.\n      It has served as a source of water for the city and as a natural axis that has shaped its urban expansion.\n    </p>",
+    "General Information and Location": "<p>\n      The Rímac River runs through Lima from east to west until it flows into the Pacific Ocean in Callao.\n    </p>\n\n    <p>\n      It is approximately 160 kilometers long and originates in the Andes, in the Lima region.\n    </p>\n\n    <p>\n      The river is the main source of drinking water for the city.\n    </p>\n\n    <p>\n      Along its urban course, it is bordered by bridges, expressways, residential areas, and industrial zones.\n    </p>",
+    "History of the Place": "<p>\n      The Rímac River has been fundamental since pre-Hispanic times, when local cultures developed irrigation systems.\n    </p>\n\n    <p>\n      During the colonial period, the river was a key element in the founding of Lima in 1535.\n    </p>\n\n    <p>\n      With the accelerated urban growth of the 20th century, the river became progressively integrated into the city’s\n      infrastructure, while also facing serious pollution problems.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      The name “Rímac” comes from Quechua and means “the one who speaks” or “the talker.”\n    </p>\n\n    <p>\n      The name refers to the sound the river produced when its flow was stronger and more natural.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      The Rímac River is a structural axis within the city and has influenced Lima’s territorial organization.\n    </p>\n\n    <p>\n      From a cultural perspective, it represents the historical origin and evolution of Lima.\n    </p>\n\n    <p>\n      It also reveals urban challenges such as pollution and the sustainable management of water resources.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/R%C3%ADo_R%C3%ADmac\" target=\"_blank\">Wikipedia – Rímac River</a></li>\n      <li><a href=\"https://www.sedapal.com.pe\" target=\"_blank\">SEDAPAL</a></li>\n      <li><a href=\"https://www.gob.pe/minam\" target=\"_blank\">Ministry of the Environment</a></li>\n      <li><a href=\"https://www.ana.gob.pe\" target=\"_blank\">National Water Authority</a></li>\n    </ul>"
   },
-
   "Isla El Frontón": {
-    "Introduction": `<p>
-      El Frontón Island is one of the most historically and symbolically charged spaces on the Peruvian coast.
-      Located off the coast of Callao, it stands out for its geography, its past as a prison, and its relationship
-      with key events in Peru’s recent history.
-    </p>`,
-
-    "General Information and Location": `<p>
-      El Frontón Island is located off the coast of the Constitutional Province of Callao.
-    </p>
-
-    <p>
-      It forms part of the group of islands of Callao, along with San Lorenzo and Cavinzas.
-    </p>
-
-    <p>
-      It is a rocky island with no permanent population, characterized by its rugged relief.
-    </p>
-
-    <p>
-      The island contains the remains of its former prison infrastructure.
-    </p>`,
-
-    "History of the Place": `<p>
-      El Frontón Island was used as a prison facility for much of the 20th century.
-    </p>
-
-    <p>
-      The San Juan Bautista maximum-security prison operated there.
-    </p>
-
-    <p>
-      One of the most significant events associated with the island occurred in 1986, when a prison riot was followed
-      by a military operation that resulted in the partial destruction of the prison and numerous deaths.
-    </p>
-
-    <p>
-      Since then, the island has been marked as a symbol of Peru’s internal conflict.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      The remains of the abandoned prison can still be observed on the island.
-    </p>
-
-    <p>
-      Due to its location and access restrictions, El Frontón is not a conventional tourist destination.
-    </p>
-
-    <p>
-      Its isolation and visible ruins reinforce its enigmatic character.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      El Frontón Island has significant value within Peru’s recent history.
-    </p>
-
-    <p>
-      It is a space that invites reflection on human rights, historical memory, and political violence.
-    </p>
-
-    <p>
-      Its isolated aesthetic and history make it a highly expressive location for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/El_Front%C3%B3n" target="_blank">Wikipedia – El Frontón Island</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Mot%C3%ADn_de_El_Front%C3%B3n" target="_blank">Wikipedia – El Frontón Riot</a></li>
-      <li><a href="https://www.cverdad.org.pe" target="_blank">Truth and Reconciliation Commission</a></li>
-      <li><a href="https://www.gob.pe/cultura" target="_blank">Ministry of Culture of Peru</a></li>
-    </ul>`
+    "Introduction": "<p>\n      El Frontón Island is one of the most historically and symbolically charged spaces on the Peruvian coast.\n      Located off the coast of Callao, it stands out for its geography, its past as a prison, and its relationship\n      with key events in Peru’s recent history.\n    </p>",
+    "General Information and Location": "<p>\n      El Frontón Island is located off the coast of the Constitutional Province of Callao.\n    </p>\n\n    <p>\n      It forms part of the group of islands of Callao, along with San Lorenzo and Cavinzas.\n    </p>\n\n    <p>\n      It is a rocky island with no permanent population, characterized by its rugged relief.\n    </p>\n\n    <p>\n      The island contains the remains of its former prison infrastructure.\n    </p>",
+    "History of the Place": "<p>\n      El Frontón Island was used as a prison facility for much of the 20th century.\n    </p>\n\n    <p>\n      The San Juan Bautista maximum-security prison operated there.\n    </p>\n\n    <p>\n      One of the most significant events associated with the island occurred in 1986, when a prison riot was followed\n      by a military operation that resulted in the partial destruction of the prison and numerous deaths.\n    </p>\n\n    <p>\n      Since then, the island has been marked as a symbol of Peru’s internal conflict.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      The remains of the abandoned prison can still be observed on the island.\n    </p>\n\n    <p>\n      Due to its location and access restrictions, El Frontón is not a conventional tourist destination.\n    </p>\n\n    <p>\n      Its isolation and visible ruins reinforce its enigmatic character.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      El Frontón Island has significant value within Peru’s recent history.\n    </p>\n\n    <p>\n      It is a space that invites reflection on human rights, historical memory, and political violence.\n    </p>\n\n    <p>\n      Its isolated aesthetic and history make it a highly expressive location for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/El_Front%C3%B3n\" target=\"_blank\">Wikipedia – El Frontón Island</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Mot%C3%ADn_de_El_Front%C3%B3n\" target=\"_blank\">Wikipedia – El Frontón Riot</a></li>\n      <li><a href=\"https://www.cverdad.org.pe\" target=\"_blank\">Truth and Reconciliation Commission</a></li>\n      <li><a href=\"https://www.gob.pe/cultura\" target=\"_blank\">Ministry of Culture of Peru</a></li>\n    </ul>"
   },
-
   "Country Club Lima Hotel": {
-    "Introduction": `<p>
-      Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima.
-      Located in San Isidro, directly opposite Lima Golf Club, it combines luxury, architecture, art, and social history.
-    </p>
-
-    <p>
-      Its colonial-style façade, spacious halls, gardens, terraces, and carefully preserved interiors make it
-      a high-value location for audiovisual productions.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Country Club Lima Hotel is located at Avenida Los Eucaliptos 590, in the district of San Isidro, Lima, Peru.
-    </p>
-
-    <p>
-      It was inaugurated on February 8, 1927, during the government of President Augusto B. Leguía.
-    </p>
-
-    <p>
-      The building was designed by American architect T. J. O’Brien in a Californian colonial architectural style.
-    </p>
-
-    <p>
-      The property currently operates as a five-star hotel and contains guest rooms, restaurants, bars, event spaces,
-      gardens, and a collection of colonial artworks.
-    </p>`,
-
-    "History of the Place": `<p>
-      The origins of the Country Club date back to 1925, when the Sociedad Anónima Propietaria del Country Club
-      was established.
-    </p>
-
-    <p>
-      The project formed part of the urban expansion of Lima during the government of Augusto B. Leguía.
-    </p>
-
-    <p>
-      The building was inaugurated in 1927 and became an important meeting place for Peruvian society,
-      foreign residents, diplomats, politicians, artists, and international visitors.
-    </p>
-
-    <p>
-      After a period of decline, it was restored and reopened as a luxury hotel in 1998.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      Throughout its history, the Country Club has received important international personalities.
-    </p>
-
-    <p>
-      Among its notable guests were the Duke of Windsor, Charles de Gaulle, Richard Nixon, Ernest Hemingway,
-      Ava Gardner, John Wayne, and Mick Jagger.
-    </p>
-
-    <p>
-      It also contains a collection of more than 300 pieces of viceregal art associated with the Pedro de Osma Museum.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Country Club Lima Hotel represents the modernization and social transformation of Lima during the early 20th century.
-    </p>
-
-    <p>
-      Its construction contributed to the development of San Isidro as an exclusive residential district.
-    </p>
-
-    <p>
-      Its façade, historical interiors, colonial art, gardens, balconies, and ceremonial spaces make it suitable
-      for films, television, advertising, and historical recreations.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://www.countryclublimahotel.com/es/el-hotel" target="_blank">Country Club Lima Hotel – Official Website</a></li>
-      <li><a href="https://www.gob.pe/43230-lugares-para-visitar-en-san-isidro-country-club-lima-hotel" target="_blank">Municipality of San Isidro</a></li>
-      <li><a href="https://www.countryclublimahotel.com/articulos/arte-y-herencia-patrimonial" target="_blank">Art and Cultural Heritage</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Hotel_Country_Club_de_Lima" target="_blank">Wikipedia – Country Club Lima Hotel</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima.\n      Located in San Isidro, directly opposite Lima Golf Club, it combines luxury, architecture, art, and social history.\n    </p>\n\n    <p>\n      Its colonial-style façade, spacious halls, gardens, terraces, and carefully preserved interiors make it\n      a high-value location for audiovisual productions.\n    </p>",
+    "General Information and Location": "<p>\n      Country Club Lima Hotel is located at Avenida Los Eucaliptos 590, in the district of San Isidro, Lima, Peru.\n    </p>\n\n    <p>\n      It was inaugurated on February 8, 1927, during the government of President Augusto B. Leguía.\n    </p>\n\n    <p>\n      The building was designed by American architect T. J. O’Brien in a Californian colonial architectural style.\n    </p>\n\n    <p>\n      The property currently operates as a five-star hotel and contains guest rooms, restaurants, bars, event spaces,\n      gardens, and a collection of colonial artworks.\n    </p>",
+    "History of the Place": "<p>\n      The origins of the Country Club date back to 1925, when the Sociedad Anónima Propietaria del Country Club\n      was established.\n    </p>\n\n    <p>\n      The project formed part of the urban expansion of Lima during the government of Augusto B. Leguía.\n    </p>\n\n    <p>\n      The building was inaugurated in 1927 and became an important meeting place for Peruvian society,\n      foreign residents, diplomats, politicians, artists, and international visitors.\n    </p>\n\n    <p>\n      After a period of decline, it was restored and reopened as a luxury hotel in 1998.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      Throughout its history, the Country Club has received important international personalities.\n    </p>\n\n    <p>\n      Among its notable guests were the Duke of Windsor, Charles de Gaulle, Richard Nixon, Ernest Hemingway,\n      Ava Gardner, John Wayne, and Mick Jagger.\n    </p>\n\n    <p>\n      It also contains a collection of more than 300 pieces of viceregal art associated with the Pedro de Osma Museum.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Country Club Lima Hotel represents the modernization and social transformation of Lima during the early 20th century.\n    </p>\n\n    <p>\n      Its construction contributed to the development of San Isidro as an exclusive residential district.\n    </p>\n\n    <p>\n      Its façade, historical interiors, colonial art, gardens, balconies, and ceremonial spaces make it suitable\n      for films, television, advertising, and historical recreations.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://www.countryclublimahotel.com/es/el-hotel\" target=\"_blank\">Country Club Lima Hotel – Official Website</a></li>\n      <li><a href=\"https://www.gob.pe/43230-lugares-para-visitar-en-san-isidro-country-club-lima-hotel\" target=\"_blank\">Municipality of San Isidro</a></li>\n      <li><a href=\"https://www.countryclublimahotel.com/articulos/arte-y-herencia-patrimonial\" target=\"_blank\">Art and Cultural Heritage</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Hotel_Country_Club_de_Lima\" target=\"_blank\">Wikipedia – Country Club Lima Hotel</a></li>\n    </ul>"
   },
-
   "Estadio Lolo Fernandez": {
-    "Introduction": `<p>
-      Lolo Fernández Stadium is one of the most representative spaces in the history of Peruvian football.
-      Located in Breña, it is deeply linked to the identity of Club Universitario de Deportes.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Lolo Fernández Stadium is located in the district of Breña, in the city of Lima.
-    </p>
-
-    <p>
-      It was inaugurated in 1952 and is named after Teodoro Fernández, known as “Lolo.”
-    </p>
-
-    <p>
-      For decades, the stadium was the main home ground of Club Universitario de Deportes.
-    </p>
-
-    <p>
-      It has an approximate capacity of 15,000 spectators.
-    </p>`,
-
-    "History of the Place": `<p>
-      Lolo Fernández Stadium was inaugurated during a period when Peruvian football was growing as a social phenomenon.
-    </p>
-
-    <p>
-      It was the main venue for official matches of Universitario de Deportes and witnessed championships,
-      classic matches, and memorable sporting events.
-    </p>
-
-    <p>
-      With the construction of the Monumental Stadium in Ate, Universitario moved its principal activities to the new venue.
-    </p>
-
-    <p>
-      Despite this, Lolo Fernández Stadium remains a symbol of the club’s history.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      The stadium is closely associated with Teodoro Fernández, one of the most iconic figures in Peruvian football.
-    </p>
-
-    <p>
-      It preserves architectural elements typical of mid-20th-century sports venues, giving it a nostalgic character.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Lolo Fernández Stadium represents an important stage in the evolution of national football.
-    </p>
-
-    <p>
-      Its location in Breña integrates it into a residential environment and connects it directly with the community.
-    </p>
-
-    <p>
-      Its historical aesthetic makes it attractive for audiovisual productions seeking to convey nostalgia.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Estadio_Lolo_Fern%C3%A1ndez" target="_blank">Wikipedia – Lolo Fernández Stadium</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Club_Universitario_de_Deportes" target="_blank">Wikipedia – Universitario de Deportes</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Teodoro_Fern%C3%A1ndez" target="_blank">Wikipedia – Teodoro Fernández</a></li>
-      <li><a href="https://www.fpf.org.pe" target="_blank">Peruvian Football Federation</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Lolo Fernández Stadium is one of the most representative spaces in the history of Peruvian football.\n      Located in Breña, it is deeply linked to the identity of Club Universitario de Deportes.\n    </p>",
+    "General Information and Location": "<p>\n      Lolo Fernández Stadium is located in the district of Breña, in the city of Lima.\n    </p>\n\n    <p>\n      It was inaugurated in 1952 and is named after Teodoro Fernández, known as “Lolo.”\n    </p>\n\n    <p>\n      For decades, the stadium was the main home ground of Club Universitario de Deportes.\n    </p>\n\n    <p>\n      It has an approximate capacity of 15,000 spectators.\n    </p>",
+    "History of the Place": "<p>\n      Lolo Fernández Stadium was inaugurated during a period when Peruvian football was growing as a social phenomenon.\n    </p>\n\n    <p>\n      It was the main venue for official matches of Universitario de Deportes and witnessed championships,\n      classic matches, and memorable sporting events.\n    </p>\n\n    <p>\n      With the construction of the Monumental Stadium in Ate, Universitario moved its principal activities to the new venue.\n    </p>\n\n    <p>\n      Despite this, Lolo Fernández Stadium remains a symbol of the club’s history.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      The stadium is closely associated with Teodoro Fernández, one of the most iconic figures in Peruvian football.\n    </p>\n\n    <p>\n      It preserves architectural elements typical of mid-20th-century sports venues, giving it a nostalgic character.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Lolo Fernández Stadium represents an important stage in the evolution of national football.\n    </p>\n\n    <p>\n      Its location in Breña integrates it into a residential environment and connects it directly with the community.\n    </p>\n\n    <p>\n      Its historical aesthetic makes it attractive for audiovisual productions seeking to convey nostalgia.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Estadio_Lolo_Fern%C3%A1ndez\" target=\"_blank\">Wikipedia – Lolo Fernández Stadium</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Club_Universitario_de_Deportes\" target=\"_blank\">Wikipedia – Universitario de Deportes</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Teodoro_Fern%C3%A1ndez\" target=\"_blank\">Wikipedia – Teodoro Fernández</a></li>\n      <li><a href=\"https://www.fpf.org.pe\" target=\"_blank\">Peruvian Football Federation</a></li>\n    </ul>"
   },
-
   "Universidad Nacional Mayor de San Marcos": {
-    "Introduction": `<p>
-      The National University of San Marcos is one of the most important academic institutions in Peru and Latin America.
-      Recognized as the oldest university in the Americas, its history is deeply linked to the intellectual, political,
-      and cultural development of the country.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The National University of San Marcos is located in Lima, with its main campus in the University City.
-    </p>
-
-    <p>
-      It was founded on May 12, 1551, by royal decree of King Charles I of Spain.
-    </p>
-
-    <p>
-      It has multiple faculties covering science, humanities, engineering, medicine, law, and social sciences.
-    </p>
-
-    <p>
-      It is a public institution that receives students from different regions of Peru.
-    </p>`,
-
-    "History of the Place": `<p>
-      San Marcos was founded during the colonial period with the objective of training professionals in theology,
-      law, and other disciplines.
-    </p>
-
-    <p>
-      Over the centuries, it has been a key center in the formation of intellectuals, politicians, and social leaders.
-    </p>
-
-    <p>
-      During the republican period, the university acquired an important role in political and ideological debates.
-    </p>
-
-    <p>
-      In the 20th century, it progressively moved to its current campus.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      San Marcos is known as the “Dean of the Americas,” a title that reflects its age and prestige.
-    </p>
-
-    <p>
-      It has maintained its operation from the 16th century to the present.
-    </p>
-
-    <p>
-      The institution also houses museums and libraries with important historical collections.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      San Marcos is a fundamental pillar of the Peruvian education system.
-    </p>
-
-    <p>
-      Its influence extends beyond academia into culture, politics, science, and society.
-    </p>
-
-    <p>
-      Its campus and historical weight make it a relevant location for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Universidad_Nacional_Mayor_de_San_Marcos" target="_blank">Wikipedia – UNMSM</a></li>
-      <li><a href="https://www.unmsm.edu.pe" target="_blank">UNMSM – Official Website</a></li>
-      <li><a href="https://www.gob.pe/minedu" target="_blank">Ministry of Education of Peru</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The National University of San Marcos is one of the most important academic institutions in Peru and Latin America.\n      Recognized as the oldest university in the Americas, its history is deeply linked to the intellectual, political,\n      and cultural development of the country.\n    </p>",
+    "General Information and Location": "<p>\n      The National University of San Marcos is located in Lima, with its main campus in the University City.\n    </p>\n\n    <p>\n      It was founded on May 12, 1551, by royal decree of King Charles I of Spain.\n    </p>\n\n    <p>\n      It has multiple faculties covering science, humanities, engineering, medicine, law, and social sciences.\n    </p>\n\n    <p>\n      It is a public institution that receives students from different regions of Peru.\n    </p>",
+    "History of the Place": "<p>\n      San Marcos was founded during the colonial period with the objective of training professionals in theology,\n      law, and other disciplines.\n    </p>\n\n    <p>\n      Over the centuries, it has been a key center in the formation of intellectuals, politicians, and social leaders.\n    </p>\n\n    <p>\n      During the republican period, the university acquired an important role in political and ideological debates.\n    </p>\n\n    <p>\n      In the 20th century, it progressively moved to its current campus.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      San Marcos is known as the “Dean of the Americas,” a title that reflects its age and prestige.\n    </p>\n\n    <p>\n      It has maintained its operation from the 16th century to the present.\n    </p>\n\n    <p>\n      The institution also houses museums and libraries with important historical collections.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      San Marcos is a fundamental pillar of the Peruvian education system.\n    </p>\n\n    <p>\n      Its influence extends beyond academia into culture, politics, science, and society.\n    </p>\n\n    <p>\n      Its campus and historical weight make it a relevant location for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Universidad_Nacional_Mayor_de_San_Marcos\" target=\"_blank\">Wikipedia – UNMSM</a></li>\n      <li><a href=\"https://www.unmsm.edu.pe\" target=\"_blank\">UNMSM – Official Website</a></li>\n      <li><a href=\"https://www.gob.pe/minedu\" target=\"_blank\">Ministry of Education of Peru</a></li>\n    </ul>"
   },
-
   "Pontificia Universidad Católica del Perú": {
-    "Introduction": `<p>
-      The Pontifical Catholic University of Peru is one of the country’s most prestigious academic institutions.
-      Its campus functions as an integrated urban environment combining architecture, green areas, cultural spaces,
-      and student life.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The Pontifical Catholic University of Peru is located in Lima, with its main campus in the district of San Miguel.
-    </p>
-
-    <p>
-      It was founded in 1917 by the priest Jorge Dintilhac.
-    </p>
-
-    <p>
-      It offers programs in engineering, social sciences, humanities, law, arts, business, and other disciplines.
-    </p>
-
-    <p>
-      The campus includes academic buildings, libraries, auditoriums, research centers, and large green areas.
-    </p>`,
-
-    "History of the Place": `<p>
-      PUCP was founded during a context of educational modernization in Peru.
-    </p>
-
-    <p>
-      Initially, the university operated in downtown Lima, but later moved to its current campus in San Miguel.
-    </p>
-
-    <p>
-      Over the decades, PUCP consolidated its prestige through research, professional training, cultural activity,
-      and participation in national academic debates.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of PUCP’s most distinctive characteristics is its university-city-style campus.
-    </p>
-
-    <p>
-      The campus is known for its balance between infrastructure and nature.
-    </p>
-
-    <p>
-      The university also houses cultural centers and artistic spaces.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      PUCP plays a key role within the Peruvian education system.
-    </p>
-
-    <p>
-      From a cultural perspective, it is a space for knowledge generation and artistic production.
-    </p>
-
-    <p>
-      Its diversity of spaces and orderly aesthetic make it attractive for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://es.wikipedia.org/wiki/Pontificia_Universidad_Cat%C3%B3lica_del_Per%C3%BA" target="_blank">Wikipedia – PUCP</a></li>
-      <li><a href="https://www.pucp.edu.pe" target="_blank">PUCP – Official Website</a></li>
-      <li><a href="https://www.gob.pe/minedu" target="_blank">Ministry of Education of Peru</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The Pontifical Catholic University of Peru is one of the country’s most prestigious academic institutions.\n      Its campus functions as an integrated urban environment combining architecture, green areas, cultural spaces,\n      and student life.\n    </p>",
+    "General Information and Location": "<p>\n      The Pontifical Catholic University of Peru is located in Lima, with its main campus in the district of San Miguel.\n    </p>\n\n    <p>\n      It was founded in 1917 by the priest Jorge Dintilhac.\n    </p>\n\n    <p>\n      It offers programs in engineering, social sciences, humanities, law, arts, business, and other disciplines.\n    </p>\n\n    <p>\n      The campus includes academic buildings, libraries, auditoriums, research centers, and large green areas.\n    </p>",
+    "History of the Place": "<p>\n      PUCP was founded during a context of educational modernization in Peru.\n    </p>\n\n    <p>\n      Initially, the university operated in downtown Lima, but later moved to its current campus in San Miguel.\n    </p>\n\n    <p>\n      Over the decades, PUCP consolidated its prestige through research, professional training, cultural activity,\n      and participation in national academic debates.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of PUCP’s most distinctive characteristics is its university-city-style campus.\n    </p>\n\n    <p>\n      The campus is known for its balance between infrastructure and nature.\n    </p>\n\n    <p>\n      The university also houses cultural centers and artistic spaces.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      PUCP plays a key role within the Peruvian education system.\n    </p>\n\n    <p>\n      From a cultural perspective, it is a space for knowledge generation and artistic production.\n    </p>\n\n    <p>\n      Its diversity of spaces and orderly aesthetic make it attractive for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://es.wikipedia.org/wiki/Pontificia_Universidad_Cat%C3%B3lica_del_Per%C3%BA\" target=\"_blank\">Wikipedia – PUCP</a></li>\n      <li><a href=\"https://www.pucp.edu.pe\" target=\"_blank\">PUCP – Official Website</a></li>\n      <li><a href=\"https://www.gob.pe/minedu\" target=\"_blank\">Ministry of Education of Peru</a></li>\n    </ul>"
   },
-
   "Avenida Larco": {
-    "Introduction": `<p>
-      Larco Avenue is one of the most important commercial, urban, and tourist roads in Miraflores.
-      It connects Kennedy Park and the Miraflores roundabout with the coastal zone and Larcomar.
-    </p>
-
-    <p>
-      More than a transportation route, Larco Avenue functions as an active urban corridor where commercial activity,
-      tourism, gastronomy, accommodation, entertainment, and public life come together.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Larco Avenue, officially named José A. Larco Avenue, is located in the district of Miraflores, Lima, Peru.
-    </p>
-
-    <p>
-      It begins near the Óvalo de Miraflores and Kennedy Park and continues south toward Armendáriz Avenue,
-      the Malecón de la Reserva, and Larcomar.
-    </p>
-
-    <p>
-      The avenue extends for approximately thirteen blocks and crosses some of the busiest commercial and tourist
-      areas of Miraflores.
-    </p>
-
-    <p>
-      Along its route are hotels, restaurants, cafés, bookstores, banks, shops, galleries, casinos, and offices.
-    </p>`,
-
-    "History of the Place": `<p>
-      The history of Larco Avenue is connected to the first stages of Miraflores’ urban development.
-    </p>
-
-    <p>
-      During the early twentieth century, Larco was already one of the district’s central streets,
-      although it was narrower and had a different appearance from the avenue seen today.
-    </p>
-
-    <p>
-      In 1946, Larco Street was officially transformed into an avenue.
-    </p>
-
-    <p>
-      The avenue was named after José A. Larco, who developed an important commercial and civic career in Peru.
-    </p>
-
-    <p>
-      During the second half of the twentieth century, Larco Avenue became one of Miraflores’ principal commercial
-      and recreational areas.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      Larco Avenue connects two different images of Miraflores: the traditional commercial center around Kennedy Park
-      and the coastal landscape around Larcomar and the Pacific Ocean.
-    </p>
-
-    <p>
-      A person can walk from the active center of Miraflores to the coastal cliffs in only a few blocks.
-    </p>
-
-    <p>
-      The name “Larcomar” combines the reference to Larco Avenue with the Spanish word for sea, “mar.”
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Larco Avenue functions as one of the principal organizing axes of Miraflores.
-    </p>
-
-    <p>
-      It connects residential, administrative, commercial, tourist, and coastal areas.
-    </p>
-
-    <p>
-      Its movement, architecture, commercial activity, and proximity to Kennedy Park, Tarata Street, and the coast
-      make it useful for audiovisual productions portraying contemporary Lima.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://www.miraflores.gob.pe/calle_miraflores/avenida-jose-a-larco/" target="_blank">Municipality of Miraflores – José A. Larco Avenue</a></li>
-      <li><a href="https://lum.cultura.pe/actividades/documental-avenida-larco" target="_blank">Lugar de la Memoria – Avenida Larco</a></li>
-      <li><a href="https://www.cinencuentro.com/2015/06/18/avenida-larco-la-pelicula-documental-grupo-rock-fragil/" target="_blank">Cinencuentro – Avenida Larco</a></li>
-      <li><a href="https://es.wikipedia.org/wiki/Avenida_Jos%C3%A9_Larco" target="_blank">Wikipedia – José Larco Avenue</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Larco Avenue is one of the most important commercial, urban, and tourist roads in Miraflores.\n      It connects Kennedy Park and the Miraflores roundabout with the coastal zone and Larcomar.\n    </p>\n\n    <p>\n      More than a transportation route, Larco Avenue functions as an active urban corridor where commercial activity,\n      tourism, gastronomy, accommodation, entertainment, and public life come together.\n    </p>",
+    "General Information and Location": "<p>\n      Larco Avenue, officially named José A. Larco Avenue, is located in the district of Miraflores, Lima, Peru.\n    </p>\n\n    <p>\n      It begins near the Óvalo de Miraflores and Kennedy Park and continues south toward Armendáriz Avenue,\n      the Malecón de la Reserva, and Larcomar.\n    </p>\n\n    <p>\n      The avenue extends for approximately thirteen blocks and crosses some of the busiest commercial and tourist\n      areas of Miraflores.\n    </p>\n\n    <p>\n      Along its route are hotels, restaurants, cafés, bookstores, banks, shops, galleries, casinos, and offices.\n    </p>",
+    "History of the Place": "<p>\n      The history of Larco Avenue is connected to the first stages of Miraflores’ urban development.\n    </p>\n\n    <p>\n      During the early twentieth century, Larco was already one of the district’s central streets,\n      although it was narrower and had a different appearance from the avenue seen today.\n    </p>\n\n    <p>\n      In 1946, Larco Street was officially transformed into an avenue.\n    </p>\n\n    <p>\n      The avenue was named after José A. Larco, who developed an important commercial and civic career in Peru.\n    </p>\n\n    <p>\n      During the second half of the twentieth century, Larco Avenue became one of Miraflores’ principal commercial\n      and recreational areas.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      Larco Avenue connects two different images of Miraflores: the traditional commercial center around Kennedy Park\n      and the coastal landscape around Larcomar and the Pacific Ocean.\n    </p>\n\n    <p>\n      A person can walk from the active center of Miraflores to the coastal cliffs in only a few blocks.\n    </p>\n\n    <p>\n      The name “Larcomar” combines the reference to Larco Avenue with the Spanish word for sea, “mar.”\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Larco Avenue functions as one of the principal organizing axes of Miraflores.\n    </p>\n\n    <p>\n      It connects residential, administrative, commercial, tourist, and coastal areas.\n    </p>\n\n    <p>\n      Its movement, architecture, commercial activity, and proximity to Kennedy Park, Tarata Street, and the coast\n      make it useful for audiovisual productions portraying contemporary Lima.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://www.miraflores.gob.pe/calle_miraflores/avenida-jose-a-larco/\" target=\"_blank\">Municipality of Miraflores – José A. Larco Avenue</a></li>\n      <li><a href=\"https://lum.cultura.pe/actividades/documental-avenida-larco\" target=\"_blank\">Lugar de la Memoria – Avenida Larco</a></li>\n      <li><a href=\"https://www.cinencuentro.com/2015/06/18/avenida-larco-la-pelicula-documental-grupo-rock-fragil/\" target=\"_blank\">Cinencuentro – Avenida Larco</a></li>\n      <li><a href=\"https://es.wikipedia.org/wiki/Avenida_Jos%C3%A9_Larco\" target=\"_blank\">Wikipedia – José Larco Avenue</a></li>\n    </ul>"
   },
-
   "Bosque El Olivar": {
-    "Introduction": `<p>
-      El Olivar Forest is one of Lima’s most representative natural, historical, and urban spaces.
-      Located in San Isidro, it preserves centuries-old olive trees in the middle of a residential and business area.
-    </p>`,
-
-    "General Information and Location": `<p>
-      El Olivar Forest is located in the district of San Isidro, Lima, Peru.
-    </p>
-
-    <p>
-      Its main elements include an artificial lagoon, pedestrian paths, green areas, old olive trees,
-      and resting areas.
-    </p>
-
-    <p>
-      The forest covers around 10 hectares and contains 1,946 trees, most of them olive trees.
-    </p>
-
-    <p>
-      It was declared a National Monument in 1959, a Monumental Zone in 1998, and an Environmental Conservation
-      Area in 2017.
-    </p>`,
-
-    "History of the Place": `<p>
-      The history of El Olivar Forest dates back to the viceregal period.
-    </p>
-
-    <p>
-      According to historical sources, the first olive trees were brought from Seville by Antonio de Rivera
-      in the 16th century.
-    </p>
-
-    <p>
-      The forest formed part of the former estate of the Count of San Isidro.
-    </p>
-
-    <p>
-      With Lima’s urban growth, San Isidro became a residential and business district while the forest remained
-      protected as a green space.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      One of the best-known curiosities of El Olivar Forest is related to Saint Martin de Porres.
-    </p>
-
-    <p>
-      Tradition says that the saint may have participated in the planting of olive trees in the old Limatambo area.
-    </p>
-
-    <p>
-      Several olive trees in the forest are more than 350 or 400 years old.
-    </p>
-
-    <p>
-      The forest is also an important point for urban birdwatching.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      El Olivar Forest preserves a large green space within one of Lima’s densest and most modern districts.
-    </p>
-
-    <p>
-      Its old olive trees connect the present-day city with its viceregal, agricultural, and republican past.
-    </p>
-
-    <p>
-      Due to its paths, lagoon, ancient trees, and residential surroundings, the forest is an attractive location
-      for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://msi.gob.pe/portal/2017/02/24/bosque-el-olivar-es-reconocido-como-area-de-conservacion-ambiental/" target="_blank">Municipality of San Isidro</a></li>
-      <li><a href="https://www.gob.pe/43159-lugares-para-visitar-en-san-isidro-bosque-el-olivar" target="_blank">Gob.pe – El Olivar Forest</a></li>
-      <li><a href="https://www.ytuqueplanes.com/teapuntas-lima-callao/distritos-con-historia/san-isidro/bosque-el-olivar" target="_blank">Y tú qué planes</a></li>
-      <li><a href="https://www.gob.pe/42534-informacion-general-de-san-isidro-historia-de-san-isidro" target="_blank">History of San Isidro</a></li>
-    </ul>`
+    "Introduction": "<p>\n      El Olivar Forest is one of Lima’s most representative natural, historical, and urban spaces.\n      Located in San Isidro, it preserves centuries-old olive trees in the middle of a residential and business area.\n    </p>",
+    "General Information and Location": "<p>\n      El Olivar Forest is located in the district of San Isidro, Lima, Peru.\n    </p>\n\n    <p>\n      Its main elements include an artificial lagoon, pedestrian paths, green areas, old olive trees,\n      and resting areas.\n    </p>\n\n    <p>\n      The forest covers around 10 hectares and contains 1,946 trees, most of them olive trees.\n    </p>\n\n    <p>\n      It was declared a National Monument in 1959, a Monumental Zone in 1998, and an Environmental Conservation\n      Area in 2017.\n    </p>",
+    "History of the Place": "<p>\n      The history of El Olivar Forest dates back to the viceregal period.\n    </p>\n\n    <p>\n      According to historical sources, the first olive trees were brought from Seville by Antonio de Rivera\n      in the 16th century.\n    </p>\n\n    <p>\n      The forest formed part of the former estate of the Count of San Isidro.\n    </p>\n\n    <p>\n      With Lima’s urban growth, San Isidro became a residential and business district while the forest remained\n      protected as a green space.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      One of the best-known curiosities of El Olivar Forest is related to Saint Martin de Porres.\n    </p>\n\n    <p>\n      Tradition says that the saint may have participated in the planting of olive trees in the old Limatambo area.\n    </p>\n\n    <p>\n      Several olive trees in the forest are more than 350 or 400 years old.\n    </p>\n\n    <p>\n      The forest is also an important point for urban birdwatching.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      El Olivar Forest preserves a large green space within one of Lima’s densest and most modern districts.\n    </p>\n\n    <p>\n      Its old olive trees connect the present-day city with its viceregal, agricultural, and republican past.\n    </p>\n\n    <p>\n      Due to its paths, lagoon, ancient trees, and residential surroundings, the forest is an attractive location\n      for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://msi.gob.pe/portal/2017/02/24/bosque-el-olivar-es-reconocido-como-area-de-conservacion-ambiental/\" target=\"_blank\">Municipality of San Isidro</a></li>\n      <li><a href=\"https://www.gob.pe/43159-lugares-para-visitar-en-san-isidro-bosque-el-olivar\" target=\"_blank\">Gob.pe – El Olivar Forest</a></li>\n      <li><a href=\"https://www.ytuqueplanes.com/teapuntas-lima-callao/distritos-con-historia/san-isidro/bosque-el-olivar\" target=\"_blank\">Y tú qué planes</a></li>\n      <li><a href=\"https://www.gob.pe/42534-informacion-general-de-san-isidro-historia-de-san-isidro\" target=\"_blank\">History of San Isidro</a></li>\n    </ul>"
   },
-
   "Morro Solar": {
-    "Introduction": `<p>
-      Morro Solar is one of Lima’s most important historical, natural, scientific, and scenic locations.
-      It is situated in Chorrillos, beside the Pacific Ocean, and rises above the southern section of Lima’s coastline.
-    </p>
-
-    <p>
-      Morro Solar is also a historic battlefield, archaeological area, geological reserve, religious destination,
-      astronomical observation point, and place of urban memory.
-    </p>`,
-
-    "General Information and Location": `<p>
-      Morro Solar is located in the district of Chorrillos, in Lima, Peru.
-    </p>
-
-    <p>
-      It is a large rocky formation overlooking the Bay of Chorrillos, the Costa Verde, the Pacific Ocean,
-      and a significant part of the city.
-    </p>
-
-    <p>
-      The rocky massif reaches approximately 281 meters in height.
-    </p>
-
-    <p>
-      Its landmarks include the Monument to the Unknown Soldier, the Morro Solar Planetarium and Observatory,
-      the Pope’s Cross, the Sanctuary of the Virgin, and the Cristo del Pacífico.
-    </p>`,
-
-    "History of the Place": `<p>
-      On the slopes of Morro Solar is the archaeological complex of Armatambo, associated with the Ichma culture.
-    </p>
-
-    <p>
-      Armatambo was later occupied by the Incas and became an important administrative and ceremonial center.
-    </p>
-
-    <p>
-      Morro Solar was one of the principal settings of the Battle of San Juan and Chorrillos in 1881,
-      during the War of the Pacific.
-    </p>
-
-    <p>
-      The area became a place of national remembrance associated with the defense of Lima.
-    </p>
-
-    <p>
-      Morro Solar was declared an intangible zone in 1977 and recognized as a Historic Monument in 1986.
-    </p>
-
-    <p>
-      The Morro Solar Planetarium was inaugurated in 1960.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      Morro Solar has a geological relationship with San Lorenzo Island and El Frontón Island.
-    </p>
-
-    <p>
-      Its rocks and slopes contain fossils and geological evidence from remote periods.
-    </p>
-
-    <p>
-      The same territory functions as a battlefield memorial, archaeological area, astronomical observation point,
-      religious destination, urban viewpoint, and geological study site.
-    </p>
-
-    <p>
-      The Pope’s Cross was built using parts of electrical transmission towers destroyed during Peru’s internal conflict.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      Morro Solar preserves different stages of Peruvian history within the same territory.
-    </p>
-
-    <p>
-      Its archaeological remains connect the location with pre-Hispanic Lima, while its monuments preserve the memory
-      of the War of the Pacific.
-    </p>
-
-    <p>
-      From an urban perspective, its silhouette marks the southern end of the Bay of Lima.
-    </p>
-
-    <p>
-      Its cliffs, arid slopes, ocean views, monuments, paths, and panoramic views make it an attractive location
-      for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://portal.munichorrillos.gob.pe/cultura-y-turismo/morro-solar" target="_blank">Municipality of Chorrillos – Morro Solar</a></li>
-      <li><a href="https://www.gob.pe/institucion/cultura/noticias/48086-ministerio-de-cultura-recupera-zona-invadida-del-morro-solar-de-chorrillos" target="_blank">Ministry of Culture – Morro Solar</a></li>
-      <li><a href="https://www.apa.com.pe/morro_solar.html" target="_blank">Peruvian Astronomy Association</a></li>
-      <li><a href="https://andina.pe/agencia/galeria-municipalidad-chorrillos-inaugura-malecon-morro-solar-gran-mirador-lima-24606.aspx" target="_blank">Andina – Morro Solar</a></li>
-    </ul>`
+    "Introduction": "<p>\n      Morro Solar is one of Lima’s most important historical, natural, scientific, and scenic locations.\n      It is situated in Chorrillos, beside the Pacific Ocean, and rises above the southern section of Lima’s coastline.\n    </p>\n\n    <p>\n      Morro Solar is also a historic battlefield, archaeological area, geological reserve, religious destination,\n      astronomical observation point, and place of urban memory.\n    </p>",
+    "General Information and Location": "<p>\n      Morro Solar is located in the district of Chorrillos, in Lima, Peru.\n    </p>\n\n    <p>\n      It is a large rocky formation overlooking the Bay of Chorrillos, the Costa Verde, the Pacific Ocean,\n      and a significant part of the city.\n    </p>\n\n    <p>\n      The rocky massif reaches approximately 281 meters in height.\n    </p>\n\n    <p>\n      Its landmarks include the Monument to the Unknown Soldier, the Morro Solar Planetarium and Observatory,\n      the Pope’s Cross, the Sanctuary of the Virgin, and the Cristo del Pacífico.\n    </p>",
+    "History of the Place": "<p>\n      On the slopes of Morro Solar is the archaeological complex of Armatambo, associated with the Ichma culture.\n    </p>\n\n    <p>\n      Armatambo was later occupied by the Incas and became an important administrative and ceremonial center.\n    </p>\n\n    <p>\n      Morro Solar was one of the principal settings of the Battle of San Juan and Chorrillos in 1881,\n      during the War of the Pacific.\n    </p>\n\n    <p>\n      The area became a place of national remembrance associated with the defense of Lima.\n    </p>\n\n    <p>\n      Morro Solar was declared an intangible zone in 1977 and recognized as a Historic Monument in 1986.\n    </p>\n\n    <p>\n      The Morro Solar Planetarium was inaugurated in 1960.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      Morro Solar has a geological relationship with San Lorenzo Island and El Frontón Island.\n    </p>\n\n    <p>\n      Its rocks and slopes contain fossils and geological evidence from remote periods.\n    </p>\n\n    <p>\n      The same territory functions as a battlefield memorial, archaeological area, astronomical observation point,\n      religious destination, urban viewpoint, and geological study site.\n    </p>\n\n    <p>\n      The Pope’s Cross was built using parts of electrical transmission towers destroyed during Peru’s internal conflict.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      Morro Solar preserves different stages of Peruvian history within the same territory.\n    </p>\n\n    <p>\n      Its archaeological remains connect the location with pre-Hispanic Lima, while its monuments preserve the memory\n      of the War of the Pacific.\n    </p>\n\n    <p>\n      From an urban perspective, its silhouette marks the southern end of the Bay of Lima.\n    </p>\n\n    <p>\n      Its cliffs, arid slopes, ocean views, monuments, paths, and panoramic views make it an attractive location\n      for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://portal.munichorrillos.gob.pe/cultura-y-turismo/morro-solar\" target=\"_blank\">Municipality of Chorrillos – Morro Solar</a></li>\n      <li><a href=\"https://www.gob.pe/institucion/cultura/noticias/48086-ministerio-de-cultura-recupera-zona-invadida-del-morro-solar-de-chorrillos\" target=\"_blank\">Ministry of Culture – Morro Solar</a></li>\n      <li><a href=\"https://www.apa.com.pe/morro_solar.html\" target=\"_blank\">Peruvian Astronomy Association</a></li>\n      <li><a href=\"https://andina.pe/agencia/galeria-municipalidad-chorrillos-inaugura-malecon-morro-solar-gran-mirador-lima-24606.aspx\" target=\"_blank\">Andina – Morro Solar</a></li>\n    </ul>"
   },
-
   "Residencial Santa Cruz": {
-    "Introduction": `<p>
-      The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing.
-      Located in San Isidro, it was designed during the 1960s as a residential development for middle-class families.
-    </p>
-
-    <p>
-      The complex combines apartments, gardens, pedestrian circulation, community spaces, and urban planning
-      within a single residential area.
-    </p>`,
-
-    "General Information and Location": `<p>
-      The Santa Cruz Residential Complex is located in the district of San Isidro, Lima, near the border with Miraflores.
-    </p>
-
-    <p>
-      Its main reference location is Avenida Belén, close to Avenida General Córdova, Avenida Pérez Araníbar,
-      and the Huaca Santa Cruz archaeological site.
-    </p>
-
-    <p>
-      The complex consists of multifamily residential blocks, houses, gardens, plazas, pedestrian paths,
-      internal streets, and community spaces.
-    </p>
-
-    <p>
-      It contains approximately 20 residential blocks and was originally developed with 446 duplex apartments.
-    </p>`,
-
-    "History of the Place": `<p>
-      The Santa Cruz Residential Complex was developed between 1964 and 1966 during the first government
-      of President Fernando Belaúnde Terry.
-    </p>
-
-    <p>
-      It formed part of public housing policies implemented in response to Lima’s rapid population growth.
-    </p>
-
-    <p>
-      The project was promoted by the National Housing Institute and designed by architects Jacques Crousse
-      and Luis Vásquez.
-    </p>
-
-    <p>
-      It was officially inaugurated on June 26, 1966.
-    </p>
-
-    <p>
-      Over time, the complex developed a strong community identity.
-    </p>`,
-
-    "Highlighted Curiosity": `<p>
-      The complex combines long linear buildings with cross-shaped blocks, creating courtyards, gardens,
-      paths, and neighborhood spaces.
-    </p>
-
-    <p>
-      Some duplex residences are connected through elevated corridors sometimes described as “aerial streets.”
-    </p>
-
-    <p>
-      Some buildings also use open ground floors, allowing pedestrians to move underneath or between the blocks.
-    </p>
-
-    <p>
-      The complex preserves much of the scale and spatial organization established during the 1960s.
-    </p>`,
-
-    "Cultural and Urban Importance": `<p>
-      The Santa Cruz Residential Complex represents the influence of the Modern Movement on Peruvian collective housing.
-    </p>
-
-    <p>
-      Its design prioritizes functionality, open space, natural lighting, ventilation, pedestrian circulation,
-      and collective life.
-    </p>
-
-    <p>
-      Its plazas, courtyards, paths, and gardens encourage interaction between residents.
-    </p>
-
-    <p>
-      Its modernist architecture and preserved atmosphere make it attractive for audiovisual productions.
-    </p>`,
-
-    "Sources": `<ul>
-      <li><a href="https://cammp.ulima.edu.pe/edificios/residencial-santa-cruz/" target="_blank">University of Lima – Residencial Santa Cruz</a></li>
-      <li><a href="https://www.gob.pe/institucion/munisanisidro-lima/noticias/791112-residencial-santa-cruz-cumplio-57-anos" target="_blank">Municipality of San Isidro</a></li>
-      <li><a href="https://diariocorreo.pe/peru/un-grupo-residencial-con-historia-propia-270188/" target="_blank">Diario Correo</a></li>
-      <li><a href="https://msi.gob.pe/portal/2018/02/26/la-resi-y-su-nuevo-rostro/" target="_blank">Municipality of San Isidro – La Resi</a></li>
-      <li><a href="https://rpp.pe/lima/actualidad/cine-al-aire-libre-en-la-residencial-santa-cruz-y-el-olivar-de-san-isidro-noticia-157599" target="_blank">RPP – Outdoor Cinema</a></li>
-    </ul>`
+    "Introduction": "<p>\n      The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing.\n      Located in San Isidro, it was designed during the 1960s as a residential development for middle-class families.\n    </p>\n\n    <p>\n      The complex combines apartments, gardens, pedestrian circulation, community spaces, and urban planning\n      within a single residential area.\n    </p>",
+    "General Information and Location": "<p>\n      The Santa Cruz Residential Complex is located in the district of San Isidro, Lima, near the border with Miraflores.\n    </p>\n\n    <p>\n      Its main reference location is Avenida Belén, close to Avenida General Córdova, Avenida Pérez Araníbar,\n      and the Huaca Santa Cruz archaeological site.\n    </p>\n\n    <p>\n      The complex consists of multifamily residential blocks, houses, gardens, plazas, pedestrian paths,\n      internal streets, and community spaces.\n    </p>\n\n    <p>\n      It contains approximately 20 residential blocks and was originally developed with 446 duplex apartments.\n    </p>",
+    "History of the Place": "<p>\n      The Santa Cruz Residential Complex was developed between 1964 and 1966 during the first government\n      of President Fernando Belaúnde Terry.\n    </p>\n\n    <p>\n      It formed part of public housing policies implemented in response to Lima’s rapid population growth.\n    </p>\n\n    <p>\n      The project was promoted by the National Housing Institute and designed by architects Jacques Crousse\n      and Luis Vásquez.\n    </p>\n\n    <p>\n      It was officially inaugurated on June 26, 1966.\n    </p>\n\n    <p>\n      Over time, the complex developed a strong community identity.\n    </p>",
+    "Highlighted Curiosity": "<p>\n      The complex combines long linear buildings with cross-shaped blocks, creating courtyards, gardens,\n      paths, and neighborhood spaces.\n    </p>\n\n    <p>\n      Some duplex residences are connected through elevated corridors sometimes described as “aerial streets.”\n    </p>\n\n    <p>\n      Some buildings also use open ground floors, allowing pedestrians to move underneath or between the blocks.\n    </p>\n\n    <p>\n      The complex preserves much of the scale and spatial organization established during the 1960s.\n    </p>",
+    "Cultural and Urban Importance": "<p>\n      The Santa Cruz Residential Complex represents the influence of the Modern Movement on Peruvian collective housing.\n    </p>\n\n    <p>\n      Its design prioritizes functionality, open space, natural lighting, ventilation, pedestrian circulation,\n      and collective life.\n    </p>\n\n    <p>\n      Its plazas, courtyards, paths, and gardens encourage interaction between residents.\n    </p>\n\n    <p>\n      Its modernist architecture and preserved atmosphere make it attractive for audiovisual productions.\n    </p>",
+    "Sources": "<ul>\n      <li><a href=\"https://cammp.ulima.edu.pe/edificios/residencial-santa-cruz/\" target=\"_blank\">University of Lima – Residencial Santa Cruz</a></li>\n      <li><a href=\"https://www.gob.pe/institucion/munisanisidro-lima/noticias/791112-residencial-santa-cruz-cumplio-57-anos\" target=\"_blank\">Municipality of San Isidro</a></li>\n      <li><a href=\"https://diariocorreo.pe/peru/un-grupo-residencial-con-historia-propia-270188/\" target=\"_blank\">Diario Correo</a></li>\n      <li><a href=\"https://msi.gob.pe/portal/2018/02/26/la-resi-y-su-nuevo-rostro/\" target=\"_blank\">Municipality of San Isidro – La Resi</a></li>\n      <li><a href=\"https://rpp.pe/lima/actualidad/cine-al-aire-libre-en-la-residencial-santa-cruz-y-el-olivar-de-san-isidro-noticia-157599\" target=\"_blank\">RPP – Outdoor Cinema</a></li>\n    </ul>"
+  },
+  "Jorge Chávez International Airport": {
+    "Introduction": "<p>\n    Jorge Chávez International Airport is Peru’s principal air terminal and one\n    of the country’s most important transportation infrastructures. Located in\n    the Constitutional Province of Callao, next to the city of Lima, it serves\n    as the main national and international gateway to Peru.\n  </p>\n\n  <p>\n    Its importance goes beyond air transportation. The airport represents travel,\n    migration, tourism, commerce, technological modernization, and Peru’s connection\n    with the rest of the world. Its terminals, runways, control towers, boarding\n    areas, and constant movement of passengers and aircraft give it considerable\n    visual and narrative value for audiovisual productions.\n  </p>\n\n  <p>\n    Since June 2025, all commercial flights have operated from a new passenger\n    terminal developed as part of the largest airport expansion project in the\n    country’s history. This infrastructure has transformed the airport into a\n    modern complex designed to strengthen Lima’s role as a regional air hub.\n  </p>",
+    "General Information and Location": "<p>\n    Jorge Chávez International Airport is located in the Constitutional Province\n    of Callao, west of the historic center of Lima and close to the Pacific coast.\n    Although it serves Lima, the airport is administratively located within Callao.\n  </p>\n\n  <p>\n    Its international identification code is LIM. The airport receives domestic\n    flights connecting Lima with different regions of Peru, as well as international\n    flights to destinations in South America, North America, Central America,\n    the Caribbean, and Europe.\n  </p>\n\n  <p>\n    The airport complex occupies approximately 935 hectares. Its modern infrastructure\n    includes a passenger terminal with five levels, two runways, a new air traffic\n    control tower, aircraft platforms, boarding bridges, parking areas, commercial\n    spaces, hotels, logistics facilities, and access roads.\n  </p>\n\n  <p>\n    The new passenger terminal is approximately three times larger than the former\n    terminal. It was designed to progressively reach a capacity of up to 40 million\n    passengers per year.\n  </p>\n\n  <p>\n    The airport is operated by Lima Airport Partners, commonly known as LAP.\n    The company began operating the airport in 2001 under a concession granted\n    by the Peruvian State.\n  </p>",
+    "History of the Place": "<p>\n    Before Jorge Chávez International Airport was constructed, Lima’s principal\n    airport was Limatambo Airport, located in the district of San Isidro.\n    As Lima expanded during the twentieth century, Limatambo became surrounded\n    by residential areas and could no longer respond adequately to the development\n    of commercial aviation.\n  </p>\n\n  <p>\n    A new airport was therefore built in Callao and inaugurated in 1960 under\n    the name Lima–Callao International Airport. Its modern passenger terminal\n    was officially inaugurated during the middle of the 1960s and became one\n    of the most representative examples of modern architecture and infrastructure\n    in Peru at that time.\n  </p>\n\n  <p>\n    The airport was named after Jorge Chávez Dartnell, a Peruvian aviation pioneer\n    born in Paris in 1887. On September 23, 1910, Chávez became the first aviator\n    to fly across the Alps, travelling from Switzerland toward Italy in a\n    Blériot XI monoplane.\n  </p>\n\n  <p>\n    During the second half of the twentieth century, the airport became Peru’s\n    principal point of international arrival and departure. It received millions\n    of travelers, as well as political leaders, artists, athletes, religious\n    figures, and other internationally recognized visitors.\n  </p>\n\n  <p>\n    In 2001, Lima Airport Partners assumed responsibility for the airport’s\n    operation and began a process of renovation and expansion. The original\n    passenger terminal was modernized, while plans were developed for a much\n    larger airport complex.\n  </p>\n\n  <p>\n    The expansion project included the construction of a second runway, a new\n    control tower, new aircraft platforms, access roads, logistics areas,\n    commercial facilities, and a completely new passenger terminal.\n  </p>\n\n  <p>\n    The new terminal was officially inaugurated on May 30, 2025. On June 1,\n    all domestic and international commercial operations were transferred to\n    the new infrastructure, while the former terminal ended its passenger\n    operations after approximately six decades of service.\n  </p>",
+    "Highlighted Curiosity": "<p>\n    One of the most interesting characteristics of Jorge Chávez International\n    Airport is that its history can be divided into several architectural periods.\n    The airport opened in 1960, its former modern terminal became operational\n    during the 1960s, and a completely new terminal replaced it in 2025.\n  </p>\n\n  <p>\n    The old terminal was one of the principal symbols of modern Lima during\n    the 1960s. Its large windows, observation areas, aircraft stairs, arrival\n    halls, and exterior platforms frequently appeared in photographs, television\n    programs, advertisements, news reports, and Peruvian films.\n  </p>\n\n  <p>\n    The former terminal was not immediately demolished after the transfer of\n    passenger operations. According to the Ministry of Transport and Communications,\n    the building is intended to be adapted for complementary logistics,\n    administrative, and commercial services within the airport complex.\n  </p>\n\n  <p>\n    The current airport has two runways and a modern control tower. Its larger\n    expansion project also includes the development of an “Airport City,”\n    conceived as a commercial, hotel, logistics, and business area connected\n    to airport activity.\n  </p>\n\n  <p>\n    Jorge Chávez Dartnell’s flight across the Alps is commemorated every\n    September 23 in Peru as National Aviation Day. The phrase traditionally\n    attributed to him, “Arriba, siempre arriba,” is also used as the motto\n    of the Peruvian Air Force.\n  </p>",
+    "Cultural and Urban Importance": "<p>\n    Jorge Chávez International Airport has major economic and strategic importance.\n    It is the principal gateway for international visitors arriving in Peru and\n    the central connection point for domestic travel between Lima and the\n    country’s different regions.\n  </p>\n\n  <p>\n    Its operations contribute directly to tourism, foreign trade, air cargo,\n    employment, business activity, and the development of services associated\n    with transportation and hospitality.\n  </p>\n\n  <p>\n    From a social and cultural perspective, the airport is associated with\n    departures, reunions, migration, family separation, professional opportunities,\n    diplomatic visits, tourism, and personal transformation. For many travelers,\n    it is their first or last visual experience of Lima.\n  </p>\n\n  <p>\n    In urban terms, the expansion of the airport has influenced the development\n    of Callao through new roads, hotels, logistics facilities, commercial areas,\n    warehouses, transportation services, and infrastructure projects.\n  </p>\n\n  <p>\n    For audiovisual productions, the airport can represent international travel,\n    diplomatic missions, escape, migration, emotional farewells, new beginnings,\n    political intrigue, or the arrival of characters from abroad.\n  </p>\n\n  <p>\n    Its historical value is also important. Images recorded in the former terminal\n    preserve the architecture, vehicles, aircraft, clothing, technology, and\n    passenger routines of Lima during the second half of the twentieth century.\n    The Peruvian film <em>El embajador y yo</em> includes sequences filmed at\n    Jorge Chávez International Airport and presents the terminal as part of\n    the modern image of Lima during the 1960s.\n  </p>",
+    "Sources": "<ul>\n    <li>\n      <a\n        href=\"https://www.lima-airport.com/comunicados/noticias/326\"\n        target=\"_blank\"\n      >\n        Lima Airport Partners – Inauguration of the New Jorge Chávez International Airport\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.lima-airport.com/cms/corporativo/ampliacion-del-aeropuerto\"\n        target=\"_blank\"\n      >\n        Lima Airport Partners – Jorge Chávez Airport Expansion Project\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.gob.pe/institucion/mtc/noticias/1179258-antiguo-aeropuerto-jorge-chavez-cerro-su-ciclo-tras-movilizar-cerca-de-400-millones-de-pasajeros\"\n        target=\"_blank\"\n      >\n        Ministry of Transport and Communications – Closure of the Former Passenger Terminal\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.icao.int/sites/default/files/postalhistory/aviation_history_flying_first_over_the_alps.htm\"\n        target=\"_blank\"\n      >\n        International Civil Aviation Organization – Jorge Chávez and the First Flight Across the Alps\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.fraport.com/en/newsroom/press-releases/2025/q2/a-new-hub-for-south-america--fraport-subsidiary-opens-terminal-i.html\"\n        target=\"_blank\"\n      >\n        Fraport – Opening of the New Terminal in Lima\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://sentidofilmico.com/2021/09/23/el-embajador-y-yo-1968/\"\n        target=\"_blank\"\n      >\n        Sentido Fílmico – El embajador y yo and Its Lima Filming Locations\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://arkivperu.com/el-embajador-y-yo-1966/\"\n        target=\"_blank\"\n      >\n        Arkiv Perú – El embajador y yo: Scenes of Jorge Chávez Airport\n      </a>\n    </li>\n  </ul>"
+  },
+  "San Martin Square": {
+    "Introduction": "<p>\n    Plaza San Martín is one of the most important civic, historical, and\n    architectural spaces in Lima. Located in the Historic Centre of the city,\n    the square commemorates Peru’s independence and honors General José de\n    San Martín, one of the principal leaders of the South American\n    independence movement.\n  </p>\n\n  <p>\n    Surrounded by monumental Republican-era buildings, hotels, theaters,\n    restaurants, commercial establishments, and pedestrian streets, the plaza\n    combines national memory with the intense activity of contemporary Lima.\n    Its symmetrical gardens, monumental architecture, public gatherings, and\n    constant circulation make it an especially valuable location for\n    audiovisual productions.\n  </p>",
+    "General Information and Location": "<p>\n    Plaza San Martín is located in the district of Cercado de Lima, within\n    the Historic Centre of Lima, Peru.\n  </p>\n\n  <p>\n    The square is situated between Jirón de la Unión and Avenida Nicolás de\n    Piérola. Through Jirón de la Unión, it is connected with Plaza Mayor,\n    forming one of the principal pedestrian and historical routes through\n    central Lima.\n  </p>\n\n  <p>\n    The plaza is organized around a central equestrian monument dedicated to\n    General José de San Martín. Its public space includes gardens, marble\n    benches, ornamental fountains, bronze streetlamps, pedestrian paths, and\n    open areas used for civic and cultural activities.\n  </p>\n\n  <p>\n    Important buildings surrounding the plaza include the Gran Hotel Bolívar,\n    the Club Nacional, the Teatro Colón, the Giacoletti Building, and the\n    Zela and Pumacahua arcades.\n  </p>\n\n  <p>\n    Plaza San Martín is a public and freely accessible space. Its central\n    location allows visitors to reach it on foot from Plaza Mayor, Jirón de\n    la Unión, Avenida Nicolás de Piérola, and several public transportation\n    stations.\n  </p>",
+    "History of the Place": "<p>\n    Plaza San Martín was created as part of the urban transformation of Lima\n    during the early twentieth century. Its construction was connected with\n    preparations for the Centenary of Peru’s Independence.\n  </p>\n\n  <p>\n    The square was officially inaugurated on July 27, 1921, by President\n    Augusto B. Leguía. The ceremony was one of the most important public\n    events organized during the centennial celebrations.\n  </p>\n\n  <p>\n    The layout, gardens, urban furniture, and ornamental design of the plaza\n    were developed by the Spanish-Peruvian architect and sculptor Manuel\n    Piqueras Cotolí. His design created a monumental Republican square\n    influenced by European urban planning.\n  </p>\n\n  <p>\n    The central monument was created by Spanish sculptor Mariano Benlliure.\n    It represents General José de San Martín crossing the Andes on horseback.\n    The pedestal includes allegorical figures, bronze reliefs, patriotic\n    inscriptions, and symbols associated with the independence of Peru and\n    the historical relationship between Peru and Argentina.\n  </p>\n\n  <p>\n    The buildings surrounding the plaza were constructed gradually between\n    1912 and 1947. Although they were created by different architects, their\n    light-colored façades, arcades, balconies, and monumental proportions\n    form a visually unified architectural ensemble.\n  </p>\n\n  <p>\n    In 1972, Plaza San Martín was declared part of Peru’s Immovable Cultural\n    Heritage. It is also integrated into the protected Historic Centre of\n    Lima, recognized internationally for its architectural and urban value.\n  </p>",
+    "Highlighted Curiosity": "<p>\n    One of the most interesting characteristics of Plaza San Martín is that\n    it was inaugurated one day before the official centenary of Peru’s\n    declaration of independence.\n  </p>\n\n  <p>\n    The monument contains several symbolic figures. On its main façade, a\n    female figure represents the Peruvian nation and is accompanied by\n    symbols of glory and fame. On the opposite side, two soldiers holding\n    crossed flags represent the historical relationship between Peru and\n    Argentina during the independence campaigns.\n  </p>\n\n  <p>\n    Another distinctive element is the ornamental streetlamp known as\n    “The Three Graces,” located near the connection between Jirón de la Unión\n    and Avenida Nicolás de Piérola. The plaza also preserves marble benches,\n    fountains, bronze lamps, and gardens created as part of its original\n    Republican design.\n  </p>\n\n  <p>\n    The Gran Hotel Bolívar, inaugurated during the celebrations of the\n    Centenary of the Battle of Ayacucho, became one of Lima’s most famous\n    hotels and contributed to the plaza’s reputation as a center of social,\n    political, and cultural life.\n  </p>",
+    "Cultural and Urban Importance": "<p>\n    Plaza San Martín is one of Lima’s principal civic spaces. Since its\n    inauguration, it has been used for official ceremonies, patriotic\n    commemorations, public speeches, cultural activities, political\n    demonstrations, artistic performances, and social gatherings.\n  </p>\n\n  <p>\n    From a historical perspective, the square represents the construction of\n    Peru’s Republican identity and the public commemoration of the country’s\n    independence.\n  </p>\n\n  <p>\n    Architecturally, it is one of Lima’s most important monumental ensembles.\n    Its surrounding buildings reflect the European-influenced architectural\n    styles introduced during the modernization of the capital in the early\n    twentieth century.\n  </p>\n\n  <p>\n    In urban terms, the plaza connects different areas of the Historic Centre.\n    Jirón de la Unión links it directly with Plaza Mayor, while Avenida Nicolás\n    de Piérola connects it with important commercial, cultural, and\n    transportation corridors.\n  </p>\n\n  <p>\n    Its monumental scale, constant pedestrian movement, historic buildings,\n    gardens, political symbolism, and intense public life make Plaza San\n    Martín a versatile audiovisual location. It can represent Republican\n    Lima, national identity, popular urban life, social inequality, political\n    conflict, migration, or the historical transformation of the capital.\n  </p>",
+    "Sources": "<ul>\n    <li>\n      <a\n        href=\"https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=4356\"\n        target=\"_blank\"\n      >\n        MINCETUR – Plaza San Martín Tourist Resource Profile\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.gob.pe/institucion/cultura/noticias/4961-escolares-revaloran-la-plaza-san-martin-como-patrimonio-cultural-que-conmemora-la-independencia-del-peru\"\n        target=\"_blank\"\n      >\n        Ministry of Culture of Peru – Plaza San Martín and the Independence of Peru\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://whc.unesco.org/en/list/500\"\n        target=\"_blank\"\n      >\n        UNESCO – Historic Centre of Lima\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.gob.pe/institucion/munilima/noticias/1235722-el-edificio-giacoletti-volvera-a-brillar-en-la-plaza-san-martin\"\n        target=\"_blank\"\n      >\n        Metropolitan Municipality of Lima – Restoration of the Giacoletti Building\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.gob.pe/institucion/munilima/noticias/1409285-municipalidad-de-lima-refuerza-proteccion-de-monumentos-ante-movilizaciones-anunciadas-en-el-centro-historico\"\n        target=\"_blank\"\n      >\n        Metropolitan Municipality of Lima – Protection of the Monument to José de San Martín\n      </a>\n    </li>\n  </ul>"
+  },
+  "Magdalena Market - Mercado de Magdalena": {
+    "Introduction": "<p>\n    Magdalena Market, commonly known as the Mercado Modelo de Magdalena del Mar,\n    is one of the most representative traditional markets in Lima. Located in the\n    commercial center of Magdalena del Mar, it brings together food vendors,\n    small businesses, restaurants, neighborhood services, and the everyday\n    movement of residents from the district and nearby areas.\n  </p>\n\n  <p>\n    More than a place for buying food, the market is a social and cultural space.\n    Its crowded aisles, street entrances, colorful products, informal conversations,\n    and constant circulation provide a direct view of everyday urban life in Lima.\n    These characteristics give it significant visual and narrative value for\n    audiovisual productions interested in migration, popular commerce, family\n    economies, street labor, and neighborhood identity.\n  </p>",
+    "General Information and Location": "<p>\n    Magdalena Market is located in the district of Magdalena del Mar, in the city\n    of Lima, Peru.\n  </p>\n\n  <p>\n    The market occupies part of the traditional commercial area around Jirón\n    Bolognesi, close to Jirón Leoncio Prado and other streets containing shops,\n    restaurants, galleries, bakeries, pharmacies, and neighborhood services.\n  </p>\n\n  <p>\n    Its location places it near the historic center of Magdalena del Mar and\n    connects it with important district landmarks such as Plaza Túpac Amaru,\n    the Church of the Immaculate Heart of Mary, and the surrounding residential\n    neighborhoods.\n  </p>\n\n  <p>\n    Inside the market, visitors can find fruits, vegetables, meat, fish, poultry,\n    groceries, spices, flowers, prepared meals, household products, and other\n    everyday goods.\n  </p>\n\n  <p>\n    The market is open to the public, although its busiest periods are generally\n    during the morning and around lunchtime, when residents arrive to buy fresh\n    products or eat in its food stalls.\n  </p>",
+    "History of the Place": "<p>\n    The history of Magdalena Market is closely connected with the urban growth\n    of Magdalena del Mar during the first half of the twentieth century.\n  </p>\n\n  <p>\n    The market began operating during the 1930s as an open-air commercial space.\n    Its early vendors included families and migrants from different regions of\n    Peru who sold agricultural products and food to the growing population of\n    the district.\n  </p>\n\n  <p>\n    As Magdalena del Mar became more urbanized, the market expanded and developed\n    into one of the district’s principal food supply centers. Permanent stands\n    and commercial spaces gradually replaced the earlier outdoor form of trade.\n  </p>\n\n  <p>\n    Over time, the market became an important meeting point for residents,\n    merchants, workers, and visitors. Several generations of families have\n    operated businesses there, allowing commercial knowledge and local traditions\n    to be passed down over time.\n  </p>\n\n  <p>\n    Despite changes in Lima’s retail economy and the arrival of supermarkets and\n    shopping centers, Magdalena Market continues to preserve its role as a\n    traditional neighborhood market.\n  </p>",
+    "Highlighted Curiosity": "<p>\n    One of the most distinctive characteristics of Magdalena Market is that its\n    commercial activity extends beyond the interior of the market building.\n    Nearby streets contain stores, restaurants, food stands, bakeries, cafés,\n    and small businesses that form a larger commercial district around it.\n  </p>\n\n  <p>\n    The market is especially recognized for the variety of fresh products offered\n    by its vendors. Shoppers frequently establish long-term relationships with\n    particular merchants, creating a type of personal exchange that is less\n    common in supermarkets.\n  </p>\n\n  <p>\n    Another important feature is the diversity of food available in and around\n    the market. Traditional Peruvian dishes, regional ingredients, fruit juices,\n    seafood, desserts, and inexpensive daily meals make the area an important\n    local gastronomic destination.\n  </p>\n\n  <p>\n    Its atmosphere changes throughout the day. During the morning, the market\n    is dominated by the arrival and sale of fresh products, while lunchtime\n    brings greater activity to restaurants and prepared-food stalls.\n  </p>",
+    "Cultural and Urban Importance": "<p>\n    Magdalena Market plays an important role in the economic and social life of\n    the district. It provides employment for vendors, cooks, transport workers,\n    suppliers, cleaners, and owners of surrounding businesses.\n  </p>\n\n  <p>\n    From a cultural perspective, the market reflects the diversity of Lima.\n    Products, dishes, accents, traditions, and commercial practices from different\n    regions of Peru coexist within the same space.\n  </p>\n\n  <p>\n    The market also illustrates the relationship between migration and urban\n    growth. Many traditional markets in Lima developed through the work of\n    families who arrived from other parts of the country and established new\n    economic and community networks in the capital.\n  </p>\n\n  <p>\n    In urban terms, Magdalena Market functions as the center of a broader\n    commercial environment. Its entrances and surrounding streets generate\n    constant pedestrian activity and connect the market with public\n    transportation, residential areas, restaurants, and small shops.\n  </p>\n\n  <p>\n    Its connection with <em>Gregorio</em> offers a way to interpret the market\n    through themes that are central to the film: migration, informal labor,\n    childhood, survival, social inequality, and the experience of discovering\n    Lima through its streets and commercial spaces.\n  </p>\n\n  <p>\n    The movement of vendors, customers, workers, families, and street merchants\n    makes the market a suitable audiovisual setting for representing the\n    everyday city, particularly a Lima shaped by work, migration, neighborhood\n    relationships, and popular commerce.\n  </p>",
+    "Sources": "<ul>\n    <li>\n      <a\n        href=\"https://www.munimagdalena.gob.pe/wp-content/uploads/2023/02/PADSC-2023.pdf\"\n        target=\"_blank\"\n      >\n        Municipality of Magdalena del Mar – District Information and Urban Landmarks\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://elcomercio.pe/lima/mercado-magdalena-conflictos-mayor-150622-noticia/\"\n        target=\"_blank\"\n      >\n        El Comercio – History and Development of Magdalena Market\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://munimagdalena.gob.pe/historia/\"\n        target=\"_blank\"\n      >\n        Municipality of Magdalena del Mar – History of the District\n      </a>\n    </li>\n\n    <li>\n      <a\n        href=\"https://www.gob.pe/institucion/munimagdalena-lima/noticias/1007561-alcalde-de-magdalena-francis-allison-superviso-murales-para-concurso-nacional-los-rostros-de-la-experiencia\"\n        target=\"_blank\"\n      >\n        Municipality of Magdalena del Mar – Jirón Bolognesi and the Market Area\n      </a>\n    </li>\n  </ul>"
+  },
+  "Avenida Brasil": {
+    "Introduction": "<p>Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city.</p>",
+    "General Information and Location": "<p>Address: Av. Brasil, Lima 15084, Perú. District: Breña, Jesús María, Pueblo Libre, Magdalena del Mar. Access: Public — free access.</p>",
+    "Cultural and Urban Importance": "<p>Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city.</p>"
+  },
+  "Lima Golf Club": {
+    "Introduction": "<p>The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller.</p>",
+    "General Information and Location": "<p>Address: Av. Camino Real 770, San Isidro 15073, Perú. District: San Isidro. Access: Private — members and guests only.</p>",
+    "Cultural and Urban Importance": "<p>The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller.</p>"
+  },
+  "Larcomar": {
+    "Introduction": "<p>Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically.</p>",
+    "General Information and Location": "<p>Address: Mal. de la Reserva 610, Miraflores 15074, Perú. District: Miraflores. Access: Public — free access.</p>",
+    "Cultural and Urban Importance": "<p>Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically.</p>"
+  },
+  "Plaza Agustín Gutiérrez": {
+    "Introduction": "<p>Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people.</p>",
+    "General Information and Location": "<p>Address: Óvalo Gutiérrez, Miraflores 15073, Perú. District: Miraflores. Access: Public — free access.</p>",
+    "Cultural and Urban Importance": "<p>Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people.</p>"
+  },
+  "Muelle Sur del Callao": {
+    "Introduction": "<p>Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .</p>",
+    "General Information and Location": "<p>Address: Port of Callao, Callao, Peru. District: Callao. Access: Restricted port area — access requires authorization or an organized visit.</p>",
+    "Cultural and Urban Importance": "<p>Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .</p>"
+  },
+  "Residencial San Felipe": {
+    "Introduction": "<p>Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.</p>",
+    "General Information and Location": "<p>Address: Avenida Gregorio Escobedo, Jesús María, Lima. District: Jesús María. Access: Residential area — public paths are accessible; respect private buildings.</p>",
+    "Cultural and Urban Importance": "<p>Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.</p>"
   }
 };
