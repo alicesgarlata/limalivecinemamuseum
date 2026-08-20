@@ -6,7 +6,7 @@
     const aboutActive = (page === 'disclaimer_page.html')
 
     const nav = document.createElement('nav')
-    nav.className = 'navbar navbar-expand-md bg-white border-bottom site-navbar'
+    nav.className = 'navbar navbar-expand-md border-bottom site-navbar'
     nav.innerHTML = `
         <div class="container-fluid px-4">
             <a class="navbar-brand site-brand" href="index.html">
