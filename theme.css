@@ -1,0 +1,517 @@
+/* =========================================================
+   LIMA — CHANGE THE THEME PANEL
+   ========================================================= */
+
+:root {
+    --theme-bg: #f5f4f0;
+    --theme-surface: #ffffff;
+    --theme-text: #1a1a1a;
+    --theme-muted: #777777;
+    --theme-accent: #1a1a1a;
+    --theme-border: #dddddd;
+    --theme-radius: 10px;
+}
+
+
+/* =========================================================
+   THEME PANEL
+   ========================================================= */
+
+.theme-panel {
+    position: fixed;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: stretch;
+
+    font-family: sans-serif;
+
+    color: var(--theme-text);
+
+    transition:
+        left 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   TAB
+   ========================================================= */
+
+.theme-tab {
+    width: 36px;
+
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 7px;
+
+    background: var(--theme-surface);
+
+    color: var(--theme-text);
+
+    border: 1px solid var(--theme-border);
+    border-left: none;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        width 0.25s ease;
+}
+
+.theme-tab:hover {
+    width: 40px;
+    background: var(--theme-bg);
+}
+
+
+/* =========================================================
+   PANEL CONTENT
+   ========================================================= */
+
+.theme-content {
+    width: 280px;
+
+    background: var(--theme-surface);
+
+    border: 1px solid var(--theme-border);
+
+    border-left: none;
+
+    box-shadow: 4px 8px 25px rgba(0, 0, 0, 0.08);
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+    transition:
+        opacity 0.25s ease,
+        width 0.35s ease;
+}
+
+
+/* closed */
+
+.theme-panel:not(.open) .theme-content {
+    width: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.theme-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 16px 16px 13px;
+
+    border-bottom: 1px solid var(--theme-border);
+
+    cursor: grab;
+}
+
+.theme-header:active {
+    cursor: grabbing;
+}
+
+.theme-title {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.theme-close {
+    border: none;
+
+    background: transparent;
+
+    color: var(--theme-muted);
+
+    cursor: pointer;
+
+    font-size: 18px;
+    line-height: 1;
+
+    padding: 0;
+
+    transition: color 0.2s ease;
+}
+
+.theme-close:hover {
+    color: var(--theme-text);
+}
+
+
+/* =========================================================
+   THEME OPTIONS
+   ========================================================= */
+
+.theme-options {
+    padding: 8px 0;
+}
+
+.theme-option {
+    width: 100%;
+
+    display: block;
+
+    padding: 13px 16px;
+
+    border: none;
+
+    border-left: 3px solid transparent;
+
+    background: transparent;
+
+    color: var(--theme-text);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.theme-option:hover {
+    background: var(--theme-bg);
+
+    padding-left: 20px;
+}
+
+.theme-option.active {
+    border-left-color: var(--theme-accent);
+
+    background: var(--theme-bg);
+}
+
+.theme-option-period {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+.theme-option-type {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--theme-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .theme-tab {
+        width: 32px;
+        min-height: 150px;
+
+        font-size: 9px;
+    }
+
+    .theme-content {
+        width: min(280px, calc(100vw - 32px));
+    }
+
+}
+
+
+/* =========================================================
+   THEME 1 — 1500–1800
+   EARLY PRINT
+   ========================================================= */
+
+body[data-era="early-print"] {
+
+    --theme-bg: #eee3cd;
+    --theme-surface: #f7efd9;
+
+    --theme-text: #35261e;
+    --theme-muted: #78604e;
+
+    --theme-accent: #762f2f;
+
+    --theme-border: #b9a07c;
+
+    --theme-radius: 2px;
+
+    background-color: var(--theme-bg);
+}
+
+body[data-era="early-print"] h1,
+body[data-era="early-print"] h2,
+body[data-era="early-print"] h3,
+body[data-era="early-print"] .site-brand {
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body[data-era="early-print"] .theme-content,
+body[data-era="early-print"] .theme-tab {
+
+    border-radius: var(--theme-radius);
+
+    box-shadow: none;
+}
+
+body[data-era="early-print"] .card {
+
+    border-radius: 2px;
+
+    background: #f7efd9;
+
+    border-color: #b9a07c;
+}
+
+
+/* =========================================================
+   THEME 2 — 1ST HALF XX CENTURY
+   MODERNIST PRINT
+   ========================================================= */
+
+body[data-era="modern-print"] {
+
+    --theme-bg: #e8e4da;
+    --theme-surface: #f4f1e8;
+
+    --theme-text: #151515;
+    --theme-muted: #5e5e5e;
+
+    --theme-accent: #c63b25;
+
+    --theme-border: #151515;
+
+    --theme-radius: 0;
+
+    background-color: var(--theme-bg);
+}
+
+body[data-era="modern-print"] h1,
+body[data-era="modern-print"] h2,
+body[data-era="modern-print"] h3,
+body[data-era="modern-print"] .site-brand {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    letter-spacing: -0.03em;
+}
+
+body[data-era="modern-print"] .theme-tab,
+body[data-era="modern-print"] .theme-content {
+
+    border-radius: 0;
+}
+
+body[data-era="modern-print"] .card {
+
+    border: 2px solid #151515;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   THEME 3 — 2ND HALF XX CENTURY
+   EDITORIAL PRINT
+   ========================================================= */
+
+body[data-era="editorial-print"] {
+
+    --theme-bg: #dedad1;
+    --theme-surface: #f7f5ef;
+
+    --theme-text: #202020;
+    --theme-muted: #66615a;
+
+    --theme-accent: #174a72;
+
+    --theme-border: #aaa39a;
+
+    --theme-radius: 0;
+
+    background-color: var(--theme-bg);
+}
+
+body[data-era="editorial-print"] h1,
+body[data-era="editorial-print"] h2,
+body[data-era="editorial-print"] h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body[data-era="editorial-print"] .theme-content {
+
+    box-shadow: 5px 5px 0 rgba(23, 74, 114, 0.12);
+}
+
+body[data-era="editorial-print"] .card {
+
+    border-radius: 0;
+
+    box-shadow: 4px 4px 0 rgba(23, 74, 114, 0.15);
+}
+
+
+/* =========================================================
+   THEME 4 — START XXI CENTURY
+   EARLY WEB
+   ========================================================= */
+
+body[data-era="early-web"] {
+
+    --theme-bg: #eeeeee;
+    --theme-surface: #ffffff;
+
+    --theme-text: #222222;
+    --theme-muted: #666666;
+
+    --theme-accent: #1649b7;
+
+    --theme-border: #bdbdbd;
+
+    --theme-radius: 3px;
+
+    background-color: var(--theme-bg);
+}
+
+body[data-era="early-web"] h1,
+body[data-era="early-web"] h2,
+body[data-era="early-web"] h3,
+body[data-era="early-web"] .site-brand {
+
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body[data-era="early-web"] .theme-tab,
+body[data-era="early-web"] .theme-content {
+
+    border-radius: 3px;
+}
+
+body[data-era="early-web"] .theme-content {
+
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+body[data-era="early-web"] .card {
+
+    border-radius: 3px;
+
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+body[data-era="early-web"] a {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   THEME 5 — 2035
+   PRINT / SCREEN
+   ========================================================= */
+
+body[data-era="future"] {
+
+    --theme-bg: #e8e8e3;
+
+    --theme-surface: rgba(249, 249, 245, 0.88);
+
+    --theme-text: #161616;
+    --theme-muted: #686861;
+
+    --theme-accent: #5b31d0;
+
+    --theme-border: rgba(20, 20, 20, 0.3);
+
+    --theme-radius: 18px;
+
+    background-color: var(--theme-bg);
+
+    background-image:
+        linear-gradient(
+            120deg,
+            rgba(91, 49, 208, 0.05),
+            transparent 35%,
+            rgba(0, 0, 0, 0.03)
+        );
+}
+
+body[data-era="future"] .theme-content {
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 12px 35px rgba(20, 20, 20, 0.1);
+}
+
+body[data-era="future"] .theme-tab {
+
+    border-radius: 0 18px 18px 0;
+
+    backdrop-filter: blur(14px);
+}
+
+body[data-era="future"] .card {
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(20, 20, 20, 0.08);
+}
