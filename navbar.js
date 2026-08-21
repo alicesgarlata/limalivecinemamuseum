@@ -8,6 +8,7 @@
        ===================================================== */
 
     const validThemes = new Set([
+        'default',
         'early-print',
         'modern-print',
         'editorial-print',
@@ -18,16 +19,18 @@
     function getSavedTheme() {
         try {
             const saved = window.localStorage.getItem('lima-theme')
-            return validThemes.has(saved) ? saved : 'early-web'
+            return validThemes.has(saved) ? saved : 'default'
         } catch (error) {
-            return 'early-web'
+            return 'default'
         }
     }
 
     // Set the attribute before loading the stylesheet to reduce theme flash.
     const initialTheme = getSavedTheme()
-    document.documentElement.dataset.era = initialTheme
-    if (document.body) document.body.dataset.era = initialTheme
+    if (initialTheme !== 'default') {
+        document.documentElement.dataset.era = initialTheme
+        if (document.body) document.body.dataset.era = initialTheme
+    }
 
     function ensureThemeStyles() {
         const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
