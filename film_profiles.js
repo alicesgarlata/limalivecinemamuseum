@@ -26,12 +26,6 @@ const filmProfiles = {
     "themes": "Terrorism, police intelligence, surveillance, political violence, state investigation, fear, and historical memory.",
     "value": "This film is useful for locations related to political memory, universities, residential districts, and hidden urban networks. It helps represent Lima as a city where the internal conflict was not only visible in public events, but also hidden inside domestic and institutional spaces."
   },
-  "La hora final": {
-    "description": "La Hora Final is a Peruvian police thriller based on the intelligence operation that led to the capture of Abimael Guzmán, leader of Shining Path. The film reconstructs a crucial moment in Peru's recent history through suspense, investigation, and political tension.",
-    "about": "The story follows police agents involved in a secret investigation during the years of terrorism in Peru. Their work consists of surveillance, analysis, and patient observation rather than spectacular action. As they move through Lima, the film presents a city under suspicion, where houses, streets, universities, and ordinary neighborhoods can become part of a hidden political conflict.",
-    "themes": "Terrorism, police intelligence, surveillance, political violence, state investigation, fear, and historical memory.",
-    "value": "This film is useful for locations related to political memory, universities, residential districts, and hidden urban networks. It helps represent Lima as a city where the internal conflict was not only visible in public events, but also hidden inside domestic and institutional spaces."
-  },
   "Palomillas del Rímac": {
     "description": "Palomillas del Rímac belongs to an early stage of Peruvian sound cinema. It is important because it preserves an image of old Lima connected to criollo music, neighborhood life, comedy, and popular traditions.",
     "about": "The film portrays the daily life of a family and its social environment in the district of Rímac. Through humor, music, and neighborhood situations, it presents a Lima where collective life, popular characters, and criollo culture are central. Music is not only decoration, but part of the identity of the place and its people.",
