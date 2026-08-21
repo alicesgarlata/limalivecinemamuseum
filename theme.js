@@ -1,3 +1,4 @@
+
 (function () {
     'use strict'
 
@@ -7,7 +8,7 @@
     window.__limaThemeSwitcherLoaded = true
 
     const STORAGE_KEY = 'lima-theme'
-    const POSITION_KEY = 'lima-theme-position-v3'
+    const POSITION_KEY = 'lima-theme-position-v4'
     const DEFAULT_THEME = 'default'
 
     const themes = [
@@ -204,6 +205,7 @@
 
         const panel = document.createElement('aside')
         panel.className = 'theme-panel'
+        panel.dataset.side = 'left'
         panel.setAttribute('aria-label', 'Editorial era selector')
 
         const tab = document.createElement('button')
@@ -290,11 +292,9 @@
         tab.setAttribute('aria-expanded', String(open))
         if (open) {
             window.requestAnimationFrame(() => {
-                if (panel.style.left && panel.style.top && !window.matchMedia('(max-width: 700px)').matches) {
+                if (panel.style.top && !window.matchMedia('(max-width: 700px)').matches) {
                     const rect = panel.getBoundingClientRect()
-                    const position = clampPosition(panel, rect.left, rect.top)
-                    panel.style.left = `${position.left}px`
-                    panel.style.top = `${position.top}px`
+                    dockPanel(panel, panel.dataset.side || 'left', rect.top)
                 }
             })
             const active = panel.querySelector('.theme-option.active') || panel.querySelector('.theme-option')
@@ -302,20 +302,29 @@
         }
     }
 
-    function clampPosition(panel, left, top) {
+    function dockPanel(panel, side, top) {
         const margin = 8
-        const maxLeft = Math.max(margin, window.innerWidth - panel.offsetWidth - margin)
         const maxTop = Math.max(margin, window.innerHeight - panel.offsetHeight - margin)
-        return {
-            left: Math.max(margin, Math.min(left, maxLeft)),
-            top: Math.max(margin, Math.min(top, maxTop))
+        const clampedTop = Math.max(margin, Math.min(top, maxTop))
+        const dockSide = side === 'right' ? 'right' : 'left'
+
+        panel.dataset.side = dockSide
+        panel.style.top = `${clampedTop}px`
+        panel.style.bottom = 'auto'
+        panel.style.transform = 'none'
+
+        if (dockSide === 'right') {
+            panel.style.right = '0px'
+            panel.style.left = 'auto'
+        } else {
+            panel.style.left = '0px'
+            panel.style.right = 'auto'
         }
     }
 
     function makeDraggable(panel, handle, ignoreInteractiveElements) {
         let dragging = false
         let pointerId = null
-        let offsetX = 0
         let offsetY = 0
         let startX = 0
         let startY = 0
@@ -328,7 +337,6 @@
             const rect = panel.getBoundingClientRect()
             dragging = true
             pointerId = event.pointerId
-            offsetX = event.clientX - rect.left
             offsetY = event.clientY - rect.top
             startX = event.clientX
             startY = event.clientY
@@ -341,12 +349,8 @@
             if (!dragging || event.pointerId !== pointerId) return
             if (Math.hypot(event.clientX - startX, event.clientY - startY) > 5) moved = true
             if (!moved) return
-            const position = clampPosition(panel, event.clientX - offsetX, event.clientY - offsetY)
-            panel.style.left = `${position.left}px`
-            panel.style.top = `${position.top}px`
-            panel.style.right = 'auto'
-            panel.style.bottom = 'auto'
-            panel.style.transform = 'none'
+            const side = event.clientX < window.innerWidth / 2 ? 'left' : 'right'
+            dockPanel(panel, side, event.clientY - offsetY)
         })
 
         function stopDragging(event) {
@@ -367,8 +371,8 @@
     }
 
     function savePosition(panel) {
-        if (!panel.style.left || !panel.style.top) return
-        writeStorage(POSITION_KEY, JSON.stringify({ left: panel.style.left, top: panel.style.top }))
+        if (!panel.style.top) return
+        writeStorage(POSITION_KEY, JSON.stringify({ side: panel.dataset.side || 'left', top: panel.style.top }))
     }
 
     function restorePosition(panel) {
@@ -378,15 +382,9 @@
 
         try {
             const position = JSON.parse(saved)
-            const left = Number.parseFloat(position.left)
             const top = Number.parseFloat(position.top)
-            if (!Number.isFinite(left) || !Number.isFinite(top)) return
-            const clamped = clampPosition(panel, left, top)
-            panel.style.left = `${clamped.left}px`
-            panel.style.top = `${clamped.top}px`
-            panel.style.right = 'auto'
-            panel.style.bottom = 'auto'
-            panel.style.transform = 'none'
+            if (!Number.isFinite(top)) return
+            dockPanel(panel, position.side, top)
         } catch (error) {
             // Ignore malformed values saved by an older version.
         }
@@ -410,11 +408,9 @@
                 panel.removeAttribute('style')
                 return
             }
-            if (!panel.style.left || !panel.style.top) return
+            if (!panel.style.top) return
             const rect = panel.getBoundingClientRect()
-            const position = clampPosition(panel, rect.left, rect.top)
-            panel.style.left = `${position.left}px`
-            panel.style.top = `${position.top}px`
+            dockPanel(panel, panel.dataset.side || 'left', rect.top)
         }, { passive: true })
     }
 
