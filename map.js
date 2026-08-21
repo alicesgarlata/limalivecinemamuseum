@@ -74,42 +74,39 @@ function showCard(data) {
     const template = document.getElementById('card-template')
 
     data.forEach(function (loc) {
-        // clone the template — gives us a fresh copy of the card skeleton
         const card = template.content.cloneNode(true).firstElementChild
-
-        // unique identifier on the card element itself
         card.dataset.location = locationSlug(loc.name)
 
-        // fill in text values using DOM methods, no string concatenation
         card.querySelector('[data-field="name"]').textContent = loc.name
 
         const badge = card.querySelector('[data-field="badge"]')
         badge.textContent = districtLabel(loc.district)
         badge.classList.add(slugify(loc.district))
 
-        // build movie tags
         const moviesList = card.querySelector('[data-field="movies"]')
         loc.movies.forEach(function (m) {
             const tag = document.createElement('span')
             tag.className = 'movie-tag'
-            // unique data-id so we could target this exact tag later if needed
             tag.dataset.id = `movie-${locationSlug(loc.name)}-${m.year}`
             tag.textContent = `${m.title} (${m.year})`
             moviesList.appendChild(tag)
         })
 
-        card.querySelector('[data-field="description"]').textContent = loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
-        card.dataset.textShort = loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
-        card.dataset.textLong  = loc.cardDescription ? loc.cardDescription.long  : (loc.descriptions.adult || '')
+        card.querySelector('[data-field="description"]').textContent =
+            loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
+        card.dataset.textShort =
+            loc.cardDescription ? loc.cardDescription.short : (loc.descriptions.adult || '')
+        card.dataset.textLong =
+            loc.cardDescription ? loc.cardDescription.long : (loc.descriptions.adult || '')
         card.querySelector('[data-field="access"]').textContent = loc.access
 
         const link = card.querySelector('[data-field="link"]')
         link.href = `location.html?name=${encodeURIComponent(loc.name)}`
 
-        // attach event listeners directly — no onclick attributes in HTML
         card.querySelector('.btn-more').addEventListener('click', function (e) {
             expandCard(e, this)
         })
+
         card.addEventListener('click', function () {
             toggleDetail(this, loc.name, loc.lat, loc.lng)
         })
@@ -123,27 +120,28 @@ function showCard(data) {
 function toggleDetail(card, locName, lat, lng) {
     const isOpen = card.classList.contains('open')
 
-    // close all cards first
     document.querySelectorAll('.card').forEach(function (c) {
         c.classList.remove('open')
         c.querySelector('.extra').classList.remove('open')
         c.querySelector('.btn-more').textContent = 'Tell me more…'
-        // reset descrizione al testo breve e rimuovi eventuale cursore typewriter
+
         const descEl = c.querySelector('.description')
         const cursor = descEl && descEl.querySelector('.typewriter-cursor')
         if (cursor) cursor.remove()
+
         if (descEl && c.dataset.textShort) {
             descEl.style.transition = 'none'
             descEl.style.opacity = '1'
             descEl.textContent = c.dataset.textShort
         }
-        // remove any prev/next bar previously injected
+
         const bar = c.querySelector('.card-prev-next')
         if (bar) bar.remove()
     })
 
     if (!isOpen) {
         card.classList.add('open')
+
         if (lat && lng) {
             map.flyTo([lat, lng], 15)
             markers.forEach(function (m) {
@@ -151,7 +149,6 @@ function toggleDetail(card, locName, lat, lng) {
             })
         }
 
-        // inject prev/next navigation into the open card
         const allCards = Array.from(document.querySelectorAll('.card'))
         const idx = allCards.indexOf(card)
         const prevCard = idx > 0 ? allCards[idx - 1] : null
@@ -159,39 +156,48 @@ function toggleDetail(card, locName, lat, lng) {
 
         const bar = document.createElement('div')
         bar.className = 'card-prev-next'
+
         if (prevCard) {
             const prevBtn = document.createElement('button')
             prevBtn.className = 'card-nav-btn'
-            prevBtn.textContent = '← ' + prevCard.querySelector('[data-field="name"]').textContent
+            prevBtn.textContent =
+                '← ' + prevCard.querySelector('[data-field="name"]').textContent
+
             prevBtn.addEventListener('click', function (e) {
                 e.stopPropagation()
                 prevCard.click()
                 prevCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
             })
+
             bar.appendChild(prevBtn)
         } else {
-            const spacer = document.createElement('span')
-            bar.appendChild(spacer)
+            bar.appendChild(document.createElement('span'))
         }
+
         if (nextCard) {
             const nextBtn = document.createElement('button')
             nextBtn.className = 'card-nav-btn card-nav-next'
-            nextBtn.textContent = nextCard.querySelector('[data-field="name"]').textContent + ' →'
+            nextBtn.textContent =
+                nextCard.querySelector('[data-field="name"]').textContent + ' →'
+
             nextBtn.addEventListener('click', function (e) {
                 e.stopPropagation()
                 nextCard.click()
                 nextCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
             })
+
             bar.appendChild(nextBtn)
         }
+
         card.appendChild(bar)
     }
 }
 
 function expandCard(e, btn) {
     e.stopPropagation()
-    const extra  = btn.nextElementSibling
-    const card   = btn.closest('.card')
+
+    const extra = btn.nextElementSibling
+    const card = btn.closest('.card')
     const descEl = card.querySelector('.description')
     const isOpen = extra.classList.contains('open')
 
@@ -199,9 +205,11 @@ function expandCard(e, btn) {
 
     descEl.style.transition = 'opacity 0.25s'
     descEl.style.opacity = '0'
+
     setTimeout(function () {
         descEl.textContent = nextText
         descEl.style.opacity = '1'
+
         if (isOpen) {
             extra.classList.remove('open')
             btn.textContent = 'Tell me more…'
@@ -218,6 +226,7 @@ function filterByDistrict(e, district) {
     document.querySelectorAll('.pill').forEach(function (pill) {
         pill.classList.remove('active')
     })
+
     e.target.classList.add('active')
 
     const filtered = district === 'All'
@@ -227,15 +236,75 @@ function filterByDistrict(e, district) {
                 ? loc.district.includes(district)
                 : loc.district === district
         })
+
     showCard(filtered)
 }
 
 // ── map init ──────────────────────────────────────────────────────────────────
 
 const map = L.map('map').setView([-12.0464, -77.0428], 12)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map)
+
+/*
+ * Two basemaps:
+ * - CARTO Light keeps the site's normal clean appearance.
+ * - Standard OpenStreetMap has much stronger coast/road/building linework,
+ *   which survives the early-print CSS treatment instead of disappearing.
+ */
+const modernBaseLayer = L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    {
+        attribution: '© OpenStreetMap contributors, © CARTO',
+        maxZoom: 19,
+        subdomains: 'abcd'
+    }
+)
+
+const earlyPrintBaseLayer = L.tileLayer(
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19
+    }
+)
+
+let activeBaseLayer = null
+
+function currentEra() {
+    return (
+        document.body?.dataset.era ||
+        document.documentElement.dataset.era ||
+        'default'
+    )
+}
+
+function setMapBaseForEra(era) {
+    const wantedLayer =
+        era === 'early-print' ? earlyPrintBaseLayer : modernBaseLayer
+
+    if (activeBaseLayer === wantedLayer) return
+
+    if (activeBaseLayer && map.hasLayer(activeBaseLayer)) {
+        map.removeLayer(activeBaseLayer)
+    }
+
+    wantedLayer.addTo(map)
+    wantedLayer.bringToBack()
+    activeBaseLayer = wantedLayer
+}
+
+setMapBaseForEra(currentEra())
+
+/*
+ * theme.js already dispatches this event whenever the user changes era.
+ * This means the basemap changes instantly without reloading the page.
+ */
+window.addEventListener('lima:themechange', function (event) {
+    const era = event.detail && event.detail.theme
+        ? event.detail.theme
+        : currentEra()
+
+    setMapBaseForEra(era)
+})
 
 locations.forEach(function (loc) {
     if (!loc.lat || !loc.lng) return
@@ -250,14 +319,24 @@ locations.forEach(function (loc) {
             <div class="popup-name">${loc.name}</div>
         </div>`
 
-    const marker = L.marker([loc.lat, loc.lng], { icon: createPin(loc.district) })
+    const marker = L.marker(
+        [loc.lat, loc.lng],
+        { icon: createPin(loc.district) }
+    )
         .addTo(map)
-        .bindPopup(popupHtml, { maxWidth: 180, className: 'custom-popup' })
+        .bindPopup(
+            popupHtml,
+            { maxWidth: 180, className: 'custom-popup' }
+        )
+
     markers.push({ name: loc.name, marker: marker })
 })
 
 showCard(locations)
 
 document.getElementById('heroBtn').addEventListener('click', function () {
-    document.querySelector('.filter-bar').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.querySelector('.filter-bar').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
 })
