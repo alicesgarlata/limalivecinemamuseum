@@ -7,7 +7,7 @@
     window.__limaThemeSwitcherLoaded = true
 
     const STORAGE_KEY = 'lima-theme'
-    const POSITION_KEY = 'lima-theme-position'
+    const POSITION_KEY = 'lima-theme-position-v3'
     const DEFAULT_THEME = 'default'
 
     const themes = [
@@ -344,6 +344,7 @@
             const position = clampPosition(panel, event.clientX - offsetX, event.clientY - offsetY)
             panel.style.left = `${position.left}px`
             panel.style.top = `${position.top}px`
+            panel.style.right = 'auto'
             panel.style.bottom = 'auto'
             panel.style.transform = 'none'
         })
@@ -383,6 +384,7 @@
             const clamped = clampPosition(panel, left, top)
             panel.style.left = `${clamped.left}px`
             panel.style.top = `${clamped.top}px`
+            panel.style.right = 'auto'
             panel.style.bottom = 'auto'
             panel.style.transform = 'none'
         } catch (error) {
