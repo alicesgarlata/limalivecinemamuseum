@@ -1,12 +1,91 @@
 (function () {
+    'use strict'
+
+    /* =====================================================
+       GLOBAL THEME LOADER
+       Every public page already loads navbar.js, so this is the most robust
+       place to make the editorial era system site-wide.
+       ===================================================== */
+
+    const validThemes = new Set([
+        'early-print',
+        'modern-print',
+        'editorial-print',
+        'early-web',
+        'future'
+    ])
+
+    function getSavedTheme() {
+        try {
+            const saved = window.localStorage.getItem('lima-theme')
+            return validThemes.has(saved) ? saved : 'early-web'
+        } catch (error) {
+            return 'early-web'
+        }
+    }
+
+    // Set the attribute before loading the stylesheet to reduce theme flash.
+    const initialTheme = getSavedTheme()
+    document.documentElement.dataset.era = initialTheme
+    if (document.body) document.body.dataset.era = initialTheme
+
+    function ensureThemeStyles() {
+        const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+            .find(link => {
+                try {
+                    return new URL(link.href, document.baseURI).pathname.endsWith('/theme.css')
+                } catch (error) {
+                    return false
+                }
+            })
+
+        if (existing) {
+            existing.dataset.limaThemeStyles = 'true'
+            return
+        }
+
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = 'theme.css'
+        link.dataset.limaThemeStyles = 'true'
+        document.head.appendChild(link)
+    }
+
+    function ensureThemeScript() {
+        if (window.__limaThemeSwitcherLoaded) return
+
+        const existing = Array.from(document.scripts).find(script => {
+            if (!script.src) return false
+            try {
+                return new URL(script.src, document.baseURI).pathname.endsWith('/theme.js')
+            } catch (error) {
+                return false
+            }
+        })
+
+        if (existing) return
+
+        const script = document.createElement('script')
+        script.src = 'theme.js'
+        script.dataset.limaThemeLoader = 'true'
+        document.body.appendChild(script)
+    }
+
+    ensureThemeStyles()
+
+    /* =====================================================
+       NAVIGATION
+       ===================================================== */
+
     const page = window.location.pathname.split('/').pop()
-    const mapActive   = (page === 'index.html' || page === 'location.html' || page === '')
-    const narActive   = (page === 'itineraries.html')
-    const docActive   = (page === 'documentation.html')
+    const mapActive = (page === 'index.html' || page === 'location.html' || page === '')
+    const narActive = (page === 'itineraries.html')
+    const docActive = (page === 'documentation.html')
     const aboutActive = (page === 'disclaimer_page.html')
 
     const nav = document.createElement('nav')
     nav.className = 'navbar navbar-expand-md border-bottom site-navbar'
+    nav.setAttribute('aria-label', 'Main navigation')
     nav.innerHTML = `
         <div class="container-fluid px-4">
             <a class="navbar-brand site-brand" href="index.html">
@@ -22,16 +101,16 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link ${mapActive ? 'active' : ''}" href="index.html">Map</a>
+                        <a class="nav-link ${mapActive ? 'active' : ''}" ${mapActive ? 'aria-current="page"' : ''} href="index.html">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ${narActive ? 'active' : ''}" href="itineraries.html">Narratives</a>
+                        <a class="nav-link ${narActive ? 'active' : ''}" ${narActive ? 'aria-current="page"' : ''} href="itineraries.html">Narratives</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ${docActive ? 'active' : ''}" href="documentation.html">Documentation</a>
+                        <a class="nav-link ${docActive ? 'active' : ''}" ${docActive ? 'aria-current="page"' : ''} href="documentation.html">Documentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ${aboutActive ? 'active' : ''}" href="disclaimer_page.html">About</a>
+                        <a class="nav-link ${aboutActive ? 'active' : ''}" ${aboutActive ? 'aria-current="page"' : ''} href="disclaimer_page.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -39,7 +118,11 @@
     `
 
     const placeholder = document.getElementById('navbar-placeholder')
-    placeholder.replaceWith(nav)
+    if (placeholder) placeholder.replaceWith(nav)
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     const footer = document.createElement('footer')
     footer.className = 'site-footer'
@@ -59,32 +142,35 @@
             <span>Film data: <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a></span>
         </div>
     `
-    document.addEventListener('DOMContentLoaded', function () {
-        document.body.appendChild(footer)
-    })
 
-    // Transparent-to-solid scroll effect (home page only).
-    // We wait for DOMContentLoaded because navbar.js runs before the rest of
-    // the page HTML is parsed — the .hero element doesn't exist yet at this point.
-    document.addEventListener('DOMContentLoaded', function () {
+    function initializePageChrome() {
+        if (!document.querySelector('.site-footer')) document.body.appendChild(footer)
+
+        // Pages that already declare theme.js keep using that script. Pages
+        // such as itineraries.html receive it automatically here.
+        ensureThemeScript()
+
         const hero = document.querySelector('.hero')
-
         if (!hero) {
-            // no hero on this page → always transparent, dark text, no scroll effect
             nav.classList.add('nav-flat')
             return
         }
 
-        // start transparent
         nav.classList.add('nav-transparent')
 
         function updateNav() {
             const heroStillVisible = hero.getBoundingClientRect().bottom > 0
             nav.classList.toggle('nav-transparent', heroStillVisible)
-            // slide navbar off-screen once the hero is gone
             nav.classList.toggle('nav-hidden', !heroStillVisible)
         }
 
         window.addEventListener('scroll', updateNav, { passive: true })
-    })
+        updateNav()
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializePageChrome, { once: true })
+    } else {
+        initializePageChrome()
+    }
 })()
