@@ -741,31 +741,36 @@ body[data-era='early-print'] .loc-photo {
 }
 
 body[data-era='early-print'] :where(.map, .itinerary-map, .leaflet-container) {
-    background-color: #b99a60;
-    background-image:
-        repeating-linear-gradient(0deg, rgba(58, 38, 19, 0.055) 0 1px, transparent 1px 5px),
-        radial-gradient(circle at 30% 25%, rgba(242, 221, 167, 0.34), transparent 42%);
-    border: 6px double #49321d;
+    position: relative;
+    overflow: hidden;
+    background: #d8c694;
+    border: 5px double #4b351f;
     box-shadow:
-        inset 0 0 0 2px rgba(240, 217, 158, 0.55),
-        inset 0 0 32px rgba(48, 29, 14, 0.48),
-        0 5px 0 rgba(62, 42, 22, 0.18);
+        inset 0 0 0 2px rgba(245, 225, 172, 0.65),
+        inset 0 0 35px rgba(72, 47, 24, 0.24),
+        0 4px 8px rgba(55, 38, 21, 0.18);
 }
 
 body[data-era='early-print'] .leaflet-tile-pane {
-    /* Filtering Leaflet's transformed pane can make the whole map render white
-       in Chromium. Keep the pane untouched and colour each tile instead. */
+    /* Do not filter Leaflet's transformed pane: in Chromium this can make
+       the entire map render white. Colour the individual tiles instead. */
     filter: none;
 }
 
 body[data-era='early-print'] .leaflet-tile {
-    opacity: 1;
-    filter: sepia(0.92) saturate(0.62) hue-rotate(-7deg) contrast(1.68) brightness(0.72);
+    opacity: 0.92;
+    filter:
+        grayscale(0.18)
+        sepia(0.72)
+        saturate(0.62)
+        hue-rotate(-5deg)
+        brightness(1.08)
+        contrast(1.16);
     mix-blend-mode: multiply;
 }
 
-/* Transparent engraved-paper layer: it gives the live map an old-atlas
-   surface without covering labels, markers, or map interaction. */
+/* Antique paper / engraved-atlas surface. This layer sits above the tiles
+   but below Leaflet controls and never blocks map interaction. */
 body[data-era='early-print'] .leaflet-container::after {
     content: '';
     position: absolute;
@@ -773,73 +778,89 @@ body[data-era='early-print'] .leaflet-container::after {
     z-index: 450;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(70, 49, 25, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(70, 49, 25, 0.08) 1px, transparent 1px),
-        repeating-linear-gradient(7deg, rgba(55, 36, 18, 0.018) 0 1px, transparent 1px 4px),
-        radial-gradient(ellipse at center, transparent 48%, rgba(65, 39, 17, 0.12) 78%, rgba(40, 24, 12, 0.38) 100%);
-    background-size: 96px 96px, 96px 96px, auto, auto;
+        linear-gradient(rgba(70, 48, 27, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70, 48, 27, 0.07) 1px, transparent 1px),
+        radial-gradient(ellipse at 18% 20%, rgba(242, 219, 159, 0.18), transparent 32%),
+        radial-gradient(ellipse at 78% 72%, rgba(117, 75, 35, 0.10), transparent 38%),
+        radial-gradient(ellipse at center, transparent 58%, rgba(91, 60, 31, 0.06) 76%, rgba(51, 34, 19, 0.18) 100%),
+        repeating-linear-gradient(8deg, rgba(77, 52, 29, 0.018) 0 1px, transparent 1px 5px);
+    background-size:
+        110px 110px,
+        110px 110px,
+        auto,
+        auto,
+        auto,
+        auto;
     box-shadow:
-        inset 0 0 0 2px rgba(61, 40, 19, 0.72),
-        inset 0 0 0 7px rgba(229, 199, 131, 0.25),
-        inset 0 0 48px rgba(54, 31, 14, 0.38);
+        inset 0 0 0 1px rgba(65, 43, 23, 0.65),
+        inset 0 0 0 6px rgba(229, 204, 147, 0.18),
+        inset 0 0 50px rgba(60, 38, 19, 0.22);
     mix-blend-mode: multiply;
 }
 
 body[data-era='early-print'] .leaflet-overlay-pane path {
-    stroke: #5e2f1b;
-    stroke-width: 3;
-    stroke-dasharray: 3 6;
-    filter: drop-shadow(0 1px 0 rgba(241, 218, 163, 0.65));
+    stroke: #693b25;
+    stroke-width: 2.5;
+    stroke-dasharray: none;
+    filter: drop-shadow(0 1px 0 rgba(239, 218, 169, 0.55));
 }
 
 body[data-era='early-print'] :where(.leaflet-marker-pane, .leaflet-shadow-pane, .leaflet-popup-pane) {
-    filter: sepia(0.35) contrast(1.12);
+    filter: sepia(0.28) saturate(0.8) contrast(1.05);
 }
 
 body[data-era='early-print'] .num-marker {
-    color: #f3dfab;
-    background: #6c2f20 !important;
-    border: 2px double #f0d9a0;
+    color: #ead8a6;
+    background: #773d29 !important;
+    border: 2px double #e4c98f;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #4a2d18, 2px 3px 0 rgba(48, 29, 14, 0.35);
+    box-shadow:
+        0 0 0 1px #4a301d,
+        1px 2px 0 rgba(47, 30, 17, 0.25);
     font-family: var(--era-font-display);
 }
 
 body[data-era='early-print'] .leaflet-marker-icon > div:not(.num-marker) {
-    background: #713624 !important;
-    border: 2px solid #efd89e !important;
-    box-shadow: 0 0 0 2px #4a2d18, 2px 3px 0 rgba(48, 29, 14, 0.32) !important;
+    background: #70432a !important;
+    border: 2px solid #dfc78f !important;
+    box-shadow:
+        0 0 0 1px #49301d,
+        1px 2px 0 rgba(47, 30, 17, 0.22) !important;
 }
 
 body[data-era='early-print'] .custom-popup .leaflet-popup-content-wrapper {
-    background-color: #ead39b;
-    background-image: repeating-linear-gradient(0deg, rgba(58, 38, 19, 0.04) 0 1px, transparent 1px 4px);
-    border: 3px double #4a321c;
+    background: #ead6a3;
+    background-image:
+        repeating-linear-gradient(0deg, rgba(60, 39, 20, 0.025) 0 1px, transparent 1px 5px);
+    border: 3px double #4c321e;
+    border-radius: 0;
+    box-shadow: 2px 3px 0 rgba(53, 35, 20, 0.18);
 }
 
 body[data-era='early-print'] .leaflet-popup-tip {
-    background: #ead39b;
+    background: #ead6a3;
 }
 
 body[data-era='early-print'] .leaflet-control-attribution {
-    color: var(--era-ink);
-    background: rgba(225, 199, 139, 0.92);
-    border-top: 1px solid rgba(74, 50, 28, 0.65);
+    color: #4b3421;
+    background: rgba(229, 208, 157, 0.90);
+    border-top: 1px solid rgba(75, 52, 31, 0.45);
     font-family: var(--era-font-display);
     font-style: italic;
 }
 
 body[data-era='early-print'] .leaflet-control-zoom a {
-    color: var(--era-ink);
-    background: #dfc486;
-    border-color: #5b3a20;
+    color: #49311e;
+    background: #dfc98e;
+    border-color: #654527;
+    border-radius: 0 !important;
     font-family: var(--era-font-display);
     font-weight: 700;
 }
 
 body[data-era='early-print'] .leaflet-control-zoom a:hover {
-    color: #f3dfab;
-    background: #654027;
+    color: #ead9aa;
+    background: #654329;
 }
 
 body[data-era='early-print'] .theme-content,
