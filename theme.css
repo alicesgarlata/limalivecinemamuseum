@@ -1,4 +1,450 @@
+:root {
+    --era-bg: #ececec;
+    --era-surface: #ffffff;
+    --era-surface-alt: #f4f4f4;
+    --era-ink: #1a1a1a;
+    --era-muted: #666666;
+    --era-accent: #003399;
+    --era-accent-2: #ffcc00;
+    --era-border: #9d9d9d;
+    --era-border-strong: #1a1a1a;
+    --era-font-body: Verdana, Geneva, Tahoma, sans-serif;
+    --era-font-display: Verdana, Geneva, Tahoma, sans-serif;
+    --era-font-ui: Verdana, Geneva, Tahoma, sans-serif;
+    --era-card-radius: 2px;
+    --era-control-radius: 2px;
+    --era-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    --era-image-filter: none;
+    --era-map-filter: none;
+    --era-bg-image: none;
+    --era-rule-style: solid;
+    --era-transition: 240ms ease;
 
+    /* The selector uses the original names for backwards compatibility. */
+    --theme-bg: var(--era-bg);
+    --theme-surface: var(--era-surface);
+    --theme-text: var(--era-ink);
+    --theme-muted: var(--era-muted);
+    --theme-accent: var(--era-accent);
+    --theme-border: var(--era-border);
+    --theme-radius: var(--era-control-radius);
+}
+
+html[data-era],
+body[data-era] {
+    min-height: 100%;
+    background-color: var(--era-bg);
+}
+
+body[data-era] {
+    color: var(--era-ink);
+    font-family: var(--era-font-body);
+    background-image: var(--era-bg-image);
+    background-attachment: fixed;
+    transition: background-color var(--era-transition), color var(--era-transition);
+}
+
+body[data-era] ::selection {
+    color: var(--era-surface);
+    background: var(--era-accent);
+}
+
+body[data-era] :where(h1, h2, h3, h4, .site-brand, .film-title, .popup-name) {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] :where(
+    .description,
+    .description-long,
+    .pelicula,
+    .loc-description,
+    .about-section p,
+    .film-description,
+    .film-meta,
+    .scheda-tab-content,
+    .timeline-body p,
+    .itinerary-text p,
+    .stop-body p
+) {
+    color: var(--era-ink);
+}
+
+body[data-era] :where(
+    .label,
+    .meta,
+    .footer,
+    .access,
+    .loc-address,
+    .loc-access,
+    .films-heading,
+    .film-year,
+    .film-genres,
+    .film-meta-label,
+    .film-profile-label,
+    .film-profile-themes,
+    .scheda-heading,
+    .difficulty-label,
+    .chapter-label,
+    .chapter-dates,
+    .timeline-location,
+    .timeline-district,
+    .itinerary-meta,
+    .map-legend,
+    .loc-photo-caption,
+    .site-sub
+) {
+    color: var(--era-muted);
+}
+
+body[data-era] :where(
+    .site-navbar:not(.nav-transparent),
+    .filter-bar,
+    .card-list,
+    .card,
+    .film-card,
+    .site-footer,
+    .narrative-transition,
+    .custom-popup .leaflet-popup-content-wrapper,
+    .leaflet-control-zoom a,
+    .leaflet-control-layers
+) {
+    background-color: var(--era-surface);
+    border-color: var(--era-border);
+}
+
+body[data-era] .site-navbar:not(.nav-transparent) {
+    background-color: var(--era-surface) !important;
+    border-bottom: 1px var(--era-rule-style) var(--era-border) !important;
+}
+
+body[data-era] .site-navbar.nav-flat {
+    background-color: transparent !important;
+}
+
+body[data-era] .site-brand,
+body[data-era] .site-brand:hover,
+body[data-era] .site-footer-title {
+    color: var(--era-ink) !important;
+}
+
+body[data-era] .navbar .nav-link,
+body[data-era] .site-footer,
+body[data-era] .site-footer a {
+    color: var(--era-muted);
+}
+
+body[data-era] .navbar .nav-link:hover,
+body[data-era] .navbar .nav-link.active,
+body[data-era] .site-footer a:hover {
+    color: var(--era-accent);
+}
+
+body[data-era] .navbar .nav-link.active {
+    text-decoration-color: var(--era-accent);
+    text-underline-offset: 0.35em;
+}
+
+body[data-era] .filter-bar,
+body[data-era] .card-list,
+body[data-era] .site-footer,
+body[data-era] :where(.loc-scheda, .prev-next-bar, .card-prev-next, .film-profile-toggle) {
+    border-color: var(--era-border);
+}
+
+body[data-era] :where(.card, .film-card, .location-header, .itinerary-map, .loc-photo) {
+    border-radius: var(--era-card-radius);
+}
+
+body[data-era] :where(.card, .film-card) {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    box-shadow: var(--era-shadow);
+    transition:
+        transform var(--era-transition),
+        box-shadow var(--era-transition),
+        border-color var(--era-transition),
+        background-color var(--era-transition);
+}
+
+body[data-era] .card:hover,
+body[data-era] .film-card:hover {
+    border-color: var(--era-accent);
+}
+
+body[data-era] .card.active {
+    border-color: var(--era-accent);
+    outline: 1px solid var(--era-accent);
+    outline-offset: -4px;
+}
+
+body[data-era] :where(
+    .pill,
+    .btn-more,
+    .btn-evenmore,
+    .difficulty-btn,
+    .scheda-tab-btn,
+    .hero-cta,
+    .narrative-tab
+) {
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+    transition:
+        color var(--era-transition),
+        background-color var(--era-transition),
+        border-color var(--era-transition),
+        box-shadow var(--era-transition),
+        transform var(--era-transition);
+}
+
+body[data-era] :where(.btn-more, .difficulty-btn, .scheda-tab-btn) {
+    color: var(--era-muted);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+}
+
+body[data-era] :where(.btn-evenmore, .hero-cta, .scheda-tab-btn.active) {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] :where(.btn-more, .btn-evenmore, .difficulty-btn, .scheda-tab-btn):hover:not(:disabled) {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] :where(.back-link, .film-wiki, .scheda-tab-content a, .prev-next-btn, .prev-next-home, .timeline-location a, .itinerary-text a, .map-legend a) {
+    color: var(--era-accent);
+    text-decoration-color: color-mix(in srgb, var(--era-accent) 48%, transparent);
+}
+
+body[data-era] :where(.narrative-switcher, .narrative-chapter, .timeline-entry, .itinerary-stop) {
+    border-color: var(--era-border);
+}
+
+body[data-era] .narrative-tab {
+    color: var(--era-muted);
+}
+
+body[data-era] .narrative-tab.active {
+    color: var(--era-accent);
+    border-bottom-color: var(--era-accent);
+}
+
+body[data-era] .narrative-transition {
+    color: var(--era-ink);
+    border-left-color: var(--era-accent);
+    border-radius: 0 var(--era-card-radius) var(--era-card-radius) 0;
+}
+
+body[data-era] .narrative-transition p {
+    color: var(--era-ink);
+}
+
+body[data-era] .stop-number,
+body[data-era] .num-marker {
+    color: var(--era-surface);
+    background: var(--era-accent) !important;
+    border-color: var(--era-surface);
+}
+
+body[data-era] :where(.movie-tag, .badge) {
+    border-radius: var(--era-control-radius);
+}
+
+body[data-era] :where(.loc-photo, .popup-img) {
+    filter: var(--era-image-filter);
+    transition: filter var(--era-transition), transform var(--era-transition);
+}
+
+body[data-era] .leaflet-tile-pane {
+    filter: var(--era-map-filter);
+    transition: filter 350ms ease;
+}
+
+body[data-era] .leaflet-container {
+    color: var(--era-ink);
+    font-family: var(--era-font-ui);
+    background: var(--era-surface-alt);
+}
+
+body[data-era] .custom-popup .leaflet-popup-content-wrapper {
+    color: var(--era-ink);
+    border: 1px solid var(--era-border);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+}
+
+body[data-era] .leaflet-popup-tip {
+    background: var(--era-surface);
+}
+
+body[data-era] .popup-name {
+    color: var(--era-ink);
+    background: var(--era-surface);
+}
+
+/* =========================================================
+   SELECTOR PANEL
+   ========================================================= */
+
+.theme-panel {
+    position: fixed;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    z-index: 2200;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--era-ink);
+    font-family: var(--era-font-ui);
+    transform: translateY(-50%);
+}
+
+.theme-panel.dragging {
+    user-select: none;
+}
+
+.theme-tab {
+    width: 46px;
+    min-height: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 13px 9px;
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border: 1px solid var(--era-border);
+    border-left: 0;
+    border-radius: 0 68% 68% 0 / 0 52% 52% 0;
+    box-shadow: var(--era-shadow);
+    cursor: grab;
+    font-family: var(--era-font-ui);
+    writing-mode: vertical-rl;
+    transform: none;
+    touch-action: none;
+    transition:
+        transform var(--era-transition),
+        color var(--era-transition),
+        background-color var(--era-transition),
+        border-color var(--era-transition);
+    animation: theme-droplet-breathe 5s ease-in-out infinite;
+}
+
+.theme-panel[data-side='right'] {
+    flex-direction: row-reverse;
+}
+
+.theme-panel[data-side='right'] .theme-tab {
+    border-right: 0;
+    border-left: 1px solid var(--era-border);
+    border-radius: 68% 0 0 68% / 52% 0 0 52%;
+}
+
+.theme-panel[data-side='right'] .theme-content {
+    margin-right: 8px;
+    margin-left: 0;
+    transform-origin: right center;
+}
+
+.theme-tab:active {
+    cursor: grabbing;
+}
+
+.theme-tab:hover,
+.theme-tab:focus-visible {
+    color: var(--era-accent);
+    transform: translateX(2px);
+    outline: 2px solid var(--era-accent);
+    outline-offset: -4px;
+}
+
+.theme-tab-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.theme-current-period {
+    display: none;
+}
+
+.theme-content {
+    width: min(390px, calc(100vw - 36px));
+    max-height: min(730px, calc(100vh - 150px));
+    overflow: auto;
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border: 1px solid var(--era-border);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+    margin-top: 0;
+    margin-left: 8px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transform-origin: left center;
+    transition:
+        max-height 300ms ease,
+        width 280ms ease,
+        opacity 180ms ease,
+        transform 280ms ease,
+        margin 280ms ease,
+        background-color var(--era-transition),
+        border-color var(--era-transition);
+}
+
+.theme-panel:not(.open) .theme-content {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-12px) scale(0.97);
+    border-width: 0;
+    box-shadow: none;
+}
+
+.theme-panel[data-side='right']:not(.open) .theme-content {
+    transform: translateX(12px) scale(0.97);
+}
+
+@keyframes theme-droplet-breathe {
+    0%, 100% { border-radius: 0 68% 68% 0 / 0 52% 52% 0; }
+    50% { border-radius: 0 58% 74% 0 / 0 62% 46% 0; }
+}
+
+.theme-panel[data-side='right'] .theme-tab {
+    animation-name: theme-droplet-breathe-right;
+}
+
+@keyframes theme-droplet-breathe-right {
+    0%, 100% { border-radius: 68% 0 0 68% / 52% 0 0 52%; }
+    50% { border-radius: 58% 0 0 74% / 62% 0 0 46%; }
+}
+
+.theme-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 20px 16px;
+    border-bottom: 1px var(--era-rule-style) var(--era-border);
+    cursor: grab;
+    touch-action: none;
+}
+
+.theme-header:active {
     cursor: grabbing;
 }
 
