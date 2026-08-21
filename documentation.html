@@ -14,72 +14,134 @@
     <script src="navbar.js"></script>
     <script src="theme.js"></script>
 
-    <div class="about-page">
+    <main class="about-page">
 
         <section class="about-section">
             <h1>Documentation</h1>
-            <p>This page provides a detailed account of the design choices made in building Lima Live Museum of Movie Locations — the conceptual decisions behind the collection, the technical architecture of the site, and the reasoning behind the interface design.</p>
+            <p>Lima Live Museum of Movie Locations is a digital exhibition about the relationship between cinema and the urban space of Lima. This page documents the research framework, collection criteria, editorial model, narrative structure, visual design and technical architecture developed for the project.</p>
         </section>
 
         <section class="about-section">
             <h2>1. Concept and Scope</h2>
-            <p>[To be completed — describe the conceptual framework of the exhibition: why Lima, why cinema, why these locations, and what the collection aims to communicate.]</p>
+            <p>The project begins with a simple question: what can the locations chosen by filmmakers tell us about Lima? Rather than treating filming locations as isolated tourist attractions, Lima Live approaches them as evidence of how the city has been represented, remembered and transformed through cinema.</p>
+            <p>The collection brings together public spaces, streets, residential complexes, commercial areas, natural landscapes, transport infrastructure and historically significant sites. Their cinematic appearances reveal different versions of Lima: monumental and everyday, affluent and marginalised, intimate and political, coastal and metropolitan.</p>
+            <p>The current dataset contains 29 location records and 29 film records. The films represented in the wider collection range from 1930 to 2024, while the historical narrative begins in 1938 with <em>Palomillas del Rímac</em>. The collection is not intended as a complete catalogue of Peruvian cinema; it is a curated selection designed to support spatial exploration and historical interpretation.</p>
         </section>
 
         <section class="about-section">
             <h2>2. Collection Criteria</h2>
-            <p>[To be completed — explain how the locations were selected: what criteria determined inclusion (number of films, historical significance, geographic spread, thematic relevance), and what was deliberately excluded.]</p>
+            <p>Locations were selected by combining cinematographic, historical, geographic and interpretive criteria. Priority was given to places that could demonstrate a meaningful relationship between a film and the social or urban history of Lima.</p>
+            <ul class="doc-list">
+                <li><strong>Documented cinematic connection:</strong> the location is associated with one or more films represented in the dataset.</li>
+                <li><strong>Historical or cultural relevance:</strong> the place contributes to understanding a significant period, event, community or transformation of the city.</li>
+                <li><strong>Geographic variety:</strong> the collection includes different districts and types of urban space rather than concentrating exclusively on the historic centre or tourist areas.</li>
+                <li><strong>Narrative value:</strong> the location can support comparison between films or become a meaningful stop in a historical or geographic itinerary.</li>
+                <li><strong>Available evidence:</strong> sufficient information could be gathered about the place, the film and their relationship.</li>
+            </ul>
+            <p>Locations for which the filming connection could not yet be sufficiently verified, or for which the available information was too limited, are not presented as definitive records. The collection can therefore be expanded as new evidence, films and images become available.</p>
         </section>
 
         <section class="about-section">
-            <h2>3. Text Grid Design</h2>
-            <p>[To be completed — describe the rationale behind the 3×3 grid of texts (tone × length × competence): why these three axes, how the texts were written for each cell, and how the interface exposes them to visitors.]</p>
+            <h2>3. Content and Data Model</h2>
+            <p>The exhibition is organised around two connected entities: <strong>locations</strong> and <strong>films</strong>. A location record contains its name, address, district, coordinates, accessibility information, associated films and multiple versions of its introductory text. Extended records add historical context, curiosities, cultural significance and sources. Film records contain title, year, director, country, genres, cast, production information, description and, when available, a Wikidata identifier.</p>
+            <p>This structure allows the same content to be explored in several ways: spatially through the map, individually through location pages, chronologically through the historical timeline and geographically through the three itineraries.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>4. Adaptive Text Design</h2>
+            <p>Each location can contain a 3×3 grid of introductory texts. The grid is based on two independent axes rather than three:</p>
             <ul class="doc-list">
-                <li><strong>Tone axis</strong> (Young / Adult / Professional): [explanation]</li>
-                <li><strong>Length axis</strong> (Brief / Mid / Long): [explanation]</li>
-                <li><strong>Competence axis</strong> (Too difficult ↔ Too simple): [explanation]</li>
+                <li><strong>Tone and complexity:</strong> Young, Adult and Professional.</li>
+                <li><strong>Length:</strong> Brief, Mid and Long.</li>
+            </ul>
+            <p>The “Too difficult” and “Too simple” controls move between the three tone levels, while “Too long” and “Too short” change the length. The interface therefore lets visitors adjust the same core information without leaving the location page. “Competence” is the interaction through which the tone axis is presented, not a third independent dimension.</p>
+            <p>The default combination is Adult + Mid. When a specific cell is unavailable, the interface falls back to the mid-length text for the selected tone and informs the visitor that the complete version is still in development.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>5. Narratives and Itineraries</h2>
+            <p>The Narratives section reorganises the collection into four curated paths. The first is interpretive and chronological; the other three can also function as real-world itineraries.</p>
+            <ul class="doc-list">
+                <li><strong>I. Historical Timeline — Lima on Screen:</strong> follows changes in the cinematic image of Lima from 1938 to 2024, moving from early urban modernity through political conflict, social crisis, memory and contemporary forms of representation.</li>
+                <li><strong>II. Cinematic Miraflores:</strong> connects Kennedy Park, Tarata Street, Larco Avenue, the Miraflores Boardwalk and Pizza Street. The route contrasts tourism, everyday social life, political memory, the coastal landscape and nightlife.</li>
+                <li><strong>III. San Isidro:</strong> connects El Olivar Forest, Country Club Lima Hotel and the Santa Cruz Residential Complex. The itinerary compares natural heritage, elite architecture and modern collective housing.</li>
+                <li><strong>IV. Callao &amp; La Punta:</strong> moves from Jorge Chávez International Airport to Monumental Callao, Cantolao Beach and the islands of Callao, including El Frontón. It links modernisation, port identity, neighbourhood memory, adolescence and political history.</li>
+            </ul>
+            <p>Transition texts in the historical timeline connect individual films to broader changes in Peruvian society. Maps and numbered markers preserve the spatial dimension of each narrative, while links return visitors to the full records of the locations involved.</p>
+            <p>The itineraries are interpretive cultural routes rather than real-time navigation services. Transport, opening conditions, accessibility and restrictions may change and should be verified before an in-person visit.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>6. Visual and Editorial Design</h2>
+            <p>The interface separates the collection from its visual presentation: films, locations and narratives remain unchanged when a visitor selects another theme. The theme switcher instead explores how the same digital museum can be reframed through different histories of publishing and screen design.</p>
+            <ul class="doc-list">
+                <li><strong>Today:</strong> the original contemporary interface defined by the main stylesheet.</li>
+                <li><strong>1500–1800:</strong> paper textures, engraved details, ochre and brown tones inspired by early printed folios.</li>
+                <li><strong>First half of the twentieth century:</strong> mid-century newspaper typography, newsprint surfaces and editorial rules.</li>
+                <li><strong>Second half of the twentieth century:</strong> an energetic 1980s–90s magazine language using bold typography, cyan, magenta and offset layers.</li>
+                <li><strong>Start of the twenty-first century:</strong> an early web portal with blue links, grey interfaces, bevelled controls and pixel-like image rendering.</li>
+                <li><strong>2035:</strong> a speculative living archive with dark high-contrast surfaces, luminous accents and restrained motion.</li>
+            </ul>
+            <p>The selector is movable but remains attached to one side of the viewport so that it does not obstruct the collection. Theme choices are stored locally in the visitor’s browser. Motion is reduced when the operating system preference for reduced animation is enabled.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>7. Technical Architecture</h2>
+            <p>Lima Live is a static website built with HTML, CSS and JavaScript and published through GitHub Pages. The static approach keeps the project portable, transparent and inexpensive to maintain, while avoiding the need for a server-side application or database.</p>
+            <ul class="doc-list">
+                <li><strong>Map:</strong> Leaflet.js with OpenStreetMap and CartoDB tiles.</li>
+                <li><strong>Layout:</strong> Bootstrap 5.3 combined with custom responsive CSS.</li>
+                <li><strong>Core data:</strong> <code>data.js</code> stores location records, film records and district colours.</li>
+                <li><strong>Extended content:</strong> <code>schede.js</code> stores detailed location sections and <code>film_profiles.js</code> stores expanded film profiles.</li>
+                <li><strong>Narratives:</strong> <code>itineraries.html</code> contains the historical timeline and three geographic routes, each supported by a Leaflet map.</li>
+                <li><strong>Theme system:</strong> <code>theme.css</code> contains the historical visual variants, while <code>theme.js</code> manages selection, persistence and the movable interface.</li>
+                <li><strong>Shared navigation:</strong> <code>navbar.js</code> creates the common navigation and loads the theme system throughout the public site.</li>
+                <li><strong>Linked data:</strong> available film records link to Wikidata for external identifiers and further information.</li>
             </ul>
         </section>
 
         <section class="about-section">
-            <h2>4. Narrative Structure</h2>
-            <p>[To be completed — discuss the two narrative itineraries: the historical timeline and the thematic day-journey. Explain how transition texts function between chapters and how the narratives relate to the individual location pages.]</p>
-        </section>
-
-        <section class="about-section">
-            <h2>5. Visual and Graphic Design</h2>
-            <p>[To be completed — describe the graphic themes available in the site, the typography choices, the colour palette, and the visual logic of the interface. Discuss how the design supports the exhibition content without dominating it.]</p>
-        </section>
-
-        <section class="about-section">
-            <h2>6. Technical Architecture</h2>
-            <p>[To be completed — describe the technical stack: HTML/CSS/JS, Leaflet.js for the map, Bootstrap for layout, data stored in data.js, schede.js for extended content. Discuss the decision to use a static site without a backend.]</p>
+            <h2>8. Sources and Research Method</h2>
+            <p>Film and location records were assembled through project research and compared across structured data, mapping services and historical or cultural sources. Sources do not all provide the same level of detail, so the project distinguishes between confirmed metadata and contextual interpretation.</p>
             <ul class="doc-list">
-                <li><strong>Map</strong>: Leaflet.js + OpenStreetMap / CartoDB tiles</li>
-                <li><strong>Runtime data</strong>: <code>data.js</code> (locations, films, districtColors), <code>schede.js</code> (extended location content), <code>film_profiles.js</code> (extended film content)</li>
-                <li><strong>Editorial source material</strong>: <code>schede.html</code>, <code>film.html</code>, and <code>metadata.json</code> preserve the research material; changes intended for the interface must also be reflected in the runtime data files above.</li>
-                <li><strong>Layout</strong>: Bootstrap 5.3 + custom CSS</li>
-                <li><strong>External data</strong>: Film metadata from Wikidata</li>
+                <li><strong>Film metadata:</strong> Wikidata and film-specific research for titles, dates, directors, cast, genres and production information.</li>
+                <li><strong>Geographic data:</strong> OpenStreetMap, Google Maps and direct location research for names, addresses and coordinates.</li>
+                <li><strong>Historical and interpretive texts:</strong> original writing developed for the project from the sources associated with each record.</li>
+                <li><strong>Photography:</strong> project images and third-party material. Complete author, URL and licence attribution must be verified before final publication.</li>
+            </ul>
+            <p>Where Wikidata does not contain a film or provides incomplete information, the local record preserves the available researched metadata without inventing an external identifier.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>9. Accessibility and Usability</h2>
+            <p>The project uses responsive layouts, semantic headings, alternative text for narrative images, keyboard-accessible controls and visible labels. Text complexity and length can be adjusted independently on location pages. The theme system preserves a readable contrast hierarchy and respects reduced-motion preferences.</p>
+            <p>Accessibility remains an ongoing process. Image descriptions, keyboard testing, colour contrast and the behaviour of maps and interactive components should be reviewed again before the final release.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>10. Known Limitations and Future Development</h2>
+            <ul class="doc-list">
+                <li>The collection is selective and does not represent the complete history of cinema filmed in Lima.</li>
+                <li>Some films and locations have richer documentation than others because source availability is uneven.</li>
+                <li>Not every location has a complete photograph, extended record or fully verified image attribution.</li>
+                <li>Public transport, opening conditions, accessibility and safety information can change after publication.</li>
+                <li>Some cinematic connections rely on research that still requires a final source-by-source verification.</li>
+                <li>The current interface is in English; a Spanish version would make the project more accessible to local audiences.</li>
+                <li>Future development could add search, multilingual content, downloadable routes and a more explicit provenance record for each statement and image.</li>
             </ul>
         </section>
 
         <section class="about-section">
-            <h2>7. Data Sources</h2>
-            <p>[To be completed — list and discuss the sources used for location data, film metadata, historical information, and images. Acknowledge limitations and gaps in the data.]</p>
-            <ul class="doc-list">
-                <li><strong>Film data</strong>: Wikidata (directors, cast, genres, descriptions)</li>
-                <li><strong>Location data</strong>: OpenStreetMap, Google Maps, original research</li>
-                <li><strong>Historical texts</strong>: Original writing by Alice Sgarlata and Adriana Alborian</li>
-                <li><strong>Photography</strong>: [sources to be listed]</li>
+            <h2>11. Responsibilities</h2>
+            <ul class="credits-list">
+                <li><span class="credit-role">Project, interface and technical integration</span> Alice Sgarlata</li>
+                <li><span class="credit-role">Location research, data collection and itinerary research</span> Adriana Villafuerte</li>
+                <li><span class="credit-role">Editorial development</span> Alice Sgarlata and Adriana Villafuerte</li>
+                <li><span class="credit-role">Course</span> Information Modeling and Web Technologies — Prof. Fabio Vitali, Università di Bologna</li>
             </ul>
         </section>
 
-        <section class="about-section">
-            <h2>8. Known Limitations</h2>
-            <p>[To be completed — be honest about what the site does not do well: gaps in the film collection, locations without images, texts not yet written for all grid cells, missing narratives, etc.]</p>
-        </section>
-
-    </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
