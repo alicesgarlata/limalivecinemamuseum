@@ -8,9 +8,18 @@
 
     const STORAGE_KEY = 'lima-theme'
     const POSITION_KEY = 'lima-theme-position'
-    const DEFAULT_THEME = 'early-web'
+    const DEFAULT_THEME = 'default'
 
     const themes = [
+        {
+            id: 'default',
+            period: 'Today',
+            medium: 'Original site',
+            title: 'Current interface',
+            description: 'The original Lima Live design, using only the main style.css.',
+            colors: ['#f5f4f0', '#ffffff', '#1a1a1a'],
+            browserColor: '#f5f4f0'
+        },
         {
             id: 'early-print',
             period: '1500–1800',
@@ -24,19 +33,19 @@
             id: 'modern-print',
             period: '1st half XX century',
             medium: 'Modernist print',
-            title: 'The modern manifesto',
-            description: 'A geometric, high-contrast language inspired by the avant-garde.',
-            colors: ['#f1ead8', '#111111', '#d43b27'],
-            browserColor: '#d43b27'
+            title: 'The daily newspaper',
+            description: 'Newsprint, serif headlines and the dense rhythm of a mid-century paper.',
+            colors: ['#e7e3d8', '#191919', '#7a1f1f'],
+            browserColor: '#191919'
         },
         {
             id: 'editorial-print',
             period: '2nd half XX century',
             medium: 'Editorial print',
-            title: 'The cultural magazine',
-            description: 'Serif headlines, offset color and the rhythm of a printed review.',
-            colors: ['#f3efe4', '#143f5f', '#d4a321'],
-            browserColor: '#143f5f'
+            title: 'The postmodern magazine',
+            description: 'An energetic 1980s–90s mix of bold type, neon color and offset layers.',
+            colors: ['#ece9df', '#e42f87', '#00a9b8'],
+            browserColor: '#e42f87'
         },
         {
             id: 'early-web',
@@ -99,8 +108,13 @@
         const settings = Object.assign({ persist: true, announce: true }, options)
         const theme = getTheme(themeId)
 
-        document.documentElement.dataset.era = theme.id
-        if (document.body) document.body.dataset.era = theme.id
+        if (theme.id === 'default') {
+            delete document.documentElement.dataset.era
+            if (document.body) delete document.body.dataset.era
+        } else {
+            document.documentElement.dataset.era = theme.id
+            if (document.body) document.body.dataset.era = theme.id
+        }
         document.documentElement.style.colorScheme = theme.id === 'future' ? 'dark' : 'light'
         updateBrowserColor(theme.browserColor)
 
@@ -133,8 +147,10 @@
     // Apply the saved era as soon as the script is evaluated to reduce the
     // flash of the default design.
     const initialTheme = getSavedTheme()
-    document.documentElement.dataset.era = initialTheme
-    if (document.body) document.body.dataset.era = initialTheme
+    if (initialTheme !== 'default') {
+        document.documentElement.dataset.era = initialTheme
+        if (document.body) document.body.dataset.era = initialTheme
+    }
 
     function createThemeOption(theme) {
         const button = document.createElement('button')
@@ -196,7 +212,7 @@
         tab.setAttribute('aria-expanded', 'false')
         tab.setAttribute('aria-controls', 'theme-selector-content')
         tab.innerHTML = `
-            <span class="theme-tab-label">Change the era</span>
+            <span class="theme-tab-label">Themes</span>
             <span class="theme-current-period">${getTheme(initialTheme).period}</span>
         `
 
@@ -239,7 +255,10 @@
         panel.append(tab, content)
         document.body.appendChild(panel)
 
-        tab.addEventListener('click', () => setPanelOpen(!panel.classList.contains('open')))
+        tab.addEventListener('click', () => {
+            if (tab.dataset.justDragged === 'true') return
+            setPanelOpen(!panel.classList.contains('open'))
+        })
         header.querySelector('.theme-close').addEventListener('click', () => setPanelOpen(false))
         header.querySelector('.theme-reset').addEventListener('click', event => {
             event.stopPropagation()
@@ -257,7 +276,8 @@
             if (panel.classList.contains('open') && !panel.contains(event.target)) setPanelOpen(false)
         })
 
-        makeDraggable(panel, header)
+        makeDraggable(panel, header, true)
+        makeDraggable(panel, tab, false)
         restorePosition(panel)
         return panel
     }
@@ -292,30 +312,39 @@
         }
     }
 
-    function makeDraggable(panel, handle) {
+    function makeDraggable(panel, handle, ignoreInteractiveElements) {
         let dragging = false
         let pointerId = null
         let offsetX = 0
         let offsetY = 0
+        let startX = 0
+        let startY = 0
+        let moved = false
 
         handle.addEventListener('pointerdown', event => {
             if (window.matchMedia('(max-width: 700px)').matches) return
-            if (event.target.closest('button')) return
+            if (ignoreInteractiveElements && event.target.closest('button')) return
 
             const rect = panel.getBoundingClientRect()
             dragging = true
             pointerId = event.pointerId
             offsetX = event.clientX - rect.left
             offsetY = event.clientY - rect.top
+            startX = event.clientX
+            startY = event.clientY
+            moved = false
             panel.classList.add('dragging')
             handle.setPointerCapture(pointerId)
         })
 
         handle.addEventListener('pointermove', event => {
             if (!dragging || event.pointerId !== pointerId) return
+            if (Math.hypot(event.clientX - startX, event.clientY - startY) > 5) moved = true
+            if (!moved) return
             const position = clampPosition(panel, event.clientX - offsetX, event.clientY - offsetY)
             panel.style.left = `${position.left}px`
             panel.style.top = `${position.top}px`
+            panel.style.bottom = 'auto'
             panel.style.transform = 'none'
         })
 
@@ -325,7 +354,11 @@
             panel.classList.remove('dragging')
             if (handle.hasPointerCapture(pointerId)) handle.releasePointerCapture(pointerId)
             pointerId = null
-            savePosition(panel)
+            if (moved) {
+                handle.dataset.justDragged = 'true'
+                window.setTimeout(() => delete handle.dataset.justDragged, 0)
+                savePosition(panel)
+            }
         }
 
         handle.addEventListener('pointerup', stopDragging)
@@ -350,6 +383,7 @@
             const clamped = clampPosition(panel, left, top)
             panel.style.left = `${clamped.left}px`
             panel.style.top = `${clamped.top}px`
+            panel.style.bottom = 'auto'
             panel.style.transform = 'none'
         } catch (error) {
             // Ignore malformed values saved by an older version.
@@ -384,7 +418,7 @@
 
     window.LimaTheme = {
         themes: themes.map(theme => Object.assign({}, theme)),
-        get: () => document.body ? document.body.dataset.era : document.documentElement.dataset.era,
+        get: () => (document.body ? document.body.dataset.era : document.documentElement.dataset.era) || 'default',
         set: themeId => {
             if (!themeIds.has(themeId)) throw new Error(`Unknown Lima theme: ${themeId}`)
             return applyTheme(themeId)
