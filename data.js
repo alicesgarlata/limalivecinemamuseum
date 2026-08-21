@@ -35,8 +35,8 @@ const locations = [
       }
     ],
     "descriptions": {
-      "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Five Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
-      "adult": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for five Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
+      "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Three Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
+      "adult": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for three Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
       "professional": "Parque John F. Kennedy functions as a primary cinematographic reference for the Miraflores district, its sociological significance as a site of intersection between tourism, informal commerce, and everyday social practice making it a recurring spatial motif in contemporary Peruvian cinema."
     },
     "access": "Public — free access",
@@ -44,23 +44,23 @@ const locations = [
     "lng": -77.0303628643947,
     "cardDescription": {
       "short": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
-      "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Five Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
+      "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Three Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
     },
     "texts": {
       "young": {
         "brief": "Kennedy Park is where Miraflores comes alive — street artists, cats, and everyone you can imagine.",
-        "mid": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Five Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
-        "long": "Kennedy Park is one of those places that's almost impossible to pass through without slowing down. Street artists set up on the corners, cats weave between park benches, and the crowd shifts from schoolkids to tourists to couples to elderly regulars — all at the same time, all sharing the same space. It's the kind of park where something is always happening, even when nothing in particular is going on. Five Peruvian films have used it as a location — not because it's spectacular, but because it's real. When you need a shot of Lima that doesn't feel staged, Kennedy Park is the answer."
+        "mid": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Three Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
+        "long": "Kennedy Park is one of those places that's almost impossible to pass through without slowing down. Street artists set up on the corners, cats weave between park benches, and the crowd shifts from schoolkids to tourists to couples to elderly regulars — all at the same time, all sharing the same space. It's the kind of park where something is always happening, even when nothing in particular is going on. Three Peruvian films have used it as a location — not because it's spectacular, but because it's real. When you need a shot of Lima that doesn't feel staged, Kennedy Park is the answer."
       },
       "adult": {
         "brief": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
-        "mid": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for five Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
-        "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Five Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
+        "mid": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for three Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
+        "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Three Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
       },
       "professional": {
         "brief": "Parque Kennedy: a high-density public space in Miraflores functioning as a key cinematographic site of urban social intersection.",
         "mid": "Parque John F. Kennedy functions as a primary cinematographic reference for the Miraflores district, its sociological significance as a site of intersection between tourism, informal commerce, and everyday social practice making it a recurring spatial motif in contemporary Peruvian cinema.",
-        "long": "Parque John F. Kennedy occupies a structurally significant position within Lima's urban social geography. Its location in the Miraflores district — associated with upper-middle-class leisure and commercial activity — is complicated by the park's role as a democratic public space attracting visitors from across the socioeconomic spectrum. In Peruvian cinema, this tension has been productively exploited: the park's social heterogeneity makes it a naturalistic setting for films that wish to represent Lima as a city in negotiation between its class distinctions and its public commons. Its five documented cinematic appearances span comedy, drama, and biographical film, confirming its status as a persistent cinematographic reference for the district."
+        "long": "Parque John F. Kennedy occupies a structurally significant position within Lima's urban social geography. Its location in the Miraflores district — associated with upper-middle-class leisure and commercial activity — is complicated by the park's role as a democratic public space attracting visitors from across the socioeconomic spectrum. In Peruvian cinema, this tension has been productively exploited: the park's social heterogeneity makes it a naturalistic setting for films that wish to represent Lima as a city in negotiation between its class distinctions and its public commons. Its three documented cinematic appearances span comedy, drama, and biographical film, confirming its status as a persistent cinematographic reference for the district."
       }
     }
   },
@@ -76,6 +76,14 @@ const locations = [
       {
         "title": "Gregorio",
         "year": 1984
+      },
+      {
+        "title": "Palomillas del Rímac",
+        "year": 1938
+      },
+      {
+        "title": "Caídos del Cielo",
+        "year": 1990
       }
     ],
     "descriptions": {
@@ -453,6 +461,10 @@ const locations = [
       {
         "title": "Cholo",
         "year": 1972
+      },
+      {
+        "title": "Metal y Melancolía",
+        "year": 1993
       }
     ],
     "descriptions": {
@@ -506,12 +518,20 @@ const locations = [
       {
         "title": "Las Sicodélicas",
         "year": 1968
+      },
+      {
+        "title": "Gregorio",
+        "year": 1984
+      },
+      {
+        "title": "Juliana",
+        "year": 1989
       }
     ],
     "descriptions": {
-      "young": "Jirón de la Unión is Lima's main pedestrian street downtown — full of shops, street sellers, and people from all over the country. Five films used it from the 1960s to the 1990s, showing how the street has always been the pulse of the city.",
-      "adult": "Lima's historic pedestrian thoroughfare, central to commercial and social life in the Centro Histórico. It has served as a backdrop for five films spanning three decades, consistently used to represent the movement, diversity, and contradictions of downtown Lima.",
-      "professional": "Jirón de la Unión represents one of Lima's most persistently cinematographic urban spaces. Its pedestrian character and demographic diversity render it a productive site for representing social heterogeneity and urban tension, with cinematic uses spanning from the transgressive comedies of the late 1960s to the socially critical dramas of the 1990s."
+      "young": "Jirón de la Unión is Lima's main pedestrian street downtown — full of shops, street sellers, and people from all over the country. Six films used it from the 1930s to the 1990s, showing how the street has always been the pulse of the city.",
+      "adult": "Lima's historic pedestrian thoroughfare, central to commercial and social life in the Centro Histórico. It has served as a backdrop for six films spanning six decades, consistently used to represent the movement, diversity, and contradictions of downtown Lima.",
+      "professional": "Jirón de la Unión represents one of Lima's most persistently cinematographic urban spaces. Its pedestrian character and demographic diversity render it a productive site for representing social heterogeneity and urban tension, with cinematic uses spanning from early popular cinema in the 1930s to socially critical dramas of the 1990s."
     },
     "access": "Public — free access",
     "lat": -12.04958142862287,
@@ -519,23 +539,23 @@ const locations = [
     "image": "images/jiron-de-la-union.webp",
     "cardDescription": {
       "short": "Lima's main pedestrian street — the commercial and social spine of the Centro Histórico.",
-      "long": "Jirón de la Unión has been the pulse of downtown Lima for generations. Lined with shops, food stalls, street sellers, and passersby from every part of the country, it concentrates the movement and contradictions of the Centro Histórico in a single walkable artery. Five films across three decades have used it — from the social comedies of the 1960s to the urban dramas of the 1990s — consistently returning to this street as a visual index of how the city's center has changed, and what has stayed the same."
+      "long": "Jirón de la Unión has been the pulse of downtown Lima for generations. Lined with shops, food stalls, street sellers, and passersby from every part of the country, it concentrates the movement and contradictions of the Centro Histórico in a single walkable artery. Six films across six decades have used it — from early popular cinema in the 1930s to the urban dramas of the 1990s — consistently returning to this street as a visual index of how the city's center has changed, and what has stayed the same."
     },
     "texts": {
       "young": {
         "brief": "Lima's main pedestrian street in the historic centre — always busy, always interesting, always very Lima.",
-        "mid": "Jirón de la Unión is Lima's main pedestrian street downtown — full of shops, street sellers, and people from all over the country. Five films used it from the 1960s to the 1990s, showing how the street has always been the pulse of the city.",
-        "long": "Jirón de la Unión is the kind of street where you can walk for ten minutes and feel like you've seen a cross-section of the whole country. Street sellers, tourists, office workers, students, and families all share the same narrow pedestrian artery through the Centro Histórico, moving in different directions for different reasons. It's been like this for decades. Films have used it since the 1960s — and what's interesting is that while Lima has changed enormously, the street's character has stayed recognisable. Five films across three decades came back to it because it always feels like the city's centre of gravity."
+        "mid": "Jirón de la Unión is Lima's main pedestrian street downtown — full of shops, street sellers, and people from all over the country. Six films used it from the 1930s to the 1990s, showing how the street has always been the pulse of the city.",
+        "long": "Jirón de la Unión is the kind of street where you can walk for ten minutes and feel like you've seen a cross-section of the whole country. Street sellers, tourists, office workers, students, and families all share the same narrow pedestrian artery through the Centro Histórico, moving in different directions for different reasons. It's been like this for decades. Films have used it since the 1930s — and what's interesting is that while Lima has changed enormously, the street's character has stayed recognisable. Six films across six decades came back to it because it always feels like the city's centre of gravity."
       },
       "adult": {
         "brief": "Lima's main pedestrian street — the commercial and social spine of the Centro Histórico.",
-        "mid": "Lima's historic pedestrian thoroughfare, central to commercial and social life in the Centro Histórico. It has served as a backdrop for five films spanning three decades, consistently used to represent the movement, diversity, and contradictions of downtown Lima.",
-        "long": "Jirón de la Unión has been the pulse of downtown Lima for generations. Lined with shops, food stalls, street sellers, and passersby from every part of the country, it concentrates the movement and contradictions of the Centro Histórico in a single walkable artery. Five films across three decades have used it — from the social comedies of the 1960s to the urban dramas of the 1990s — consistently returning to this street as a visual index of how the city's centre has changed, and what has stayed the same."
+        "mid": "Lima's historic pedestrian thoroughfare, central to commercial and social life in the Centro Histórico. It has served as a backdrop for six films spanning six decades, consistently used to represent the movement, diversity, and contradictions of downtown Lima.",
+        "long": "Jirón de la Unión has been the pulse of downtown Lima for generations. Lined with shops, food stalls, street sellers, and passersby from every part of the country, it concentrates the movement and contradictions of the Centro Histórico in a single walkable artery. Six films across six decades have used it — from early popular cinema in the 1930s to the urban dramas of the 1990s — consistently returning to this street as a visual index of how the city's centre has changed, and what has stayed the same."
       },
       "professional": {
-        "brief": "Jirón de la Unión: Lima's principal pedestrian thoroughfare, with documented cinematic use spanning three decades of Peruvian film.",
-        "mid": "Jirón de la Unión represents one of Lima's most persistently cinematographic urban spaces, with cinematic uses spanning from the transgressive comedies of the late 1960s to the socially critical dramas of the 1990s.",
-        "long": "Jirón de la Unión's status as Lima's principal pedestrian axis — connecting the Plaza Mayor to the Plaza San Martín through the commercial heart of the Centro Histórico — makes it a uniquely productive cinematographic space. Its demographic heterogeneity, concentrated pedestrian density, and architectural layering of colonial, republican, and twentieth-century commercial fabric produce a visual environment that filmmakers have returned to consistently as an index of Lima's social complexity. Its five documented cinematic appearances across a thirty-year period reveal a consistent deployment of the street as a space where social distinction and urban anonymity coexist — where the contradictions of Peruvian urban modernity are made visible in motion."
+        "brief": "Jirón de la Unión: Lima's principal pedestrian thoroughfare, with documented cinematic use spanning six decades of Peruvian film.",
+        "mid": "Jirón de la Unión represents one of Lima's most persistently cinematographic urban spaces, with cinematic uses spanning from early popular cinema in the 1930s to socially critical dramas of the 1990s.",
+        "long": "Jirón de la Unión's status as Lima's principal pedestrian axis — connecting the Plaza Mayor to the Plaza San Martín through the commercial heart of the Centro Histórico — makes it a uniquely productive cinematographic space. Its demographic heterogeneity, concentrated pedestrian density, and architectural layering of colonial, republican, and twentieth-century commercial fabric produce a visual environment that filmmakers have returned to consistently as an index of Lima's social complexity. Its six documented cinematic appearances across six decades reveal a consistent deployment of the street as a space where social distinction and urban anonymity coexist — where the contradictions of Peruvian urban modernity are made visible in motion."
       }
     }
   },
@@ -599,6 +619,18 @@ const locations = [
       {
         "title": "Metal y Melancolía",
         "year": 1993
+      },
+      {
+        "title": "Gregorio",
+        "year": 1984
+      },
+      {
+        "title": "Juliana",
+        "year": 1989
+      },
+      {
+        "title": "Caídos del Cielo",
+        "year": 1990
       }
     ],
     "descriptions": {
@@ -689,11 +721,19 @@ const locations = [
       {
         "title": "El embajador y yo",
         "year": 1966
+      },
+      {
+        "title": "¡Asu Mare!",
+        "year": 2013
+      },
+      {
+        "title": "Muero por Muriel",
+        "year": 2007
       }
     ],
     "descriptions": {
       "young": "The Lima Golf Club in San Isidro is where the most exclusive side of Lima plays. Its use in films — from a biographical comedy to a psychological thriller — shows how filmmakers use elite spaces to explore class and identity.",
-      "adult": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in three films exploring class dynamics, personal identity, and social aspiration.",
+      "adult": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in five films exploring class dynamics, personal identity, and social aspiration.",
       "professional": "The Lima Golf Club functions as a cinematographic sign of Lima's upper-class habitus, its spatial exclusivity making it a productive site for exploring tensions of class, sexuality, and social performance across ¡Asu Mare!, No Se Lo Digas a Nadie, and Muero por Muriel."
     },
     "access": "Private — members and guests only",
@@ -702,7 +742,7 @@ const locations = [
     "image": "images/lima-golf-club.webp",
     "cardDescription": {
       "short": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-      "long": "The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
+      "long": "The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Five films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
     },
     "texts": {
       "young": {
@@ -712,8 +752,8 @@ const locations = [
       },
       "adult": {
         "brief": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-        "mid": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in three films exploring class dynamics, personal identity, and social aspiration.",
-        "long": "The Lima Golf Club sits in the centre of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinised. Three films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
+        "mid": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in five films exploring class dynamics, personal identity, and social aspiration.",
+        "long": "The Lima Golf Club sits in the centre of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinised. Five films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
       },
       "professional": {
         "brief": "Lima Golf Club: a site of elite spatial practice used cinematographically to explore class, sexuality, and social performance.",
@@ -742,8 +782,8 @@ const locations = [
       "professional": "Estadio Lolo Fernández constitutes a significant site of popular cultural memory in Lima, its association with Universitario de Deportes — a club with deep roots in Peruvian national identity — making it a space where sports, emotion, and collective history converge in documentary form."
     },
     "access": "Restricted — event-based access",
-    "lat": -12.04958142862287,
-    "lng": -77.03413897419874,
+    "lat": -12.04902,
+    "lng": -77.04784,
     "image": "images/estadio-lolo-fernandez.webp",
     "cardDescription": {
       "short": "The home of Universitario de Deportes — Peru's most beloved football club and a symbol of national sporting identity.",
@@ -782,6 +822,10 @@ const locations = [
       {
         "title": "Tarata",
         "year": 2009
+      },
+      {
+        "title": "Esta es la U",
+        "year": 2024
       }
     ],
     "descriptions": {
@@ -827,6 +871,10 @@ const locations = [
       {
         "title": "Un mundo para Julius",
         "year": 2021
+      },
+      {
+        "title": "Viaje a Tombuctú",
+        "year": 2014
       }
     ],
     "descriptions": {
@@ -880,11 +928,15 @@ const locations = [
       {
         "title": "¡Asu Mare!",
         "year": 2013
+      },
+      {
+        "title": "No Se Lo Digas a Nadie",
+        "year": 1998
       }
     ],
     "descriptions": {
-      "young": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in four films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-      "adult": "A modern shopping and entertainment center built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in four films spanning the late 1990s to the 2010s.",
+      "young": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in five films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
+      "adult": "A modern shopping and entertainment center built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in five films spanning the late 1990s to the 2010s.",
       "professional": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use — across comedy, drama, and thriller — reflects its function as a symbol of Lima's aspirational consumer modernity and its associated social contradictions."
     },
     "access": "Public — free access",
@@ -893,23 +945,23 @@ const locations = [
     "image": "images/larcomar.webp",
     "cardDescription": {
       "short": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-      "long": "Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
+      "long": "Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Five films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
     },
     "texts": {
       "young": {
         "brief": "A shopping mall built into the cliffs of Miraflores, with the Pacific directly below — one of Lima's most surreal and spectacular spaces.",
-        "mid": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in four films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-        "long": "Larcomar is the kind of place that takes a moment to process the first time you see it. It's a shopping centre — cinemas, restaurants, shops — but it's built into the cliff face of the Malecón, with the Pacific Ocean filling the horizon from every terrace. The combination of commercial space and coastal drama is uniquely limeño: glamorous and slightly absurd at the same time. Four films have used it as a location, and in all of them it carries the same meaning — Miraflores at its most aspirational, a place where lifestyle and status are performed against a backdrop of extraordinary views."
+        "mid": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in five films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
+        "long": "Larcomar is the kind of place that takes a moment to process the first time you see it. It's a shopping centre — cinemas, restaurants, shops — but it's built into the cliff face of the Malecón, with the Pacific Ocean filling the horizon from every terrace. The combination of commercial space and coastal drama is uniquely limeño: glamorous and slightly absurd at the same time. Five films have used it as a location, and in all of them it carries the same meaning — Miraflores at its most aspirational, a place where lifestyle and status are performed against a backdrop of extraordinary views."
       },
       "adult": {
         "brief": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-        "mid": "A modern shopping and entertainment centre built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in four films spanning the late 1990s to the 2010s.",
-        "long": "Larcomar is Lima doing something only Lima would do: carving a commercial centre into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Four films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
+        "mid": "A modern shopping and entertainment centre built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in five films spanning the late 1990s to the 2010s.",
+        "long": "Larcomar is Lima doing something only Lima would do: carving a commercial centre into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Five films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
       },
       "professional": {
         "brief": "Larcomar: a cliff-edge commercial complex functioning cinematographically as a condensed sign of Lima's aspirational consumer modernity.",
         "mid": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use reflects its function as a symbol of Lima's aspirational consumer modernity.",
-        "long": "Larcomar's integration of commercial infrastructure into the coastal cliff face of the Malecón de Miraflores represents a significant moment in Lima's urban development, inaugurating a model of spectacular retail environment whose design exploits the city's geography as a vehicle for commercial aspiration. Its cinematic uses across four productions reflect a consistent deployment of the complex as a sign of Miraflores' consumer culture — a space where lifestyle, status, and spatial spectacle converge in ways that lend themselves equally to celebratory and critical representational framings. Larcomar's architectural syntax — open terraces, ocean views, vertical commercial layering — provides a visual grammar of aspirational modernity that is simultaneously global in its commercial logic and distinctly limeño in its spatial specificity."
+        "long": "Larcomar's integration of commercial infrastructure into the coastal cliff face of the Malecón de Miraflores represents a significant moment in Lima's urban development, inaugurating a model of spectacular retail environment whose design exploits the city's geography as a vehicle for commercial aspiration. Its cinematic uses across five productions reflect a consistent deployment of the complex as a sign of Miraflores' consumer culture — a space where lifestyle, status, and spatial spectacle converge in ways that lend themselves equally to celebratory and critical representational framings. Larcomar's architectural syntax — open terraces, ocean views, vertical commercial layering — provides a visual grammar of aspirational modernity that is simultaneously global in its commercial logic and distinctly limeño in its spatial specificity."
       }
     }
   },
@@ -929,11 +981,23 @@ const locations = [
       {
         "title": "Un mundo para Julius",
         "year": 2021
+      },
+      {
+        "title": "Lima 13",
+        "year": 2012
+      },
+      {
+        "title": "Utopía",
+        "year": 2018
+      },
+      {
+        "title": "Muero por Muriel",
+        "year": 2007
       }
     ],
     "descriptions": {
-      "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-      "adult": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in three films exploring Lima's urban social landscape.",
+      "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Six films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
+      "adult": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in six films exploring Lima's urban social landscape.",
       "professional": "Plaza Agustín Gutiérrez functions as a cinematographic node of upper-middle-class social life in Lima, its location at the intersection of Miraflores and San Isidro making it a spatial marker of class aspiration and leisure as depicted in Lima 13, Utopía, and Muero por Muriel."
     },
     "access": "Public — free access",
@@ -942,18 +1006,18 @@ const locations = [
     "image": "images/ovalo-gutierrez.webp",
     "cardDescription": {
       "short": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-      "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
+      "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Six films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
     },
     "texts": {
       "young": {
         "brief": "One of Lima's busiest intersections — surrounded by bars, restaurants, and the social life of the younger, urban middle class.",
-        "mid": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Three films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-        "long": "Ovalo Gutiérrez is one of those intersections that feels like its own ecosystem. It connects Miraflores and San Isidro, sits at the junction of several important streets, and is surrounded by the kind of bars, restaurants, and terraces where Lima's urban middle class spends its evenings. It's busy without being chaotic, social without being formal — the kind of place you end up in on a Tuesday night as much as a Saturday. Three films have used it as a setting, and all three are interested in the same thing: the social rituals of a particular class of limeño, the way people perform their lives in public, in the city, under neon lights."
+        "mid": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Six films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
+        "long": "Ovalo Gutiérrez is one of those intersections that feels like its own ecosystem. It connects Miraflores and San Isidro, sits at the junction of several important streets, and is surrounded by the kind of bars, restaurants, and terraces where Lima's urban middle class spends its evenings. It's busy without being chaotic, social without being formal — the kind of place you end up in on a Tuesday night as much as a Saturday. Six films have used it as a setting, all interested in the social rituals of a particular class of limeño and the way people perform their lives in public, in the city, under neon lights."
       },
       "adult": {
         "brief": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-        "mid": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in three films exploring Lima's urban social landscape.",
-        "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Three films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
+        "mid": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in six films exploring Lima's urban social landscape.",
+        "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Six films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
       },
       "professional": {
         "brief": "Plaza Agustín Gutiérrez: a commercial urban node at the Miraflores–San Isidro boundary, functioning as a cinematographic site of class aspiration and leisure.",
@@ -1018,6 +1082,10 @@ const locations = [
       {
         "title": "Django: Sangre de mi sangre",
         "year": 2018
+      },
+      {
+        "title": "Alias \"La Gringa\"",
+        "year": 1991
       }
     ],
     "descriptions": {
@@ -1098,6 +1166,10 @@ const locations = [
       {
         "title": "Avenida Larco, la película",
         "year": 2017
+      },
+      {
+        "title": "Gregorio",
+        "year": 1984
       }
     ],
     "descriptions": {
