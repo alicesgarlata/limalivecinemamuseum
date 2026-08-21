@@ -717,7 +717,7 @@ body[data-era='early-print'] :where(.about-section h1, .narrative-intro h1)::aft
 body[data-era='early-print'] .hero {
     background-image:
         linear-gradient(rgba(63, 39, 16, 0.48), rgba(45, 28, 14, 0.67)),
-        url('images/limashore.jpg');
+        url('images/lima-shore.webp');
     background-blend-mode: multiply;
 }
 
@@ -846,7 +846,7 @@ body[data-era='modern-print'] .hero {
     text-align: center;
     background-image:
         linear-gradient(rgba(24, 23, 20, 0.72), rgba(24, 23, 20, 0.8)),
-        url('images/limashore.jpg');
+        url('images/lima-shore.webp');
 }
 
 body[data-era='modern-print'] .hero h1 {
@@ -959,7 +959,7 @@ body[data-era='editorial-print'] .film-card:nth-child(3n) {
 body[data-era='editorial-print'] .hero {
     background-image:
         linear-gradient(115deg, rgba(213, 30, 117, 0.78) 0 36%, rgba(0, 142, 155, 0.62) 36% 62%, rgba(21, 21, 33, 0.38) 62%),
-        url('images/limashore.jpg');
+        url('images/lima-shore.webp');
 }
 
 body[data-era='editorial-print'] .hero h1 {
@@ -1094,7 +1094,7 @@ body[data-era='early-web'] :where(.pill, .btn-more, .btn-evenmore, .difficulty-b
 body[data-era='early-web'] .hero {
     background-image:
         linear-gradient(rgba(0, 30, 86, 0.7), rgba(0, 30, 86, 0.83)),
-        url('images/limashore.jpg');
+        url('images/lima-shore.webp');
 }
 
 body[data-era='early-web'] .hero h1 {
@@ -1264,7 +1264,7 @@ body[data-era='future'] .hero {
     background-image:
         radial-gradient(circle at 75% 22%, rgba(131, 242, 207, 0.23), transparent 32%),
         linear-gradient(112deg, rgba(7, 9, 15, 0.92) 0 44%, rgba(7, 9, 15, 0.42) 100%),
-        url('images/limashore.jpg');
+        url('images/lima-shore.webp');
 }
 
 body[data-era='future'] .hero::after {
@@ -1378,7 +1378,7 @@ body[data-era='future'] .leaflet-marker-icon {
     body[data-era='modern-print'] .hero {
         background-image:
             linear-gradient(rgba(17, 17, 17, 0.68), rgba(17, 17, 17, 0.7)),
-            url('images/limashore.jpg');
+            url('images/lima-shore.webp');
     }
 
     body[data-era='modern-print'] .hero h1,
