@@ -743,98 +743,123 @@ body[data-era='early-print'] .loc-photo {
 body[data-era='early-print'] :where(.map, .itinerary-map, .leaflet-container) {
     position: relative;
     overflow: hidden;
-    background: #d8c694;
-    border: 5px double #4b351f;
+    background: #e5d4a8;
+    border: 6px double #49321d;
     box-shadow:
-        inset 0 0 0 2px rgba(245, 225, 172, 0.65),
-        inset 0 0 35px rgba(72, 47, 24, 0.24),
-        0 4px 8px rgba(55, 38, 21, 0.18);
+        inset 0 0 0 2px rgba(246, 230, 185, 0.58),
+        inset 0 0 24px rgba(67, 43, 22, 0.18),
+        0 4px 0 rgba(62, 42, 22, 0.16);
 }
 
+/*
+ * IMPORTANT:
+ * Do not filter Leaflet's transformed tile pane. Chromium can render it white.
+ * The old-map treatment is applied to individual tiles instead.
+ */
 body[data-era='early-print'] .leaflet-tile-pane {
-    /* Do not filter Leaflet's transformed pane: in Chromium this can make
-       the entire map render white. Colour the individual tiles instead. */
-    filter: none;
+    filter: none !important;
+    opacity: 1 !important;
 }
 
+/*
+ * Early-print uses the stronger standard OSM raster layer in map.js.
+ * Keep the tiles readable: dark brown linework, pale paper, visible coastlines.
+ */
 body[data-era='early-print'] .leaflet-tile {
-    opacity: 0.92;
+    opacity: 1 !important;
     filter:
-        grayscale(0.18)
-        sepia(0.72)
-        saturate(0.62)
-        hue-rotate(-5deg)
-        brightness(1.08)
-        contrast(1.16);
-    mix-blend-mode: multiply;
+        grayscale(0.62)
+        sepia(0.82)
+        saturate(0.72)
+        hue-rotate(-8deg)
+        brightness(0.90)
+        contrast(1.48) !important;
+    mix-blend-mode: normal !important;
 }
 
-/* Antique paper / engraved-atlas surface. This layer sits above the tiles
-   but below Leaflet controls and never blocks map interaction. */
+/*
+ * A very light paper wash. It must never cover the cartography.
+ */
 body[data-era='early-print'] .leaflet-container::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 450;
     pointer-events: none;
-    background-image:
-        linear-gradient(rgba(70, 48, 27, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(70, 48, 27, 0.07) 1px, transparent 1px),
-        radial-gradient(ellipse at 18% 20%, rgba(242, 219, 159, 0.18), transparent 32%),
-        radial-gradient(ellipse at 78% 72%, rgba(117, 75, 35, 0.10), transparent 38%),
-        radial-gradient(ellipse at center, transparent 58%, rgba(91, 60, 31, 0.06) 76%, rgba(51, 34, 19, 0.18) 100%),
-        repeating-linear-gradient(8deg, rgba(77, 52, 29, 0.018) 0 1px, transparent 1px 5px);
-    background-size:
-        110px 110px,
-        110px 110px,
-        auto,
-        auto,
-        auto,
-        auto;
+    background:
+        repeating-linear-gradient(
+            7deg,
+            rgba(72, 49, 27, 0.014) 0 1px,
+            transparent 1px 5px
+        ),
+        radial-gradient(
+            ellipse at 18% 22%,
+            rgba(244, 224, 174, 0.10),
+            transparent 36%
+        ),
+        radial-gradient(
+            ellipse at 82% 76%,
+            rgba(111, 72, 35, 0.055),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at center,
+            transparent 70%,
+            rgba(72, 47, 24, 0.045) 88%,
+            rgba(47, 29, 15, 0.11) 100%
+        );
     box-shadow:
-        inset 0 0 0 1px rgba(65, 43, 23, 0.65),
-        inset 0 0 0 6px rgba(229, 204, 147, 0.18),
-        inset 0 0 50px rgba(60, 38, 19, 0.22);
-    mix-blend-mode: multiply;
+        inset 0 0 0 1px rgba(65, 43, 23, 0.52),
+        inset 0 0 0 6px rgba(229, 204, 147, 0.10);
 }
 
+/* Route lines should read like hand-drawn ink. */
 body[data-era='early-print'] .leaflet-overlay-pane path {
-    stroke: #693b25;
-    stroke-width: 2.5;
+    stroke: #61351f;
+    stroke-width: 2.6;
     stroke-dasharray: none;
-    filter: drop-shadow(0 1px 0 rgba(239, 218, 169, 0.55));
+    opacity: 0.88;
+    filter: drop-shadow(0 1px 0 rgba(241, 222, 176, 0.38));
 }
 
-body[data-era='early-print'] :where(.leaflet-marker-pane, .leaflet-shadow-pane, .leaflet-popup-pane) {
-    filter: sepia(0.28) saturate(0.8) contrast(1.05);
+body[data-era='early-print'] :where(
+    .leaflet-marker-pane,
+    .leaflet-shadow-pane,
+    .leaflet-popup-pane
+) {
+    filter: sepia(0.16) contrast(1.04);
 }
 
 body[data-era='early-print'] .num-marker {
-    color: #ead8a6;
-    background: #773d29 !important;
-    border: 2px double #e4c98f;
+    color: #f1dfac;
+    background: #6d3a27 !important;
+    border: 2px double #ead19a;
     border-radius: 50%;
     box-shadow:
-        0 0 0 1px #4a301d,
-        1px 2px 0 rgba(47, 30, 17, 0.25);
+        0 0 0 1px #49301d,
+        1px 2px 0 rgba(47, 30, 17, 0.24);
     font-family: var(--era-font-display);
 }
 
 body[data-era='early-print'] .leaflet-marker-icon > div:not(.num-marker) {
-    background: #70432a !important;
-    border: 2px solid #dfc78f !important;
+    background: #6d3d29 !important;
+    border: 2px solid #e4cc96 !important;
     box-shadow:
         0 0 0 1px #49301d,
         1px 2px 0 rgba(47, 30, 17, 0.22) !important;
 }
 
 body[data-era='early-print'] .custom-popup .leaflet-popup-content-wrapper {
-    background: #ead6a3;
+    background-color: #ead6a3;
     background-image:
-        repeating-linear-gradient(0deg, rgba(60, 39, 20, 0.025) 0 1px, transparent 1px 5px);
-    border: 3px double #4c321e;
+        repeating-linear-gradient(
+            0deg,
+            rgba(58, 38, 19, 0.025) 0 1px,
+            transparent 1px 5px
+        );
+    border: 3px double #4a321c;
     border-radius: 0;
-    box-shadow: 2px 3px 0 rgba(53, 35, 20, 0.18);
+    box-shadow: 2px 3px 0 rgba(53, 35, 20, 0.16);
 }
 
 body[data-era='early-print'] .leaflet-popup-tip {
@@ -842,25 +867,25 @@ body[data-era='early-print'] .leaflet-popup-tip {
 }
 
 body[data-era='early-print'] .leaflet-control-attribution {
-    color: #4b3421;
-    background: rgba(229, 208, 157, 0.90);
-    border-top: 1px solid rgba(75, 52, 31, 0.45);
+    color: var(--era-ink);
+    background: rgba(229, 207, 157, 0.94);
+    border-top: 1px solid rgba(74, 50, 28, 0.52);
     font-family: var(--era-font-display);
     font-style: italic;
 }
 
 body[data-era='early-print'] .leaflet-control-zoom a {
-    color: #49311e;
-    background: #dfc98e;
-    border-color: #654527;
+    color: var(--era-ink);
+    background: #dfc88e;
+    border-color: #5b3a20;
     border-radius: 0 !important;
     font-family: var(--era-font-display);
     font-weight: 700;
 }
 
 body[data-era='early-print'] .leaflet-control-zoom a:hover {
-    color: #ead9aa;
-    background: #654329;
+    color: #f3dfab;
+    background: #654027;
 }
 
 body[data-era='early-print'] .theme-content,
