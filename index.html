@@ -19,22 +19,92 @@
     <script src="navbar.js"></script>
     <script src="theme.js"></script>
 
-    <section class="hero">
-        <h1>Lima Live Museum of Movie Locations</h1>
-        <p class="hero-sub"><span id="location-count">0</span> locations. <span id="film-count">0</span> films. Nearly a century of urban cinema.</p>
-        <p class="hero-intro">Lima has been a film set for as long as it has been a modern city. From the republican squares of the 1930s to the cliff-face malls of the 1990s, from the working-class markets of the internal conflict to the stadiums of centenary celebration — the city's spaces have served as stages for an extraordinarily rich body of cinematic work. This exhibition maps those spaces, traces their histories, and proposes two ways of reading them: as a timeline of the city's cinematic century, and as a single day's journey from the river to the sea.</p>
-        <div class="hero-actions">
-            <button class="hero-cta" id="heroBtn">Explore the map</button>
-            <a class="hero-link" href="itineraries.html">Read the narratives →</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="hero-eyebrow">A virtual museum of Lima's urban cinema</p>
+                <h1 id="hero-title">Lima Live<br><span>Museum of Movie Locations</span></h1>
+                <p class="hero-sub"><span id="location-count">0</span> locations. <span id="film-count">0</span> films. Nearly a century of urban cinema.</p>
+                <p class="hero-intro">Lima has been a film set for as long as it has been a modern city. From the republican squares of the 1930s to the cliff-face malls of the 1990s, from the working-class markets of the internal conflict to the stadiums of centenary celebration — the city's spaces have served as stages for an extraordinarily rich body of cinematic work. This exhibition maps those spaces, traces their histories, and proposes two ways of reading them: as a timeline of the city's cinematic century, and as a single day's journey from the river to the sea.</p>
+                <div class="hero-actions">
+                    <a class="hero-cta" id="heroBtn" href="#locations">Explore the locations</a>
+                    <a class="hero-link" href="#cinematic-itineraries">Choose an itinerary <span aria-hidden="true">↘</span></a>
+                </div>
+            </div>
+            <a class="hero-scroll" href="#cinematic-itineraries" aria-label="Continue to the cinematic itineraries">
+                <span>Enter the museum</span>
+                <span aria-hidden="true">↓</span>
+            </a>
+        </section>
 
-    <div class="filter-bar" id="filter-bar"></div>
+        <section class="home-itineraries" id="cinematic-itineraries" aria-labelledby="itineraries-title">
+            <div class="home-section-heading">
+                <div>
+                    <p class="section-kicker">Visit the city</p>
+                    <h2 id="itineraries-title">Follow cinema through Lima</h2>
+                </div>
+                <p>These are not only stories to read: they are routes designed for visitors who want to encounter the real places where Lima's films were made.</p>
+            </div>
 
-    <div class="main">
-        <div class="map" id="map"></div>
-        <div class="card-list" id="list"></div>
-    </div>
+            <div class="itinerary-preview-grid">
+                <a class="itinerary-preview-card" href="itineraries.html#miraflores" aria-label="Open the Cinematic Miraflores itinerary">
+                    <div class="itinerary-preview-image">
+                        <img src="images/calle-tarata.webp" alt="Calle Tarata in Miraflores" loading="lazy" decoding="async">
+                        <span class="itinerary-number">01</span>
+                    </div>
+                    <div class="itinerary-preview-copy">
+                        <p class="itinerary-preview-meta">On foot · Miraflores · 5 stops</p>
+                        <h3>A Walking Tour of Cinematic Miraflores</h3>
+                        <p>For the first itinerary, we propose a walking tour through Miraflores, one of Lima’s most recognizable and tourist-oriented districts.</p>
+                        <span class="itinerary-preview-link">View itinerary <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+
+                <a class="itinerary-preview-card" href="itineraries.html#sanisidro" aria-label="Open the Residential and Cinematic San Isidro itinerary">
+                    <div class="itinerary-preview-image">
+                        <img src="images/bosque-el-olivar.webp" alt="Bosque El Olivar in San Isidro" loading="lazy" decoding="async">
+                        <span class="itinerary-number">02</span>
+                    </div>
+                    <div class="itinerary-preview-copy">
+                        <p class="itinerary-preview-meta">Walking itinerary · San Isidro · 3 stops</p>
+                        <h3>Residential and Cinematic San Isidro</h3>
+                        <p>The second itinerary takes place in San Isidro, one of Lima’s most representative residential, historical, and financial districts.</p>
+                        <span class="itinerary-preview-link">View itinerary <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+
+                <a class="itinerary-preview-card" href="itineraries.html#callao" aria-label="Open the Cinematic Callao and La Punta itinerary">
+                    <div class="itinerary-preview-image">
+                        <img src="images/jorge-chavez-international-airport-location.webp" alt="Jorge Chávez International Airport" loading="lazy" decoding="async">
+                        <span class="itinerary-number">03</span>
+                    </div>
+                    <div class="itinerary-preview-copy">
+                        <p class="itinerary-preview-meta">Taxi + bus / boat · Callao, La Punta and Islands · 4 main stops</p>
+                        <h3>From Jorge Chávez Airport to Cinematic Callao</h3>
+                        <p>From modernisation and neighbourhood memory to maritime Callao.</p>
+                        <span class="itinerary-preview-link">View itinerary <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+            </div>
+
+            <a class="all-narratives-link" href="itineraries.html#timeline">Explore the historical timeline and all itineraries <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="locations-section" id="locations" aria-labelledby="locations-title">
+            <div class="locations-heading">
+                <p class="section-kicker">Explore the collection</p>
+                <h2 id="locations-title">Movie locations across Lima</h2>
+                <p>Select a district, move across the map and open a location to discover its films and urban history.</p>
+            </div>
+
+            <div class="filter-bar" id="filter-bar"></div>
+
+            <div class="main">
+                <div class="map" id="map" aria-label="Interactive map of movie locations in Lima"></div>
+                <div class="card-list" id="list"></div>
+            </div>
+        </section>
+    </main>
 
     <template id="card-template">
         <div class="card">
