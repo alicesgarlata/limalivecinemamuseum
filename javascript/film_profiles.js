@@ -1,4 +1,4 @@
-// Film profiles — descriptions, themes, and location value from film.html
+// Film profiles — descriptions, themes, and location value
 // Key = film title as used in data.js films[].title
 
 const filmProfiles = {
