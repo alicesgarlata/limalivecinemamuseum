@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Narratives — Lima Live Museum of Movie Locations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .narrative-page { max-width: 1180px; padding: 2rem; }
+
+        .narrative-switcher {
+            display: flex; gap: 12px; margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5; padding-bottom: 0;
+        }
+        .narrative-tab {
+            font-size: 13px; font-weight: 500; color: #aaa;
+            background: none; border: none;
+            border-bottom: 2px solid transparent;
+            padding: 8px 0; margin-bottom: -1px; cursor: pointer;
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .narrative-tab.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+
+        .narrative-content { display: none; }
+        .narrative-content.active { display: block; }
+
+        /* Two-column layout */
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 380px;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        @media (max-width: 860px) {
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .itinerary-map-col { position: static !important; }
+        }
+
+        .itinerary-text { min-width: 0; }
+
+        .itinerary-map-col {
+            position: sticky;
+            top: 24px;
+        }
+        .itinerary-map {
+            width: 100%; height: 520px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+        }
+        .map-legend {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #888;
+            line-height: 1.6;
+        }
+        .map-legend a { color: #1a1a1a; }
+
+        /* Inline location photos */
+        .loc-photo {
+            width: 100%; border-radius: 10px;
+            margin: 1rem 0 0.5rem;
+            aspect-ratio: 16/7;
+            object-fit: cover;
+            display: block;
+        }
+        .loc-photo-caption {
+            font-size: 11px; color: #aaa;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* Narrative text styles */
+        .narrative-intro { margin-bottom: 2rem; }
+        .narrative-intro h1 { font-size: 28px; font-weight: 500; margin-bottom: 6px; }
+        .narrative-subtitle {
+            font-size: 12px; color: #aaa; text-transform: uppercase;
+            letter-spacing: 0.08em; margin-bottom: 1rem;
+        }
+        .itinerary-meta {
+            display: flex; gap: 1rem; font-size: 12px; color: #aaa;
+            flex-wrap: wrap; margin-top: 0.75rem;
+        }
+
+        .itinerary-text p {
+            font-size: 15px; line-height: 1.8; color: #444;
+            margin-bottom: 1rem; text-align: justify;
+        }
+        .itinerary-text a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
+        .itinerary-text a:hover { border-color: #1a1a1a; }
+
+        /* Timeline (narrative I) */
+        .chapter-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 6px; }
+        .narrative-chapter { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0; }
+        .narrative-chapter h2 { font-size: 18px; font-weight: 500; margin-bottom: 0.5rem; }
+        .chapter-dates { font-size: 14px; font-weight: 400; color: #aaa; }
+        .chapter-intro { font-size: 13px; color: #888; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
+        .narrative-transition {
+            margin: 1.5rem 0; padding: 1rem 1.25rem;
+            border-left: 3px solid #e5e5e5; background: #fafaf8;
+            border-radius: 0 8px 8px 0;
+        }
+        .narrative-transition p { font-size: 13px; color: #666; font-style: italic; line-height: 1.75; margin: 0; }
+        .timeline-entry { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid #f5f5f5; }
+        .timeline-year { font-size: 17px; font-weight: 600; color: #1a1a1a; padding-top: 2px; }
+        .timeline-location { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
+        .timeline-location a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
+        .timeline-district { font-weight: 400; color: #aaa; }
+        .timeline-body p { font-size: 14px; color: #444; line-height: 1.75; margin: 0; }
+
+        /* Leaflet marker numbers */
+        .num-marker {
+            width: 26px; height: 26px; border-radius: 50%;
+            background: #1a1a1a; color: white;
+            font-size: 11px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <script src="navbar.js"></script>
+
+    <div class="about-page narrative-page">
+
+        <div class="narrative-switcher">
+            <button class="narrative-tab active" data-narrative="timeline">I. Historical Timeline</button>
+            <button class="narrative-tab" data-narrative="miraflores">II. Cinematic Miraflores</button>
+            <button class="narrative-tab" data-narrative="sanisidro">III. San Isidro</button>
+            <button class="narrative-tab" data-narrative="callao">IV. Callao &amp; La Punta</button>
+        </div>
+
+
+        <!-- ══ I. HISTORICAL TIMELINE ══ -->
+        <div class="narrative-content active" id="narrative-timeline">
+            <div class="itinerary-grid">
+                <div class="itinerary-text">
+                    <div class="narrative-intro">
+                        <h1>Lima on Screen</h1>
+                        <p class="narrative-subtitle">A Century of Urban Cinema, 1938–2024</p>
+                        <p>This narrative traces how Lima has been seen, imagined, and constructed through cinema over nearly ninety years. It moves between two parallel timelines: the history of the films themselves, and the history of the places they chose to inhabit. Together they tell a story about a city in constant negotiation with its own image — what it wants to be, what it cannot escape, and what it films when it wants to remember.</p>
+                    </div>
+
+                    <div class="narrative-chapter">
+                        <div class="chapter-label">Chapter I</div>
+                        <h2>The City Before the Conflict <span class="chapter-dates">1938–1968</span></h2>
+                        <p class="chapter-intro">Before the years of internal crisis, Lima's cinema looked outward and upward — to the republican grandeur of its historic centre, to the comedy of its streets, to a city that believed in its own modernity.</p>
+                        <img class="loc-photo" src="images/plaza-mayor-lima.webp" alt="San Martin Square" loading="lazy" decoding="async">
+                        <p class="loc-photo-caption">San Martin Square — Centro Histórico</p>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1938</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=San%20Martin%20Square">San Martin Square</a> — <span class="timeline-district">Centro Histórico</span></div>
+                                <p><em>Palomillas del Rímac</em> opens in Plaza San Martín. One of the earliest surviving examples of Peruvian fiction cinema shot on location in the city.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1968</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=San%20Martin%20Square">San Martin Square</a> · <a href="location.html?name=Jir%C3%B3n%20de%20la%20Uni%C3%B3n">Jirón de la Unión</a></div>
+                                <p><em>Las Sicodélicas</em> takes to the streets of downtown Lima during a period of rapid social transformation. The Lima of 1968 still gravitates toward the historic downtown, not yet the southern districts that will dominate later decades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="narrative-transition"><p>The decade that follows marks a fracture. Peru enters a period of political upheaval — the 1968 military coup, agrarian reform, and the slow build of an internal conflict. Cinema turns darker. The city it films begins to show its wounds.</p></div>
+
+                    <div class="narrative-chapter">
+                        <div class="chapter-label">Chapter II</div>
+                        <h2>Children of the Crisis <span class="chapter-dates">1984–1991</span></h2>
+                        <p class="chapter-intro">Grupo Chaski documents the lives of those the city has abandoned. The port, the river, the market — the spaces of labour and survival — move to the centre of the frame.</p>
+                        <img class="loc-photo" src="images/jiron-de-la-union.webp" alt="Jirón de la Unión" loading="lazy" decoding="async">
+                        <p class="loc-photo-caption">Jirón de la Unión — Centro Histórico</p>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1984</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Magdalena%20Market%20-%20Mercado%20de%20Magdalena">Magdalena Market</a> · <a href="location.html?name=Jir%C3%B3n%20de%20la%20Uni%C3%B3n">Jirón de la Unión</a> · <a href="location.html?name=Rio%20Rimac%20-%20Rimac%20River">Río Rímac</a></div>
+                                <p>Grupo Chaski releases <em>Gregorio</em>, a neorealist portrait of a child migrant navigating Lima's streets. Location as document.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1989</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Magdalena%20Market%20-%20Mercado%20de%20Magdalena">Magdalena Market</a> · <a href="location.html?name=Jir%C3%B3n%20de%20la%20Uni%C3%B3n">Jirón de la Unión</a> · <a href="location.html?name=Rio%20Rimac%20-%20Rimac%20River">Río Rímac</a></div>
+                                <p>Grupo Chaski returns with <em>Juliana</em>. The same locations reappear — deliberately: these spaces have not changed because the conditions that produce them have not changed. Cinema as witness.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1990</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=San%20Martin%20Square">San Martin Square</a> · <a href="location.html?name=Rio%20Rimac%20-%20Rimac%20River">Río Rímac</a></div>
+                                <p>Lombardi's <em>Caídos del Cielo</em> weaves three stories of crisis-era Lima. The city has not moved; its meaning has been transformed.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1991</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Muelle%20Sur%20del%20Callao">Muelle Sur del Callao</a> · <a href="location.html?name=Isla%20El%20Front%C3%B3n">Isla El Frontón</a></div>
+                                <p><em>Alias "La Gringa"</em> uses the port and the decommissioned prison island of El Frontón: the working waterfront and the site of a massacre the country has not fully reckoned with.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="narrative-transition"><p>July 16, 1992. A car bomb on Calle Tarata kills 25 people. The violence of the internal conflict has reached the city's most protected districts. Cinema begins to look back — and, tentatively, forward.</p></div>
+
+                    <div class="narrative-chapter">
+                        <div class="chapter-label">Chapter III</div>
+                        <h2>Reckoning and Recovery <span class="chapter-dates">1993–2002</span></h2>
+                        <img class="loc-photo" src="images/lima-shore.webp" alt="Malecón de Miraflores" loading="lazy" decoding="async">
+                        <p class="loc-photo-caption">Malecón de Miraflores</p>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1993</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a> · <a href="location.html?name=Avenida%20Brasil">Avenida Brasil</a></div>
+                                <p>Honigmann's <em>Metal y Melancolía</em> follows Lima's informal taxi drivers at night — beauty and exhaustion in equal measure.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">1998</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Lima%20Golf%20Club">Lima Golf Club</a></div>
+                                <p>Lombardi's <em>No Se Lo Digas a Nadie</em>. Larcomar — opened the same year — makes its first cinematic appearance. Lima's most exclusive spaces reveal what they conceal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="narrative-transition"><p>The 2000s bring sustained economic expansion. Cinema follows, producing films simultaneously more commercially sophisticated and more socially self-aware.</p></div>
+
+                    <div class="narrative-chapter">
+                        <div class="chapter-label">Chapter IV</div>
+                        <h2>The City of Aspiration <span class="chapter-dates">2007–2024</span></h2>
+                        <img class="loc-photo" src="images/calle-tarata.webp" alt="Calle Tarata" loading="lazy" decoding="async">
+                        <p class="loc-photo-caption">Calle Tarata — Miraflores</p>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">2009</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Calle%20Tarata">Calle Tarata</a></div>
+                                <p>Aguilar's <em>Tarata</em> reconstructs the 1992 bombing on the street that bears its name. The film refuses to let the city forget.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">2013</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Parque%20John%20F.%20Kennedy">Parque Kennedy</a> · <a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Playa%20Agua%20Dulce">Playa Agua Dulce</a></div>
+                                <p><em>¡Asu Mare!</em> moves across Lima's class geography — from the public beach to the Golf Club — a film about crossing the city's invisible boundaries.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">2017</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Residencial%20San%20Felipe">Residencial San Felipe</a> · <a href="location.html?name=Universidad%20Nacional%20Mayor%20de%20San%20Marcos">UNMSM</a></div>
+                                <p><em>La Hora Final</em> reconstructs the DINCOTE operations. Lima's urban fabric as evidence.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-body">
+                                <div class="timeline-location"><a href="location.html?name=Estadio%20Lolo%20Fernandez">Estadio Lolo Fernández</a></div>
+                                <p><em>Esta es la U</em> marks the centenary of Universitario de Deportes — collective memory as documentary.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAP I -->
+                <div class="itinerary-map-col">
+                    <div id="map-timeline" class="itinerary-map"></div>
+                    <p class="map-legend">Key locations across Lima — all districts represented in the timeline.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ II. CINEMATIC MIRAFLORES ══ -->
+        <div class="narrative-content" id="narrative-miraflores">
+            <div class="itinerary-grid">
+                <div class="itinerary-text">
+                    <div class="narrative-intro">
+                        <h1>Itinerary 1: A Walking Tour of Cinematic Miraflores</h1>
+                        <p class="narrative-subtitle">A walking route through Miraflores</p>
+                        <div class="itinerary-meta"><span>🚶 On foot</span><span>🗺 Miraflores</span><span>📍 5 stops</span></div>
+                    </div>
+
+                    <p>For the first itinerary, we propose a walking tour through Miraflores, one of Lima’s most recognizable and tourist-oriented districts. The starting point is <a href="location.html?name=Parque%20John%20F.%20Kennedy">Kennedy Park</a>, located in the center of the district and surrounded by restaurants, shops, cultural spaces, and intense urban activity. Its constant movement and role as a meeting place make it an appropriate setting for representing everyday life in the city.</p>
+
+                    <p>This location is connected with <em>Lima 13</em>, directed by Fabrizio Aguilar, and with <em>Gregorio</em>, a Grupo Chaski production that presents Lima through the experience of a migrant child who begins working in its streets. In this context, Kennedy Park allows visitors to observe the contrast between the tourist image of Miraflores and the different social realities that coexist in its public spaces.</p>
+
+                    <img class="loc-photo" src="images/calle-tarata.webp" alt="Calle Tarata" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Calle%20Tarata">Calle Tarata</a> — Miraflores</p>
+
+                    <p>From the park, the route continues toward Tarata Street, located only a few minutes away and very close to Larco Avenue. This stop introduces a historical and memorial dimension to the itinerary. The street acquired particular importance after the bombing that occurred on July 16, 1992, during the period of internal violence in Peru. After the attack, the area was rebuilt and transformed into a pedestrian, commercial, and tourist space, becoming a symbol of urban recovery.</p>
+
+                    <p>The cinematic connection of this location can be found in <em>Tarata</em>, a film by Fabrizio Aguilar that reconstructs the context of the bombing through the experience of a family from Lima. In the film, the street is not merely a geographical reference but the historical and symbolic center of the narrative. This stop encourages reflection on memory, fear, and the effects of political violence on everyday life.</p>
+
+                    <img class="loc-photo" src="images/avenida-larco.webp" alt="Avenida Larco" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Avenida%20Larco">Avenida Larco</a> — Miraflores</p>
+
+                    <p>After visiting Tarata Street, the walk continues along Larco Avenue, one of the main commercial and tourist thoroughfares in Miraflores. The avenue connects the district’s traditional center, where Kennedy Park and the Municipality of Miraflores are located, with the coastal area and the Malecón de la Reserva. Along the way, visitors can observe hotels, restaurants, cafés, shops, and entertainment venues that reflect the urban development of Miraflores during the twentieth century.</p>
+
+                    <p>The avenue is directly connected with <em>Avenida Larco, la película</em>, a documentary dedicated to the history of the Peruvian rock band Frágil and one of its best-known songs. It can also be associated with <em>Gregorio</em>, since the film presents the streets of Miraflores as spaces of movement, child labor, and social contrast. Larco Avenue can therefore be observed both as a symbol of Lima’s urban culture and through the experience of those who travel through the city in order to survive.</p>
+
+                    <img class="loc-photo" src="images/lima-shore.webp" alt="Malecón de Miraflores" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a></p>
+
+                    <p>Following the avenue toward the ocean, the route reaches the Miraflores Boardwalk, a corridor of parks and pedestrian paths built along the cliffs of the Costa Verde. From this point, visitors can observe the Pacific Ocean, the beaches, coastal traffic, and some of Lima’s most representative landscapes. The boardwalk allows the route to move away from the commercial activity of central Miraflores toward a more open and contemplative image of the city.</p>
+
+                    <p>This location is connected with <em>Caídos del cielo</em>, a film by Francisco Lombardi that presents a Lima marked by loneliness, inequality, and the lives of characters who inhabit different parts of the capital. It is also associated with <em>Metal y melancolía</em>, a documentary by Heddy Honigmann that follows several taxi drivers in Lima and portrays the city through their journeys, financial difficulties, and personal experiences. In both productions, the urban landscape is an essential part of the story and reveals a version of Lima that goes beyond its tourist image.</p>
+
+                    <p>To conclude the itinerary, visitors can return toward the center of Miraflores along Larco Avenue and continue to <a href="location.html?name=Calle%20de%20las%20Pizzas">Pizza Street</a>, officially known as San Ramón Boulevard. This pedestrian area is located only a few meters from Kennedy Park and is known for its restaurants, cafés, bars, and entertainment venues. During the 1970s and 1980s, it became especially popular because of its concentration of pizzerias and intense nightlife. It was later renovated and transformed into a more organized, safer, and pedestrian-friendly boulevard.</p>
+
+                    <p>Pizza Street is connected with <em>Arde Lima</em>, a documentary directed by Alberto Castro that portrays Lima’s drag scene and uses different urban and nightlife spaces as part of its visual landscape. This final stop therefore concludes the itinerary by presenting another side of Miraflores: its nightlife, entertainment, diversity, and forms of social life, which also contribute to Lima’s audiovisual identity.</p>
+
+                    <p>As a whole, the itinerary connects five different images of Miraflores: the public and social space of Kennedy Park, the historical memory of Tarata Street, the commercial movement of Larco Avenue, the coastal landscape of the boardwalk, and the nightlife of Pizza Street. Through these locations and films, visitors can observe how Peruvian cinema has represented the district from social, historical, cultural, and urban perspectives.</p>
+                </div>
+
+                <!-- MAP II -->
+                <div class="itinerary-map-col">
+                    <div id="map-miraflores" class="itinerary-map"></div>
+                    <p class="map-legend">
+                        <strong>Route:</strong>
+                        <a href="location.html?name=Parque%20John%20F.%20Kennedy">1. Parque Kennedy</a> →
+                        <a href="location.html?name=Calle%20Tarata">2. Calle Tarata</a> →
+                        <a href="location.html?name=Avenida%20Larco">3. Avenida Larco</a> →
+                        <a href="location.html?name=Malecon%20de%20Miraflores">4. Malecón</a> →
+                        <a href="location.html?name=Calle%20de%20las%20Pizzas">5. Calle de las Pizzas</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ III. SAN ISIDRO ══ -->
+        <div class="narrative-content" id="narrative-sanisidro">
+            <div class="itinerary-grid">
+                <div class="itinerary-text">
+                    <div class="narrative-intro">
+                        <h1>Itinerary 2: Residential and Cinematic San Isidro</h1>
+                        <p class="narrative-subtitle">Natural heritage, elite architecture and community life</p>
+                        <div class="itinerary-meta"><span>🚶 Walking itinerary</span><span>🗺 San Isidro</span><span>📍 3 stops</span></div>
+                    </div>
+
+                    <p>The second itinerary takes place in San Isidro, one of Lima’s most representative residential, historical, and financial districts. Unlike the more tourist-oriented circuit of Miraflores, this route introduces visitors to spaces connected with urban memory, residential architecture, and the different ways of life that have developed in the district. The itinerary includes three main locations: El Olivar Forest, Country Club Lima Hotel, and the Santa Cruz Residential Complex.</p>
+
+                    <img class="loc-photo" src="images/bosque-el-olivar.webp" alt="Bosque El Olivar" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Bosque%20El%20Olivar">Bosque El Olivar</a> — San Isidro</p>
+
+                    <p>The route can begin at El Olivar Forest, one of the most important natural and historical spaces in San Isidro. The forest preserves ancient olive trees, pedestrian paths, gardens, an artificial lagoon, and rest areas. Its presence within a residential and business district creates a strong contrast between nature and Lima’s urban growth.</p>
+
+                    <p>El Olivar Forest is connected with <em>La última tarde</em>, directed by Joel Calero. Its paths, old trees, and quiet surrounding streets contribute to an intimate and contemplative image of the city. This first stop therefore introduces a cinematic representation of San Isidro associated with memory, the passage of time, and personal relationships.</p>
+
+                    <img class="loc-photo" src="images/country_club_lima_hotel.webp" alt="Country Club Lima Hotel" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Country%20Club%20Lima%20Hotel">Country Club Lima Hotel</a> — San Isidro</p>
+
+                    <p>From El Olivar, the itinerary can continue toward Country Club Lima Hotel, one of the most elegant historical buildings in San Isidro. It is located opposite the Lima Golf Club area and was inaugurated in 1927. Its Californian Colonial-style architecture includes arches, balconies, interior courtyards, gardens, large halls, and ceremonial spaces.</p>
+
+                    <p>For several decades, the Country Club was an important meeting place for members of Lima society, diplomats, politicians, artists, and international visitors. Today, it operates as a luxury hotel and preserves a collection of viceregal art, as well as much of its original architectural character.</p>
+
+                    <p>Country Club Lima Hotel is connected with <em>Un mundo para Julius</em>, the film adaptation of Alfredo Bryce Echenique’s novel, directed by Rossana Díaz Costa. The elegance of the building, its gardens, and its interiors visually represent the environment of Lima’s upper class portrayed in the story. This stop therefore offers a critical perspective on luxury, social inequality, and the lifestyles of Lima’s privileged classes.</p>
+
+                    <img class="loc-photo" src="images/residencial_santa_cruz.webp" alt="Santa Cruz Residential Complex" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Residencial%20Santa%20Cruz">Santa Cruz Residential Complex</a> — San Isidro</p>
+
+                    <p>Finally, the itinerary can continue toward the <a href="location.html?name=Residencial%20Santa%20Cruz">Santa Cruz Residential Complex</a>, a housing development built during the 1960s. Its architecture follows the principles of the modern movement and is characterized by residential blocks, elevated corridors, exterior staircases, courtyards, gardens, and shared spaces.</p>
+
+                    <p>The Santa Cruz Residential Complex presents a different image of San Isidro. Instead of large hotels, office buildings, or private residences, this stop shows a multifamily housing project designed to encourage natural lighting, pedestrian circulation, and community life. Its plazas, gardens, and interior passageways continue to function as meeting spaces for residents.</p>
+
+                    <p>The Santa Cruz Residential Complex is connected with <em>Gen Hi8</em>. Its modernist architecture and the atmosphere it preserves from the second half of the twentieth century make it an appropriate space for representing family life, childhood, community, and Lima’s urban memory.</p>
+
+                    <p>As a whole, the itinerary presents three different images of San Isidro. El Olivar Forest, connected with <em>La última tarde</em>, shows the historical, natural, and contemplative side of the district. Country Club Lima Hotel, associated with <em>Un mundo para Julius</em>, presents the elegant and exclusive world of Lima’s upper class. Finally, the Santa Cruz Residential Complex, connected with <em>Gen Hi8</em>, represents modern architecture and community life.</p>
+
+                    <p>In this way, the itinerary shows that San Isidro is not only a financial district but also a cinematic space composed of natural areas, historical buildings, and residential developments that reflect different stages of Lima’s urban and social transformation.</p>
+                </div>
+
+                <!-- MAP III -->
+                <div class="itinerary-map-col">
+                    <div id="map-sanisidro" class="itinerary-map"></div>
+                    <p class="map-legend">
+                        <strong>Route:</strong>
+                        <a href="location.html?name=Bosque%20El%20Olivar">1. Bosque El Olivar</a> →
+                        <a href="location.html?name=Country%20Club%20Lima%20Hotel">2. Country Club</a> →
+                        <a href="location.html?name=Residencial%20Santa%20Cruz">3. Santa Cruz</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ══ IV. CALLAO & LA PUNTA ══ -->
+        <div class="narrative-content" id="narrative-callao">
+            <div class="itinerary-grid">
+                <div class="itinerary-text">
+                    <div class="narrative-intro">
+                        <h1>Itinerary 3: From Jorge Chávez Airport to Cinematic Callao</h1>
+                        <p class="narrative-subtitle">From modernisation and neighbourhood memory to maritime Callao</p>
+                        <div class="itinerary-meta"><span>🚕 Taxi + bus / boat</span><span>🗺 Callao · La Punta · Islands</span><span>📍 4 main stops</span></div>
+                    </div>
+
+                    <img class="loc-photo" src="images/jorge-chavez-international-airport-location.webp" alt="Jorge Chávez International Airport" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport">Jorge Chávez International Airport</a> — Callao</p>
+
+                    <p>The route can begin at <a href="location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport">Jorge Chávez International Airport</a>, Peru’s main airport and the entry point to Lima for many visitors. Although commercial operations now take place in the new terminal, the former airport building was one of the main symbols of Lima’s modernization during the second half of the twentieth century.</p>
+
+                    <p>This location appears in <em>El embajador y yo</em>, a Peruvian comedy starring Kiko Ledgard, Patricia Aspíllaga, and Saby Kamalich. The film includes sequences recorded in the former terminal of Jorge Chávez Airport. Its arrival halls, large windows, boarding stairs, and exterior platforms projected a modern and cosmopolitan image of the city during the 1960s. The airport therefore provides an appropriate starting point for the route, connecting the arrival in Lima with the international travel, diplomatic missions, and intrigue that form part of the film.</p>
+
+                    <p>From the airport, visitors are advised to take a taxi to the Callao Monumental area, a tourist circuit renovated approximately ten years ago that brings together urban art, historic mansions, Republican-era balconies, historical squares, and streets connected with the maritime memory of Peru’s main port.</p>
+
+                    <p>The film connected with this stop is <em>Viejos amigos</em> (2014), directed by Fernando Villarán. The story follows three elderly men who steal the urn containing their friend’s ashes and take it through his old neighborhood in Callao. Their objective is to fulfill his final wish by scattering the ashes in the sea near his hometown. Callao Monumental therefore functions as an ideal entrance into the world of the film, with its historic streets, local squares, neighborhood memory, and strong emotional connection with the port.</p>
+
+                    <p>The itinerary can then continue toward La Punta, a coastal district that changes the tone of the route. To reach it, visitors can take bus line 1133 from Plaza Grau in Callao, get off at Plaza Matriz in La Punta, and walk directly to Cantolao Beach.</p>
+
+                    <p>A large part of <em>Viaje a Tombuctú</em> (2014), directed by Rossana Díaz Costa, was filmed at this beach. The film tells the story of two teenagers growing up during the period of political violence and economic crisis in Peru in the 1980s. At this stop, the focus moves away from the urban and monumental areas of Callao toward a more intimate, coastal, and nostalgic image associated with adolescence, family memory, and the passage of time.</p>
+
+                    <p>Cantolao is also connected with <em>Viejos amigos</em>, maintaining a link with the first part of the route. Its pebble coastline, relatively calm waters, and views of the islands show the historical and everyday relationship between the people of Callao and the Pacific Ocean.</p>
+
+                    <img class="loc-photo" src="images/el-fronton.webp" alt="Isla El Frontón" loading="lazy" decoding="async">
+                    <p class="loc-photo-caption"><a href="location.html?name=Isla%20El%20Front%C3%B3n">Isla El Frontón</a> — Callao</p>
+
+                    <p>Finally, the route can end with a view of the islands of Callao. Boats depart from Cantolao Beach and offer tours around the bay, allowing visitors to observe locations such as San Lorenzo Island and El Frontón Island. However, direct access to El Frontón is restricted, so disembarking on the island is not always possible.</p>
+
+                    <p>El Frontón is the main location of <em>Alias “La Gringa”</em> (1991). The film tells the story of a daring fugitive who voluntarily returns to the feared prison on El Frontón Island to rescue a professor who previously saved his life. Surrounded by the sea and marked by the remains of its former prison infrastructure, the island becomes the central and oppressive setting of the story.</p>
+
+                    <p>The itinerary therefore connects four different cinematic images of Callao: the modernity and international travel represented by Jorge Chávez Airport in <em>El embajador y yo</em>; the streets, neighborhood memory, and port landscape of Callao Monumental in <em>Viejos amigos</em>; the nostalgic coastline of Cantolao in <em>Viaje a Tombuctú</em>; and the historical and prison-related isolation of El Frontón Island in <em>Alias “La Gringa”</em>.</p>
+                </div>
+
+                <!-- MAP IV -->
+                <div class="itinerary-map-col">
+                    <div id="map-callao" class="itinerary-map"></div>
+                    <p class="map-legend">
+                        <strong>Route:</strong>
+                        <a href="location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport">Jorge Chávez Airport</a> →
+                        <a href="location.html?name=Monumental%20Callao">Callao Monumental</a> →
+                        <a href="location.html?name=Playa%20Cantolao">La Punta / Cantolao</a> →
+                        <a href="location.html?name=Isla%20El%20Front%C3%B3n">Islands of Callao / El Frontón</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end narrative-page -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // ── tab switcher ──────────────────────────────────────────────────────
+    const maps = {};
+
+    document.querySelectorAll('.narrative-tab').forEach(tab => {
+        tab.addEventListener('click', function () {
+            document.querySelectorAll('.narrative-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.narrative-content').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            const id = 'narrative-' + this.dataset.narrative;
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // invalidate map size after display: block
+            const mapKey = this.dataset.narrative;
+            if (maps[mapKey]) setTimeout(() => maps[mapKey].invalidateSize(), 100);
+        });
+    });
+
+    // ── shared tile layer factory ─────────────────────────────────────────
+    function tileLayer() {
+        return L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap contributors, © CARTO',
+            maxZoom: 18
+        });
+    }
+
+    // ── numbered marker factory ───────────────────────────────────────────
+    function numIcon(n, color) {
+        color = color || '#1a1a1a';
+        return L.divIcon({
+            className: '',
+            html: `<div class="num-marker" style="background:${color}">${n}</div>`,
+            iconSize: [26, 26],
+            iconAnchor: [13, 13],
+            popupAnchor: [0, -14]
+        });
+    }
+
+    // ── MAP I: TIMELINE (key locations across all chapters) ───────────────
+    (function () {
+        const m = L.map('map-timeline').setView([-12.08, -77.05], 12);
+        tileLayer().addTo(m);
+        maps['timeline'] = m;
+
+        const pts = [
+            { name: 'San Martin Square',   lat: -12.0508, lng: -77.0345, n: 1 },
+            { name: 'Jirón de la Unión',   lat: -12.0496, lng: -77.0341, n: 2 },
+            { name: 'Río Rímac',           lat: -12.0439, lng: -77.0210, n: 3 },
+            { name: 'Magdalena Market',    lat: -12.0928, lng: -77.0655, n: 4 },
+            { name: 'Malecón de Miraflores', lat: -12.1243, lng: -77.0384, n: 5 },
+            { name: 'Calle Tarata',        lat: -12.1235, lng: -77.0288, n: 6 },
+            { name: 'Larcomar',            lat: -12.1319, lng: -77.0305, n: 7 },
+            { name: 'Muelle Sur del Callao', lat: -12.0554, lng: -77.1506, n: 8 },
+            { name: 'Isla El Frontón',     lat: -12.1165, lng: -77.1814, n: 9 },
+        ];
+
+        pts.forEach(p => {
+            L.marker([p.lat, p.lng], { icon: numIcon(p.n) })
+              .addTo(m)
+              .bindPopup(`<strong>${p.name}</strong>`);
+        });
+    })();
+
+    // ── MAP II: MIRAFLORES ────────────────────────────────────────────────
+    (function () {
+        const stops = [
+            { name: 'Parque Kennedy',        lat: -12.1217, lng: -77.0304, n: 1, url: 'location.html?name=Parque%20John%20F.%20Kennedy' },
+            { name: 'Calle Tarata',          lat: -12.1235, lng: -77.0288, n: 2, url: 'location.html?name=Calle%20Tarata' },
+            { name: 'Avenida Larco',         lat: -12.1260, lng: -77.0304, n: 3, url: 'location.html?name=Avenida%20Larco' },
+            { name: 'Malecón de Miraflores', lat: -12.1243, lng: -77.0384, n: 4, url: 'location.html?name=Malecon%20de%20Miraflores' },
+            { name: 'Calle de las Pizzas',   lat: -12.1209, lng: -77.0300, n: 5, url: 'location.html?name=Calle%20de%20las%20Pizzas' },
+        ];
+
+        const m = L.map('map-miraflores').setView([-12.126, -77.032], 15);
+        tileLayer().addTo(m);
+        maps['miraflores'] = m;
+
+        const latlngs = stops.map(s => [s.lat, s.lng]);
+        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
+
+        stops.forEach(s => {
+            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
+              .addTo(m)
+              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
+        });
+    })();
+
+    // ── MAP III: SAN ISIDRO ───────────────────────────────────────────────
+    (function () {
+        const stops = [
+            { name: 'Bosque El Olivar', lat: -12.1021, lng: -77.0352, n: 1, url: 'location.html?name=Bosque%20El%20Olivar' },
+            { name: 'Country Club Lima Hotel', lat: -12.0980, lng: -77.0490, n: 2, url: 'location.html?name=Country%20Club%20Lima%20Hotel' },
+            { name: 'Santa Cruz Residential Complex', lat: -12.1097, lng: -77.0495, n: 3, url: 'location.html?name=Residencial%20Santa%20Cruz' },
+        ];
+
+        const m = L.map('map-sanisidro').setView([-12.105, -77.037], 15);
+        tileLayer().addTo(m);
+        maps['sanisidro'] = m;
+
+        const latlngs = stops.map(s => [s.lat, s.lng]);
+        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
+
+        stops.forEach(s => {
+            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
+              .addTo(m)
+              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
+        });
+    })();
+
+    // ── MAP IV: CALLAO & LA PUNTA ─────────────────────────────────────────
+    (function () {
+        const stops = [
+            { name: 'Jorge Chávez International Airport', lat: -12.0198, lng: -77.1087, n: 1, url: 'location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport' },
+            { name: 'Callao Monumental', lat: -12.0598, lng: -77.1385, n: 2, url: 'location.html?name=Monumental%20Callao' },
+            { name: 'La Punta — Cantolao Beach', lat: -12.0763, lng: -77.1630, n: 3, url: 'location.html?name=Playa%20Cantolao' },
+            { name: 'Isla El Frontón',   lat: -12.1165, lng: -77.1814, n: 4, url: 'location.html?name=Isla%20El%20Front%C3%B3n' },
+        ];
+
+        const m = L.map('map-callao').setView([-12.067, -77.145], 12);
+        tileLayer().addTo(m);
+        maps['callao'] = m;
+
+        const latlngs = stops.map(s => [s.lat, s.lng]);
+        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
+
+        stops.forEach(s => {
+            const popup = s.url
+                ? `<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`
+                : `<strong>${s.name}</strong>`;
+            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
+              .addTo(m)
+              .bindPopup(popup);
+        });
+    })();
+    </script>
+</body>
+</html>
