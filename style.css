@@ -491,30 +491,70 @@ hr {
 }
 
 .hero {
-    height: 100vh;
+    position: relative;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
+        90deg,
+        rgba(8, 12, 15, 0.88) 0%,
+        rgba(8, 12, 15, 0.7) 48%,
+        rgba(8, 12, 15, 0.24) 100%
     ), url('images/lima-shore.webp');
     background-size: cover;
     background-position: center;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    padding: clamp(110px, 14vh, 160px) clamp(24px, 8vw, 120px) clamp(80px, 10vh, 110px);
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: clamp(24px, 8vw, 120px);
+    right: clamp(24px, 8vw, 120px);
+    bottom: 48px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(780px, 100%);
+}
+
+.hero-eyebrow {
+    margin: 0 0 18px;
+    font-size: 11px !important;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72) !important;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 54px;
+    font-size: clamp(54px, 7.4vw, 104px);
     font-weight: 900;
-    letter-spacing: -0.01em;
-    line-height: 1.1;
-    margin-bottom: 16px;
+    letter-spacing: -0.045em;
+    line-height: 0.86;
+    margin: 0 0 26px;
     color: white;
     text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero h1 span {
+    display: inline-block;
+    max-width: 780px;
+    margin-top: 13px;
+    font-family: sans-serif;
+    font-size: clamp(18px, 2.2vw, 30px);
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    line-height: 1.15;
 }
 
 .hero p {
@@ -524,18 +564,24 @@ hr {
 }
 
 .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    border: 1px solid #1a1a1a;
-    background: #1a1a1a;
-    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 2px;
+    border: 1px solid white;
+    background: white;
+    color: #161616;
     cursor: pointer;
-    transition: all 0.2s ease;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .hero-cta:hover {
-    background: #333;
+    color: white;
+    background: transparent;
 }
 
 .movies-list {
@@ -932,21 +978,21 @@ hr {
 /* ── Hero intro (index.html) ──────────────────────────────────────────────── */
 
 .hero-sub {
-    font-size: 14px;
-    letter-spacing: 0.06em;
+    font-size: 12px !important;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.7);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem !important;
     text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
 .hero-intro {
-    max-width: 640px;
-    font-size: 15px;
-    line-height: 1.85;
+    max-width: 690px;
+    font-size: 15px !important;
+    line-height: 1.75;
     color: rgba(255,255,255,0.92);
-    margin: 0 auto 2rem;
-    text-align: justify;
+    margin: 0 0 2rem !important;
+    text-align: left;
     text-shadow: 0 1px 8px rgba(0,0,0,0.55), 0 2px 24px rgba(0,0,0,0.35);
 }
 
@@ -954,7 +1000,7 @@ hr {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-link {
@@ -969,6 +1015,282 @@ hr {
 .hero-link:hover {
     color: white;
     border-color: white;
+}
+
+.hero-scroll {
+    position: absolute;
+    z-index: 1;
+    right: clamp(24px, 8vw, 120px);
+    bottom: 61px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-scroll:hover { color: white; }
+
+/* ── Home: cinematic itineraries ───────────────────────────────────────── */
+
+.home-itineraries {
+    padding: clamp(72px, 9vw, 128px) clamp(24px, 8vw, 120px);
+    color: #1a1a1a;
+    background: #f5f4f0;
+}
+
+.home-section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: clamp(32px, 7vw, 110px);
+    align-items: end;
+    margin-bottom: clamp(36px, 5vw, 64px);
+    padding-bottom: 24px;
+    border-bottom: 1px solid #cbc8c0;
+}
+
+.section-kicker {
+    margin: 0 0 12px;
+    color: #8c332b;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.home-section-heading h2,
+.locations-heading h2 {
+    margin: 0;
+    color: #181818;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 4.2vw, 62px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+.home-section-heading > p {
+    max-width: 500px;
+    margin: 0;
+    color: #5e5b55;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.itinerary-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 2.4vw, 34px);
+}
+
+.itinerary-preview-card {
+    min-width: 0;
+    color: inherit;
+    background: #fff;
+    border: 1px solid #d8d5ce;
+    text-decoration: none;
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.itinerary-preview-card:hover {
+    color: inherit;
+    border-color: #8c332b;
+    box-shadow: 0 18px 44px rgba(24, 22, 18, 0.11);
+    transform: translateY(-7px);
+}
+
+.itinerary-preview-image {
+    position: relative;
+    height: clamp(220px, 27vw, 390px);
+    overflow: hidden;
+    background: #ddd9d0;
+}
+
+.itinerary-preview-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 8, 8, 0.42), transparent 48%);
+    pointer-events: none;
+}
+
+.itinerary-preview-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: saturate(0.78) contrast(1.04);
+    transition: transform 650ms cubic-bezier(.2,.7,.2,1), filter 350ms ease;
+}
+
+.itinerary-preview-card:hover .itinerary-preview-image img {
+    filter: saturate(1) contrast(1.02);
+    transform: scale(1.045);
+}
+
+.itinerary-number {
+    position: absolute;
+    z-index: 1;
+    left: 18px;
+    bottom: 15px;
+    color: white;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.itinerary-preview-copy { padding: 23px 22px 25px; }
+
+.itinerary-preview-meta {
+    min-height: 2.8em;
+    margin: 0 0 9px;
+    color: #8c332b;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.itinerary-preview-copy h3 {
+    min-height: 2.45em;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(21px, 2vw, 29px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+.itinerary-preview-copy > p:not(.itinerary-preview-meta) {
+    min-height: 7em;
+    margin: 0 0 20px;
+    color: #66625c;
+    font-size: 13px;
+    line-height: 1.72;
+}
+
+.itinerary-preview-link,
+.all-narratives-link {
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.itinerary-preview-link {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #e4e1da;
+}
+
+.all-narratives-link {
+    display: table;
+    margin: 38px 0 0 auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+}
+
+.all-narratives-link:hover {
+    color: #8c332b;
+    border-color: #8c332b;
+}
+
+/* ── Home: locations introduction ──────────────────────────────────────── */
+
+.locations-section {
+    scroll-margin-top: 64px;
+    background: white;
+}
+
+.locations-heading {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 1.1fr);
+    column-gap: clamp(36px, 8vw, 120px);
+    padding: clamp(60px, 8vw, 100px) clamp(24px, 8vw, 120px) clamp(34px, 4vw, 52px);
+    border-top: 1px solid #dedbd4;
+}
+
+.locations-heading .section-kicker,
+.locations-heading h2 { grid-column: 1; }
+
+.locations-heading > p:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+    max-width: 460px;
+    margin: 0;
+    color: #66625c;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+    .home-section-heading,
+    .locations-heading { grid-template-columns: 1fr; }
+
+    .home-section-heading > p,
+    .locations-heading > p:last-child {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 18px;
+    }
+
+    .itinerary-preview-grid { grid-template-columns: 1fr; }
+
+    .itinerary-preview-card {
+        display: grid;
+        grid-template-columns: minmax(230px, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    .itinerary-preview-image {
+        height: 100%;
+        min-height: 320px;
+    }
+
+    .itinerary-preview-copy h3,
+    .itinerary-preview-copy > p:not(.itinerary-preview-meta) { min-height: 0; }
+}
+
+@media (max-width: 620px) {
+    .hero {
+        padding-inline: 22px;
+        background-image: linear-gradient(rgba(8, 12, 15, 0.74), rgba(8, 12, 15, 0.72)), url('images/lima-shore.webp');
+    }
+
+    .hero::after,
+    .hero-scroll { display: none; }
+
+    .hero h1 { font-size: clamp(48px, 15vw, 68px); }
+
+    .hero-intro {
+        font-size: 13px !important;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .home-itineraries { padding-inline: 20px; }
+    .itinerary-preview-card { display: block; }
+
+    .itinerary-preview-image {
+        height: 280px;
+        min-height: 0;
+    }
+
+    .locations-heading { padding-inline: 20px; }
 }
 
 /* ── Narratives page (itineraries.html) ───────────────────────────────────── */
