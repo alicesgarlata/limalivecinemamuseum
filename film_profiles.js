@@ -122,18 +122,6 @@ const filmProfiles = {
     "themes": "Sexual identity, homophobia, upper-class hypocrisy, family repression, religion, secrecy, and social pressure.",
     "value": "The film connects with Óvalo Gutiérrez, San Isidro, Miraflores, Lima Golf Club, and university or residential spaces associated with Lima's upper and upper-middle classes."
   },
-  "Django: La Otra Cara": {
-    "description": "Django: La Otra Cara is a Peruvian action and crime film inspired by the figure of Orlando Hernández, known as Django, a famous bank robber. The film helped establish a criminal saga within contemporary Peruvian cinema.",
-    "about": "The film follows Django's life as a criminal, lover, fugitive, and urban legend. Through robberies, betrayals, romantic relationships, and confrontations with the police, the story presents the world of crime as both dangerous and seductive. Lima appears as a city of banks, streets, prisons, and hidden networks.",
-    "themes": "Crime, robbery, masculinity, violence, love, betrayal, police pursuit, and urban myth.",
-    "value": "The film can be connected to Callao Monumental, port-related streets, closed urban spaces, and locations associated with crime, pursuit, and tension."
-  },
-  "Django: Sangre de mi sangre": {
-    "description": "Django: Sangre de mi sangre is the sequel to Django: La Otra Cara. It returns to the character of Django after years in prison and explores the possibility of redemption in a world where violence and crime continue to shape family life.",
-    "about": "After being released from prison, Django tries to rebuild his life and reconnect with his family. However, the criminal world reappears through his son, who becomes involved with dangerous people. The film turns crime into an inherited conflict, where the father's past threatens the next generation.",
-    "themes": "Crime, family, inheritance, redemption, prison, urban violence, and generational conflict.",
-    "value": "The film can be linked to Callao Monumental, urban crime spaces, enclosed streets, and locations associated with violence, pursuit, and family tension."
-  },
   "La última tarde": {
     "description": "La última tarde is an intimate Peruvian drama about memory, politics, love, and unresolved emotional wounds. The film is structured around a long conversation between two former partners who meet again after many years.",
     "about": "Laura and Ramón meet to finalize their divorce. As they walk and talk, their past as a couple and as political militants returns. Their conversation reveals old wounds, ideological differences, affection, resentment, and the traces left by Peru's political violence in their private lives.",
@@ -164,16 +152,5 @@ const filmProfiles = {
     "themes": "Youth, memory, video culture, experimentation, identity, personal relationships, urban experience, and independent filmmaking.",
     "value": "The film is useful for locations connected to alternative culture, residential streets, artistic spaces, and everyday urban Lima. Its visual language adds value to an itinerary focused on how new recording technologies changed the way the city and its younger inhabitants could be represented on screen."
   },
-  "Utopía": {
-    "description": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster.",
-    "about": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster.",
-    "themes": "Drama",
-    "value": "This title is preserved in the film catalogue. A location-specific curatorial note can be added when a documented Lima location is linked."
-  },
-  "Lady Nazca": {
-    "description": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage.",
-    "about": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage.",
-    "themes": "Drama histórico, Biográfico",
-    "value": "This title is preserved in the film catalogue. A location-specific curatorial note can be added when a documented Lima location is linked."
-  }
+
 };
