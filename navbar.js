@@ -81,7 +81,7 @@
        ===================================================== */
 
     const page = window.location.pathname.split('/').pop()
-    const mapActive = (page === 'index.html' || page === 'location.html' || page === '')
+    const locationsActive = (page === 'index.html' || page === 'location.html' || page === '')
     const narActive = (page === 'itineraries.html')
     const docActive = (page === 'documentation.html')
     const aboutActive = (page === 'disclaimer_page.html')
@@ -104,7 +104,7 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link ${mapActive ? 'active' : ''}" ${mapActive ? 'aria-current="page"' : ''} href="index.html">Map</a>
+                        <a class="nav-link ${locationsActive ? 'active' : ''}" ${locationsActive ? 'aria-current="page"' : ''} href="index.html#locations">Locations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${narActive ? 'active' : ''}" ${narActive ? 'aria-current="page"' : ''} href="itineraries.html">Narratives</a>
@@ -164,7 +164,7 @@
         function updateNav() {
             const heroStillVisible = hero.getBoundingClientRect().bottom > 0
             nav.classList.toggle('nav-transparent', heroStillVisible)
-            nav.classList.toggle('nav-hidden', !heroStillVisible)
+            nav.classList.remove('nav-hidden')
         }
 
         window.addEventListener('scroll', updateNav, { passive: true })
