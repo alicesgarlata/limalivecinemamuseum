@@ -42,6 +42,7 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.121701218863464,
     "lng": -77.0303628643947,
+    "image": "images/parque_john_f_kennedy.webp",
     "cardDescription": {
       "short": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
       "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Three Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
@@ -192,6 +193,7 @@ const locations = [
     "access": "Public cultural area — Casa Fugaz and guided tours available Tuesday to Sunday, 11:00 a.m. to 6:00 p.m.; some indoor spaces or rooftop activities may require reservation",
     "lat": -12.06085,
     "lng": -77.14645,
+    "image": "images/monumental-callao.webp",
     "cardDescription": {
       "short": "A revitalized cultural district in Callao’s historic center, known for murals, galleries, heritage buildings, music, food, and urban art.",
       "long": "Monumental Callao is not the restricted industrial port, but a cultural and artistic district in the historic center of Callao. Around Casa Fugaz, Jirón Constitución, Plaza Matriz, Plaza Gálvez, Plaza Grau, and the old Ronald Building, the area combines restored republican architecture, street art, galleries, artist studios, gastronomy, music, and community projects. It offers a visual counterpoint to Lima’s more polished districts by showing Callao as a place of memory, creativity, port identity, and urban transformation."
@@ -236,6 +238,7 @@ const locations = [
     "access": "Public beach — free entry; recommended visiting hours are 9:00 a.m. to 6:00 p.m.; access may depend on weather, sea conditions, or temporary municipal restrictions",
     "lat": -12.0681,
     "lng": -77.1626,
+    "image": "images/playa_cantolao.webp",
     "cardDescription": {
       "short": "A traditional pebble beach in La Punta, Callao, with calm waters, boats, island views, and strong maritime identity.",
       "long": "Playa Cantolao is one of Callao’s most traditional coastal spaces. Located in La Punta, near the Malecón Figueredo and the Peruvian Naval School, it is known for its pebble shoreline, calm waters, nautical atmosphere, and views of San Lorenzo and El Frontón islands. The beach connects recreation, fishing, boating, family visits, and local memory, offering a quieter and more maritime image of Callao than the industrial port or the urban center."
@@ -292,6 +295,7 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.162789787144682,
     "lng": -77.02697982995775,
+    "image": "images/playa_agua_dulce.webp",
     "cardDescription": {
       "short": "Lima's most democratic beach — packed, loud, and full of the city's summer energy.",
       "long": "Agua Dulce is where Lima goes to the beach. Unlike the private clubs of Miraflores, this public shore draws people from across the city and across economic backgrounds, making it one of the rare spaces where the social mix of Lima becomes truly visible. Its crowded weekends and limeño summer atmosphere have made it a recurring reference in films that want to show the city not as an architectural stage, but as a living, breathing community."
@@ -336,6 +340,7 @@ const locations = [
     "access": "Public — free access",
     "lat": -12.148642839701377,
     "lng": -77.02247030601738,
+    "image": "images/puente_de_los_suspiros.webp",
     "cardDescription": {
       "short": "A historic wooden bridge in Barranco — the most romantic landmark in Lima's artistic quarter.",
       "long": "Puente de Los Suspiros is one of Lima's most photographed and most storied locations. Set in the bohemian district of Barranco, surrounded by colorful colonial houses and within earshot of the ocean, it carries the weight of over a century of love stories, art, and local legend. For Peruvian cinema, it represents a Lima of beauty and melancholy — a place that feels apart from the rest of the city, suspended somewhere between past and present."
@@ -585,6 +590,7 @@ const locations = [
     "access": "Restricted — educational institution",
     "lat": -12.03668676454872,
     "lng": -77.02701301478236,
+    "image": "images/institucion_educativa_3004_espana.webp",
     "cardDescription": {
       "short": "A public school in Rímac, one of Lima's oldest districts — a setting for stories about childhood and community.",
       "long": "Schools like IE 3004 España are where Lima's public life begins for most of its residents. Located in Rímac — a district with deep roots in the city's colonial and republican history — the school represents the infrastructure of everyday urban childhood, far from elite institutions. Its appearance in film reflects a broader interest in the realities of public education and community life in Lima's older, working-class neighborhoods."
@@ -1096,6 +1102,7 @@ const locations = [
     "access": "Restricted port area — access requires authorization or an organized visit",
     "lat": -12.0554,
     "lng": -77.1506,
+    "image": "images/muelle_sur_del_callao.webp",
     "cardDescription": {
       "short": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
       "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre ."
@@ -1136,6 +1143,7 @@ const locations = [
     "access": "Public pedestrian boulevard — free access",
     "lat": -12.1209,
     "lng": -77.03,
+    "image": "images/calle_de_las_pizzas.webp",
     "cardDescription": {
       "short": "Pizza Street, officially known as San Ramón Boulevard, is one of Lima’s best-known pedestrian streets and an iconic part of the Miraflores district.",
       "long": "Pizza Street, officially known as San Ramón Boulevard, is one of Lima’s best-known pedestrian streets and an iconic part of the Miraflores district. For decades, it has been associated with nightlife, gastronomy, and tourism, serving as a meeting point for both locals and international visitors. Although its identity has evolved over time, the street remains a lively urban setting where restaurants, cafés, bars, and entertainment venues create a vibrant atmosphere. From an audiovisual perspective, it offers an authentic representation of Lima’s contemporary nightlife and commercial culture."
@@ -1180,6 +1188,7 @@ const locations = [
     "access": "Public avenue — free access",
     "lat": -12.126,
     "lng": -77.0304,
+    "image": "images/avenida_larco.webp",
     "cardDescription": {
       "short": "Larco Avenue is one of the most important commercial, urban, and tourist roads in Miraflores.",
       "long": "Larco Avenue is one of the most important commercial, urban, and tourist roads in Miraflores. It connects Kennedy Park and the Miraflores roundabout with the coastal zone and Larcomar. More than a transportation route, Larco Avenue functions as an active urban corridor where commercial activity, tourism, gastronomy, accommodation, entertainment, and public life come together."
@@ -1224,6 +1233,7 @@ const locations = [
     "access": "Operating hotel — interior access is available to guests and visitors using hotel services",
     "lat": -12.09797,
     "lng": -77.04902,
+    "image": "images/country_club_lima_hotel.webp",
     "cardDescription": {
       "short": "Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima.",
       "long": "Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima. Located in San Isidro, directly opposite Lima Golf Club, it combines luxury, architecture, art, and social history. Its colonial-style façade, spacious halls, gardens, terraces, and carefully preserved interiors make it a high-value location for audiovisual productions."
@@ -1264,6 +1274,7 @@ const locations = [
     "access": "Outdoor site — prefer daylight hours or an organized visit",
     "lat": -12.169259,
     "lng": -77.035687,
+    "image": "images/morro_solar.webp",
     "cardDescription": {
       "short": "Morro Solar is one of Lima’s most important historical, natural, scientific, and scenic locations.",
       "long": "Morro Solar is one of Lima’s most important historical, natural, scientific, and scenic locations. It is situated in Chorrillos, beside the Pacific Ocean, and rises above the southern section of Lima’s coastline. Morro Solar is also a historic battlefield, archaeological area, geological reserve, religious destination, astronomical observation point, and place of urban memory."
@@ -1304,6 +1315,7 @@ const locations = [
     "access": "Residential area — public streets and paths are accessible; respect private property",
     "lat": -12.1097,
     "lng": -77.0495,
+    "image": "images/residencial_santa_cruz.webp",
     "cardDescription": {
       "short": "The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing.",
       "long": "The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing. Located in San Isidro, it was designed during the 1960s as a residential development for middle-class families. The complex combines apartments, gardens, pedestrian circulation, community spaces, and urban planning within a single residential area."
@@ -1344,6 +1356,7 @@ const locations = [
     "access": "Residential area — public paths are accessible; respect private buildings",
     "lat": -12.09,
     "lng": -77.052,
+    "image": "images/residencial_san_felipe.webp",
     "cardDescription": {
       "short": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
       "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development."
@@ -1384,7 +1397,7 @@ const locations = [
     "access": "Public terminal areas; restricted access beyond security checkpoints",
     "lat": -12.0198,
     "lng": -77.1087,
-    "image": "images/imagenes/jorge-chavez-airport.webp",
+    "image": "images/jorge-chavez-international-airport-location.webp",
     "cardDescription": {
       "short": "Jorge Chávez International Airport is Peru’s principal air terminal and one of the country’s most important transportation infrastructures.",
       "long": "Jorge Chávez International Airport is Peru’s principal air terminal and one of the country’s most important transportation infrastructures. Located in the Constitutional Province of Callao, next to the city of Lima, it serves as the main national and international gateway to Peru. Its importance goes beyond air transportation. The airport represents travel, migration, tourism, commerce, technological modernization, and Peru’s connection with the rest of the world. Its terminals, runways, control towers, boarding areas, and constant movement of passengers and aircraft give it considerable visual and narrative value for audiovisual productions. Since June 2025, all commercial flights have operated from a new passenger terminal developed as part of the largest airport expansion project in the country’s history. This infrastructure has transformed the airport into a modern complex designed to strengthen Lima’s role as a regional air hub."
