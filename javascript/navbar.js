@@ -49,7 +49,7 @@
 
         const link = document.createElement('link')
         link.rel = 'stylesheet'
-        link.href = 'theme.css'
+        link.href = 'css/theme.css'
         link.dataset.limaThemeStyles = 'true'
         document.head.appendChild(link)
     }
@@ -69,7 +69,7 @@
         if (existing) return
 
         const script = document.createElement('script')
-        script.src = 'theme.js'
+        script.src = 'javascript/theme.js'
         script.dataset.limaThemeLoader = 'true'
         document.body.appendChild(script)
     }
