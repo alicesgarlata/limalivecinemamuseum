@@ -92,7 +92,7 @@
     nav.innerHTML = `
         <div class="container-fluid px-4">
             <a class="navbar-brand site-brand" href="index.html">
-                Lima Live Museum of Movie Locations
+                Lima Live Cinema Museum
                 <span class="site-sub d-block">Explore iconic movie locations around the world</span>
             </a>
             <button class="navbar-toggler" type="button"
@@ -131,7 +131,7 @@
     footer.className = 'site-footer'
     footer.innerHTML = `
         <div class="site-footer-inner">
-            <span class="site-footer-title">Lima Live Museum of Movie Locations</span>
+            <span class="site-footer-title">Lima Live Cinema Museum</span>
             <span class="site-footer-divider">·</span>
             <span>A project by Alice Sgarlata and Adriana Villafuerte</span>
             <span class="site-footer-divider">·</span>
