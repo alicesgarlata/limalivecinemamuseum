@@ -287,6 +287,59 @@ body[data-era] .popup-name {
     background: var(--era-surface);
 }
 
+/* Home additions inherit the selected editorial era without changing content. */
+body[data-era] :where(.home-itineraries, .locations-section) {
+    color: var(--era-ink);
+    background-color: var(--era-bg);
+    background-image: var(--era-bg-image);
+}
+
+body[data-era] :where(.home-section-heading, .locations-heading) {
+    border-color: var(--era-border);
+}
+
+body[data-era] :where(.home-section-heading h2, .locations-heading h2, .itinerary-preview-copy h3) {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] :where(.home-section-heading > p, .locations-heading > p:last-child, .itinerary-preview-copy > p:not(.itinerary-preview-meta)) {
+    color: var(--era-muted);
+}
+
+body[data-era] :where(.section-kicker, .itinerary-preview-meta) {
+    color: var(--era-accent);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .itinerary-preview-card {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+}
+
+body[data-era] .itinerary-preview-card:hover {
+    color: var(--era-ink);
+    border-color: var(--era-accent);
+}
+
+body[data-era] .itinerary-preview-image {
+    background: var(--era-surface-alt);
+    border-radius: var(--era-card-radius) var(--era-card-radius) 0 0;
+}
+
+body[data-era] .itinerary-preview-image img {
+    filter: var(--era-image-filter);
+}
+
+body[data-era] :where(.itinerary-preview-link, .all-narratives-link) {
+    color: var(--era-accent);
+    border-color: var(--era-border);
+    font-family: var(--era-font-ui);
+}
+
 /* =========================================================
    SELECTOR PANEL
    ========================================================= */
