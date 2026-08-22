@@ -502,7 +502,7 @@ hr {
         rgba(8, 12, 15, 0.88) 0%,
         rgba(8, 12, 15, 0.7) 48%,
         rgba(8, 12, 15, 0.24) 100%
-    ), url('images/lima-shore.webp');
+    ), url('../images/lima-shore.webp');
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -1263,7 +1263,7 @@ hr {
 @media (max-width: 620px) {
     .hero {
         padding-inline: 22px;
-        background-image: linear-gradient(rgba(8, 12, 15, 0.74), rgba(8, 12, 15, 0.72)), url('images/lima-shore.webp');
+        background-image: linear-gradient(rgba(8, 12, 15, 0.74), rgba(8, 12, 15, 0.72)), url('../images/lima-shore.webp');
     }
 
     .hero::after,
