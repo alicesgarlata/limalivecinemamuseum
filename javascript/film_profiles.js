@@ -92,12 +92,7 @@ const filmProfiles = {
     "themes": "Childhood, class inequality, aristocracy, domestic service, privilege, innocence, and social critique.",
     "value": "The film relates strongly to Lima Golf Club, Bosque El Olivar, Country Club Lima Hotel, and residential San Isidro. These spaces visually represent the social world that the film observes and questions."
   },
-  "La Luz en el Cerro": {
-    "description": "La Luz en el Cerro is a Peruvian mystery thriller. Unlike many of the films in this list, it does not focus mainly on Lima's social or historical spaces, but on atmosphere, suspense, landscape, and hidden tensions.",
-    "about": "The film develops a story marked by mystery, fear, and investigation. Its title suggests a space where something strange or unexplained appears in the landscape. The narrative uses suspense and uncertainty to create a tense relationship between people, territory, and the unknown.",
-    "themes": "Mystery, fear, landscape, secrecy, investigation, local beliefs, and psychological tension.",
-    "value": "This film is useful for expanding the project beyond urban Lima. It can be connected to locations with a mysterious, rural, peripheral, or symbolic atmosphere."
-  },
+
   "Viaje a Tombuctú": {
     "description": "Viaje a Tombuctú is a Peruvian drama about adolescence, love, memory, and the loss of innocence during the 1980s. The film combines an intimate coming-of-age story with the broader context of terrorism, migration, and economic crisis in Peru.",
     "about": "Ana and Lucho are two teenagers who create an imaginary country called Tombuctú as a refuge from the violence and uncertainty around them. Their relationship becomes a private world where they can preserve affection, freedom, and innocence. However, the political and social reality of Peru gradually threatens that fragile space.",
@@ -110,12 +105,7 @@ const filmProfiles = {
     "themes": "Diplomacy, social life, urban elegance, modernity, intrigue, and Lima's upper-class spaces.",
     "value": "The film can be connected to San Isidro, Lima Golf Club, and areas associated with diplomatic, residential, and elite Lima in the 1960s."
   },
-  "Muero por Muriel": {
-    "description": "Muero por Muriel is a Peruvian drama-thriller centered on emotional tension, desire, and conflict. It belongs to a group of Peruvian films from the 2000s that explored more intimate, psychological, and suspenseful stories.",
-    "about": "The film revolves around a relationship marked by attraction, obsession, and emotional conflict. The title suggests that the character of Muriel occupies the center of the protagonist's desire or crisis. The film can be read as a story where love, danger, and psychological tension become closely connected.",
-    "themes": "Desire, obsession, emotional conflict, psychological tension, love, and danger.",
-    "value": "This film can be linked interpretively to Barranco, Puente de los Suspiros, or other intimate and nocturnal spaces. The relationship should be presented as curatorial rather than as a confirmed precise location."
-  },
+
   "No Se Lo Digas a Nadie": {
     "description": "No se lo digas a nadie is a Peruvian drama based on the novel by Jaime Bayly. The film was significant because it openly addressed homosexuality, repression, and hypocrisy within Lima's upper class.",
     "about": "The film follows Joaquín Camino, a young man from Lima's wealthy social environment who struggles with his sexuality in a conservative and judgmental society. His family, school, religion, and social circle pressure him to hide his identity. Through his relationships and personal conflicts, the film exposes the contradictions of an elite that protects appearances while denying emotional truth.",
