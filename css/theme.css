@@ -56,16 +56,13 @@ body[data-era] :where(h1, h2, h3, h4, .site-brand, .film-title, .popup-name) {
 
 body[data-era] :where(
     .description,
-    .description-long,
-    .pelicula,
     .loc-description,
     .about-section p,
     .film-description,
     .film-meta,
     .scheda-tab-content,
     .timeline-body p,
-    .itinerary-text p,
-    .stop-body p
+    .itinerary-text p
 ) {
     color: var(--era-ink);
 }
@@ -73,7 +70,6 @@ body[data-era] :where(
 body[data-era] :where(
     .label,
     .meta,
-    .footer,
     .access,
     .loc-address,
     .loc-access,
@@ -221,7 +217,7 @@ body[data-era] :where(.back-link, .film-wiki, .scheda-tab-content a, .prev-next-
     text-decoration-color: color-mix(in srgb, var(--era-accent) 48%, transparent);
 }
 
-body[data-era] :where(.narrative-switcher, .narrative-chapter, .timeline-entry, .itinerary-stop) {
+body[data-era] :where(.narrative-switcher, .narrative-chapter, .timeline-entry) {
     border-color: var(--era-border);
 }
 
@@ -244,7 +240,6 @@ body[data-era] .narrative-transition p {
     color: var(--era-ink);
 }
 
-body[data-era] .stop-number,
 body[data-era] .num-marker {
     color: var(--era-surface);
     background: var(--era-accent) !important;
@@ -1401,7 +1396,7 @@ body[data-era='future'] .film-card :where(h1, h2, h3, h4, .title, .film-title, .
     color: #ffffff !important;
 }
 
-body[data-era='future'] .card-list .card :where(p, .description, .description-long, .pelicula, .meta, .access, .loc-address, .loc-access),
+body[data-era='future'] .card-list .card :where(p, .description, .meta, .access, .loc-address, .loc-access),
 body[data-era='future'] .film-card :where(p, .description, .film-description, .film-meta, .film-year, .film-genres) {
     color: #d7e2f0 !important;
 }
