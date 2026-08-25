@@ -2055,3 +2055,99 @@ body[data-era='future'] :where(
 ) {
     background-size: auto, auto, 32px 32px, 32px 32px;
 }
+
+/* =========================================================
+   CONTRAST SAFEGUARDS
+   Keep labels readable across every editorial palette and over photography.
+   ========================================================= */
+
+/* Location titles always sit over photography: a fixed light foreground and
+   layered shadow remain reliable regardless of the selected era or image. */
+body[data-era] .location-header:not(.no-image) h1 {
+    color: #ffffff !important;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.92),
+        0 7px 28px rgba(0, 0, 0, 0.72);
+}
+
+body[data-era] .location-header:not(.no-image) .location-header-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(6, 8, 10, 0.94) 0%,
+        rgba(6, 8, 10, 0.68) 34%,
+        rgba(6, 8, 10, 0.24) 68%,
+        rgba(6, 8, 10, 0.08) 100%
+    );
+}
+
+/* District colours remain visible on map cards. Inside the photographic
+   header the badge uses a dark translucent plate instead of a pale district
+   background paired with white text. */
+body[data-era] .location-header:not(.no-image) .badge {
+    color: #ffffff !important;
+    background: color-mix(in srgb, #080a0c 84%, var(--era-accent) 16%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+    text-shadow: none;
+}
+
+body[data-era] .location-header:not(.no-image) .loc-address {
+    color: rgba(255, 255, 255, 0.94) !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Preserve a readable theme-aware fallback when a location has no image. */
+body[data-era] .location-header.no-image {
+    color: var(--era-ink);
+    background: var(--era-surface-alt);
+    border-color: var(--era-border);
+}
+
+body[data-era] .location-header.no-image h1 {
+    color: var(--era-ink) !important;
+    text-shadow: none;
+}
+
+body[data-era] .location-header.no-image .loc-address {
+    color: var(--era-ink) !important;
+    text-shadow: none;
+}
+
+body[data-era] .location-header.no-image .badge {
+    color: var(--era-ink) !important;
+    background: var(--era-surface);
+    border: 1px solid var(--era-border);
+    text-shadow: none;
+}
+
+/* Film tags use the same high-contrast surface pair in every era. */
+body[data-era] :where(.movie-tag, .film-genre-tag) {
+    color: var(--era-ink);
+    background: var(--era-surface-alt);
+    border: 1px solid var(--era-border);
+}
+
+body[data-era='future'] :where(.movie-tag, .film-genre-tag) {
+    color: #07100d;
+    background: var(--era-accent);
+    border-color: transparent;
+}
+
+/* Expanded film profiles on location records previously retained fixed grey
+   values designed only for white cards. */
+body[data-era] .film-card :where(.film-profile-text, .film-profile-themes) {
+    color: var(--era-ink);
+}
+
+body[data-era] .film-card :where(.film-profile-label, .film-profile-toggle) {
+    color: var(--era-accent);
+}
+
+body[data-era] .film-card :where(.film-profile, .film-profile-toggle) {
+    border-color: var(--era-border);
+}
+
+body[data-era] .film-card .film-profile-toggle:hover,
+body[data-era] .film-card .film-profile-toggle.open {
+    color: var(--era-ink);
+}
