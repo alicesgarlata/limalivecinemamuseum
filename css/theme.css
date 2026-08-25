@@ -1661,3 +1661,102 @@ body[data-era='future'] .leaflet-marker-icon {
         background: var(--era-surface-alt);
     }
 }
+
+/* ==========================================================================
+   SHARED MUSEUM LAYOUT — ERA COMPATIBILITY
+   The main stylesheet gives every page the home page's editorial structure.
+   These rules preserve that structure while restoring each era's own palette,
+   typography, borders and surfaces.
+   ========================================================================== */
+
+body[data-era] .narrative-page .narrative-switcher {
+    background: var(--era-bg);
+    background: color-mix(in srgb, var(--era-bg) 94%, transparent);
+    border-color: var(--era-border);
+}
+
+body[data-era] .narrative-page .narrative-tab {
+    color: var(--era-muted);
+    background: transparent;
+    border-color: transparent;
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .narrative-page .narrative-tab:hover {
+    color: var(--era-accent);
+    border-color: var(--era-border);
+}
+
+body[data-era] .narrative-page .narrative-tab.active {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] .narrative-page .narrative-intro,
+body[data-era] .narrative-page .narrative-chapter,
+body[data-era] .narrative-page .timeline-entry,
+body[data-era] .narrative-page .map-legend {
+    border-color: var(--era-border);
+}
+
+body[data-era] .narrative-page .narrative-intro h1,
+body[data-era] .narrative-page .narrative-chapter h2,
+body[data-era] .narrative-page .timeline-year,
+body[data-era] .narrative-page .narrative-transition p {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] .narrative-page .narrative-subtitle,
+body[data-era] .narrative-page .chapter-label,
+body[data-era] .narrative-page .loc-photo-caption,
+body[data-era] .narrative-page .timeline-year {
+    color: var(--era-accent);
+}
+
+body[data-era] .narrative-page .itinerary-text p,
+body[data-era] .narrative-page .narrative-intro > p:not(.narrative-subtitle),
+body[data-era] .narrative-page .chapter-intro,
+body[data-era] .narrative-page .timeline-body p,
+body[data-era] .narrative-page .map-legend {
+    color: var(--era-ink);
+    font-family: var(--era-font-body);
+}
+
+body[data-era] .narrative-page :where(.itinerary-text a, .map-legend a) {
+    color: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] .narrative-page .itinerary-meta span {
+    color: var(--era-muted);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .narrative-page .loc-photo,
+body[data-era] .narrative-page .itinerary-map {
+    border-color: var(--era-border);
+    border-radius: var(--era-card-radius);
+}
+
+body[data-era] .narrative-page .narrative-transition {
+    color: var(--era-ink);
+    background: var(--era-surface-alt);
+    border-left-color: var(--era-accent);
+}
+
+body[data-era] .location-main > .difficulty-bar,
+body[data-era] .loc-access,
+body[data-era] .films-heading,
+body[data-era] .scheda-tab-bar {
+    border-color: var(--era-border);
+}
+
+body[data-era] .location-main > .difficulty-bar,
+body[data-era] .difficulty-btn,
+body[data-era] .difficulty-label {
+    font-family: var(--era-font-ui);
+}
