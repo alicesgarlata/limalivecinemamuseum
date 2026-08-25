@@ -28,7 +28,7 @@
             <h2>1. Concept and Scope</h2>
             <p>The project begins with a simple question: what can the locations chosen by filmmakers tell us about Lima? Rather than treating filming locations as isolated tourist attractions, Lima Live approaches them as evidence of how the city has been represented, remembered and transformed through cinema.</p>
             <p>The collection brings together public spaces, streets, residential complexes, commercial areas, natural landscapes, transport infrastructure and historically significant sites. Their cinematic appearances reveal different versions of Lima: monumental and everyday, affluent and marginalised, intimate and political, coastal and metropolitan.</p>
-            <p>The current dataset contains 29 location records and 29 film records. The films represented in the wider collection range from 1930 to 2024, while the historical narrative begins in 1938 with <em>Palomillas del Rímac</em>. The collection is not intended as a complete catalogue of Peruvian cinema; it is a curated selection designed to support spatial exploration and historical interpretation.</p>
+            <p>The current dataset contains 24 location records and 28 film records. The films represented in the wider collection range from 1930 to 2025, while the historical narrative begins in 1938 with <em>Palomillas del Rímac</em>. The collection is not intended as a complete catalogue of Peruvian cinema; it is a curated selection designed to support spatial exploration and historical interpretation.</p>
         </section>
 
         <section class="about-section">
@@ -47,7 +47,7 @@
         <section class="about-section">
             <h2>3. Content and Data Model</h2>
             <p>The exhibition is organised around two connected entities: <strong>locations</strong> and <strong>films</strong>. A location record contains its name, address, district, coordinates, accessibility information, associated films and multiple versions of its introductory text. Extended records add historical context, curiosities, cultural significance and sources. Film records contain title, year, director, country, genres, cast, production information, description and, when available, a Wikidata identifier.</p>
-            <p>This structure allows the same content to be explored in several ways: spatially through the map, individually through location pages, chronologically through the historical timeline and geographically through the three itineraries.</p>
+            <p>This structure allows the same content to be explored in several ways: spatially through the map, by film through the collection catalogue, individually through location pages, chronologically through the historical timeline and geographically through the three itineraries.</p>
         </section>
 
         <section class="about-section">
@@ -96,6 +96,7 @@
                 <li><strong>Layout:</strong> Bootstrap 5.3 combined with custom responsive CSS.</li>
                 <li><strong>Core data:</strong> <code>data.js</code> stores location records, film records and district colours.</li>
                 <li><strong>Extended content:</strong> <code>schede.js</code> stores detailed location sections and <code>film_profiles.js</code> stores expanded film profiles.</li>
+                <li><strong>Film collection:</strong> <code>films.html</code> and <code>films.js</code> generate the searchable film catalogue and connect each film record to its mapped locations.</li>
                 <li><strong>Narratives:</strong> <code>itineraries.html</code> contains the historical timeline and three geographic routes, each supported by a Leaflet map.</li>
                 <li><strong>Theme system:</strong> <code>theme.css</code> contains the historical visual variants, while <code>theme.js</code> manages selection, persistence and the movable interface.</li>
                 <li><strong>Shared navigation:</strong> <code>navbar.js</code> creates the common navigation and loads the theme system throughout the public site.</li>
