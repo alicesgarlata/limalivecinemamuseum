@@ -646,11 +646,11 @@ main.about-page {
 
 .about-section {
     display: grid;
-    grid-template-columns: minmax(210px, 0.62fr) minmax(0, 1.38fr);
-    column-gap: clamp(40px, 7vw, 120px);
+    grid-template-columns: minmax(210px, var(--golden-minor)) minmax(0, var(--golden-major));
+    column-gap: clamp(var(--space-phi-3), 7vw, var(--space-phi-5));
     row-gap: 16px;
     width: 100%;
-    padding: clamp(42px, 5.5vw, 78px) 0;
+    padding: clamp(var(--space-phi-3), 5.5vw, var(--space-phi-4)) 0;
     border-top: 1px solid var(--theme-border, #d6d2ca);
 }
 
@@ -1273,10 +1273,10 @@ main.about-page > .about-section:first-child {
 
 .home-section-heading {
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: clamp(32px, 7vw, 110px);
+    grid-template-columns: minmax(0, var(--golden-major)) minmax(280px, var(--golden-minor));
+    gap: clamp(var(--space-phi-3), 7vw, var(--space-phi-5));
     align-items: end;
-    margin-bottom: clamp(36px, 5vw, 64px);
+    margin-bottom: clamp(var(--space-phi-3), 5vw, var(--space-phi-4));
     padding-bottom: 24px;
     border-bottom: 1px solid #cbc8c0;
 }
@@ -1819,6 +1819,13 @@ main.about-page > .about-section:first-child {
     --museum-rule: #cbc8c0;
     --museum-rule-light: #e4e1da;
     --museum-display: 'Playfair Display', Georgia, serif;
+    --golden-major: 1.618fr;
+    --golden-minor: 1fr;
+    --space-phi-1: 16px;
+    --space-phi-2: 26px;
+    --space-phi-3: 42px;
+    --space-phi-4: 68px;
+    --space-phi-5: 110px;
 }
 
 body {
@@ -2649,10 +2656,10 @@ main.about-page {
 
 .film-catalogue-heading {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.64fr);
-    gap: clamp(32px, 7vw, 110px);
+    grid-template-columns: minmax(0, var(--golden-major)) minmax(280px, var(--golden-minor));
+    gap: clamp(var(--space-phi-3), 7vw, var(--space-phi-5));
     align-items: end;
-    padding-bottom: clamp(30px, 4vw, 50px);
+    padding-bottom: clamp(var(--space-phi-2), 4vw, var(--space-phi-3));
     border-bottom: 1px solid var(--museum-rule);
 }
 
