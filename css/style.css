@@ -756,6 +756,105 @@ main.about-page > .about-section:first-child {
     margin-top: 0.65rem;
 }
 
+/* Extended design documentation */
+
+.doc-design-stack {
+    width: 100%;
+    max-width: 980px;
+}
+
+.doc-design-block {
+    margin: 0 0 clamp(36px, 5vw, 58px);
+    padding: 0 0 clamp(36px, 5vw, 58px);
+    border-bottom: 1px solid var(--museum-rule-light, #e4e1da);
+}
+
+.doc-design-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.doc-design-block h3 {
+    max-width: 760px;
+    margin: 0 0 18px;
+    color: var(--museum-ink, #181818);
+    font-family: var(--museum-display, 'Playfair Display', Georgia, serif);
+    font-size: clamp(22px, 2.3vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+.doc-design-block p {
+    max-width: 880px;
+    margin: 0 0 1.1rem;
+    color: var(--museum-muted, #66625c);
+    font-size: clamp(14px, 1.05vw, 16px);
+    line-height: 1.8;
+}
+
+.doc-design-block p:last-child {
+    margin-bottom: 0;
+}
+
+.doc-design-block .doc-list {
+    max-width: 880px;
+    margin: 0 0 1.1rem;
+}
+
+.doc-table-wrap {
+    width: 100%;
+    margin: 24px 0 4px;
+    overflow-x: auto;
+    border-top: 1px solid var(--museum-ink, #181818);
+    border-bottom: 1px solid var(--museum-ink, #181818);
+}
+
+.doc-table-wrap:focus-visible {
+    outline: 3px solid var(--museum-accent, #8c332b);
+    outline-offset: 4px;
+}
+
+.doc-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    color: var(--museum-muted, #66625c);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.doc-table th,
+.doc-table td {
+    padding: 15px 16px 15px 0;
+    vertical-align: top;
+    border-bottom: 1px solid var(--museum-rule-light, #e4e1da);
+    text-align: left;
+}
+
+.doc-table th {
+    color: var(--museum-accent, #8c332b);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.doc-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.doc-table th:first-child,
+.doc-table td:first-child {
+    width: 21%;
+}
+
+.doc-theme-table th:first-child,
+.doc-theme-table td:first-child {
+    width: 18%;
+}
+
 .credits-list {
     list-style: none;
     display: flex;
