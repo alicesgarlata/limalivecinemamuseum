@@ -1,5 +1,5 @@
 // Extended location profiles used by location.html.
-// Keys match locations[].name in data.js; editorial additions from schede.html are included here.
+// Keys match locations[].name in data.js; extended location records are stored here.
 
 const schede = {
   "Parque John F. Kennedy": {
