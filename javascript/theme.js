@@ -1,4 +1,3 @@
-
 (function () {
     'use strict'
 
@@ -17,7 +16,7 @@
             period: 'Today',
             medium: 'Original site',
             title: 'Current interface',
-            description: 'The original Lima Live design, using only the main style.css.',
+            description: 'The contemporary museum interface used as the site’s default visual style.',
             colors: ['#f5f4f0', '#ffffff', '#1a1a1a'],
             browserColor: '#f5f4f0'
         },
@@ -206,7 +205,7 @@
         const panel = document.createElement('aside')
         panel.className = 'theme-panel'
         panel.dataset.side = 'left'
-        panel.setAttribute('aria-label', 'Editorial era selector')
+        panel.setAttribute('aria-label', 'Editorial style selector')
 
         const tab = document.createElement('button')
         tab.className = 'theme-tab'
@@ -231,7 +230,7 @@
         header.innerHTML = `
             <div>
                 <span class="theme-kicker">Lima Live display system</span>
-                <h2 class="theme-title" id="theme-selector-title">Choose an editorial era</h2>
+                <h2 class="theme-title" id="theme-selector-title">Choose an editorial style</h2>
             </div>
             <div class="theme-header-actions">
                 <button class="theme-reset" type="button" aria-label="Reset selector position" title="Reset position">↺</button>
@@ -241,12 +240,12 @@
 
         const introduction = document.createElement('p')
         introduction.className = 'theme-introduction'
-        introduction.textContent = 'The collection stays the same; its visual language moves through five histories of publishing.'
+        introduction.textContent = 'The collection stays the same; only colours, typography and layout change between the required editorial styles.'
 
         const options = document.createElement('div')
         options.className = 'theme-options'
         options.setAttribute('role', 'radiogroup')
-        options.setAttribute('aria-label', 'Editorial eras')
+        options.setAttribute('aria-label', 'Editorial styles')
         themes.forEach(theme => options.appendChild(createThemeOption(theme)))
 
         const status = document.createElement('p')
