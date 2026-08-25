@@ -2038,6 +2038,40 @@ body[data-era] .about-page code {
     padding: 0.08em 0.34em;
 }
 
+body[data-era] .about-page .doc-design-block {
+    border-color: var(--era-border);
+}
+
+body[data-era] .about-page .doc-design-block h3 {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] .about-page .doc-design-block :where(p, .doc-list, .doc-list li) {
+    color: var(--era-ink);
+}
+
+body[data-era] .about-page .doc-table-wrap {
+    border-color: var(--era-border-strong);
+}
+
+body[data-era] .about-page .doc-table-wrap:focus-visible {
+    outline-color: var(--era-accent);
+}
+
+body[data-era] .about-page .doc-table {
+    color: var(--era-ink);
+}
+
+body[data-era] .about-page .doc-table :where(th, td) {
+    border-color: var(--era-border);
+}
+
+body[data-era] .about-page .doc-table th {
+    color: var(--era-accent);
+    font-family: var(--era-font-ui);
+}
+
 /* Reuse the small tiled portal grid on every internal page. */
 body[data-era='early-web'] :where(
     .about-page,
