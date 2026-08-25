@@ -251,6 +251,24 @@ function toggleDetail(card, locName, lat, lng) {
     }
 }
 
+function openCardForLocation(loc) {
+    const card = list.querySelector(
+        `[data-location="${locationSlug(loc.name)}"]`
+    )
+
+    if (!card) return
+
+    if (!card.classList.contains('open')) {
+        toggleDetail(card, loc.name, loc.lat, loc.lng)
+    }
+
+    card.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'nearest'
+    })
+}
+
 function expandCard(e, btn) {
     e.stopPropagation()
 
@@ -378,6 +396,10 @@ locations.forEach(function (loc) {
             popupHtml,
             { maxWidth: 180, className: 'custom-popup' }
         )
+
+    marker.on('click', function () {
+        openCardForLocation(loc)
+    })
 
     markers.push({ name: loc.name, marker: marker })
 })
