@@ -93,7 +93,7 @@
                         <li><strong>Location record:</strong> begins with a large photographic header, then separates the main interpretive record from the associated-film column. Visitors can adjust text tone and length without changing page.</li>
                         <li><strong>Films:</strong> presents a searchable and filterable catalogue. Opening a film in a dialog preserves the user’s position in the collection while revealing metadata, description and linked locations.</li>
                         <li><strong>Narratives:</strong> uses a persistent route selector, long-form editorial text and maps to connect spatial evidence with historical interpretation.</li>
-                        <li><strong>Documentation and About:</strong> use a wide editorial reading layout so that research, method, responsibilities and limitations remain part of the public exhibition rather than hidden project notes.</li>
+                        <li><strong>Documentation, About and Disclaimer:</strong> use a wide editorial reading layout while separating research and design decisions, project identity and responsibilities, and the legal or practical limitations of the exhibition.</li>
                     </ul>
                 </article>
 
@@ -111,14 +111,20 @@
                                 <tr><td>Location record</td><td>Main text plus a 320–400 px film column; gap scales approximately from 42 to 112 px</td><td>The location remains the primary object, while its cinematic evidence stays visible as a related but distinct layer.</td></tr>
                                 <tr><td>Narratives</td><td>Long-form text plus a 330–430 px sticky map column</td><td>The map remains available as a geographic reference while the visitor reads the itinerary or historical timeline.</td></tr>
                                 <tr><td>Film catalogue</td><td>Three cards per row on wide screens, two below 1100 px and one below 680 px</td><td>Cards retain enough width for titles, summaries, genres and an image without becoming visually dense.</td></tr>
-                                <tr><td>Documentation</td><td>Approximately 0.62fr for headings and 1.38fr for content</td><td>Section titles act as margin labels, while the wider column supports sustained reading.</td></tr>
+                                <tr><td>Documentation, About and Disclaimer</td><td>Golden-ratio columns of <code>1fr</code> for headings and <code>1.618fr</code> for content</td><td>Section titles act as margin labels, while the wider column supports sustained reading.</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.4 Image ratios and photographic treatment</h3>
+                    <h3>6.4 Proportional system and golden ratio</h3>
+                    <p>The contemporary interface uses the golden ratio as a flexible proportional guide rather than a rigid template. On wide screens, selected editorial grids divide available space approximately into 61.8% and 38.2%, establishing a clear relationship between primary and supporting content. The same progression informs the spacing scale of 16, 26, 42, 68 and 110 pixels. Film catalogue images use a 16:10 ratio, whose value of 1.6 closely approximates the golden ratio.</p>
+                    <p>The ratio is applied to the homepage itinerary heading, the film catalogue heading and the editorial layouts used by Documentation, About and Disclaimer. It is not imposed on functional components such as the map, location metadata panels or responsive single-column layouts, where fixed proportions could reduce readability or usability. Responsive breakpoints therefore override the proportional grids whenever the available viewport becomes too narrow.</p>
+                </article>
+
+                <article class="doc-design-block">
+                    <h3>6.5 Image ratios and photographic treatment</h3>
                     <p>Images are not decorative additions: they establish the relationship between the real city and its cinematic representation. Different ratios are used according to the function of the image rather than forcing every visual into one format.</p>
                     <ul class="doc-list">
                         <li><strong>Home hero:</strong> uses a fluid full-viewport background with <code>background-size: cover</code>. Some edge cropping is accepted because the image functions as an immersive atmosphere behind the exhibition title.</li>
@@ -131,7 +137,7 @@
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.5 Responsive strategy</h3>
+                    <h3>6.6 Responsive strategy</h3>
                     <p>The interface uses fluid measurements and page-specific breakpoints rather than designing only for a small list of named devices. Functions such as <code>clamp()</code>, <code>minmax()</code>, viewport units and flexible gaps allow typography and spacing to scale continuously between minimum and maximum values.</p>
                     <ul class="doc-list">
                         <li>At 1100 px the film catalogue changes from three columns to two.</li>
@@ -145,7 +151,7 @@
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.6 Typography and hierarchy</h3>
+                    <h3>6.7 Typography and hierarchy</h3>
                     <p>The main interface uses scale contrast rather than a large number of decorative elements. Display titles identify the museum, places, films and narrative chapters; small uppercase labels identify metadata and controls; body text uses generous line-height for sustained reading.</p>
                     <div class="doc-table-wrap" tabindex="0" aria-label="Typography scale table">
                         <table class="doc-table">
@@ -165,7 +171,7 @@
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.7 Interaction design</h3>
+                    <h3>6.8 Interaction design</h3>
                     <ul class="doc-list">
                         <li><strong>Map and cards:</strong> markers and location cards are coordinated so that selecting one spatial representation activates the corresponding editorial record.</li>
                         <li><strong>Search and filtering:</strong> free-text search, district pills, a clear control and a live result count make the map usable as a retrieval interface rather than only a visual illustration.</li>
@@ -177,7 +183,7 @@
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.8 Visual design system and required editorial styles</h3>
+                    <h3>6.9 Visual design system and required editorial styles</h3>
                     <p>The historical and speculative styles were implemented in response to the course assignment, which required the selection of different editorial periods and the creation of alternative designs for the same website. The selected periods are therefore design references, not curatorial categories. They do not correspond to the release dates of the films, phases in the history of Lima or different interpretations of the collection.</p>
                     <p>The interface strictly separates collection data from visual presentation: films, locations, coordinates, photographs, associations and narrative texts remain unchanged when another style is selected. The alternatives modify only presentation variables and interface composition, including colours, typography, spacing, borders, card shapes, image and map filters, decorative patterns, animation and selected layout behaviours.</p>
                     <p>CSS custom properties control background, surface, ink, muted text, accents, borders, typography, radii, shadows and image or map filters. JavaScript applies the selected style through a data attribute and stores the choice in <code>localStorage</code>, allowing it to persist between pages and visits. This implementation demonstrates how one HTML and data structure can support multiple coherent visual systems without duplicating or semantically altering the content.</p>
@@ -199,7 +205,7 @@
                 </article>
 
                 <article class="doc-design-block">
-                    <h3>6.9 Accessibility within the visual system</h3>
+                    <h3>6.10 Accessibility within the visual system</h3>
                     <p>Theme variation is constrained by usability requirements. Text and surfaces use paired design tokens, photographic location titles remain white over a strengthened dark gradient, and tags or badges receive explicit foreground and background combinations. Interactive controls use native buttons or links wherever possible, film cards expose a visible keyboard focus state, and layouts avoid requiring hover as the only way to reach content.</p>
                     <p>Decorative motion is disabled or reduced when <code>prefers-reduced-motion</code> is active. On smaller screens, sticky or side-by-side elements return to the normal document flow. This prevents the theme system from becoming more important than the collection it is intended to present.</p>
                 </article>
@@ -263,7 +269,7 @@
                 <li>Public transport, opening conditions, accessibility and safety information can change after publication.</li>
                 <li>Some cinematic connections rely on research that still requires a final source-by-source verification.</li>
                 <li>The current interface is in English; a Spanish version would make the project more accessible to local audiences.</li>
-                <li>Future development could add search, multilingual content, downloadable routes and a more explicit provenance record for each statement and image.</li>
+                <li>Future development could add multilingual content, downloadable routes and a more explicit provenance record for each statement and image.</li>
             </ul>
         </section>
 
