@@ -1,5 +1,6 @@
 const list = document.getElementById('list')
 const markers = []
+let activeDistrict = 'All'
 
 const locationCount = document.getElementById('location-count')
 const filmCount = document.getElementById('film-count')
@@ -8,12 +9,16 @@ if (filmCount) filmCount.textContent = films.length
 
 // ── filter pills (built from districtColors in data.js) ──────────────────────
 const filterBar = document.getElementById('filter-bar')
+const districtPills = document.getElementById('district-pills')
+const searchInput = document.getElementById('location-search-input')
+const searchClear = document.getElementById('location-search-clear')
+const resultsLabel = document.getElementById('location-results')
 
 const allBtn = document.createElement('button')
 allBtn.className = 'pill active'
 allBtn.textContent = 'All'
 allBtn.addEventListener('click', function (e) { filterByDistrict(e, 'All') })
-filterBar.appendChild(allBtn)
+districtPills.appendChild(allBtn)
 
 Object.entries(districtColors).forEach(function ([district, color]) {
     const btn = document.createElement('button')
@@ -21,7 +26,7 @@ Object.entries(districtColors).forEach(function ([district, color]) {
     btn.style.setProperty('--color', color)
     btn.textContent = district
     btn.addEventListener('click', function (e) { filterByDistrict(e, district) })
-    filterBar.appendChild(btn)
+    districtPills.appendChild(btn)
 })
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -48,6 +53,59 @@ function districtColor(district) {
 
 function locationSlug(name) {
     return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
+
+function normalizeSearchText(value) {
+    return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
+function locationSearchText(loc) {
+    const districts = Array.isArray(loc.district) ? loc.district : [loc.district]
+    const movies = (loc.movies || []).flatMap(function (movie) {
+        return [movie.title, movie.year]
+    })
+
+    return normalizeSearchText([loc.name].concat(districts, movies).join(' '))
+}
+
+function locationMatchesDistrict(loc) {
+    if (activeDistrict === 'All') return true
+    return Array.isArray(loc.district)
+        ? loc.district.includes(activeDistrict)
+        : loc.district === activeDistrict
+}
+
+function updateVisibleMarkers(visibleLocations) {
+    const visibleNames = new Set(visibleLocations.map(function (loc) { return loc.name }))
+
+    markers.forEach(function (item) {
+        const shouldShow = visibleNames.has(item.name)
+        const isShown = map.hasLayer(item.marker)
+
+        if (shouldShow && !isShown) item.marker.addTo(map)
+        if (!shouldShow && isShown) map.removeLayer(item.marker)
+    })
+}
+
+function applyLocationFilters() {
+    const query = normalizeSearchText(searchInput.value)
+    const queryTerms = query ? query.split(' ') : []
+    const filtered = locations.filter(function (loc) {
+        const searchableText = locationSearchText(loc)
+        return locationMatchesDistrict(loc) &&
+            queryTerms.every(function (term) { return searchableText.includes(term) })
+    })
+
+    showCard(filtered)
+    updateVisibleMarkers(filtered)
+    resultsLabel.textContent = `${filtered.length} ${filtered.length === 1 ? 'location' : 'locations'}`
+    searchClear.hidden = !query
 }
 
 // ── map pin ───────────────────────────────────────────────────────────────────
@@ -227,17 +285,9 @@ function filterByDistrict(e, district) {
         pill.classList.remove('active')
     })
 
-    e.target.classList.add('active')
-
-    const filtered = district === 'All'
-        ? locations
-        : locations.filter(function (loc) {
-            return Array.isArray(loc.district)
-                ? loc.district.includes(district)
-                : loc.district === district
-        })
-
-    showCard(filtered)
+    e.currentTarget.classList.add('active')
+    activeDistrict = district
+    applyLocationFilters()
 }
 
 // ── map init ──────────────────────────────────────────────────────────────────
@@ -333,6 +383,15 @@ locations.forEach(function (loc) {
 })
 
 showCard(locations)
+resultsLabel.textContent = `${locations.length} locations`
+
+searchInput.addEventListener('input', applyLocationFilters)
+
+searchClear.addEventListener('click', function () {
+    searchInput.value = ''
+    applyLocationFilters()
+    searchInput.focus()
+})
 
 document.getElementById('heroBtn').addEventListener('click', function () {
     document.querySelector('.filter-bar').scrollIntoView({
