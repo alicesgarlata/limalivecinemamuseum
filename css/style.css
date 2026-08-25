@@ -3409,3 +3409,26 @@ body.film-dialog-open { overflow: hidden; }
     .film-collage-frame-bottom { border-width: 5px; }
     .film-dialog-record { padding-inline: 23px; }
 }
+
+/* Prevent long introductory titles from entering the text column. */
+main.about-page > .about-section:first-child {
+    grid-template-columns: minmax(520px, 0.95fr) minmax(320px, 1.05fr);
+    column-gap: clamp(42px, 5vw, 90px);
+}
+
+main.about-page > .about-section:first-child h1 {
+    max-width: none;
+    font-size: clamp(54px, 5.4vw, 82px);
+}
+
+@media (max-width: 1250px) {
+    main.about-page > .about-section:first-child {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 30px;
+    }
+
+    main.about-page > .about-section:first-child > h1,
+    main.about-page > .about-section:first-child > :not(h1):not(h2) {
+        grid-column: 1;
+    }
+}
