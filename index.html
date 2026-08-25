@@ -97,7 +97,22 @@
                 <p>Select a district, move across the map and open a location to discover its films and urban history.</p>
             </div>
 
-            <div class="filter-bar" id="filter-bar"></div>
+            <div class="filter-bar" id="filter-bar">
+                <div class="location-search" role="search">
+                    <label class="visually-hidden" for="location-search-input">Search locations, districts, films or years</label>
+                    <span class="location-search-icon" aria-hidden="true">⌕</span>
+                    <input
+                        id="location-search-input"
+                        class="location-search-input"
+                        type="search"
+                        placeholder="Search location, district, film or year…"
+                        autocomplete="off"
+                    >
+                    <button class="location-search-clear" id="location-search-clear" type="button" aria-label="Clear search" hidden>×</button>
+                </div>
+                <p class="location-results" id="location-results" aria-live="polite"></p>
+                <div class="district-pills" id="district-pills" aria-label="Filter locations by district"></div>
+            </div>
 
             <div class="main">
                 <div class="map" id="map" aria-label="Interactive map of movie locations in Lima"></div>
