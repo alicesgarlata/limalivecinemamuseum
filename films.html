@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Films — Lima Live Cinema Museum</title>
+    <meta name="description" content="Explore the films represented in the Lima Live Cinema Museum and the locations connected to each production.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/theme.js"></script>
+
+    <main class="film-collection-page">
+        <header class="film-collection-hero" aria-labelledby="films-title">
+            <div class="film-collection-hero-copy">
+                <p class="section-kicker">Explore the collection</p>
+                <h1 id="films-title">Films of Lima</h1>
+                <p class="film-collection-lead">Browse the films represented in the museum and discover the streets, squares, coastlines and neighbourhoods connected to each production.</p>
+                <p class="film-collection-summary"><span id="films-total">0</span> films · <span id="films-years">—</span></p>
+                <a class="film-collection-jump" href="#film-catalogue">Enter the film catalogue <span aria-hidden="true">↓</span></a>
+            </div>
+
+            <div class="film-collection-collage" aria-hidden="true">
+                <figure class="film-collage-frame film-collage-frame-main">
+                    <img src="images/imagenes/viejos amigos monumental callao 3.webp" alt="">
+                </figure>
+                <figure class="film-collage-frame film-collage-frame-top">
+                    <img src="images/imagenes/las sicodelicas jiron de la union.webp" alt="">
+                </figure>
+                <figure class="film-collage-frame film-collage-frame-bottom">
+                    <img src="images/imagenes/tarata calle tarata.webp" alt="">
+                </figure>
+            </div>
+        </header>
+
+        <section class="film-catalogue" id="film-catalogue" aria-labelledby="catalogue-title">
+            <div class="film-catalogue-heading">
+                <div>
+                    <p class="section-kicker">Collection index</p>
+                    <h2 id="catalogue-title">Browse by film</h2>
+                </div>
+                <p>Search by title, director, genre, year or mapped location. Select a film to open its complete museum record.</p>
+            </div>
+
+            <div class="film-controls" role="search" aria-label="Search and filter the film collection">
+                <div class="film-search-field">
+                    <label for="film-search">Search the collection</label>
+                    <input id="film-search" type="search" placeholder="Title, director, genre or location…" autocomplete="off">
+                </div>
+                <div class="film-select-field">
+                    <label for="film-decade">Period</label>
+                    <select id="film-decade">
+                        <option value="all">All decades</option>
+                    </select>
+                </div>
+                <div class="film-select-field">
+                    <label for="film-sort">Order</label>
+                    <select id="film-sort">
+                        <option value="oldest">Oldest first</option>
+                        <option value="newest">Newest first</option>
+                        <option value="title">Title A–Z</option>
+                    </select>
+                </div>
+                <button class="film-clear-filters" id="film-clear-filters" type="button">Clear filters</button>
+            </div>
+
+            <div class="film-results-line">
+                <p id="film-results-count" aria-live="polite"></p>
+                <p>Film records are connected to the location collection whenever a verified association is available.</p>
+            </div>
+
+            <div class="film-collection-grid" id="film-grid"></div>
+            <p class="film-empty-state" id="film-empty-state" hidden>No films match the current search.</p>
+        </section>
+    </main>
+
+    <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-dialog-title">
+        <button class="film-dialog-close" id="film-dialog-close" type="button" aria-label="Close film record">×</button>
+        <div id="film-dialog-content"></div>
+    </dialog>
+
+    <script src="javascript/data.js"></script>
+    <script src="javascript/film_profiles.js"></script>
+    <script src="javascript/films.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
