@@ -1977,3 +1977,45 @@ body[data-era='future'] :where(.film-controls input, .film-controls select, .fil
     background: rgba(24, 29, 41, 0.96);
     border-color: rgba(131, 242, 207, 0.48);
 }
+
+/* About and Documentation: restore the dark 2035 surface and readable text. */
+body[data-era='future'] main.about-page {
+    color: var(--era-ink);
+    background-color: var(--era-bg);
+    background-image: var(--era-bg-image);
+    background-attachment: fixed;
+}
+
+body[data-era='future'] main.about-page .about-section {
+    border-color: var(--era-border);
+}
+
+body[data-era='future'] main.about-page .about-section h2 {
+    color: var(--era-accent);
+}
+
+body[data-era='future'] main.about-page :where(
+    .about-section p,
+    .about-section .doc-list,
+    .about-section .doc-list li,
+    .credits-list li
+) {
+    color: #d7e2f0;
+}
+
+body[data-era='future'] main.about-page :where(.about-section a, .credits-list a) {
+    color: var(--era-accent);
+    text-decoration-color: rgba(131, 242, 207, 0.55);
+}
+
+body[data-era='future'] main.about-page .credit-role {
+    color: var(--era-accent-2);
+}
+
+body[data-era='future'] main.about-page code {
+    color: var(--era-accent);
+    background: var(--era-surface-alt);
+    border: 1px solid var(--era-border);
+    border-radius: 4px;
+    padding: 0.08em 0.34em;
+}
