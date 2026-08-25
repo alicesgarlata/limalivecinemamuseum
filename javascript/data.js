@@ -168,7 +168,7 @@ const locations = [
     }
   },
   {
-    "name": "Monumental Callao",
+    "name": "Monumental Del Callao",
     "address": "Jirón Constitución 250, Callao 07021, Perú",
     "district": "Callao",
     "movies": [
@@ -183,12 +183,16 @@ const locations = [
       {
         "title": "Django: Sangre de mi sangre",
         "year": 2018
+      },
+      {
+        "title": "Alias \"La Gringa\"",
+        "year": 1991
       }
     ],
     "descriptions": {
-      "young": "Monumental Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
-      "adult": "A culture-driven urban regeneration area located in Callao's historic center, centered around Casa Fugaz and the surrounding heritage streets. Monumental Callao brings together urban art, galleries, restored architecture, gastronomy, rooftop views, local memory, and community projects, offering a renewed reading of one of Lima's most historically important port districts.",
-      "professional": "Monumental Callao functions as a contemporary cultural and urban regeneration node within the historic center of Callao. Through Casa Fugaz, the Ronald Building, mural interventions, galleries, artist studios, gastronomic spaces, and heritage routes, the area reframes the port city as a site of visual production, collective memory, architectural recovery, and community-based cultural transformation."
+      "young": "Monumental Del Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
+      "adult": "A culture-driven urban regeneration area located in Callao's historic center, centered around Casa Fugaz and the surrounding heritage streets. Monumental Del Callao brings together urban art, galleries, restored architecture, gastronomy, rooftop views, local memory, and community projects, offering a renewed reading of one of Lima's most historically important port districts.",
+      "professional": "Monumental Del Callao functions as a contemporary cultural and urban regeneration node within the historic center of Callao. Through Casa Fugaz, the Ronald Building, mural interventions, galleries, artist studios, gastronomic spaces, and heritage routes, the area reframes the port city as a site of visual production, collective memory, architectural recovery, and community-based cultural transformation."
     },
     "access": "Public cultural area — Casa Fugaz and guided tours available Tuesday to Sunday, 11:00 a.m. to 6:00 p.m.; some indoor spaces or rooftop activities may require reservation",
     "lat": -12.06085,
@@ -196,23 +200,23 @@ const locations = [
     "image": "images/monumental-callao.webp",
     "cardDescription": {
       "short": "A revitalized cultural district in Callao’s historic center, known for murals, galleries, heritage buildings, music, food, and urban art.",
-      "long": "Monumental Callao is not the restricted industrial port, but a cultural and artistic district in the historic center of Callao. Around Casa Fugaz, Jirón Constitución, Plaza Matriz, Plaza Gálvez, Plaza Grau, and the old Ronald Building, the area combines restored republican architecture, street art, galleries, artist studios, gastronomy, music, and community projects. It offers a visual counterpoint to Lima’s more polished districts by showing Callao as a place of memory, creativity, port identity, and urban transformation."
+      "long": "Monumental Del Callao is not the restricted industrial port, but a cultural and artistic district in the historic center of Callao. Around Casa Fugaz, Jirón Constitución, Plaza Matriz, Plaza Gálvez, Plaza Grau, and the old Ronald Building, the area combines restored republican architecture, street art, galleries, artist studios, gastronomy, music, and community projects. It offers a visual counterpoint to Lima’s more polished districts by showing Callao as a place of memory, creativity, port identity, and urban transformation."
     },
     "texts": {
       "young": {
         "brief": "A colorful art district in historic Callao, full of murals, galleries, music, food, and restored old buildings.",
-        "mid": "Monumental Callao is one of the most creative urban spaces in the port city. Instead of cranes and warehouses, here you find murals, galleries, rooftops, artist studios, food spots, and old republican buildings brought back to life.",
-        "long": "Monumental Callao is the side of Callao where history and street art meet. Around Casa Fugaz and the old streets of the historic center, walls have become murals, old buildings have become galleries, and public spaces have turned into places for music, food, workshops, and cultural events. It still feels urban and very connected to the port, but its energy is now more creative than industrial: colorful façades, local stories, rooftop views, and a strong sense of neighborhood identity."
+        "mid": "Monumental Del Callao is one of the most creative urban spaces in the port city. Instead of cranes and warehouses, here you find murals, galleries, rooftops, artist studios, food spots, and old republican buildings brought back to life.",
+        "long": "Monumental Del Callao is the side of Callao where history and street art meet. Around Casa Fugaz and the old streets of the historic center, walls have become murals, old buildings have become galleries, and public spaces have turned into places for music, food, workshops, and cultural events. It still feels urban and very connected to the port, but its energy is now more creative than industrial: colorful façades, local stories, rooftop views, and a strong sense of neighborhood identity."
       },
       "adult": {
         "brief": "A revitalized cultural district in Callao’s historic center, shaped by art, heritage, gastronomy, and community life.",
-        "mid": "Monumental Callao is a culture-led regeneration area centered around Casa Fugaz and the heritage streets of the old port district. It brings together urban murals, galleries, restored architecture, local gastronomy, and historical routes through places such as Plaza Matriz, Plaza Gálvez, Plaza Grau, and the Ronald Building.",
-        "long": "Monumental Callao represents the transformation of part of Callao’s historic center into a cultural, artistic, and tourist-oriented district. Its streets preserve traces of the old port city through republican buildings, traditional plazas, balconies, and narrow urban passages, while contemporary murals, galleries, artist studios, restaurants, music spaces, and rooftop venues give the area a new public life. Rather than functioning as a restricted port zone, it is a walkable cultural route that connects heritage, local memory, urban art, and the social identity of Callao."
+        "mid": "Monumental Del Callao is a culture-led regeneration area centered around Casa Fugaz and the heritage streets of the old port district. It brings together urban murals, galleries, restored architecture, local gastronomy, and historical routes through places such as Plaza Matriz, Plaza Gálvez, Plaza Grau, and the Ronald Building.",
+        "long": "Monumental Del Callao represents the transformation of part of Callao’s historic center into a cultural, artistic, and tourist-oriented district. Its streets preserve traces of the old port city through republican buildings, traditional plazas, balconies, and narrow urban passages, while contemporary murals, galleries, artist studios, restaurants, music spaces, and rooftop venues give the area a new public life. Rather than functioning as a restricted port zone, it is a walkable cultural route that connects heritage, local memory, urban art, and the social identity of Callao."
       },
       "professional": {
-        "brief": "Monumental Callao: a culture-led urban regeneration district in the historic port center, articulated through art, heritage architecture, and community activation.",
-        "mid": "Monumental Callao operates as a contemporary urban regeneration project within the historic center of Callao. Centered on Casa Fugaz, the Ronald Building, public murals, galleries, studios, cultural programming, and heritage routes, it transforms the port city’s architectural and social memory into a platform for visual culture, tourism, and community-based cultural production.",
-        "long": "Monumental Callao should be understood not as an industrial port facility but as a cultural and spatial reactivation of Callao’s historic center. Its value lies in the encounter between republican architecture, port memory, public art, creative industries, gastronomy, and community-oriented cultural management. The district uses restored buildings, mural interventions, gallery spaces, artist studios, rooftop programming, and guided routes through Plaza Matriz, Plaza Gálvez, Plaza Grau, Jirón Constitución, and Casa Fugaz to reframe Callao as a site of heritage, visual experimentation, and urban transformation. For audiovisual narratives, it offers a layered setting where historical architecture, street art, local identity, and social renewal coexist within the symbolic geography of Peru’s main port city."
+        "brief": "Monumental Del Callao: a culture-led urban regeneration district in the historic port center, articulated through art, heritage architecture, and community activation.",
+        "mid": "Monumental Del Callao operates as a contemporary urban regeneration project within the historic center of Callao. Centered on Casa Fugaz, the Ronald Building, public murals, galleries, studios, cultural programming, and heritage routes, it transforms the port city’s architectural and social memory into a platform for visual culture, tourism, and community-based cultural production.",
+        "long": "Monumental Del Callao should be understood not as an industrial port facility but as a cultural and spatial reactivation of Callao’s historic center. Its value lies in the encounter between republican architecture, port memory, public art, creative industries, gastronomy, and community-oriented cultural management. The district uses restored buildings, mural interventions, gallery spaces, artist studios, rooftop programming, and guided routes through Plaza Matriz, Plaza Gálvez, Plaza Grau, Jirón Constitución, and Casa Fugaz to reframe Callao as a site of heritage, visual experimentation, and urban transformation. For audiovisual narratives, it offers a layered setting where historical architecture, street art, local identity, and social renewal coexist within the symbolic geography of Peru’s main port city."
       }
     }
   },
@@ -446,60 +450,6 @@ const locations = [
         "brief": "Calle Tarata: a site of urban trauma in Miraflores, cinematically treated as a space of memory for the 1992 Sendero Luminoso bombing.",
         "mid": "Calle Tarata constitutes a site of urban trauma within the Miraflores district. The 1992 car bombing by Sendero Luminoso transformed it into a memorial space whose cinematic treatment in Aguilar's Tarata (2009) navigates the intersection of collective memory, political violence, and bourgeois civilian experience.",
         "long": "Calle Tarata occupies a distinctive position in Lima's urban memory as the site of the July 16, 1992 car bombing by Sendero Luminoso, which killed 25 civilians and became one of the most symbolically charged events of Peru's internal conflict. The attack's location in Miraflores — Lima's most affluent and internationally visible district — was understood at the time as a deliberate escalation of the conflict into spaces previously perceived as protected by class geography. Fabrizio Aguilar's Tarata (2009) engages directly with this dimension, reconstructing the night of the bombing in a mode that blends personal testimony with collective trauma, positioning the street not as historical backdrop but as a space whose spatial memory structures the film's entire affective logic."
-      }
-    }
-  },
-  {
-    "name": "Avenida Brasil",
-    "address": "Av. Brasil, Lima 15084, Perú",
-    "district": [
-      "Breña",
-      "Jesús María",
-      "Pueblo Libre",
-      "Magdalena del Mar"
-    ],
-    "movies": [
-      {
-        "title": "Esta es la U",
-        "year": 2024
-      },
-      {
-        "title": "Cholo",
-        "year": 1972
-      },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      }
-    ],
-    "descriptions": {
-      "young": "Avenida Brasil runs through several Lima districts and is one of those streets that just shows the city in motion — cars, buses, everyday people. It shows up in films as a connector, a slice of the city's daily flow.",
-      "adult": "A major avenue crossing multiple districts, used in films to represent the flow of everyday urban life, middle-class Lima, and the city's spatial connections. It appears across diverse genres, from documentary to comedy to crime.",
-      "professional": "Avenida Brasil functions as a cinematographic artery of Lima's urban landscape, its cross-district extent making it a spatial marker of the city's social heterogeneity. Its use across multiple productions — from Honigmann's documentary to Maldonado's biographical comedy — reflects its role as a shared spatial reference for Lima's diverse cinematic representations."
-    },
-    "access": "Public — free access",
-    "lat": -12.078385714156722,
-    "lng": -77.05694122354882,
-    "image": "images/avenida-brasil.webp",
-    "cardDescription": {
-      "short": "A major Lima avenue that crosses the city like a vein — busy, unglamorous, and completely alive.",
-      "long": "Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city."
-    },
-    "texts": {
-      "young": {
-        "brief": "One of Lima's main avenues — busy, everyday, and a reliable way to show the city as it actually is.",
-        "mid": "Avenida Brasil runs through several Lima districts and is one of those streets that just shows the city in motion — cars, buses, everyday people. It shows up in films as a connector, a slice of the city's daily flow.",
-        "long": "Avenida Brasil isn't a scenic street and it isn't trying to be. It's a major urban artery that runs through Breña, Jesús María, and Pueblo Libre, carrying traffic, buses, and the daily movement of middle Lima in both directions. That's exactly why filmmakers use it. When you want a shot of the city that feels honest — not beautiful, not ugly, just real — Avenida Brasil delivers. It's the Lima of bus stops and corner pharmacies and people who have somewhere to be. Several films across very different genres have used it for exactly that quality: the unglamorous, undeniable rhythm of everyday urban life."
-      },
-      "adult": {
-        "brief": "A major Lima avenue that crosses the city like a vein — busy, unglamorous, and completely alive.",
-        "mid": "A major avenue crossing multiple districts, used in films to represent the flow of everyday urban life, middle-class Lima, and the city's spatial connections. It appears across diverse genres, from documentary to comedy to crime.",
-        "long": "Avenida Brasil doesn't appear in films for its beauty. It appears because it feels true. Running through Breña, Jesús María, and Pueblo Libre, it carries the traffic and daily rhythms of middle Lima — the Lima of buses and corner shops and people always somewhere to be. Across documentary, comedy, and crime genres, filmmakers have used it as a spatial connector, a slice of urban motion that locates stories firmly in the real geography of the city."
-      },
-      "professional": {
-        "brief": "Avenida Brasil: a multi-district urban artery used cinematographically as a spatial marker of Lima's middle-class everyday life.",
-        "mid": "Avenida Brasil functions as a cinematographic artery of Lima's urban landscape, its cross-district extent making it a spatial marker of the city's social heterogeneity. Its use across multiple productions reflects its role as a shared spatial reference for Lima's diverse cinematic representations.",
-        "long": "Avenida Brasil's cinematic utility lies in its indexical quality: as a major arterial road crossing several of Lima's central districts, it provides a spatial reference point that grounds diverse filmic narratives in a shared urban geography. Unlike the symbolic monuments of the Centro Histórico or the aspirational architectures of Miraflores, the avenue's visual register is resolutely quotidian — traffic, commerce, transit — making it a productive site for films seeking to represent Lima's middle strata and their daily spatial practices. Its cross-generic appearances, from documentary to comedy to social drama, confirm its status as a versatile cinematographic resource for a wide range of representational purposes."
       }
     }
   },
@@ -915,124 +865,6 @@ const locations = [
     }
   },
   {
-    "name": "Larcomar",
-    "address": "Mal. de la Reserva 610, Miraflores 15074, Perú",
-    "district": "Miraflores",
-    "movies": [
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      },
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Lima 13",
-        "year": 2012
-      },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      },
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
-      }
-    ],
-    "descriptions": {
-      "young": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in five films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-      "adult": "A modern shopping and entertainment center built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in five films spanning the late 1990s to the 2010s.",
-      "professional": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use — across comedy, drama, and thriller — reflects its function as a symbol of Lima's aspirational consumer modernity and its associated social contradictions."
-    },
-    "access": "Public — free access",
-    "lat": -12.1318722790964,
-    "lng": -77.03047475216545,
-    "image": "images/larcomar.webp",
-    "cardDescription": {
-      "short": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-      "long": "Larcomar is Lima doing something only Lima would do: carving a commercial center into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Five films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
-    },
-    "texts": {
-      "young": {
-        "brief": "A shopping mall built into the cliffs of Miraflores, with the Pacific directly below — one of Lima's most surreal and spectacular spaces.",
-        "mid": "Larcomar is literally a mall built into the edge of a cliff overlooking the Pacific — only in Lima. It's appeared in five films, often as the symbol of the aspirational, consumerist side of Miraflores life.",
-        "long": "Larcomar is the kind of place that takes a moment to process the first time you see it. It's a shopping centre — cinemas, restaurants, shops — but it's built into the cliff face of the Malecón, with the Pacific Ocean filling the horizon from every terrace. The combination of commercial space and coastal drama is uniquely limeño: glamorous and slightly absurd at the same time. Five films have used it as a location, and in all of them it carries the same meaning — Miraflores at its most aspirational, a place where lifestyle and status are performed against a backdrop of extraordinary views."
-      },
-      "adult": {
-        "brief": "A shopping mall built into the cliffs of Miraflores — literally cantilevered over the Pacific.",
-        "mid": "A modern shopping and entertainment centre built into the Miraflores coastal cliffs, offering ocean views and associated with Lima's commercial and nightlife culture. It appears in five films spanning the late 1990s to the 2010s.",
-        "long": "Larcomar is Lima doing something only Lima would do: carving a commercial centre into the coastal cliffs, with ocean views from every terrace. Since opening in 1998, it has become a symbol of Miraflores' aspirational lifestyle — glamorous, slightly surreal, and undeniably spectacular. Five films have used it as a location, repeatedly deploying its architecture to represent the consumerist and upper-class social culture of the district, sometimes admiringly, sometimes critically."
-      },
-      "professional": {
-        "brief": "Larcomar: a cliff-edge commercial complex functioning cinematographically as a condensed sign of Lima's aspirational consumer modernity.",
-        "mid": "Larcomar occupies a distinctive position in Lima's urban geography, its cliff-edge architecture integrating commercial infrastructure with spectacular coastal scenery. Its repeated cinematic use reflects its function as a symbol of Lima's aspirational consumer modernity.",
-        "long": "Larcomar's integration of commercial infrastructure into the coastal cliff face of the Malecón de Miraflores represents a significant moment in Lima's urban development, inaugurating a model of spectacular retail environment whose design exploits the city's geography as a vehicle for commercial aspiration. Its cinematic uses across five productions reflect a consistent deployment of the complex as a sign of Miraflores' consumer culture — a space where lifestyle, status, and spatial spectacle converge in ways that lend themselves equally to celebratory and critical representational framings. Larcomar's architectural syntax — open terraces, ocean views, vertical commercial layering — provides a visual grammar of aspirational modernity that is simultaneously global in its commercial logic and distinctly limeño in its spatial specificity."
-      }
-    }
-  },
-  {
-    "name": "Plaza Agustín Gutiérrez",
-    "address": "Óvalo Gutiérrez, Miraflores 15073, Perú",
-    "district": "Miraflores",
-    "movies": [
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
-      },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      },
-      {
-        "title": "Lima 13",
-        "year": 2012
-      },
-      {
-        "title": "Utopía",
-        "year": 2018
-      },
-      {
-        "title": "Muero por Muriel",
-        "year": 2007
-      }
-    ],
-    "descriptions": {
-      "young": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Six films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-      "adult": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in six films exploring Lima's urban social landscape.",
-      "professional": "Plaza Agustín Gutiérrez functions as a cinematographic node of upper-middle-class social life in Lima, its location at the intersection of Miraflores and San Isidro making it a spatial marker of class aspiration and leisure as depicted in Lima 13, Utopía, and Muero por Muriel."
-    },
-    "access": "Public — free access",
-    "lat": -12.11031660293372,
-    "lng": -77.03690308601313,
-    "image": "images/ovalo-gutierrez.webp",
-    "cardDescription": {
-      "short": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-      "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Six films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
-    },
-    "texts": {
-      "young": {
-        "brief": "One of Lima's busiest intersections — surrounded by bars, restaurants, and the social life of the younger, urban middle class.",
-        "mid": "Ovalo Gutiérrez is one of Lima's busiest urban intersections, surrounded by bars, restaurants, and nightlife. Six films used it as a setting for stories about Lima's younger and upper-middle-class urban life.",
-        "long": "Ovalo Gutiérrez is one of those intersections that feels like its own ecosystem. It connects Miraflores and San Isidro, sits at the junction of several important streets, and is surrounded by the kind of bars, restaurants, and terraces where Lima's urban middle class spends its evenings. It's busy without being chaotic, social without being formal — the kind of place you end up in on a Tuesday night as much as a Saturday. Six films have used it as a setting, all interested in the social rituals of a particular class of limeño and the way people perform their lives in public, in the city, under neon lights."
-      },
-      "adult": {
-        "brief": "One of Lima's busiest urban intersections — a hub of nightlife and social life between Miraflores and San Isidro.",
-        "mid": "A busy commercial intersection and plaza connecting Miraflores and San Isidro, associated with nightlife, restaurants, and upper-middle-class social life. It appears in six films exploring Lima's urban social landscape.",
-        "long": "Ovalo Gutiérrez is the kind of place Lima's younger, urban middle class treats as a living room. Surrounded by bars, restaurants, and coffee shops, it connects two of the city's most affluent districts and serves as a staging ground for the social rituals of night out, first dates, and after-work gatherings. Six films have set scenes here, using the plaza to ground stories in the texture of contemporary Lima — the city of terraces, city noise, and people watching other people."
-      },
-      "professional": {
-        "brief": "Plaza Agustín Gutiérrez: a commercial urban node at the Miraflores–San Isidro boundary, functioning as a cinematographic site of class aspiration and leisure.",
-        "mid": "Plaza Agustín Gutiérrez functions as a cinematographic node of upper-middle-class social life in Lima, its location at the intersection of Miraflores and San Isidro making it a spatial marker of class aspiration and leisure.",
-        "long": "Plaza Agustín Gutiérrez (Ovalo Gutiérrez) functions in Peruvian cinema as a spatial sign of the social rituals of Lima's upper-middle class. Its position at the boundary between Miraflores and San Isidro — the two districts most associated with the city's economic and cultural elite — makes it a productive cinematographic site for films interested in the performance of class and social aspiration. The plaza's commercial environment — characterised by restaurants, bars, and café terraces oriented toward conspicuous sociability — provides a spatial grammar of leisure and status that three productions have deployed to locate their narratives within a specific social and geographic stratum of the city."
-      }
-    }
-  },
-  {
     "name": "Bosque El Olivar",
     "address": "Av. Paz Soldán, San Isidro, Lima 15073, Perú",
     "district": [
@@ -1077,51 +909,6 @@ const locations = [
         "brief": "Bosque El Olivar: a colonial-era heritage landscape within San Isidro, cinematographically deployed as a space of historical depth and urban contrast.",
         "mid": "Bosque El Olivar constitutes a significant heritage landscape within San Isidro, its olive grove tracing colonial-era agricultural history within a contemporary residential context — a site of historical layering that preserves a trace of Lima's pre-republican landscape.",
         "long": "Bosque El Olivar represents a significant case of colonial agricultural heritage preserved within a contemporary urban context. The park's olive trees — introduced to Peru from Spain in the sixteenth century and cultivated at this site since the colonial period — constitute one of Lima's oldest surviving living landscapes, a trace of the city's pre-republican history embedded within one of its most affluent contemporary districts. The park's cinematic utility lies in precisely this quality of temporal displacement: its spatial atmosphere — shade, silence, the presence of centuries-old trees within a dense urban environment — produces a visual and sensory grammar that differs markedly from the rest of Lima, making it a productive setting for films that require a space of retreat, reflection, or historical depth."
-      }
-    }
-  },
-  {
-    "name": "Muelle Sur del Callao",
-    "address": "Port of Callao, Callao, Peru",
-    "district": "Callao",
-    "movies": [
-      {
-        "title": "Django: Sangre de mi sangre",
-        "year": 2018
-      },
-      {
-        "title": "Alias \"La Gringa\"",
-        "year": 1991
-      }
-    ],
-    "descriptions": {
-      "young": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "adult": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "professional": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre ."
-    },
-    "access": "Restricted port area — access requires authorization or an organized visit",
-    "lat": -12.0554,
-    "lng": -77.1506,
-    "image": "images/muelle_sur_del_callao.webp",
-    "cardDescription": {
-      "short": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-      "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre ."
-    },
-    "texts": {
-      "young": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
-      },
-      "adult": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
-      },
-      "professional": {
-        "brief": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "mid": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre .",
-        "long": "Muelle Sur del Callao is part of the port landscape of Callao and appears in the cinematic geography connected with Django: Sangre de mi sangre . The site is within the Port of Callao. It is an operational and restricted port area, so access requires authorization or an organized visit."
       }
     }
   },
@@ -1335,47 +1122,6 @@ const locations = [
         "brief": "The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing.",
         "mid": "The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing. Located in San Isidro, it was designed during the 1960s as a residential development for middle-class families. The complex combines apartments, gardens, pedestrian circulation, community spaces, and urban planning within a single residential area.",
         "long": "The Santa Cruz Residential Complex is one of Lima’s most representative examples of modern collective housing. Located in San Isidro, it was designed during the 1960s as a residential development for middle-class families. The complex combines apartments, gardens, pedestrian circulation, community spaces, and urban planning within a single residential area. The Santa Cruz Residential Complex is located in the district of San Isidro, Lima, near the border with Miraflores. Its main reference location is Avenida Belén, close to Avenida General Córdova, Avenida Pérez Araníbar, and the Huaca Santa Cruz archaeological site. The complex consists of multifamily residential blocks, houses, gardens, plazas, pedestrian paths, internal streets, and community spaces. It contains approximately 20 residential blocks and was originally developed with 446 duplex apartments."
-      }
-    }
-  },
-  {
-    "name": "Residencial San Felipe",
-    "address": "Avenida Gregorio Escobedo, Jesús María, Lima",
-    "district": "Jesús María",
-    "movies": [
-      {
-        "title": "La Hora Final",
-        "year": 2017
-      }
-    ],
-    "descriptions": {
-      "young": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-      "adult": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-      "professional": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development."
-    },
-    "access": "Residential area — public paths are accessible; respect private buildings",
-    "lat": -12.09,
-    "lng": -77.052,
-    "image": "images/residencial_san_felipe.webp",
-    "cardDescription": {
-      "short": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-      "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development."
-    },
-    "texts": {
-      "young": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
-      },
-      "adult": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
-      },
-      "professional": {
-        "brief": "Residencial San Felipe is a landmark modernist housing complex in Jesús María.",
-        "mid": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development.",
-        "long": "Residencial San Felipe is a landmark modernist housing complex in Jesús María. Its towers, duplex apartments, gardens and pedestrian spaces represent an important chapter in Lima's twentieth-century urban development. The complex stands between Avenida Gregorio Escobedo and Avenida Salaverry in Jesús María. Built between 1962 and 1966, it contains residential buildings of different heights arranged around public gardens and shared spaces."
       }
     }
   },
@@ -1692,30 +1438,6 @@ const films = [
       "La Gorda Films"
     ],
     "description": "A documentary celebrating the 100th anniversary of Universitario de Deportes, revisiting its history, achievements, and emotional connection with fans."
-  },
-  {
-    "title": "Utopía",
-    "year": 2018,
-    "wikidata_id": "Q56886991",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q56886991",
-    "director": [
-      "Gino Tassara",
-      "Jorge Vilela"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Drama"
-    ],
-    "cast": [
-      "Renzo Schuller",
-      "Natalia Salas"
-    ],
-    "production": [
-      "Sinargollas Producciones"
-    ],
-    "description": "Recreates the real nightclub fire tragedy in Lima (2002), highlighting negligence, corruption, and the human consequences of the disaster."
   },
   {
     "title": "Caídos del Cielo",
