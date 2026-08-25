@@ -1760,3 +1760,220 @@ body[data-era] .difficulty-btn,
 body[data-era] .difficulty-label {
     font-family: var(--era-font-ui);
 }
+
+/* =========================================================
+   FILM COLLECTION PAGE
+   ========================================================= */
+
+body[data-era] .film-collection-page,
+body[data-era] .film-catalogue {
+    color: var(--era-ink);
+    background-color: var(--era-bg);
+    background-image: var(--era-bg-image);
+}
+
+body[data-era] :where(.film-collection-hero, .film-catalogue-heading, .film-controls, .film-results-line) {
+    border-color: var(--era-border);
+}
+
+body[data-era] :where(.film-collection-hero h1, .film-catalogue-heading h2, .film-dialog-title) {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] :where(
+    .film-collection-lead,
+    .film-catalogue-heading > p,
+    .film-results-line p,
+    .film-dialog-text,
+    .film-dialog-value,
+    .film-dialog-location-district
+) {
+    color: var(--era-muted);
+}
+
+body[data-era] :where(
+    .film-collection-summary,
+    .film-card-meta,
+    .film-card-arrow,
+    .film-dialog-label,
+    .film-dialog-section-title,
+    .film-results-line p:first-child
+) {
+    color: var(--era-accent);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] :where(.film-collection-jump, .film-dialog-location-link, .film-dialog-external) {
+    color: var(--era-accent);
+    border-color: var(--era-accent);
+    text-decoration-color: color-mix(in srgb, var(--era-accent) 55%, transparent);
+}
+
+body[data-era] .film-collage-frame {
+    background: var(--era-surface-alt);
+    border-color: var(--era-bg);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+}
+
+body[data-era] :where(.film-collage-frame img, .film-card-visual img, .film-dialog-visual img, .film-dialog-gallery-grid img) {
+    filter: var(--era-image-filter);
+}
+
+body[data-era] .film-card.film-collection-card {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    border-radius: var(--era-card-radius);
+}
+
+body[data-era] .film-collection-card .film-title {
+    color: var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] :where(.film-collection-card .film-description, .film-card-footer) {
+    color: var(--era-muted);
+}
+
+body[data-era] :where(.film-card-footer, .film-dialog-fact, .film-dialog-section, .film-dialog-location-list li) {
+    border-color: var(--era-border);
+}
+
+body[data-era] .film-genre-tag {
+    color: var(--era-ink);
+    background: var(--era-surface-alt);
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] :where(.film-card-fallback, .film-dialog-fallback) {
+    color: var(--era-muted);
+    background-color: var(--era-surface-alt);
+    font-family: var(--era-font-display);
+}
+
+body[data-era] .film-card-index {
+    color: var(--era-surface);
+    background: color-mix(in srgb, var(--era-ink) 88%, transparent);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .film-controls label {
+    color: var(--era-muted);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] :where(.film-controls input, .film-controls select) {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border-strong);
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] :where(.film-controls input, .film-controls select):focus {
+    border-color: var(--era-accent);
+    box-shadow: 0 2px 0 var(--era-accent);
+}
+
+body[data-era] .film-clear-filters {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border-strong);
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .film-clear-filters:hover:not(:disabled) {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] .film-dialog {
+    color: var(--era-ink);
+    background: var(--era-bg);
+    background-image: var(--era-bg-image);
+    border-color: var(--era-border-strong);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+}
+
+body[data-era] .film-dialog-close {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-surface);
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] :where(.film-dialog-visual, .film-dialog-gallery-grid figure) {
+    background: var(--era-surface-alt);
+    border-radius: var(--era-card-radius);
+}
+
+body[data-era='early-print'] .film-collection-hero h1::after {
+    content: '❦';
+    display: block;
+    margin-top: 0.32em;
+    color: var(--era-accent);
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+body[data-era='early-print'] :where(.film-card.film-collection-card, .film-dialog) {
+    background-image:
+        repeating-linear-gradient(0deg, rgba(52, 36, 27, 0.025) 0 1px, transparent 1px 5px),
+        radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.24), transparent 34%);
+    border: 3px double var(--era-border);
+}
+
+body[data-era='modern-print'] :where(.film-collection-hero h1, .film-catalogue-heading h2) {
+    border-top: 4px double var(--era-ink);
+    border-bottom: 1px solid var(--era-ink);
+    padding-block: 0.16em;
+}
+
+body[data-era='editorial-print'] :where(.film-collection-hero h1, .film-catalogue-heading h2, .film-dialog-title) {
+    color: var(--era-ink);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+body[data-era='early-web'] :where(.film-controls input, .film-controls select, .film-clear-filters) {
+    border: 1px solid;
+    border-color: #ffffff #555555 #555555 #ffffff;
+    background: linear-gradient(#ffffff, #d1d1d1);
+    box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #999999;
+}
+
+body[data-era='early-web'] :where(.film-collection-jump, .film-dialog-location-link, .film-dialog-external) {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+body[data-era='future'] :where(.film-collection-hero, .film-catalogue, .film-dialog) {
+    color: #f4f7fa;
+    background-color: #090b11;
+}
+
+body[data-era='future'] .film-dialog {
+    border-color: rgba(131, 242, 207, 0.5);
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.64), 0 0 0 1px rgba(131, 242, 207, 0.12);
+}
+
+body[data-era='future'] :where(.film-dialog-title, .film-dialog-section-title, .film-dialog-location-link) {
+    color: #ffffff;
+}
+
+body[data-era='future'] :where(.film-dialog-text, .film-dialog-value, .film-dialog-location-district) {
+    color: #d7e2f0;
+}
+
+body[data-era='future'] :where(.film-controls input, .film-controls select, .film-clear-filters) {
+    color: #f4f7fa;
+    background: rgba(24, 29, 41, 0.96);
+    border-color: rgba(131, 242, 207, 0.48);
+}
