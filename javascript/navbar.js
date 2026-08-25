@@ -82,6 +82,7 @@
 
     const page = window.location.pathname.split('/').pop()
     const locationsActive = (page === 'index.html' || page === 'location.html' || page === '')
+    const filmsActive = (page === 'films.html')
     const narActive = (page === 'itineraries.html')
     const docActive = (page === 'documentation.html')
     const aboutActive = (page === 'disclaimer_page.html')
@@ -105,6 +106,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link ${locationsActive ? 'active' : ''}" ${locationsActive ? 'aria-current="page"' : ''} href="index.html#locations">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ${filmsActive ? 'active' : ''}" ${filmsActive ? 'aria-current="page"' : ''} href="films.html">Films</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${narActive ? 'active' : ''}" ${narActive ? 'aria-current="page"' : ''} href="itineraries.html">Narratives</a>
