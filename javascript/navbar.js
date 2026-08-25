@@ -85,10 +85,11 @@
     const filmsActive = (page === 'films.html')
     const narActive = (page === 'itineraries.html')
     const docActive = (page === 'documentation.html')
-    const aboutActive = (page === 'disclaimer_page.html')
+    const aboutActive = (page === 'about.html')
+    const disclaimerActive = (page === 'disclaimer_page.html')
 
     const nav = document.createElement('nav')
-    nav.className = 'navbar navbar-expand-md border-bottom site-navbar'
+    nav.className = 'navbar navbar-expand-xl border-bottom site-navbar'
     nav.setAttribute('aria-label', 'Main navigation')
     nav.innerHTML = `
         <div class="container-fluid px-4">
@@ -117,7 +118,10 @@
                         <a class="nav-link ${docActive ? 'active' : ''}" ${docActive ? 'aria-current="page"' : ''} href="documentation.html">Documentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ${aboutActive ? 'active' : ''}" ${aboutActive ? 'aria-current="page"' : ''} href="disclaimer_page.html">About</a>
+                        <a class="nav-link ${aboutActive ? 'active' : ''}" ${aboutActive ? 'aria-current="page"' : ''} href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ${disclaimerActive ? 'active' : ''}" ${disclaimerActive ? 'aria-current="page"' : ''} href="disclaimer_page.html">Disclaimer</a>
                     </li>
                 </ul>
             </div>
@@ -143,6 +147,8 @@
         </div>
         <div class="site-footer-inner site-footer-credits">
             <span>© 2026</span>
+            <span class="site-footer-divider">·</span>
+            <span><a href="about.html">About</a> · <a href="disclaimer_page.html">Disclaimer</a></span>
             <span class="site-footer-divider">·</span>
             <span>Map: <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> + <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></span>
             <span class="site-footer-divider">·</span>
