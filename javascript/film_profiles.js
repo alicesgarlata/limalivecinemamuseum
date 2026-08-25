@@ -84,8 +84,8 @@ const filmProfiles = {
     "description": "Viejos amigos is a Peruvian comedy about friendship, old age, memory, football, and Callao. The film combines humor and nostalgia to portray a group of elderly friends who reconnect with their past and with the port identity of their neighborhood.",
     "about": "Three elderly friends steal the urn containing the ashes of their deceased friend in order to fulfill his final wish: to have his ashes scattered in the sea near Callao. Their journey becomes an emotional and comic route through memories, old friendships, football passion, and the urban identity of the port.",
     "themes": "Friendship, aging, memory, Callao identity, football, nostalgia, and loyalty.",
-    "value": "The film has a strong relationship with Callao Monumental, Playa Cantolao, the sea, and the emotional geography of the port. It is one of the most useful films for building a Callao itinerary.",
-    "related_location": "Callao Monumental, Playa cantolao",
+    "value": "The film has a strong relationship with Monumental Del Callao, Playa Cantolao, the sea, and the emotional geography of the port. It is one of the most useful films for building a Callao itinerary.",
+    "related_location": "Monumental Del Callao, Playa cantolao",
     "image": ["images/imagenes/viejos amigos monumental callao 3.webp", "images/imagenes/viejos amigos barco cantolao.webp"]
   },
 
@@ -93,7 +93,7 @@ const filmProfiles = {
     "description": "Lima 13 is a choral drama set in contemporary Miraflores. The title refers to the postal code of the district, making Miraflores part of the film's identity. The film portrays an urban environment marked by loneliness, anxiety, surveillance, and emotional distance.",
     "about": "The story takes place during a period marked by fear of the end of the world. A security guard observes the lives of several people in a residential area. Through these characters, the film explores different forms of solitude, memory, fear, and human connection in a modern district of Lima.",
     "themes": "Urban loneliness, surveillance, anxiety, modern life, emotional isolation, and residential Lima.",
-    "value": "This film relates strongly to Miraflores, Parque Kennedy, Larcomar, and the district's residential and tourist axis.",
+    "value": "This film relates strongly to Miraflores, Parque Kennedy, and the district's residential and tourist axis.",
     "related_location": "Parque Kenedy",
     "image": "images/imagenes/lima 13 parque kenedy.webp"
   },
@@ -177,7 +177,7 @@ const filmProfiles = {
     "description": "Cholo is a Peruvian biographical film starring footballer Hugo Sotil. It combines sports biography, fiction, and social commentary on migration, racism, and popular success.",
     "about": "The film follows a young man from the provinces who arrives in Lima and faces discrimination and hardship. His talent for football becomes a way to overcome social barriers and gain national recognition. Through his rise, the film explores the relationship between sport, class, race, and identity in Peru.",
     "themes": "Football, migration, racism, social mobility, popular identity, talent, and national recognition.",
-    "value": "The film can be related to Estadio Lolo Fernández, Avenida Brasil, and other spaces connected to football culture and popular urban memory in Lima.",
+    "value": "The film can be related to Estadio Lolo Fernández and other spaces connected to football culture and popular urban memory in Lima.",
     "related_location": "Estadio Lolo Fernández",
     "image": "images/imagenes/lolofernanez.webp"
   },
