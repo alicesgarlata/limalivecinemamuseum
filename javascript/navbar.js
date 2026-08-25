@@ -94,7 +94,7 @@
         <div class="container-fluid px-4">
             <a class="navbar-brand site-brand" href="index.html">
                 Lima Live Cinema Museum
-                <span class="site-sub d-block">Explore iconic movie locations around the world</span>
+                <span class="site-sub d-block">Explore Lima through its cinematic locations</span>
             </a>
             <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#mainNav"
