@@ -87,7 +87,7 @@
         const years = films.map(film => film.year).filter(Number.isFinite)
         document.getElementById('films-total').textContent = films.length
         document.getElementById('films-years').textContent = years.length
-            ? `${Math.min(...years)}â€“${Math.max(...years)}`
+            ? `${Math.min(...years)}–${Math.max(...years)}`
             : 'Dates unavailable'
 
         const decades = [...new Set(catalogue.map(item => item.decade))].sort((a, b) => a - b)
@@ -146,7 +146,7 @@
             : `${linkedLocations.length} mapped locations`
         footer.append(
             element('span', 'film-location-count', locationLabel),
-            element('span', 'film-card-arrow', 'Open record â†’')
+            element('span', 'film-card-arrow', 'Open record →')
         )
 
         copy.append(meta, title, description, genres, footer)
@@ -272,7 +272,7 @@
         layout.appendChild(makeDialogVisual(film, cover))
 
         const record = element('div', 'film-dialog-record')
-        const eyebrow = element('p', 'section-kicker', `${film.year} Â· Film record`)
+        const eyebrow = element('p', 'section-kicker', `${film.year} · Film record`)
         const title = element('h2', 'film-dialog-title', film.title)
         title.id = 'film-dialog-title'
         const facts = element('dl', 'film-dialog-facts')
@@ -296,7 +296,7 @@
         if (gallery) record.appendChild(gallery)
 
         if (film.wikidata_url) {
-            const external = element('a', 'film-dialog-external', 'Open the Wikidata record â†—')
+            const external = element('a', 'film-dialog-external', 'Open the Wikidata record ↗')
             external.href = film.wikidata_url
             external.target = '_blank'
             external.rel = 'noopener'
