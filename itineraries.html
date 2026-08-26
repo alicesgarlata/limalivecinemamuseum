@@ -3,14 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Narratives — Lima Live Cinema Museum</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <title>Narratives — Lima Live Museum of Movie Locations</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .narrative-page { max-width: 1180px; padding: 2rem; }
+
+        .narrative-switcher {
+            display: flex; gap: 12px; margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5; padding-bottom: 0;
+        }
+        .narrative-tab {
+            font-size: 13px; font-weight: 500; color: #aaa;
+            background: none; border: none;
+            border-bottom: 2px solid transparent;
+            padding: 8px 0; margin-bottom: -1px; cursor: pointer;
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .narrative-tab.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+
+        .narrative-content { display: none; }
+        .narrative-content.active { display: block; }
+
+        /* Two-column layout */
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 380px;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        @media (max-width: 860px) {
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .itinerary-map-col { position: static !important; }
+        }
+
+        .itinerary-text { min-width: 0; }
+
+        .itinerary-map-col {
+            position: sticky;
+            top: 24px;
+        }
+        .itinerary-map {
+            width: 100%; height: 520px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+        }
+        .map-legend {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #888;
+            line-height: 1.6;
+        }
+        .map-legend a { color: #1a1a1a; }
+
+        /* Inline location photos */
+        .loc-photo {
+            width: 100%; border-radius: 10px;
+            margin: 1rem 0 0.5rem;
+            aspect-ratio: 16/7;
+            object-fit: cover;
+            display: block;
+        }
+        .loc-photo-caption {
+            font-size: 11px; color: #aaa;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* Narrative text styles */
+        .narrative-intro { margin-bottom: 2rem; }
+        .narrative-intro h1 { font-size: 28px; font-weight: 500; margin-bottom: 6px; }
+        .narrative-subtitle {
+            font-size: 12px; color: #aaa; text-transform: uppercase;
+            letter-spacing: 0.08em; margin-bottom: 1rem;
+        }
+        .itinerary-meta {
+            display: flex; gap: 1rem; font-size: 12px; color: #aaa;
+            flex-wrap: wrap; margin-top: 0.75rem;
+        }
+
+        .itinerary-text p {
+            font-size: 15px; line-height: 1.8; color: #444;
+            margin-bottom: 1rem; text-align: justify;
+        }
+        .itinerary-text a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
+        .itinerary-text a:hover { border-color: #1a1a1a; }
+
+        /* Timeline (narrative I) */
+        .chapter-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 6px; }
+        .narrative-chapter { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0; }
+        .narrative-chapter h2 { font-size: 18px; font-weight: 500; margin-bottom: 0.5rem; }
+        .chapter-dates { font-size: 14px; font-weight: 400; color: #aaa; }
+        .chapter-intro { font-size: 13px; color: #888; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
+        .narrative-transition {
+            margin: 1.5rem 0; padding: 1rem 1.25rem;
+            border-left: 3px solid #e5e5e5; background: #fafaf8;
+            border-radius: 0 8px 8px 0;
+        }
+        .narrative-transition p { font-size: 13px; color: #666; font-style: italic; line-height: 1.75; margin: 0; }
+        .timeline-entry { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid #f5f5f5; }
+        .timeline-year { font-size: 17px; font-weight: 600; color: #1a1a1a; padding-top: 2px; }
+        .timeline-location { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
+        .timeline-location a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
+        .timeline-district { font-weight: 400; color: #aaa; }
+        .timeline-body p { font-size: 14px; color: #444; line-height: 1.75; margin: 0; }
+
+        /* Leaflet marker numbers */
+        .num-marker {
+            width: 26px; height: 26px; border-radius: 50%;
+            background: #1a1a1a; color: white;
+            font-size: 11px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body>
 
@@ -24,6 +134,7 @@
             <button class="narrative-tab" data-narrative="miraflores">II. Cinematic Miraflores</button>
             <button class="narrative-tab" data-narrative="sanisidro">III. San Isidro</button>
             <button class="narrative-tab" data-narrative="callao">IV. Callao &amp; La Punta</button>
+            <button class="narrative-tab" data-narrative="conflict">V. Violence &amp; Memory</button>
         </div>
 
 
@@ -91,7 +202,7 @@
                         <div class="timeline-entry">
                             <div class="timeline-year">1991</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Monumental%20Del%20Callao">Monumental Del Callao</a> · <a href="location.html?name=Isla%20El%20Front%C3%B3n">Isla El Frontón</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Muelle%20Sur%20del%20Callao">Muelle Sur del Callao</a> · <a href="location.html?name=Isla%20El%20Front%C3%B3n">Isla El Frontón</a></div>
                                 <p><em>Alias "La Gringa"</em> uses the port and the decommissioned prison island of El Frontón: the working waterfront and the site of a massacre the country has not fully reckoned with.</p>
                             </div>
                         </div>
@@ -107,15 +218,15 @@
                         <div class="timeline-entry">
                             <div class="timeline-year">1993</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a> · <a href="location.html?name=Avenida%20Brasil">Avenida Brasil</a></div>
                                 <p>Honigmann's <em>Metal y Melancolía</em> follows Lima's informal taxi drivers at night — beauty and exhaustion in equal measure.</p>
                             </div>
                         </div>
                         <div class="timeline-entry">
                             <div class="timeline-year">1998</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Lima%20Golf%20Club">Lima Golf Club</a></div>
-                                <p>Lombardi's <em>No Se Lo Digas a Nadie</em>. Lima's most exclusive spaces reveal what they conceal.</p>
+                                <div class="timeline-location"><a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Lima%20Golf%20Club">Lima Golf Club</a></div>
+                                <p>Lombardi's <em>No Se Lo Digas a Nadie</em>. Larcomar — opened the same year — makes its first cinematic appearance. Lima's most exclusive spaces reveal what they conceal.</p>
                             </div>
                         </div>
                     </div>
@@ -137,14 +248,14 @@
                         <div class="timeline-entry">
                             <div class="timeline-year">2013</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Parque%20John%20F.%20Kennedy">Parque Kennedy</a> · <a href="location.html?name=Playa%20Agua%20Dulce">Playa Agua Dulce</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Parque%20John%20F.%20Kennedy">Parque Kennedy</a> · <a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Playa%20Agua%20Dulce">Playa Agua Dulce</a></div>
                                 <p><em>¡Asu Mare!</em> moves across Lima's class geography — from the public beach to the Golf Club — a film about crossing the city's invisible boundaries.</p>
                             </div>
                         </div>
                         <div class="timeline-entry">
                             <div class="timeline-year">2017</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Universidad%20Nacional%20Mayor%20de%20San%20Marcos">UNMSM</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Residencial%20San%20Felipe">Residencial San Felipe</a> · <a href="location.html?name=Universidad%20Nacional%20Mayor%20de%20San%20Marcos">UNMSM</a></div>
                                 <p><em>La Hora Final</em> reconstructs the DINCOTE operations. Lima's urban fabric as evidence.</p>
                             </div>
                         </div>
@@ -298,9 +409,9 @@
 
                     <p>This location appears in <em>El embajador y yo</em>, a Peruvian comedy starring Kiko Ledgard, Patricia Aspíllaga, and Saby Kamalich. The film includes sequences recorded in the former terminal of Jorge Chávez Airport. Its arrival halls, large windows, boarding stairs, and exterior platforms projected a modern and cosmopolitan image of the city during the 1960s. The airport therefore provides an appropriate starting point for the route, connecting the arrival in Lima with the international travel, diplomatic missions, and intrigue that form part of the film.</p>
 
-                    <p>From the airport, visitors are advised to take a taxi to the Monumental Del Callao area, a tourist circuit renovated approximately ten years ago that brings together urban art, historic mansions, Republican-era balconies, historical squares, and streets connected with the maritime memory of Peru’s main port.</p>
+                    <p>From the airport, visitors are advised to take a taxi to the Callao Monumental area, a tourist circuit renovated approximately ten years ago that brings together urban art, historic mansions, Republican-era balconies, historical squares, and streets connected with the maritime memory of Peru’s main port.</p>
 
-                    <p>The film connected with this stop is <em>Viejos amigos</em> (2014), directed by Fernando Villarán. The story follows three elderly men who steal the urn containing their friend’s ashes and take it through his old neighborhood in Callao. Their objective is to fulfill his final wish by scattering the ashes in the sea near his hometown. Monumental Del Callao therefore functions as an ideal entrance into the world of the film, with its historic streets, local squares, neighborhood memory, and strong emotional connection with the port.</p>
+                    <p>The film connected with this stop is <em>Viejos amigos</em> (2014), directed by Fernando Villarán. The story follows three elderly men who steal the urn containing their friend’s ashes and take it through his old neighborhood in Callao. Their objective is to fulfill his final wish by scattering the ashes in the sea near his hometown. Callao Monumental therefore functions as an ideal entrance into the world of the film, with its historic streets, local squares, neighborhood memory, and strong emotional connection with the port.</p>
 
                     <p>The itinerary can then continue toward La Punta, a coastal district that changes the tone of the route. To reach it, visitors can take bus line 1133 from Plaza Grau in Callao, get off at Plaza Matriz in La Punta, and walk directly to Cantolao Beach.</p>
 
@@ -315,7 +426,7 @@
 
                     <p>El Frontón is the main location of <em>Alias “La Gringa”</em> (1991). The film tells the story of a daring fugitive who voluntarily returns to the feared prison on El Frontón Island to rescue a professor who previously saved his life. Surrounded by the sea and marked by the remains of its former prison infrastructure, the island becomes the central and oppressive setting of the story.</p>
 
-                    <p>The itinerary therefore connects four different cinematic images of Callao: the modernity and international travel represented by Jorge Chávez Airport in <em>El embajador y yo</em>; the streets, neighborhood memory, and port landscape of Monumental Del Callao in <em>Viejos amigos</em>; the nostalgic coastline of Cantolao in <em>Viaje a Tombuctú</em>; and the historical and prison-related isolation of El Frontón Island in <em>Alias “La Gringa”</em>.</p>
+                    <p>The itinerary therefore connects four different cinematic images of Callao: the modernity and international travel represented by Jorge Chávez Airport in <em>El embajador y yo</em>; the streets, neighborhood memory, and port landscape of Callao Monumental in <em>Viejos amigos</em>; the nostalgic coastline of Cantolao in <em>Viaje a Tombuctú</em>; and the historical and prison-related isolation of El Frontón Island in <em>Alias “La Gringa”</em>.</p>
                 </div>
 
                 <!-- MAP IV -->
@@ -324,7 +435,7 @@
                     <p class="map-legend">
                         <strong>Route:</strong>
                         <a href="location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport">Jorge Chávez Airport</a> →
-                        <a href="location.html?name=Monumental%20Del%20Callao">Monumental Del Callao</a> →
+                        <a href="location.html?name=Monumental%20Callao">Callao Monumental</a> →
                         <a href="location.html?name=Playa%20Cantolao">La Punta / Cantolao</a> →
                         <a href="location.html?name=Isla%20El%20Front%C3%B3n">Islands of Callao / El Frontón</a>
                     </p>
@@ -576,8 +687,9 @@
             { name: 'Magdalena Market',    lat: -12.0928, lng: -77.0655, n: 4 },
             { name: 'Malecón de Miraflores', lat: -12.1243, lng: -77.0384, n: 5 },
             { name: 'Calle Tarata',        lat: -12.1235, lng: -77.0288, n: 6 },
-            { name: 'Monumental Del Callao', lat: -12.06085, lng: -77.14645, n: 7 },
-            { name: 'Isla El Frontón',     lat: -12.1165, lng: -77.1814, n: 8 },
+            { name: 'Larcomar',            lat: -12.1319, lng: -77.0305, n: 7 },
+            { name: 'Muelle Sur del Callao', lat: -12.0554, lng: -77.1506, n: 8 },
+            { name: 'Isla El Frontón',     lat: -12.1165, lng: -77.1814, n: 9 },
         ];
 
         pts.forEach(p => {
@@ -637,7 +749,7 @@
     (function () {
         const stops = [
             { name: 'Jorge Chávez International Airport', lat: -12.0198, lng: -77.1087, n: 1, url: 'location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport' },
-            { name: 'Monumental Del Callao', lat: -12.0598, lng: -77.1385, n: 2, url: 'location.html?name=Monumental%20Del%20Callao' },
+            { name: 'Callao Monumental', lat: -12.0598, lng: -77.1385, n: 2, url: 'location.html?name=Monumental%20Callao' },
             { name: 'La Punta — Cantolao Beach', lat: -12.0763, lng: -77.1630, n: 3, url: 'location.html?name=Playa%20Cantolao' },
             { name: 'Isla El Frontón',   lat: -12.1165, lng: -77.1814, n: 4, url: 'location.html?name=Isla%20El%20Front%C3%B3n' },
         ];
@@ -656,6 +768,51 @@
             L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
               .addTo(m)
               .bindPopup(popup);
+        });
+    })();
+
+    // ── MAP V: LIMA, VIOLENCE & MEMORY ────────────────────────────────────
+    (function () {
+        const stops = [
+            {
+                name: 'Calle Tarata',
+                lat: -12.1235,
+                lng: -77.0288,
+                n: 1,
+                url: 'location.html?name=Calle%20Tarata'
+            },
+            {
+                name: 'Calle Varsovia',
+                lat: -12.1136,
+                lng: -77.0110,
+                n: 2,
+                url: 'location.html?name=Calle%20Varsovia'
+            },
+            {
+                name: 'Puente de los Suspiros',
+                lat: -12.1492,
+                lng: -77.0218,
+                n: 3,
+                url: 'location.html?name=Puente%20de%20los%20Suspiros'
+            }
+        ];
+
+        const m = L.map('map-conflict').setView([-12.133, -77.021], 13);
+        tileLayer().addTo(m);
+        maps['conflict'] = m;
+
+        const latlngs = stops.map(s => [s.lat, s.lng]);
+        L.polyline(latlngs, {
+            color: '#1a1a1a',
+            weight: 2,
+            dashArray: '5,6',
+            opacity: 0.6
+        }).addTo(m);
+
+        stops.forEach(s => {
+            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
+              .addTo(m)
+              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
         });
     })();
     </script>
