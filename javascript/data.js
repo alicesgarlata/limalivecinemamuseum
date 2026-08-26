@@ -78,7 +78,7 @@ const locations = [
       {
         "title": "Caídos del Cielo",
         "year": 1990
-      }
+      },
        {
         "title": "El embajador y yo",
         "year": 1966
