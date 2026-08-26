@@ -29,10 +29,7 @@ const locations = [
         "title": "Gregorio",
         "year": 1984
       },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      }
+  
     ],
     "descriptions": {
       "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Three Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
@@ -79,13 +76,13 @@ const locations = [
         "year": 1984
       },
       {
-        "title": "Palomillas del Rímac",
-        "year": 1938
-      },
-      {
         "title": "Caídos del Cielo",
         "year": 1990
       }
+       {
+        "title": "El embajador y yo",
+        "year": 1966
+      },
     ],
     "descriptions": {
       "young": "One of Lima's most legendary squares — grand old buildings, decades of history packed into one place. Peruvian films have used it since the 1930s to capture what downtown Lima looks and feels like.",
@@ -176,18 +173,7 @@ const locations = [
         "title": "Viejos amigos",
         "year": 2014
       },
-      {
-        "title": "Django: La Otra Cara",
-        "year": 2002
-      },
-      {
-        "title": "Django: Sangre de mi sangre",
-        "year": 2018
-      },
-      {
-        "title": "Alias \"La Gringa\"",
-        "year": 1991
-      }
+     
     ],
     "descriptions": {
       "young": "Monumental Del Callao is a colorful cultural district in the historic center of Callao, known for murals, galleries, street art, music, food, and restored republican-era buildings. It shows a creative and urban side of the port city, very different from the industrial image usually associated with Callao.",
@@ -270,14 +256,7 @@ const locations = [
     "address": "RXPF+R55, Chorrillos, Perú",
     "district": "Chorrillos",
     "movies": [
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
+     
       {
         "title": "¡Asu Mare!",
         "year": 2013
@@ -331,10 +310,7 @@ const locations = [
         "title": "La última tarde",
         "year": 2016
       },
-      {
-        "title": "Muero por Muriel",
-        "year": 2007
-      }
+     
     ],
     "descriptions": {
       "young": "The Bridge of Sighs in Barranco is the most romantic spot in Lima — a wooden bridge surrounded by old colorful houses, street musicians, and the sound of the ocean in the distance. Very photogenic, but genuinely beautiful.",
@@ -458,14 +434,7 @@ const locations = [
     "address": "Jirón de la Unión, Lima 15001, Perú",
     "district": "Lima",
     "movies": [
-      {
-        "title": "Palomillas del Rímac",
-        "year": 1938
-      },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
+  
       {
         "title": "Las chicas del Jirón de la Unión",
         "year": 1930
@@ -474,14 +443,7 @@ const locations = [
         "title": "Las Sicodélicas",
         "year": 1968
       },
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Juliana",
-        "year": 1989
-      }
+
     ],
     "descriptions": {
       "young": "Jirón de la Unión is Lima's main pedestrian street downtown — full of shops, street sellers, and people from all over the country. Six films used it from the 1930s to the 1990s, showing how the street has always been the pulse of the city.",
@@ -519,14 +481,7 @@ const locations = [
     "address": "XX7F+855, Rímac 15093, Perú",
     "district": "Rimac",
     "movies": [
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Juliana",
-        "year": 1989
-      },
+     
       {
         "title": "La Hora Final",
         "year": 2017
@@ -572,22 +527,7 @@ const locations = [
         "title": "Palomillas del Rímac",
         "year": 1938
       },
-      {
-        "title": "Metal y Melancolía",
-        "year": 1993
-      },
-      {
-        "title": "Gregorio",
-        "year": 1984
-      },
-      {
-        "title": "Juliana",
-        "year": 1989
-      },
-      {
-        "title": "Caídos del Cielo",
-        "year": 1990
-      }
+
     ],
     "descriptions": {
       "young": "The Rímac River is one of Lima's most ancient landmarks — and one of its most complicated ones. Polluted, contested, and historically significant, it divides the city in both geographic and social terms. Five films used it to represent marginality and urban struggle.",
@@ -661,63 +601,7 @@ const locations = [
       }
     }
   },
-  {
-    "name": "Lima Golf Club",
-    "address": "Av. Camino Real 770, San Isidro 15073, Perú",
-    "district": "San Isidro",
-    "movies": [
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      },
-      {
-        "title": "No Se Lo Digas a Nadie",
-        "year": 1998
-      },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      },
-      {
-        "title": "¡Asu Mare!",
-        "year": 2013
-      },
-      {
-        "title": "Muero por Muriel",
-        "year": 2007
-      }
-    ],
-    "descriptions": {
-      "young": "The Lima Golf Club in San Isidro is where the most exclusive side of Lima plays. Its use in films — from a biographical comedy to a psychological thriller — shows how filmmakers use elite spaces to explore class and identity.",
-      "adult": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in five films exploring class dynamics, personal identity, and social aspiration.",
-      "professional": "The Lima Golf Club functions as a cinematographic sign of Lima's upper-class habitus, its spatial exclusivity making it a productive site for exploring tensions of class, sexuality, and social performance across ¡Asu Mare!, No Se Lo Digas a Nadie, and Muero por Muriel."
-    },
-    "access": "Private — members and guests only",
-    "lat": -12.101500033881788,
-    "lng": -77.03853518755118,
-    "image": "images/lima-golf-club.webp",
-    "cardDescription": {
-      "short": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-      "long": "The Lima Golf Club sits in the center of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinized. Five films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
-    },
-    "texts": {
-      "young": {
-        "brief": "The most exclusive golf club in Lima — a window into a side of the city that most people never see.",
-        "mid": "The Lima Golf Club in San Isidro is where the most exclusive side of Lima plays. Its use in films — from a biographical comedy to a psychological thriller — shows how filmmakers use elite spaces to explore class and identity.",
-        "long": "The Lima Golf Club is not a public space. It's a private institution in the middle of San Isidro — Lima's financial and diplomatic district — and it serves the city's most privileged residents. Green fairways in the middle of a dense urban neighbourhood, surrounded by embassies and corporate towers. Films have used it as a setting for stories about class, aspiration, and the rituals of Lima's elite — from the biographical comedy of ¡Asu Mare! to the darker territory of No Se Lo Digas a Nadie. It's a space where who you know and how you perform your status matter as much as anything else."
-      },
-      "adult": {
-        "brief": "San Isidro's exclusive golf club — a symbol of Lima's upper-class social world.",
-        "mid": "An exclusive private golf club in San Isidro, representing Lima's upper-class lifestyle and elite social spaces. It has appeared in five films exploring class dynamics, personal identity, and social aspiration.",
-        "long": "The Lima Golf Club sits in the centre of San Isidro, the capital's financial and diplomatic heart, surrounded by embassies and corporate towers. Its manicured fairways represent a Lima of privilege and social closure that rarely appears in film without being scrutinised. Five films have used it to explore class dynamics, social aspiration, and the particular rituals of Lima's elite — from biographical comedy to psychological thriller."
-      },
-      "professional": {
-        "brief": "Lima Golf Club: a site of elite spatial practice used cinematographically to explore class, sexuality, and social performance.",
-        "mid": "The Lima Golf Club functions as a cinematographic sign of Lima's upper-class habitus, its spatial exclusivity making it a productive site for exploring tensions of class, sexuality, and social performance across ¡Asu Mare!, No Se Lo Digas a Nadie, and Muero por Muriel.",
-        "long": "The Lima Golf Club operates in Peruvian cinema as a site of elite habitus — a space whose exclusivity, spatial arrangement, and associated social codes make it a productive setting for films that engage critically with Lima's class structure. Its appearances in ¡Asu Mare! (biographical comedy), No Se Lo Digas a Nadie (psychological drama addressing homosexuality and class), and Muero por Muriel (romantic comedy) demonstrate a consistent deployment of the club as a space where social performance, identity, and aspiration are staged and sometimes subverted. The golf club's role as a sign of Lima's upper-class world makes it particularly useful for narratives concerned with the tensions between social belonging and its exclusions."
-      }
-    }
-  },
+  
   {
     "name": "Estadio Lolo Fernandez",
     "address": "Jr. Zorritos 668, Lima 15001, Perú",
@@ -727,10 +611,6 @@ const locations = [
         "title": "Esta es la U",
         "year": 2024
       },
-      {
-        "title": "Cholo",
-        "year": 1972
-      }
     ],
     "descriptions": {
       "young": "The Estadio Lolo Fernández is home to Universitario de Deportes — Peru's most famous football club. The 2024 documentary Esta es la U was shot here to celebrate the club's 100th anniversary.",
@@ -771,18 +651,11 @@ const locations = [
       "Callao"
     ],
     "movies": [
-      {
-        "title": "La Hora Final",
-        "year": 2017
-      },
+    
       {
         "title": "Tarata",
         "year": 2009
       },
-      {
-        "title": "Esta es la U",
-        "year": 2024
-      }
     ],
     "descriptions": {
       "young": "UNMSM is the oldest university in the Americas — founded in 1551. Its campus was a major site of political activity during Peru's internal conflict in the 1980s and 1990s, and it appears in La Hora Final for exactly that reason.",
@@ -824,14 +697,7 @@ const locations = [
         "title": "No Se Lo Digas a Nadie",
         "year": 1998
       },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      },
-      {
-        "title": "Viaje a Tombuctú",
-        "year": 2014
-      }
+  
     ],
     "descriptions": {
       "young": "PUCP is one of Peru's most prestigious universities, and it appears in Viaje a Tombuctú as part of the film's portrait of a Peruvian woman returning to the Lima of her youth in the 1980s.",
@@ -876,10 +742,6 @@ const locations = [
         "title": "La última tarde",
         "year": 2016
       },
-      {
-        "title": "Un mundo para Julius",
-        "year": 2021
-      }
     ],
     "descriptions": {
       "young": "El Olivar is a genuinely peaceful urban forest in San Isidro — ancient olive trees, lakes, winding paths, and a very different mood from the rest of the city. One of those hidden corners of Lima that feels completely out of time.",
@@ -1007,10 +869,7 @@ const locations = [
         "title": "Un mundo para Julius",
         "year": 2021
       },
-      {
-        "title": "El embajador y yo",
-        "year": 1966
-      }
+     
     ],
     "descriptions": {
       "young": "Country Club Lima Hotel is one of the most elegant and historically representative buildings in modern Lima. Located in San Isidro, directly opposite Lima Golf Club, it combines luxury, architecture, art, and social history. Its colonial-style façade, spacious halls, gardens, terraces, and carefully preserved interiors make it a high-value location for audiovisual productions.",
