@@ -1463,30 +1463,7 @@ const films = [
     ],
     "description": "Interwoven stories of marginalized characters in Lima, inspired by works of Julio Ramón Ribeyro, exploring loneliness, fate, and existential struggle."
   },
-  {
-    "title": "La Luz en el Cerro",
-    "year": 2016,
-    "wikidata_id": "Q123483054",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q123483054",
-    "director": [
-      "Ricardo Velarde"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Thriller",
-      "Misterio"
-    ],
-    "cast": [
-      "Manuel Gold",
-      "Emilram Cossío"
-    ],
-    "production": [
-      "Caudal Films"
-    ],
-    "description": "A group of friends travels to an Andean village where strange events occur, blending mystery, horror, and supernatural elements."
-  },
+ 
   {
     "title": "Viaje a Tombuctú",
     "year": 2014,
@@ -1508,30 +1485,7 @@ const films = [
     ],
     "description": "A woman returns to Peru and revisits her youth in the 1980s, confronting memories, loss, and the passage of time within a complex social context."
   },
-  {
-    "title": "Muero por Muriel",
-    "year": 2007,
-    "wikidata_id": "Q123278472",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q123278472",
-    "director": [
-      "Augusto Cabada"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Drama",
-      "Thriller"
-    ],
-    "cast": [
-      "Andrea Montenegro",
-      "Diego Bertie"
-    ],
-    "production": [
-      "Iguana Producciones"
-    ],
-    "description": "A story of romantic obsession where a man becomes involved in an intense relationship that leads to dangerous and emotionally destructive situations."
-  },
+
   {
     "title": "No Se Lo Digas a Nadie",
     "year": 1998,
@@ -1577,32 +1531,7 @@ const films = [
     ],
     "description": "Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence."
   },
-  {
-    "title": "Lady Nazca",
-    "year": 2025,
-    "wikidata_id": "Q135474677",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q135474677",
-    "director": [
-      "Damien Dorsaz"
-    ],
-    "countries": [
-      "Alemania",
-      "Francia",
-      "Suiza",
-      "Perú"
-    ],
-    "genres": [
-      "Drama histórico",
-      "Biográfico"
-    ],
-    "cast": [
-      "Devrim Lingnau",
-      "Guillaume Gallienne",
-      "Olivia Ross",
-      "Javier Valdés"
-    ],
-    "description": "Based on real events, it tells the story of Maria Reiche, a German mathematician who dedicates her life to studying and preserving the Nazca Lines, highlighting her perseverance, scientific passion, and the cultural importance of this ancient Peruvian heritage."
-  },
+  
   {
     "title": "Viejos amigos",
     "year": 2014,
@@ -1844,32 +1773,5 @@ const films = [
     "release_date": "2017-11-06",
     "description": "Gen Hi8 is a Peruvian independent film associated with youth culture, audiovisual experimentation, and the use of low-cost video technology. Its title refers to the Hi8 format, a medium closely linked to home video, personal recording, and alternative filmmaking during the transition from analog to digital images."
   },
-  {
-    "title": "Django: Sangre de mi sangre",
-    "year": 2018,
-    "wikidata_id": null,
-    "wikidata_url": null,
-    "director": [
-      "Aldo Salvini"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Acción",
-      "Crimen",
-      "Drama"
-    ],
-    "cast": [
-      "Giovanni Ciccia",
-      "Aldo Miyashiro",
-      "Melania Urbina",
-      "Emanuel Soriano",
-      "Tatiana Astengo",
-      "Sergio Galliani"
-    ],
-    "production": [],
-    "release_date": "2018",
-    "description": "Django: Sangre de mi sangre is the sequel to Django: La Otra Cara. It returns to the character of Django after years in prison and explores the possibility of redemption in a world where violence and crime continue to shape family life."
-  }
+
 ];
