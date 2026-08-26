@@ -149,10 +149,8 @@ const filmProfiles = {
     "themes": "Diplomacy, social life, urban elegance, modernity, intrigue, and Lima's upper-class spaces.",
     "value": "The film is connected to Lima's airport and Plaza San Martín, two locations that reinforce its cosmopolitan and urban atmosphere and its association with travel, diplomacy, public life, and the modern image of the capital.",
   "related_location": "Lima Airport, Plaza San Martín",
-  "images": [
-    "images/imagenes/el embajador y yo plaza san martin.webp",
+  "images":
     "images/el embajador y yo aeropuerto.webp"
-  ]
   },
 
   "No Se Lo Digas a Nadie": {
@@ -177,9 +175,9 @@ const filmProfiles = {
     "description": "Cholo is a Peruvian biographical film starring footballer Hugo Sotil. It combines sports biography, fiction, and social commentary on migration, racism, and popular success.",
     "about": "The film follows a young man from the provinces who arrives in Lima and faces discrimination and hardship. His talent for football becomes a way to overcome social barriers and gain national recognition. Through his rise, the film explores the relationship between sport, class, race, and identity in Peru.",
     "themes": "Football, migration, racism, social mobility, popular identity, talent, and national recognition.",
-    "value": "The film can be related to Estadio Lolo Fernández and other spaces connected to football culture and popular urban memory in Lima.",
-    "related_location": "Estadio Lolo Fernández",
-    "image": "images/imagenes/lolofernanez.webp"
+    "value": "The film is connected to Playa Agua Dulce, a popular coastal location in Lima associated with everyday urban life, leisure, and the city's relationship with the Pacific Ocean.",
+    "related_location": "Playa Agua Dulce",
+    "image": "images/imagenes/cholo agua dulce.webp"
   },
 
   "Las chicas del Jirón de la Unión": {
