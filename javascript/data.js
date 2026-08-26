@@ -1178,11 +1178,11 @@ const films = [
       "Gilberto Martínez Solares"
     ],
     "countries": [
-      "México",
-      "Perú"
+      "Mexico",
+      "Peru"
     ],
     "genres": [
-      "Comedia negra",
+      "Black comedy",
       "Thriller"
     ],
     "cast": [
@@ -1208,7 +1208,7 @@ const films = [
       "Fabrizio Aguilar"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1222,7 +1222,7 @@ const films = [
     "production": [
       "Luna Llena Films"
     ],
-    "description": "Depicts the impact of the Sendero Luminoso terrorist attack on Tarata Street (Miraflores, 1992), showing how violence disrupts everyday life and exposes the social trauma of the time."
+    "description": "Depicts the impact of the Shining Path terrorist attack on Tarata Street (Miraflores, 1992), showing how violence disrupts everyday life and exposes the social trauma of the time."
   },
   {
     "title": "Gregorio",
@@ -1235,7 +1235,7 @@ const films = [
       "Alejandro Legaspi"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1259,11 +1259,11 @@ const films = [
       "Eduardo Mendoza de Echave"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama",
-      "Thriller policial"
+      "Police thriller"
     ],
     "cast": [
       "Pietro Sibille",
@@ -1284,10 +1284,10 @@ const films = [
       "Sigifredo Salas"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Comedia",
+      "Comedy",
       "Musical"
     ],
     "cast": [
@@ -1298,7 +1298,7 @@ const films = [
     "production": [
       "Amauta Films"
     ],
-    "description": "A costumbrista comedy portraying popular life in Lima, with Creole characters and humorous situations that reflect traditions, music, and urban culture of the time."
+    "description": "A comedy of local customs portraying popular life in Lima, with Creole characters and humorous situations that reflect traditions, music, and urban culture of the time."
   },
   {
     "title": "¡Asu Mare!",
@@ -1309,11 +1309,11 @@ const films = [
       "Ricardo Maldonado"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Comedia",
-      "Biográfico"
+      "Comedy",
+      "Biographical"
     ],
     "cast": [
       "Carlos Alcántara",
@@ -1335,7 +1335,7 @@ const films = [
       "Alejandro Legaspi"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1358,14 +1358,14 @@ const films = [
       "Alberto Durant"
     ],
     "countries": [
-      "Perú",
+      "Peru",
       "Cuba",
-      "España",
-      "Reino Unido",
-      "Francia"
+      "Spain",
+      "United Kingdom",
+      "France"
     ],
     "genres": [
-      "Acción",
+      "Action",
       "Drama"
     ],
     "cast": [
@@ -1387,11 +1387,11 @@ const films = [
       "Heddy Honigmann"
     ],
     "countries": [
-      "Países Bajos",
-      "Perú"
+      "Netherlands",
+      "Peru"
     ],
     "genres": [
-      "Documental"
+      "Documentary"
     ],
     "production": [
       "Ariel Film Production"
@@ -1407,7 +1407,7 @@ const films = [
       "Fabrizio Aguilar"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1428,10 +1428,10 @@ const films = [
       "Daniel Farfán"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Documental deportivo"
+      "Sports documentary"
     ],
     "cast": [],
     "production": [
@@ -1448,8 +1448,8 @@ const films = [
       "Francisco Lombardi"
     ],
     "countries": [
-      "Perú",
-      "España"
+      "Peru",
+      "Spain"
     ],
     "genres": [
       "Drama"
@@ -1463,7 +1463,6 @@ const films = [
     ],
     "description": "Interwoven stories of marginalized characters in Lima, inspired by works of Julio Ramón Ribeyro, exploring loneliness, fate, and existential struggle."
   },
- 
   {
     "title": "Viaje a Tombuctú",
     "year": 2014,
@@ -1473,7 +1472,7 @@ const films = [
       "Rossana Díaz Costa"
     ],
     "countries": [
-      "Perú",
+      "Peru",
       "Argentina"
     ],
     "genres": [
@@ -1485,7 +1484,6 @@ const films = [
     ],
     "description": "A woman returns to Peru and revisits her youth in the 1980s, confronting memories, loss, and the passage of time within a complex social context."
   },
-
   {
     "title": "No Se Lo Digas a Nadie",
     "year": 1998,
@@ -1495,8 +1493,8 @@ const films = [
       "Francisco Lombardi"
     ],
     "countries": [
-      "Perú",
-      "España"
+      "Peru",
+      "Spain"
     ],
     "genres": [
       "Drama"
@@ -1511,28 +1509,6 @@ const films = [
     "description": "Follows a young upper-class man struggling with his identity and sexual orientation in a conservative society."
   },
   {
-    "title": "Django: La Otra Cara",
-    "year": 2002,
-    "wikidata_id": "Q5812025",
-    "wikidata_url": "https://www.wikidata.org/wiki/Q5812025",
-    "director": [
-      "Ricardo Velásquez"
-    ],
-    "countries": [
-      "Perú"
-    ],
-    "genres": [
-      "Acción",
-      "Crimen"
-    ],
-    "cast": [
-      "Giovanni Ciccia",
-      "Melania Urbina"
-    ],
-    "description": "Based on real events, it tells the story of a notorious criminal in Lima, portraying crime, marginality, and urban violence."
-  },
-  
-  {
     "title": "Viejos amigos",
     "year": 2014,
     "wikidata_id": "Q60825921",
@@ -1541,10 +1517,10 @@ const films = [
       "Fernando Villarán Luján"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Comedia"
+      "Comedy"
     ],
     "cast": [
       "Ricardo Blume",
@@ -1566,10 +1542,10 @@ const films = [
       "Alberto Castro"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Documental"
+      "Documentary"
     ],
     "cast": [
       "Tany de la Riva",
@@ -1592,9 +1568,9 @@ const films = [
       "Rossana Díaz Costa"
     ],
     "countries": [
-      "Perú",
+      "Peru",
       "Argentina",
-      "España"
+      "Spain"
     ],
     "genres": [
       "Drama"
@@ -1626,7 +1602,7 @@ const films = [
       "Óscar Kantor"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1652,7 +1628,7 @@ const films = [
       "Joel Calero"
     ],
     "countries": [
-      "Perú",
+      "Peru",
       "Colombia"
     ],
     "genres": [
@@ -1677,10 +1653,10 @@ const films = [
       "Bernardo Batievsky"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
-      "Película biográfica"
+      "Biographical film"
     ],
     "cast": [
       "Hugo Sotil"
@@ -1700,12 +1676,12 @@ const films = [
       "Alberto Santana"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Melodrama",
       "Romance",
-      "Película muda"
+      "Silent film"
     ],
     "cast": [
       "Olga Ortega",
@@ -1729,11 +1705,11 @@ const films = [
       "Jorge Carmona"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Musical",
-      "Comedia dramática"
+      "Comedy-drama"
     ],
     "cast": [
       "Juan Carlos Rey de Castro",
@@ -1756,7 +1732,7 @@ const films = [
       "Miguel Miyahira"
     ],
     "countries": [
-      "Perú"
+      "Peru"
     ],
     "genres": [
       "Drama"
@@ -1772,6 +1748,5 @@ const films = [
     ],
     "release_date": "2017-11-06",
     "description": "Gen Hi8 is a Peruvian independent film associated with youth culture, audiovisual experimentation, and the use of low-cost video technology. Its title refers to the Hi8 format, a medium closely linked to home video, personal recording, and alternative filmmaking during the transition from analog to digital images."
-  },
-
+  }
 ];
