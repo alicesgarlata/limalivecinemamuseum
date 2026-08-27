@@ -2130,11 +2130,17 @@ main.about-page {
     transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
+.location-film-card {
+    min-width: 0;
+    overflow: hidden;
+}
+
 .location-film-card .film-card-header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(84px, 8vw, 112px) auto;
+    grid-template-columns: minmax(0, 1fr) 88px auto;
     gap: 10px;
     align-items: start;
+    min-width: 0;
 }
 
 .location-film-heading {
@@ -2143,17 +2149,23 @@ main.about-page {
 
 .location-film-thumbnail {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 10;
+    width: 88px;
+    height: 55px;
+    max-width: 100%;
+    justify-self: end;
     overflow: hidden;
+    box-sizing: border-box;
     background: #d8d4cb;
     border: 1px solid var(--museum-rule-light);
 }
 
 .location-film-thumbnail img {
     display: block;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
     transition: transform 400ms cubic-bezier(.2, .75, .2, 1), filter 240ms ease;
 }
@@ -2179,7 +2191,12 @@ main.about-page {
 
 @media (max-width: 360px) {
     .location-film-card .film-card-header {
-        grid-template-columns: minmax(0, 1fr) 84px;
+        grid-template-columns: minmax(0, 1fr) 72px;
+    }
+
+    .location-film-thumbnail {
+        width: 72px;
+        height: 45px;
     }
 
     .location-film-card .film-wiki {
