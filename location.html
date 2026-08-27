@@ -228,10 +228,10 @@
                 const profile = (typeof filmProfiles !== 'undefined') ? filmProfiles[film.title] : null
                 const cover = coverForFilm(film)
 
-                const thumbnailHtml = `
-                    <div class="location-film-thumbnail">
+                const filmImageHtml = `
+                    <div class="location-film-image">
                         ${cover ? `<img src="${cover}" alt="" loading="lazy" decoding="async">` : ''}
-                        <span class="location-film-thumbnail-fallback"${cover ? ' hidden' : ''}>${film.year}</span>
+                        <span class="location-film-image-fallback"${cover ? ' hidden' : ''}>${film.year}</span>
                     </div>`
 
                 const profileHtml = profile ? `
@@ -248,13 +248,13 @@
 
                 filmsContainer.innerHTML += `
                     <div class="film-card location-film-card">
-                        <div class="film-card-header">
-                            <div class="location-film-heading">
-                                <h3 class="film-title">${film.title}</h3>
+                        <h3 class="film-title">${film.title}</h3>
+                        ${filmImageHtml}
+                        <div class="location-film-details-row">
+                            <div class="location-film-details">
                                 <span class="film-year">${film.year}</span>
                                 ${genres ? `<span class="film-genres">${genres}</span>` : ''}
                             </div>
-                            ${thumbnailHtml}
                             ${film.wikidata_url ? `<a class="film-wiki" href="${film.wikidata_url}" target="_blank" rel="noopener">Wikidata ↗</a>` : ''}
                         </div>
                         <p class="film-description">${film.description}</p>
@@ -268,7 +268,7 @@
                 `
             })
 
-            filmsContainer.querySelectorAll('.location-film-thumbnail img').forEach(function(image) {
+            filmsContainer.querySelectorAll('.location-film-image img').forEach(function(image) {
                 image.addEventListener('error', function() {
                     image.hidden = true
                     const fallback = image.nextElementSibling
