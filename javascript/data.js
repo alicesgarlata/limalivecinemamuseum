@@ -1,6 +1,7 @@
 const districtColors = {
   "Lima": "#9b1c1c",
   "Miraflores": "#166534",
+  "Surquillo": "#b45309",
   "Centro Historico": "#854d0e",
   "Callao": "#1e40af",
   "Chorrillos": "#633806",
@@ -426,6 +427,47 @@ const locations = [
         "brief": "Calle Tarata: a site of urban trauma in Miraflores, cinematically treated as a space of memory for the 1992 Sendero Luminoso bombing.",
         "mid": "Calle Tarata constitutes a site of urban trauma within the Miraflores district. The 1992 car bombing by Sendero Luminoso transformed it into a memorial space whose cinematic treatment in Aguilar's Tarata (2009) navigates the intersection of collective memory, political violence, and bourgeois civilian experience.",
         "long": "Calle Tarata occupies a distinctive position in Lima's urban memory as the site of the July 16, 1992 car bombing by Sendero Luminoso, which killed 25 civilians and became one of the most symbolically charged events of Peru's internal conflict. The attack's location in Miraflores — Lima's most affluent and internationally visible district — was understood at the time as a deliberate escalation of the conflict into spaces previously perceived as protected by class geography. Fabrizio Aguilar's Tarata (2009) engages directly with this dimension, reconstructing the night of the bombing in a mode that blends personal testimony with collective trauma, positioning the street not as historical backdrop but as a space whose spatial memory structures the film's entire affective logic."
+      }
+    }
+  },
+  {
+    "name": "Calle Varsovia",
+    "address": "Calle Varsovia, Surquillo, Lima, Perú",
+    "district": "Surquillo",
+    "movies": [
+      {
+        "title": "La Hora Final",
+        "year": 2017
+      }
+    ],
+    "descriptions": {
+      "young": "Calle Varsovia is a street in Surquillo connected with the historical operation reconstructed in La Hora Final. It shows how an apparently ordinary urban space became part of a surveillance and intelligence network.",
+      "adult": "Calle Varsovia in Surquillo is a historical location connected with La Hora Final. The film reconstructs the intelligence operation that led to the capture of Abimael Guzmán on 12 September 1992.",
+      "professional": "Calle Varsovia is connected with the long surveillance operation carried out by the GEIN, the Special Intelligence Group of the Peruvian police, which led to the capture of Abimael Guzmán on 12 September 1992."
+    },
+    "access": "Public street — free access",
+    "lat": -12.1136,
+    "lng": -77.0110,
+    "image": "images/varsovia.webp",
+    "cardDescription": {
+      "short": "A street in Surquillo connected with the historical intelligence operation reconstructed in La Hora Final.",
+      "long": "Calle Varsovia reveals a hidden dimension of Peru's internal conflict. The apparently ordinary street became part of the surveillance network that led the GEIN to capture Abimael Guzmán on 12 September 1992, an operation reconstructed in La Hora Final."
+    },
+    "texts": {
+      "young": {
+        "brief": "A street in Surquillo connected with the historical operation reconstructed in La Hora Final.",
+        "mid": "Calle Varsovia is a street in Surquillo connected with the historical operation reconstructed in La Hora Final. It shows how an apparently ordinary urban space became part of a surveillance and intelligence network.",
+        "long": "Calle Varsovia looks like an ordinary street in Surquillo, but it is connected with one of the most important intelligence operations in Peru's recent history. After a long surveillance operation, the GEIN captured Abimael Guzmán here on 12 September 1992. La Hora Final reconstructs this operation and shows how houses, streets and daily routines became part of an intelligence network."
+      },
+      "adult": {
+        "brief": "A street in Surquillo connected with the intelligence operation reconstructed in La Hora Final.",
+        "mid": "Calle Varsovia in Surquillo is a historical location connected with La Hora Final. The film reconstructs the intelligence operation that led to the capture of Abimael Guzmán on 12 September 1992.",
+        "long": "Calle Varsovia in Surquillo is connected with the long surveillance operation carried out by the GEIN, the Special Intelligence Group of the Peruvian police, which led to the capture of Abimael Guzmán on 12 September 1992. In La Hora Final, the location represents the hidden dimension of the internal conflict: ordinary houses and streets transformed into spaces of observation, information and intelligence work."
+      },
+      "professional": {
+        "brief": "Calle Varsovia: a site associated with the GEIN surveillance operation reconstructed in La Hora Final.",
+        "mid": "Calle Varsovia is connected with the long surveillance operation carried out by the GEIN, the Special Intelligence Group of the Peruvian police, which led to the capture of Abimael Guzmán on 12 September 1992.",
+        "long": "Calle Varsovia constitutes a significant site in the spatial history of Peru's internal conflict. The long surveillance operation carried out by the GEIN culminated here in the capture of Abimael Guzmán on 12 September 1992. La Hora Final reconstructs this intelligence operation and presents Lima as a network of houses, streets, vehicles and institutions through which information, observation and political conflict circulated."
       }
     }
   },
