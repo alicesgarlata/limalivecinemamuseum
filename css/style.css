@@ -2135,31 +2135,23 @@ main.about-page {
     overflow: hidden;
 }
 
-.location-film-card .film-card-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 88px auto;
-    gap: 10px;
-    align-items: start;
-    min-width: 0;
+.location-film-card > .film-title {
+    margin: 0 0 14px;
 }
 
-.location-film-heading {
-    min-width: 0;
-}
-
-.location-film-thumbnail {
+.location-film-image {
     position: relative;
-    width: 88px;
-    height: 55px;
+    width: 100%;
     max-width: 100%;
-    justify-self: end;
+    margin-bottom: 12px;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
     box-sizing: border-box;
     background: #d8d4cb;
     border: 1px solid var(--museum-rule-light);
 }
 
-.location-film-thumbnail img {
+.location-film-image img {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -2170,11 +2162,11 @@ main.about-page {
     transition: transform 400ms cubic-bezier(.2, .75, .2, 1), filter 240ms ease;
 }
 
-.location-film-card:hover .location-film-thumbnail img {
+.location-film-card:hover .location-film-image img {
     transform: scale(1.045);
 }
 
-.location-film-thumbnail-fallback {
+.location-film-image-fallback {
     display: grid;
     width: 100%;
     height: 100%;
@@ -2185,23 +2177,25 @@ main.about-page {
     font-weight: 800;
 }
 
-.location-film-thumbnail-fallback[hidden] {
+.location-film-image-fallback[hidden] {
     display: none;
 }
 
-@media (max-width: 360px) {
-    .location-film-card .film-card-header {
-        grid-template-columns: minmax(0, 1fr) 72px;
-    }
+.location-film-details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    margin-bottom: 12px;
+}
 
-    .location-film-thumbnail {
-        width: 72px;
-        height: 45px;
-    }
-
-    .location-film-card .film-wiki {
-        grid-column: 1 / -1;
-    }
+.location-film-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    min-width: 0;
+    gap: 4px;
 }
 
 .film-card:hover {
