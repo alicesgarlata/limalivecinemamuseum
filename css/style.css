@@ -2130,6 +2130,63 @@ main.about-page {
     transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
+.location-film-card .film-card-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(84px, 8vw, 112px) auto;
+    gap: 10px;
+    align-items: start;
+}
+
+.location-film-heading {
+    min-width: 0;
+}
+
+.location-film-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #d8d4cb;
+    border: 1px solid var(--museum-rule-light);
+}
+
+.location-film-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms cubic-bezier(.2, .75, .2, 1), filter 240ms ease;
+}
+
+.location-film-card:hover .location-film-thumbnail img {
+    transform: scale(1.045);
+}
+
+.location-film-thumbnail-fallback {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    color: var(--museum-muted);
+    font-family: var(--museum-display);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.location-film-thumbnail-fallback[hidden] {
+    display: none;
+}
+
+@media (max-width: 360px) {
+    .location-film-card .film-card-header {
+        grid-template-columns: minmax(0, 1fr) 84px;
+    }
+
+    .location-film-card .film-wiki {
+        grid-column: 1 / -1;
+    }
+}
+
 .film-card:hover {
     border-color: var(--museum-accent);
     box-shadow: 0 14px 34px rgba(24, 22, 18, 0.08);
