@@ -31,7 +31,7 @@ const filmProfiles = {
     "about": "The story follows police agents involved in a secret investigation during the years of terrorism in Peru. Their work consists of surveillance, analysis, and patient observation rather than spectacular action. As they move through Lima, the film presents a city under suspicion, where houses, streets, universities, and ordinary neighborhoods can become part of a hidden political conflict.",
     "themes": "Terrorism, police intelligence, surveillance, political violence, state investigation, fear, and historical memory.",
     "value": "This film is useful for locations related to political memory, universities, residential districts, and hidden urban networks. It helps represent Lima as a city where the internal conflict was not only visible in public events, but also hidden inside domestic and institutional spaces.",
-    "related_location": "IE España",
+    "related_location": "IE España, Calle Varsovia",
     "image": "images/imagenes/la hora final-ie españa.webp"
   },
 
