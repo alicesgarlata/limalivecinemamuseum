@@ -188,6 +188,28 @@
 
         const filmsContainer = document.getElementById('loc-films')
         const filmsHeading = document.getElementById('loc-films-heading')
+
+        function profileImages(profile) {
+            if (!profile) return []
+            const values = []
+            if (profile.image) values.push(...(Array.isArray(profile.image) ? profile.image : [profile.image]))
+            if (profile.images) values.push(...(Array.isArray(profile.images) ? profile.images : [profile.images]))
+            return [...new Set(values.filter(Boolean))]
+        }
+
+        function locationsForFilm(film) {
+            return locations.filter(location => location.movies.some(movie => (
+                movie.title === film.title && movie.year === film.year
+            )))
+        }
+
+        function coverForFilm(film) {
+            const profile = (typeof filmProfiles !== 'undefined') ? filmProfiles[film.title] : null
+            const images = profileImages(profile)
+            if (images.length) return images[0]
+            return locationsForFilm(film).find(location => location.image)?.image || ''
+        }
+
         if (loc.movies.length === 0) {
             filmsHeading.style.display = 'none'
             filmsContainer.innerHTML = '<p class="no-films">No films catalogued for this location yet.</p>'
@@ -204,6 +226,13 @@
                 const countries = film.countries ? film.countries.join(', ') : ''
 
                 const profile = (typeof filmProfiles !== 'undefined') ? filmProfiles[film.title] : null
+                const cover = coverForFilm(film)
+
+                const thumbnailHtml = `
+                    <div class="location-film-thumbnail">
+                        ${cover ? `<img src="${cover}" alt="" loading="lazy" decoding="async">` : ''}
+                        <span class="location-film-thumbnail-fallback"${cover ? ' hidden' : ''}>${film.year}</span>
+                    </div>`
 
                 const profileHtml = profile ? `
                     <button class="film-profile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">About this film ↓</button>
@@ -218,13 +247,14 @@
                     </div>` : ''
 
                 filmsContainer.innerHTML += `
-                    <div class="film-card">
+                    <div class="film-card location-film-card">
                         <div class="film-card-header">
-                            <div>
+                            <div class="location-film-heading">
                                 <h3 class="film-title">${film.title}</h3>
                                 <span class="film-year">${film.year}</span>
                                 ${genres ? `<span class="film-genres">${genres}</span>` : ''}
                             </div>
+                            ${thumbnailHtml}
                             ${film.wikidata_url ? `<a class="film-wiki" href="${film.wikidata_url}" target="_blank" rel="noopener">Wikidata ↗</a>` : ''}
                         </div>
                         <p class="film-description">${film.description}</p>
@@ -236,6 +266,14 @@
                         ${profileHtml}
                     </div>
                 `
+            })
+
+            filmsContainer.querySelectorAll('.location-film-thumbnail img').forEach(function(image) {
+                image.addEventListener('error', function() {
+                    image.hidden = true
+                    const fallback = image.nextElementSibling
+                    if (fallback) fallback.hidden = false
+                }, { once: true })
             })
         }
 
