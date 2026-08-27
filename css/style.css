@@ -2120,7 +2120,37 @@ main.about-page {
     border-bottom: 1px solid var(--museum-ink);
 }
 
-.loc-films { gap: 16px; }
+.loc-films {
+    flex: 1 1 auto;
+    min-height: 0;
+    gap: 16px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scrollbar-width: auto;
+    scrollbar-color: var(--museum-accent) rgba(24, 22, 18, 0.08);
+}
+
+.loc-films::-webkit-scrollbar {
+    width: 10px;
+}
+
+.loc-films::-webkit-scrollbar-track {
+    background: rgba(24, 22, 18, 0.08);
+    border-radius: 999px;
+}
+
+.loc-films::-webkit-scrollbar-thumb {
+    min-height: 44px;
+    background: var(--museum-accent);
+    border: 2px solid var(--museum-surface);
+    border-radius: 999px;
+}
+
+.loc-films::-webkit-scrollbar-thumb:hover {
+    background: var(--museum-ink);
+}
 
 .film-card {
     padding: 1.35rem 1.4rem;
@@ -2131,6 +2161,7 @@ main.about-page {
 }
 
 .location-film-card {
+    flex: 0 0 auto;
     min-width: 0;
     overflow: hidden;
 }
