@@ -8,7 +8,6 @@ if (locationCount) locationCount.textContent = locations.length
 if (filmCount) filmCount.textContent = films.length
 
 // ── filter pills (built from districtColors in data.js) ──────────────────────
-const filterBar = document.getElementById('filter-bar')
 const districtPills = document.getElementById('district-pills')
 const searchInput = document.getElementById('location-search-input')
 const searchClear = document.getElementById('location-search-clear')
@@ -313,65 +312,17 @@ function filterByDistrict(e, district) {
 const map = L.map('map').setView([-12.0464, -77.0428], 12)
 
 /*
- * Two basemaps:
- * - Standard OpenStreetMap provides the normal basemap without an API key.
- * - Standard OpenStreetMap has much stronger coast/road/building linework,
- *   which survives the early-print CSS treatment instead of disappearing.
+ * OpenStreetMap provides the basemap without requiring an API key.
+ * Temporal themes change its appearance through CSS filters, so the map data
+ * and tile source remain identical in every editorial era.
  */
-const modernBaseLayer = L.tileLayer(
+L.tileLayer(
     'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 19
     }
-)
-
-const earlyPrintBaseLayer = L.tileLayer(
-    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 19
-    }
-)
-
-let activeBaseLayer = null
-
-function currentEra() {
-    return (
-        document.body?.dataset.era ||
-        document.documentElement.dataset.era ||
-        'default'
-    )
-}
-
-function setMapBaseForEra(era) {
-    const wantedLayer =
-        era === 'early-print' ? earlyPrintBaseLayer : modernBaseLayer
-
-    if (activeBaseLayer === wantedLayer) return
-
-    if (activeBaseLayer && map.hasLayer(activeBaseLayer)) {
-        map.removeLayer(activeBaseLayer)
-    }
-
-    wantedLayer.addTo(map)
-    wantedLayer.bringToBack()
-    activeBaseLayer = wantedLayer
-}
-
-setMapBaseForEra(currentEra())
-
-/*
- * theme.js already dispatches this event whenever the user changes era.
- * This means the basemap changes instantly without reloading the page.
- */
-window.addEventListener('lima:themechange', function (event) {
-    const era = event.detail && event.detail.theme
-        ? event.detail.theme
-        : currentEra()
-
-    setMapBaseForEra(era)
-})
+).addTo(map)
 
 locations.forEach(function (loc) {
     if (!loc.lat || !loc.lng) return
