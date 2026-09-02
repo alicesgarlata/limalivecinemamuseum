@@ -1,70 +1,165 @@
+# Lima Live Cinema Museum
 
-## Itinerary 1: A Walking Tour of Cinematic Miraflores
+Lima Live Cinema Museum is a virtual museum dedicated to the relationship between cinema and the urban spaces of Lima, Peru. It combines digital mapping, film metadata, historical research and editorial storytelling to show how streets, squares, beaches, markets, hotels and residential areas have contributed to the cinematic representation of the city.
 
-For the first itinerary, we propose a walking tour through Miraflores, one of Lima’s most recognizable and tourist-oriented districts. The starting point is Kennedy Park, located in the center of the district and surrounded by restaurants, shops, cultural spaces, and intense urban activity. Its constant movement and role as a meeting place make it an appropriate setting for representing everyday life in the city.
+**Live website:** [alicesgarlata.github.io/limalivecinemamuseum](https://alicesgarlata.github.io/limalivecinemamuseum/)
 
-This location is connected with *Lima 13*, directed by Fabrizio Aguilar, and with *Gregorio*, a Grupo Chaski production that presents Lima through the experience of a migrant child who begins working in its streets. In this context, Kennedy Park allows visitors to observe the contrast between the tourist image of Miraflores and the different social realities that coexist in its public spaces.
+## Project overview
 
-From the park, the route continues toward Tarata Street, located only a few minutes away and very close to Larco Avenue. This stop introduces a historical and memorial dimension to the itinerary. The street acquired particular importance after the bombing that occurred on July 16, 1992, during the period of internal violence in Peru. After the attack, the area was rebuilt and transformed into a pedestrian, commercial, and tourist space, becoming a symbol of urban recovery.
+The project treats filming locations as cultural and historical records rather than simple tourist destinations. Each place is connected to one or more films and can be explored through spatial, chronological and thematic perspectives.
 
-The cinematic connection of this location can be found in *Tarata*, a film by Fabrizio Aguilar that reconstructs the context of the bombing through the experience of a family from Lima. In the film, the street is not merely a geographical reference but the historical and symbolic center of the narrative. This stop encourages reflection on memory, fear, and the effects of political violence on everyday life.
+The current collection contains:
 
-After visiting Tarata Street, the walk continues along Larco Avenue, one of the main commercial and tourist thoroughfares in Miraflores. The avenue connects the district’s traditional center, where Kennedy Park and the Municipality of Miraflores are located, with the coastal area and the Malecón de la Reserva. Along the way, visitors can observe hotels, restaurants, cafés, shops, and entertainment venues that reflect the urban development of Miraflores during the twentieth century.
+- 24 location records;
+- 23 film records spanning 1930â€“2024;
+- 36 filmâ€“location associations represented in the dataset;
+- 5 curated narrative paths;
+- 6 alternative editorial themes.
 
-The avenue is directly connected with *Avenida Larco, la película*, a documentary dedicated to the history of the Peruvian rock band Frágil and one of its best-known songs. It can also be associated with *Gregorio*, since the film presents the streets of Miraflores as spaces of movement, child labor, and social contrast. Larco Avenue can therefore be observed both as a symbol of Lima’s urban culture and through the experience of those who travel through the city in order to survive.
+The website is a static multi-page application built with HTML, CSS and vanilla JavaScript. It does not require a backend, database, build system or map API key.
 
-Following the avenue toward the ocean, the route reaches the Miraflores Boardwalk, a corridor of parks and pedestrian paths built along the cliffs of the Costa Verde. From this point, visitors can observe the Pacific Ocean, the beaches, coastal traffic, and some of Lima’s most representative landscapes. The boardwalk allows the route to move away from the commercial activity of central Miraflores toward a more open and contemplative image of the city.
+## Main features
 
-This location is connected with *Caídos del cielo*, a film by Francisco Lombardi that presents a Lima marked by loneliness, inequality, and the lives of characters who inhabit different parts of the capital. It is also associated with *Metal y melancolía*, a documentary by Heddy Honigmann that follows several taxi drivers in Lima and portrays the city through their journeys, financial difficulties, and personal experiences. In both productions, the urban landscape is an essential part of the story and reveals a version of Lima that goes beyond its tourist image.
+### Interactive location map
 
-To conclude the itinerary, visitors can return toward the center of Miraflores along Larco Avenue and continue to Pizza Street, officially known as San Ramón Boulevard. This pedestrian area is located only a few meters from Kennedy Park and is known for its restaurants, cafés, bars, and entertainment venues. During the 1970s and 1980s, it became especially popular because of its concentration of pizzerias and intense nightlife. It was later renovated and transformed into a more organized, safer, and pedestrian-friendly boulevard.
+The Home page uses Leaflet and OpenStreetMap to display the collection geographically. Visitors can:
 
-Pizza Street is connected with *Arde Lima*, a documentary directed by Alberto Castro that portrays Lima’s drag scene and uses different urban and nightlife spaces as part of its visual landscape. This final stop therefore concludes the itinerary by presenting another side of Miraflores: its nightlife, entertainment, diversity, and forms of social life, which also contribute to Lima’s audiovisual identity.
+- filter locations by district;
+- search by location, district, film title or year;
+- move between synchronized map markers and location cards;
+- open a complete dynamic record for each place.
 
-As a whole, the itinerary connects five different images of Miraflores: the public and social space of Kennedy Park, the historical memory of Tarata Street, the commercial movement of Larco Avenue, the coastal landscape of the boardwalk, and the nightlife of Pizza Street. Through these locations and films, visitors can observe how Peruvian cinema has represented the district from social, historical, cultural, and urban perspectives.
+### Dynamic location records
 
-## Itinerary 2: Residential and Cinematic San Isidro
+One reusable `location.html` page displays every location through a `name` URL parameter. `location.js` retrieves the correct record from `data.js` and generates:
 
-The second itinerary takes place in San Isidro, one of Lima’s most representative residential, historical, and financial districts. Unlike the more tourist-oriented circuit of Miraflores, this route introduces visitors to spaces connected with urban memory, residential architecture, and the different ways of life that have developed in the district. The itinerary includes three main locations: El Olivar Forest, Country Club Lima Hotel, and the Santa Cruz Residential Complex.
+- the photographic header and location metadata;
+- introductory texts with three tone levels and three length levels;
+- historical, cultural and source tabs from `schede.js`;
+- related film cards;
+- enlarged film-scene images through a reusable native dialog;
+- direct links to the corresponding records in the Films section.
 
-The route can begin at El Olivar Forest, one of the most important natural and historical spaces in San Isidro. The forest preserves ancient olive trees, pedestrian paths, gardens, an artificial lagoon, and rest areas. Its presence within a residential and business district creates a strong contrast between nature and Lima’s urban growth.
+### Film catalogue
 
-El Olivar Forest is connected with *La última tarde*, directed by Joel Calero. Its paths, old trees, and quiet surrounding streets contribute to an intimate and contemplative image of the city. This first stop therefore introduces a cinematic representation of San Isidro associated with memory, the passage of time, and personal relationships.
+The Films page provides a searchable and filterable catalogue. Film records can be sorted by date or title and filtered by decade. Each dialog combines factual metadata, curatorial interpretation, related images, mapped locations and an external Wikidata link when available.
 
-From El Olivar, the itinerary can continue toward Country Club Lima Hotel, one of the most elegant historical buildings in San Isidro. It is located opposite the Lima Golf Club area and was inaugurated in 1927. Its Californian Colonial-style architecture includes arches, balconies, interior courtyards, gardens, large halls, and ceremonial spaces.
+Individual films can be opened directly through a URL such as:
 
-For several decades, the Country Club was an important meeting place for members of Lima society, diplomats, politicians, artists, and international visitors. Today, it operates as a luxury hotel and preserves a collection of viceregal art, as well as much of its original architectural character.
+```text
+films.html?film=Gregorio
+```
 
-Country Club Lima Hotel is connected with *Un mundo para Julius*, the film adaptation of Alfredo Bryce Echenique’s novel, directed by Rossana Díaz Costa. The elegance of the building, its gardens, and its interiors visually represent the environment of Lima’s upper class portrayed in the story. This stop therefore offers a critical perspective on luxury, social inequality, and the lifestyles of Lima’s privileged classes.
+### Narrative paths
 
-Finally, the itinerary can continue toward the Santa Cruz Residential Complex, a housing development built during the 1960s. Its architecture follows the principles of the modern movement and is characterized by residential blocks, elevated corridors, exterior staircases, courtyards, gardens, and shared spaces.
+The Narratives section reorganises the collection into five curated perspectives:
 
-The Santa Cruz Residential Complex presents a different image of San Isidro. Instead of large hotels, office buildings, or private residences, this stop shows a multifamily housing project designed to encourage natural lighting, pedestrian circulation, and community life. Its plazas, gardens, and interior passageways continue to function as meeting spaces for residents.
+1. **Historical Timeline â€” Lima on Screen:** a chronological reading of the cinematic city from 1938 to 2024.
+2. **Cinematic Miraflores:** a walking route through public space, urban memory, commerce, the coastline and nightlife.
+3. **Residential and Cinematic San Isidro:** a route connecting natural heritage, elite architecture and community housing.
+4. **Callao and La Punta:** a route through airport modernity, port identity, coastal memory and the islands.
+5. **Violence and Memory:** an interpretive route connecting political violence, surveillance and later reflection.
 
-The Santa Cruz Residential Complex is connected with *Gen Hi8*. Its modernist architecture and the atmosphere it preserves from the second half of the twentieth century make it an appropriate space for representing family life, childhood, community, and Lima’s urban memory.
+The complete itinerary texts, route maps and numbered stops are available on the website rather than duplicated in this README. Links from the Home page use URL fragments to open the requested narrative directly.
 
-As a whole, the itinerary presents three different images of San Isidro. El Olivar Forest, connected with *La última tarde*, shows the historical, natural, and contemplative side of the district. Country Club Lima Hotel, associated with *Un mundo para Julius*, presents the elegant and exclusive world of Lima’s upper class. Finally, the Santa Cruz Residential Complex, connected with *Gen Hi8*, represents modern architecture and community life.
+### Temporal editorial themes
 
-In this way, the itinerary shows that San Isidro is not only a financial district but also a cinematic space composed of natural areas, historical buildings, and residential developments that reflect different stages of Lima’s urban and social transformation.
+The same collection can be viewed through six visual systems:
 
-## Itinerary 3: From Jorge Chávez Airport to Cinematic Callao
+- Today;
+- 1500â€“1800 â€” Early Print;
+- First half of the twentieth century â€” Modernist Print;
+- Second half of the twentieth century â€” Editorial Print;
+- Early twenty-first-century websites;
+- 2035 â€” Future Print/Screen.
 
-The route can begin at Jorge Chávez International Airport, Peru’s main airport and the entry point to Lima for many visitors. Although commercial operations now take place in the new terminal, the former airport building was one of the main symbols of Lima’s modernization during the second half of the twentieth century.
+JavaScript stores the selected theme in `localStorage` and applies a `data-era` attribute. `theme.css` then changes typography, colours, borders, spacing, image treatments and map filters without altering the underlying content or functionality.
 
-This location appears in *El embajador y yo*, a Peruvian comedy starring Kiko Ledgard, Patricia Aspíllaga, and Saby Kamalich. The film includes sequences recorded in the former terminal of Jorge Chávez Airport. Its arrival halls, large windows, boarding stairs, and exterior platforms projected a modern and cosmopolitan image of the city during the 1960s. The airport therefore provides an appropriate starting point for the route, connecting the arrival in Lima with the international travel, diplomatic missions, and intrigue that form part of the film.
+## Data architecture
 
-From the airport, visitors are advised to take a taxi to the Callao Monumental area, a tourist circuit renovated approximately ten years ago that brings together urban art, historic mansions, Republican-era balconies, historical squares, and streets connected with the maritime memory of Peru’s main port.
+The project uses local JavaScript data structures:
 
-The film connected with this stop is *Viejos amigos* (2014), directed by Fernando Villarán. The story follows three elderly men who steal the urn containing their friend’s ashes and take it through his old neighborhood in Callao. Their objective is to fulfill his final wish by scattering the ashes in the sea near his hometown. Callao Monumental therefore functions as an ideal entrance into the world of the film, with its historic streets, local squares, neighborhood memory, and strong emotional connection with the port.
+- `data.js` contains district colours, location records and film records;
+- each film contains a nested `profile` object for its extended curatorial text and images;
+- each location contains lightweight film references based on title and year;
+- `schede.js` contains the extended historical and cultural sections associated with location names.
 
-The itinerary can then continue toward La Punta, a coastal district that changes the tone of the route. To reach it, visitors can take bus line 1133 from Plaza Grau in Callao, get off at Plaza Matriz in La Punta, and walk directly to Cantolao Beach.
+The interface connects locations and films by matching both film title and year. Dynamic pages use `URLSearchParams`, while `encodeURIComponent()` creates safe links for names and titles containing spaces or special characters.
 
-A large part of *Viaje a Tombuctú* (2014), directed by Rossana Díaz Costa, was filmed at this beach. The film tells the story of two teenagers growing up during the period of political violence and economic crisis in Peru in the 1980s. At this stop, the focus moves away from the urban and monumental areas of Callao toward a more intimate, coastal, and nostalgic image associated with adolescence, family memory, and the passage of time.
+## Project structure
 
-Cantolao is also connected with *Viejos amigos*, maintaining a link with the first part of the route. Its pebble coastline, relatively calm waters, and views of the islands show the historical and everyday relationship between the people of Callao and the Pacific Ocean.
+```text
+.
+â”œâ”€â”€ index.html                  Home, itinerary previews and map structure
+â”œâ”€â”€ location.html               Reusable location-page structure
+â”œâ”€â”€ films.html                  Film catalogue structure
+â”œâ”€â”€ itineraries.html            Narrative content and map containers
+â”œâ”€â”€ documentation.html          Research, design and technical documentation
+â”œâ”€â”€ about.html                  Project scope, authorship and methodology
+â”œâ”€â”€ disclaimer_page.html        Rights, sources and visitor disclaimer
+â”œâ”€â”€ css/
+â”‚   â”œâ”€â”€ style.css               Default layout, components and responsive rules
+â”‚   â””â”€â”€ theme.css               Temporal theme variables and overrides
+â”œâ”€â”€ javascript/
+â”‚   â”œâ”€â”€ data.js                 Locations, films, profiles and district colours
+â”‚   â”œâ”€â”€ schede.js               Extended location records and sources
+â”‚   â”œâ”€â”€ map.js                  Home map, search, filters, markers and cards
+â”‚   â”œâ”€â”€ location.js             Dynamic location rendering and interactions
+â”‚   â”œâ”€â”€ films.js                Film catalogue, filters, dialogs and deep links
+â”‚   â”œâ”€â”€ itineraries.js          Narrative tabs, route maps and deep links
+â”‚   â”œâ”€â”€ navbar.js               Shared navigation and footer
+â”‚   â””â”€â”€ theme.js                Theme selector, persistence and positioning
+â””â”€â”€ images/                     Location photographs and selected film stills
+```
 
-Finally, the route can end with a view of the islands of Callao. Boats depart from Cantolao Beach and offer tours around the bay, allowing visitors to observe locations such as San Lorenzo Island and El Frontón Island. However, direct access to El Frontón is restricted, so disembarking on the island is not always possible.
+## Technologies
 
-El Frontón is the main location of *Alias “La Gringa”* (1991). The film tells the story of a daring fugitive who voluntarily returns to the feared prison on El Frontón Island to rescue a professor who previously saved his life. Surrounded by the sea and marked by the remains of its former prison infrastructure, the island becomes the central and oppressive setting of the story.
+- HTML5;
+- CSS3, including Grid, Flexbox, custom properties and media queries;
+- vanilla JavaScript;
+- Leaflet 1.9.4;
+- OpenStreetMap tiles;
+- Bootstrap 5.3.3 for responsive navigation;
+- Wikidata identifiers and external records;
+- GitHub Pages for publication.
 
-The itinerary therefore connects four different cinematic images of Callao: the modernity and international travel represented by Jorge Chávez Airport in *El embajador y yo*; the streets, neighborhood memory, and port landscape of Callao Monumental in *Viejos amigos*; the nostalgic coastline of Cantolao in *Viaje a Tombuctú*; and the historical and prison-related isolation of El Frontón Island in *Alias “La Gringa”*.
+## Running the project locally
+
+No installation or build step is required. Clone or download the repository and serve its root directory with a simple local server:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000/
+```
+
+Using a local server is recommended because it reproduces the relative-path behaviour used by GitHub Pages.
+
+## Responsive design and accessibility
+
+The interface combines CSS Grid and Flexbox with fluid dimensions and responsive breakpoints. On smaller screens, multi-column records become single-column layouts, sticky elements return to the normal document flow and navigation becomes collapsible.
+
+Accessibility measures include semantic headings, native buttons and dialogs, keyboard-accessible controls, visible focus states, alternative text, live result labels and reduced-motion support.
+
+## Sources, image rights and limitations
+
+Maps use Leaflet and OpenStreetMap. Film records may include Wikidata identifiers, while historical and cultural sources are listed in the extended location records where available.
+
+The website is a non-commercial university project. It includes location photographs and selected film stills, some captured from copies available online, including unofficial uploads. The project does not claim ownership or authorisation for third-party material. A professional publication would require documented provenance, full attribution and verified licences or permissions. See the [Disclaimer](https://alicesgarlata.github.io/limalivecinemamuseum/disclaimer_page.html) for the complete statement.
+
+The collection is curated rather than exhaustive, and route or visitor information should not be treated as a real-time travel service.
+
+## Academic context
+
+The project was developed for the course **Information Modeling and Web Technologies**, taught by Prof. Fabio Vitali as part of the Masterâ€™s Degree in Digital Humanities and Digital Knowledge at the University of Bologna.
+
+## Authors
+
+- Alice Sgarlata
+- Adriana Villafuerte
+
+Original editorial writing, interface design and project-specific code Â© 2026 Alice Sgarlata and Adriana Villafuerte, unless otherwise stated. Third-party rights remain with their respective owners.
