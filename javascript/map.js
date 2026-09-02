@@ -314,16 +314,15 @@ const map = L.map('map').setView([-12.0464, -77.0428], 12)
 
 /*
  * Two basemaps:
- * - CARTO Light keeps the site's normal clean appearance.
+ * - Standard OpenStreetMap provides the normal basemap without an API key.
  * - Standard OpenStreetMap has much stronger coast/road/building linework,
  *   which survives the early-print CSS treatment instead of disappearing.
  */
 const modernBaseLayer = L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
-        attribution: '© OpenStreetMap contributors, © CARTO',
-        maxZoom: 19,
-        subdomains: 'abcd'
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19
     }
 )
 
