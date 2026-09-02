@@ -4,6 +4,7 @@ const districtColors = {
   "Surquillo": "#b45309",
   "Centro Historico": "#854d0e",
   "Callao": "#1e40af",
+  "La Punta": "#0369a1",
   "Chorrillos": "#633806",
   "Barranco": "#6b21a8",
   "Magdalena del Mar": "#0f766e",
@@ -30,8 +31,8 @@ const locations = [
   
     ],
     "descriptions": {
-      "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Three Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
-      "adult": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for three Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
+      "young": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Two Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
+      "adult": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for two Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
       "professional": "Parque John F. Kennedy functions as a primary cinematographic reference for the Miraflores district, its sociological significance as a site of intersection between tourism, informal commerce, and everyday social practice making it a recurring spatial motif in contemporary Peruvian cinema."
     },
     "access": "Public — free access",
@@ -40,23 +41,23 @@ const locations = [
     "image": "images/parque_john_f_kennedy.webp",
     "cardDescription": {
       "short": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
-      "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Three Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
+      "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Two Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
     },
     "texts": {
       "young": {
         "brief": "Kennedy Park is where Miraflores comes alive — street artists, cats, and everyone you can imagine.",
-        "mid": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Three Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
-        "long": "Kennedy Park is one of those places that's almost impossible to pass through without slowing down. Street artists set up on the corners, cats weave between park benches, and the crowd shifts from schoolkids to tourists to couples to elderly regulars — all at the same time, all sharing the same space. It's the kind of park where something is always happening, even when nothing in particular is going on. Three Peruvian films have used it as a location — not because it's spectacular, but because it's real. When you need a shot of Lima that doesn't feel staged, Kennedy Park is the answer."
+        "mid": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, cats wandering around, and people from all walks of life. Two Peruvian films have been shot here, and it's easy to see why: it's just unmistakably Lima.",
+        "long": "Kennedy Park is one of those places that's almost impossible to pass through without slowing down. Street artists set up on the corners, cats weave between park benches, and the crowd shifts from schoolkids to tourists to couples to elderly regulars — all at the same time, all sharing the same space. It's the kind of park where something is always happening, even when nothing in particular is going on. Two Peruvian films have used it as a location — not because it's spectacular, but because it's real. When you need a shot of Lima that doesn't feel staged, Kennedy Park is the answer."
       },
       "adult": {
         "brief": "Kennedy Park is the beating heart of Miraflores — always alive with street artists, wandering cats, and people from all walks of life.",
-        "mid": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for three Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
-        "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Three Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
+        "mid": "A central public park in Miraflores, known for cultural activity, street artists, and as a social gathering point. It has served as a backdrop for two Peruvian films, representing the vitality and everyday rhythm of modern Lima.",
+        "long": "Few places in Lima feel as alive as Kennedy Park. Street artists, musicians, and people from every corner of the city converge here daily, making it one of the most socially layered public spaces in the capital. Two Peruvian films have used it as a backdrop — not for any single event, but for what it represents: the pulse of modern Lima, where the traditional and the contemporary coexist naturally."
       },
       "professional": {
         "brief": "Parque Kennedy: a high-density public space in Miraflores functioning as a key cinematographic site of urban social intersection.",
         "mid": "Parque John F. Kennedy functions as a primary cinematographic reference for the Miraflores district, its sociological significance as a site of intersection between tourism, informal commerce, and everyday social practice making it a recurring spatial motif in contemporary Peruvian cinema.",
-        "long": "Parque John F. Kennedy occupies a structurally significant position within Lima's urban social geography. Its location in the Miraflores district — associated with upper-middle-class leisure and commercial activity — is complicated by the park's role as a democratic public space attracting visitors from across the socioeconomic spectrum. In Peruvian cinema, this tension has been productively exploited: the park's social heterogeneity makes it a naturalistic setting for films that wish to represent Lima as a city in negotiation between its class distinctions and its public commons. Its three documented cinematic appearances span comedy, drama, and biographical film, confirming its status as a persistent cinematographic reference for the district."
+        "long": "Parque John F. Kennedy occupies a structurally significant position within Lima's urban social geography. Its location in the Miraflores district — associated with upper-middle-class leisure and commercial activity — is complicated by the park's role as a democratic public space attracting visitors from across the socioeconomic spectrum. In Peruvian cinema, this tension has been productively exploited: the park's social heterogeneity makes it a naturalistic setting for films that wish to represent Lima as a city in negotiation between its class distinctions and its public commons. Its two documented cinematic appearances confirm its status as a persistent cinematographic reference for the district."
       }
     }
   },
