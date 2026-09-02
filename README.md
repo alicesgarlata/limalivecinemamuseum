@@ -11,8 +11,8 @@ The project treats filming locations as cultural and historical records rather t
 The current collection contains:
 
 - 24 location records;
-- 23 film records spanning 1930â€“2024;
-- 36 filmâ€“location associations represented in the dataset;
+- 23 film records spanning 1930-2024;
+- 36 film location associations represented in the dataset;
 - 5 curated narrative paths;
 - 6 alternative editorial themes.
 
