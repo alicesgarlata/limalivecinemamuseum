@@ -2,81 +2,6 @@
     'use strict'
 
     /* =====================================================
-       GLOBAL THEME LOADER
-       Every public page already loads navbar.js, so this is the most robust
-       place to make the editorial era system site-wide.
-       ===================================================== */
-
-    const validThemes = new Set([
-        'default',
-        'early-print',
-        'modern-print',
-        'editorial-print',
-        'early-web',
-        'future'
-    ])
-
-    function getSavedTheme() {
-        try {
-            const saved = window.localStorage.getItem('lima-theme')
-            return validThemes.has(saved) ? saved : 'default'
-        } catch (error) {
-            return 'default'
-        }
-    }
-
-    // Set the attribute before loading the stylesheet to reduce theme flash.
-    const initialTheme = getSavedTheme()
-    if (initialTheme !== 'default') {
-        document.documentElement.dataset.era = initialTheme
-        if (document.body) document.body.dataset.era = initialTheme
-    }
-
-    function ensureThemeStyles() {
-        const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
-            .find(link => {
-                try {
-                    return new URL(link.href, document.baseURI).pathname.endsWith('/theme.css')
-                } catch (error) {
-                    return false
-                }
-            })
-
-        if (existing) {
-            existing.dataset.limaThemeStyles = 'true'
-            return
-        }
-
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = 'css/theme.css'
-        link.dataset.limaThemeStyles = 'true'
-        document.head.appendChild(link)
-    }
-
-    function ensureThemeScript() {
-        if (window.__limaThemeSwitcherLoaded) return
-
-        const existing = Array.from(document.scripts).find(script => {
-            if (!script.src) return false
-            try {
-                return new URL(script.src, document.baseURI).pathname.endsWith('/theme.js')
-            } catch (error) {
-                return false
-            }
-        })
-
-        if (existing) return
-
-        const script = document.createElement('script')
-        script.src = 'javascript/theme.js'
-        script.dataset.limaThemeLoader = 'true'
-        document.body.appendChild(script)
-    }
-
-    ensureThemeStyles()
-
-    /* =====================================================
        NAVIGATION
        ===================================================== */
 
@@ -158,10 +83,6 @@
 
     function initializePageChrome() {
         if (!document.querySelector('.site-footer')) document.body.appendChild(footer)
-
-        // Pages that already declare theme.js keep using that script. Pages
-        // such as itineraries.html receive it automatically here.
-        ensureThemeScript()
 
         const hero = document.querySelector('.hero')
         if (!hero) {
