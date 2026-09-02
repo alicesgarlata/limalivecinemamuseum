@@ -1466,6 +1466,29 @@ main.about-page > .about-section:first-child {
     line-height: 1.75;
 }
 
+.locations-film-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--museum-accent);
+    font-weight: 800;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+}
+
+.locations-film-link:hover {
+    color: var(--museum-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+body[data-era] .locations-film-link {
+    color: var(--era-accent);
+}
+
+body[data-era] .locations-film-link:hover {
+    color: var(--era-ink);
+}
+
 @media (max-width: 900px) {
     .home-section-heading,
     .locations-heading { grid-template-columns: 1fr; }
@@ -2182,6 +2205,27 @@ main.about-page {
     border: 1px solid var(--museum-rule-light);
 }
 
+.location-film-image-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    cursor: zoom-in;
+}
+
+.location-film-image-button:focus-visible {
+    outline: 3px solid var(--museum-accent);
+    outline-offset: -3px;
+}
+
+.location-film-image-button:disabled {
+    cursor: default;
+}
+
 .location-film-image img {
     display: block;
     box-sizing: border-box;
@@ -2211,6 +2255,102 @@ main.about-page {
 
 .location-film-image-fallback[hidden] {
     display: none;
+}
+
+.location-film-record-link {
+    display: inline-flex;
+    margin: 2px 0 14px;
+    color: var(--museum-accent);
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.location-film-record-link:hover {
+    color: var(--museum-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+body[data-era] .location-film-record-link {
+    color: var(--era-accent);
+}
+
+body[data-era] .location-film-record-link:hover {
+    color: var(--era-ink);
+}
+
+body.location-film-lightbox-open {
+    overflow: hidden;
+}
+
+.location-film-lightbox {
+    width: min(94vw, 1120px);
+    max-width: none;
+    max-height: 94svh;
+    padding: 0;
+    overflow: visible;
+    color: var(--era-ink, var(--museum-ink));
+    background: var(--era-surface, var(--museum-surface));
+    border: 1px solid var(--era-border, var(--museum-rule));
+    border-radius: var(--era-card-radius, 0);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+}
+
+.location-film-lightbox::backdrop {
+    background: rgba(8, 8, 8, 0.84);
+    backdrop-filter: blur(4px);
+}
+
+.location-film-lightbox-figure {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    max-height: 94svh;
+    margin: 0;
+}
+
+.location-film-lightbox-figure img {
+    display: block;
+    width: 100%;
+    max-height: calc(94svh - 64px);
+    object-fit: contain;
+    background: #090909;
+}
+
+.location-film-lightbox-figure figcaption {
+    padding: 15px 64px 16px 20px;
+    color: var(--era-ink, var(--museum-ink));
+    font-family: var(--era-font-ui, var(--museum-ui));
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+
+.location-film-lightbox-close {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    z-index: 2;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    place-items: center;
+    color: var(--era-ink, var(--museum-ink));
+    background: var(--era-surface, var(--museum-surface));
+    border: 1px solid var(--era-border, var(--museum-rule));
+    border-radius: var(--era-control-radius, 0);
+    font-size: 28px;
+    line-height: 1;
+}
+
+.location-film-lightbox-close:hover,
+.location-film-lightbox-close:focus-visible {
+    color: var(--era-surface, #fff);
+    background: var(--era-accent, var(--museum-accent));
+    border-color: var(--era-accent, var(--museum-accent));
 }
 
 .location-film-details-row {
