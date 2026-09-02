@@ -83,9 +83,6 @@ btnSimpler.addEventListener('click', function () {
     const idx = TONES.indexOf(currentTone)
     if (idx > 0) {
         currentTone = TONES[idx - 1]
-        document.querySelectorAll('.tone-btn').forEach(b => {
-            b.classList.toggle('active', b.dataset.tone === currentTone)
-        })
         renderDescription()
     }
 })
@@ -93,9 +90,6 @@ btnHarder.addEventListener('click', function () {
     const idx = TONES.indexOf(currentTone)
     if (idx < TONES.length - 1) {
         currentTone = TONES[idx + 1]
-        document.querySelectorAll('.tone-btn').forEach(b => {
-            b.classList.toggle('active', b.dataset.tone === currentTone)
-        })
         renderDescription()
     }
 })
@@ -173,8 +167,8 @@ if (loc.movies.length === 0) {
                 </button>
             </div>`
 
-            const profileHtml = profile ? `
-                <button class="film-profile-toggle" type="button">About this film ↓</button>
+        const profileHtml = profile ? `
+            <button class="film-profile-toggle" type="button">About this film ↓</button>
             <div class="film-profile">
                 <p class="film-profile-text">${profile.description}</p>
                 <h4 class="film-profile-label">What it is about</h4>
@@ -218,7 +212,7 @@ if (loc.movies.length === 0) {
         }, { once: true })
     })
 
-        filmsContainer.querySelectorAll('.location-film-image-button').forEach(function(button) {
+    filmsContainer.querySelectorAll('.location-film-image-button').forEach(function(button) {
         const movieRef = loc.movies[Number(button.dataset.filmIndex)]
         const film = movieRef
             ? films.find(item => item.title === movieRef.title && item.year === movieRef.year)
@@ -235,20 +229,23 @@ if (loc.movies.length === 0) {
             filmLightboxImage.src = cover
             filmLightboxImage.alt = `Enlarged scene from ${film.title}`
             filmLightboxCaption.textContent = `${film.title} (${film.year})`
-            if (typeof filmLightbox.showModal === 'function') filmLightbox.showModal()
-            else filmLightbox.setAttribute('open', '')
-                document.body.classList.add('location-film-lightbox-open')
-            })
+            if (typeof filmLightbox.showModal === 'function') {
+                filmLightbox.showModal()
+            } else {
+                filmLightbox.setAttribute('open', '')
+            }
+            document.body.classList.add('location-film-lightbox-open')
         })
+    })
 
-        filmsContainer.querySelectorAll('.film-profile-toggle').forEach(function(button) {
-            button.addEventListener('click', function() {
-                button.classList.toggle('open')
-                const profile = button.nextElementSibling
-                if (profile) profile.classList.toggle('open')
-            })
+    filmsContainer.querySelectorAll('.film-profile-toggle').forEach(function(button) {
+        button.addEventListener('click', function() {
+            button.classList.toggle('open')
+            const profile = button.nextElementSibling
+            if (profile) profile.classList.toggle('open')
         })
-    }
+    })
+}
 
 function closeFilmLightbox() {
     if (!filmLightbox) return
