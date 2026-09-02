@@ -60,6 +60,14 @@
         </div>
     </div>
 
+    <dialog class="location-film-lightbox" id="location-film-lightbox" aria-labelledby="location-film-lightbox-caption">
+        <button class="location-film-lightbox-close" id="location-film-lightbox-close" type="button" aria-label="Close enlarged image">×</button>
+        <figure class="location-film-lightbox-figure">
+            <img id="location-film-lightbox-image" alt="">
+            <figcaption id="location-film-lightbox-caption"></figcaption>
+        </figure>
+    </dialog>
+
     <script src="javascript/data.js"></script>
     <script src="javascript/schede.js"></script>
     <script src="javascript/film_profiles.js"></script>
@@ -188,6 +196,10 @@
 
         const filmsContainer = document.getElementById('loc-films')
         const filmsHeading = document.getElementById('loc-films-heading')
+        const filmLightbox = document.getElementById('location-film-lightbox')
+        const filmLightboxImage = document.getElementById('location-film-lightbox-image')
+        const filmLightboxCaption = document.getElementById('location-film-lightbox-caption')
+        const filmLightboxClose = document.getElementById('location-film-lightbox-close')
 
         function profileImages(profile) {
             if (!profile) return []
@@ -216,7 +228,7 @@
         } else {
             filmsHeading.textContent = 'Films shot here'
             filmsContainer.innerHTML = ''
-            loc.movies.forEach(function(movieRef) {
+            loc.movies.forEach(function(movieRef, movieIndex) {
                 const film = films.find(f => f.title === movieRef.title && f.year === movieRef.year)
                 if (!film) return
 
@@ -230,8 +242,10 @@
 
                 const filmImageHtml = `
                     <div class="location-film-image">
-                        ${cover ? `<img src="${cover}" alt="" loading="lazy" decoding="async">` : ''}
-                        <span class="location-film-image-fallback"${cover ? ' hidden' : ''}>${film.year}</span>
+                        <button class="location-film-image-button" type="button" data-film-index="${movieIndex}" aria-haspopup="dialog" aria-label="Enlarge film image"${cover ? '' : ' disabled'}>
+                            ${cover ? `<img src="${cover}" alt="" loading="lazy" decoding="async">` : ''}
+                            <span class="location-film-image-fallback"${cover ? ' hidden' : ''}>${film.year}</span>
+                        </button>
                     </div>`
 
                 const profileHtml = profile ? `
@@ -263,6 +277,7 @@
                             ${cast ? `<span><span class="film-meta-label">Cast</span> ${cast}</span>` : ''}
                             ${countries ? `<span><span class="film-meta-label">Countries</span> ${countries}</span>` : ''}
                         </div>
+                        <a class="location-film-record-link" href="films.html?film=${encodeURIComponent(film.title)}">View in Films →</a>
                         ${profileHtml}
                     </div>
                 `
@@ -273,9 +288,54 @@
                     image.hidden = true
                     const fallback = image.nextElementSibling
                     if (fallback) fallback.hidden = false
+                    const button = image.closest('.location-film-image-button')
+                    if (button) button.disabled = true
                 }, { once: true })
             })
+
+            filmsContainer.querySelectorAll('.location-film-image-button').forEach(function(button) {
+                const movieRef = loc.movies[Number(button.dataset.filmIndex)]
+                const film = movieRef
+                    ? films.find(item => item.title === movieRef.title && item.year === movieRef.year)
+                    : null
+                if (!film) return
+
+                const image = button.querySelector('img')
+                if (image) image.alt = `Scene from ${film.title}`
+                button.setAttribute('aria-label', `View scene from ${film.title} at full size`)
+
+                button.addEventListener('click', function() {
+                    const cover = coverForFilm(film)
+                    if (!cover || !filmLightbox) return
+                    filmLightboxImage.src = cover
+                    filmLightboxImage.alt = `Enlarged scene from ${film.title}`
+                    filmLightboxCaption.textContent = `${film.title} (${film.year})`
+                    if (typeof filmLightbox.showModal === 'function') filmLightbox.showModal()
+                    else filmLightbox.setAttribute('open', '')
+                    document.body.classList.add('location-film-lightbox-open')
+                })
+            })
         }
+
+        function closeFilmLightbox() {
+            if (!filmLightbox) return
+            if (filmLightbox.open && typeof filmLightbox.close === 'function') filmLightbox.close()
+            else filmLightbox.removeAttribute('open')
+            document.body.classList.remove('location-film-lightbox-open')
+        }
+
+        filmLightboxClose.addEventListener('click', closeFilmLightbox)
+        filmLightbox.addEventListener('close', function() {
+            document.body.classList.remove('location-film-lightbox-open')
+            filmLightboxImage.removeAttribute('src')
+        })
+        filmLightbox.addEventListener('click', function(event) {
+            if (event.target !== filmLightbox) return
+            const bounds = filmLightbox.getBoundingClientRect()
+            const inside = event.clientX >= bounds.left && event.clientX <= bounds.right
+                && event.clientY >= bounds.top && event.clientY <= bounds.bottom
+            if (!inside) closeFilmLightbox()
+        })
 
         // ── scheda estesa (Introduction / History / Curiosity / ecc.) ──────────
         // Non tutte le location hanno una scheda: se manca, non mostriamo nulla.
