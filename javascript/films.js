@@ -14,8 +14,6 @@
 
     if (!grid || typeof films === 'undefined' || typeof locations === 'undefined') return
 
-    const profileData = typeof filmProfiles === 'undefined' ? {} : filmProfiles
-
     function element(tag, className, text) {
         const node = document.createElement(tag)
         if (className) node.className = className
@@ -50,7 +48,7 @@
     }
 
     function coverForFilm(film) {
-        const profile = profileData[film.title]
+        const profile = film.profile || null
         const images = profileImages(profile)
         if (images.length) return images[0]
         const linkedLocations = locationsForFilm(film)
@@ -264,7 +262,7 @@
     }
 
     function openFilm(film, updateUrl) {
-        const profile = profileData[film.title]
+        const profile = film.profile || null
         const images = profileImages(profile)
         const cover = images[0] || coverForFilm(film)
         const layout = element('article', 'film-dialog-layout')
