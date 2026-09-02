@@ -1,8 +1,7 @@
 (function () {
     'use strict'
 
-    // navbar.js can load this file automatically. The guard also prevents a
-    // second panel on pages that still include theme.js explicitly.
+    // Prevent accidental duplicate initialisation if the script is included twice.
     if (window.__limaThemeSwitcherLoaded) return
     window.__limaThemeSwitcherLoaded = true
 
@@ -136,10 +135,6 @@
                 status.textContent = `${theme.period}: ${theme.title} selected.`
             }
         }
-
-        window.dispatchEvent(new CustomEvent('lima:themechange', {
-            detail: { theme: theme.id, period: theme.period }
-        }))
 
         return theme
     }
