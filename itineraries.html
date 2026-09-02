@@ -7,125 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-        .narrative-page { max-width: 1180px; padding: 2rem; }
-
-        .narrative-switcher {
-            display: flex; gap: 12px; margin-bottom: 2rem;
-            border-bottom: 1px solid #e5e5e5; padding-bottom: 0;
-        }
-        .narrative-tab {
-            font-size: 13px; font-weight: 500; color: #aaa;
-            background: none; border: none;
-            border-bottom: 2px solid transparent;
-            padding: 8px 0; margin-bottom: -1px; cursor: pointer;
-            transition: color 0.15s, border-color 0.15s;
-        }
-        .narrative-tab.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
-
-        .narrative-content { display: none; }
-        .narrative-content.active { display: block; }
-
-        /* Two-column layout */
-        .itinerary-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 380px;
-            gap: 2.5rem;
-            align-items: start;
-        }
-        @media (max-width: 860px) {
-            .itinerary-grid { grid-template-columns: 1fr; }
-            .itinerary-map-col { position: static !important; }
-        }
-
-        .itinerary-text { min-width: 0; }
-
-        .itinerary-map-col {
-            position: sticky;
-            top: 24px;
-        }
-        .itinerary-map {
-            width: 100%; height: 520px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e5e5e5;
-        }
-        .map-legend {
-            margin-top: 10px;
-            font-size: 11px;
-            color: #888;
-            line-height: 1.6;
-        }
-        .map-legend a { color: #1a1a1a; }
-
-        /* Inline location photos */
-        .loc-photo {
-            width: 100%; border-radius: 10px;
-            margin: 1rem 0 0.5rem;
-            aspect-ratio: 16/7;
-            object-fit: cover;
-            display: block;
-        }
-        .loc-photo-caption {
-            font-size: 11px; color: #aaa;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        /* Narrative text styles */
-        .narrative-intro { margin-bottom: 2rem; }
-        .narrative-intro h1 { font-size: 28px; font-weight: 500; margin-bottom: 6px; }
-        .narrative-subtitle {
-            font-size: 12px; color: #aaa; text-transform: uppercase;
-            letter-spacing: 0.08em; margin-bottom: 1rem;
-        }
-        .itinerary-meta {
-            display: flex; gap: 1rem; font-size: 12px; color: #aaa;
-            flex-wrap: wrap; margin-top: 0.75rem;
-        }
-
-        .itinerary-text p {
-            font-size: 15px; line-height: 1.8; color: #444;
-            margin-bottom: 1rem; text-align: justify;
-        }
-        .itinerary-text a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
-        .itinerary-text a:hover { border-color: #1a1a1a; }
-
-        /* Timeline (narrative I) */
-        .chapter-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 6px; }
-        .narrative-chapter { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #f0f0f0; }
-        .narrative-chapter h2 { font-size: 18px; font-weight: 500; margin-bottom: 0.5rem; }
-        .chapter-dates { font-size: 14px; font-weight: 400; color: #aaa; }
-        .chapter-intro { font-size: 13px; color: #888; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
-        .narrative-transition {
-            margin: 1.5rem 0; padding: 1rem 1.25rem;
-            border-left: 3px solid #e5e5e5; background: #fafaf8;
-            border-radius: 0 8px 8px 0;
-        }
-        .narrative-transition p { font-size: 13px; color: #666; font-style: italic; line-height: 1.75; margin: 0; }
-        .timeline-entry { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid #f5f5f5; }
-        .timeline-year { font-size: 17px; font-weight: 600; color: #1a1a1a; padding-top: 2px; }
-        .timeline-location { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
-        .timeline-location a { color: #1a1a1a; border-bottom: 1px solid #ddd; text-decoration: none; }
-        .timeline-district { font-weight: 400; color: #aaa; }
-        .timeline-body p { font-size: 14px; color: #444; line-height: 1.75; margin: 0; }
-
-        /* Leaflet marker numbers */
-        .num-marker {
-            width: 26px; height: 26px; border-radius: 50%;
-            background: #1a1a1a; color: white;
-            font-size: 11px; font-weight: 700;
-            display: flex; align-items: center; justify-content: center;
-            border: 2px solid white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
-    </style>
 </head>
 <body>
 
     <div id="navbar-placeholder"></div>
     <script src="javascript/navbar.js"></script>
+    <script src="javascript/theme.js"></script>
 
     <div class="about-page narrative-page">
 
@@ -218,14 +107,14 @@
                         <div class="timeline-entry">
                             <div class="timeline-year">1993</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a> · <a href="location.html?name=Avenida%20Brasil">Avenida Brasil</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Malecon%20de%20Miraflores">Malecón de Miraflores</a> · Avenida Brasil</div>
                                 <p>Honigmann's <em>Metal y Melancolía</em> follows Lima's informal taxi drivers at night — beauty and exhaustion in equal measure.</p>
                             </div>
                         </div>
                         <div class="timeline-entry">
                             <div class="timeline-year">1998</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Lima%20Golf%20Club">Lima Golf Club</a></div>
+                                <div class="timeline-location">Larcomar · Lima Golf Club</div>
                                 <p>Lombardi's <em>No Se Lo Digas a Nadie</em>. Larcomar — opened the same year — makes its first cinematic appearance. Lima's most exclusive spaces reveal what they conceal.</p>
                             </div>
                         </div>
@@ -248,14 +137,14 @@
                         <div class="timeline-entry">
                             <div class="timeline-year">2013</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Parque%20John%20F.%20Kennedy">Parque Kennedy</a> · <a href="location.html?name=Larcomar">Larcomar</a> · <a href="location.html?name=Playa%20Agua%20Dulce">Playa Agua Dulce</a></div>
+                                <div class="timeline-location"><a href="location.html?name=Parque%20John%20F.%20Kennedy">Parque Kennedy</a> · Larcomar · <a href="location.html?name=Playa%20Agua%20Dulce">Playa Agua Dulce</a></div>
                                 <p><em>¡Asu Mare!</em> moves across Lima's class geography — from the public beach to the Golf Club — a film about crossing the city's invisible boundaries.</p>
                             </div>
                         </div>
                         <div class="timeline-entry">
                             <div class="timeline-year">2017</div>
                             <div class="timeline-body">
-                                <div class="timeline-location"><a href="location.html?name=Residencial%20San%20Felipe">Residencial San Felipe</a> · <a href="location.html?name=Universidad%20Nacional%20Mayor%20de%20San%20Marcos">UNMSM</a></div>
+                                <div class="timeline-location">Residencial San Felipe · <a href="location.html?name=Universidad%20Nacional%20Mayor%20de%20San%20Marcos">UNMSM</a></div>
                                 <p><em>La Hora Final</em> reconstructs the DINCOTE operations. Lima's urban fabric as evidence.</p>
                             </div>
                         </div>
@@ -568,7 +457,7 @@
 
             <p>
                 The final part of the route moves toward
-                <a href="location.html?name=Barranco">Barranco</a>,
+                Barranco,
                 changing both the historical period and the emotional tone of the
                 itinerary. <em>La última tarde</em> does not reconstruct a bombing,
                 an arrest, or another major historical event. Instead, it explores
@@ -636,185 +525,6 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    // ── tab switcher ──────────────────────────────────────────────────────
-    const maps = {};
-
-    document.querySelectorAll('.narrative-tab').forEach(tab => {
-        tab.addEventListener('click', function () {
-            document.querySelectorAll('.narrative-tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.narrative-content').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            const id = 'narrative-' + this.dataset.narrative;
-            document.getElementById(id).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            // invalidate map size after display: block
-            const mapKey = this.dataset.narrative;
-            if (maps[mapKey]) setTimeout(() => maps[mapKey].invalidateSize(), 100);
-        });
-    });
-
-    // ── shared tile layer factory ─────────────────────────────────────────
-    function tileLayer() {
-        return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors',
-            maxZoom: 19
-        });
-    }
-
-    // ── numbered marker factory ───────────────────────────────────────────
-    function numIcon(n, color) {
-        color = color || '#1a1a1a';
-        return L.divIcon({
-            className: '',
-            html: `<div class="num-marker" style="background:${color}">${n}</div>`,
-            iconSize: [26, 26],
-            iconAnchor: [13, 13],
-            popupAnchor: [0, -14]
-        });
-    }
-
-    // ── MAP I: TIMELINE (key locations across all chapters) ───────────────
-    (function () {
-        const m = L.map('map-timeline').setView([-12.08, -77.05], 12);
-        tileLayer().addTo(m);
-        maps['timeline'] = m;
-
-        const pts = [
-            { name: 'San Martin Square',   lat: -12.0508, lng: -77.0345, n: 1 },
-            { name: 'Jirón de la Unión',   lat: -12.0496, lng: -77.0341, n: 2 },
-            { name: 'Río Rímac',           lat: -12.0439, lng: -77.0210, n: 3 },
-            { name: 'Magdalena Market',    lat: -12.0928, lng: -77.0655, n: 4 },
-            { name: 'Malecón de Miraflores', lat: -12.1243, lng: -77.0384, n: 5 },
-            { name: 'Calle Tarata',        lat: -12.1235, lng: -77.0288, n: 6 },
-            { name: 'Larcomar',            lat: -12.1319, lng: -77.0305, n: 7 },
-            { name: 'Muelle Sur del Callao', lat: -12.0554, lng: -77.1506, n: 8 },
-            { name: 'Isla El Frontón',     lat: -12.1165, lng: -77.1814, n: 9 },
-        ];
-
-        pts.forEach(p => {
-            L.marker([p.lat, p.lng], { icon: numIcon(p.n) })
-              .addTo(m)
-              .bindPopup(`<strong>${p.name}</strong>`);
-        });
-    })();
-
-    // ── MAP II: MIRAFLORES ────────────────────────────────────────────────
-    (function () {
-        const stops = [
-            { name: 'Parque Kennedy',        lat: -12.1217, lng: -77.0304, n: 1, url: 'location.html?name=Parque%20John%20F.%20Kennedy' },
-            { name: 'Calle Tarata',          lat: -12.1235, lng: -77.0288, n: 2, url: 'location.html?name=Calle%20Tarata' },
-            { name: 'Avenida Larco',         lat: -12.1260, lng: -77.0304, n: 3, url: 'location.html?name=Avenida%20Larco' },
-            { name: 'Malecón de Miraflores', lat: -12.1243, lng: -77.0384, n: 4, url: 'location.html?name=Malecon%20de%20Miraflores' },
-            { name: 'Calle de las Pizzas',   lat: -12.1209, lng: -77.0300, n: 5, url: 'location.html?name=Calle%20de%20las%20Pizzas' },
-        ];
-
-        const m = L.map('map-miraflores').setView([-12.126, -77.032], 15);
-        tileLayer().addTo(m);
-        maps['miraflores'] = m;
-
-        const latlngs = stops.map(s => [s.lat, s.lng]);
-        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
-
-        stops.forEach(s => {
-            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
-              .addTo(m)
-              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
-        });
-    })();
-
-    // ── MAP III: SAN ISIDRO ───────────────────────────────────────────────
-    (function () {
-        const stops = [
-            { name: 'Bosque El Olivar', lat: -12.1021, lng: -77.0352, n: 1, url: 'location.html?name=Bosque%20El%20Olivar' },
-            { name: 'Country Club Lima Hotel', lat: -12.0980, lng: -77.0490, n: 2, url: 'location.html?name=Country%20Club%20Lima%20Hotel' },
-            { name: 'Santa Cruz Residential Complex', lat: -12.1097, lng: -77.0495, n: 3, url: 'location.html?name=Residencial%20Santa%20Cruz' },
-        ];
-
-        const m = L.map('map-sanisidro').setView([-12.105, -77.037], 15);
-        tileLayer().addTo(m);
-        maps['sanisidro'] = m;
-
-        const latlngs = stops.map(s => [s.lat, s.lng]);
-        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
-
-        stops.forEach(s => {
-            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
-              .addTo(m)
-              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
-        });
-    })();
-
-    // ── MAP IV: CALLAO & LA PUNTA ─────────────────────────────────────────
-    (function () {
-        const stops = [
-            { name: 'Jorge Chávez International Airport', lat: -12.0198, lng: -77.1087, n: 1, url: 'location.html?name=Jorge%20Ch%C3%A1vez%20International%20Airport' },
-            { name: 'Callao Monumental', lat: -12.0598, lng: -77.1385, n: 2, url: 'location.html?name=Monumental%20Del%20Callao' },
-            { name: 'La Punta — Cantolao Beach', lat: -12.0763, lng: -77.1630, n: 3, url: 'location.html?name=Playa%20Cantolao' },
-            { name: 'Isla El Frontón',   lat: -12.1165, lng: -77.1814, n: 4, url: 'location.html?name=Isla%20El%20Front%C3%B3n' },
-        ];
-
-        const m = L.map('map-callao').setView([-12.067, -77.145], 12);
-        tileLayer().addTo(m);
-        maps['callao'] = m;
-
-        const latlngs = stops.map(s => [s.lat, s.lng]);
-        L.polyline(latlngs, { color: '#1a1a1a', weight: 2, dashArray: '5,6', opacity: 0.6 }).addTo(m);
-
-        stops.forEach(s => {
-            const popup = s.url
-                ? `<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`
-                : `<strong>${s.name}</strong>`;
-            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
-              .addTo(m)
-              .bindPopup(popup);
-        });
-    })();
-
-    // ── MAP V: LIMA, VIOLENCE & MEMORY ────────────────────────────────────
-    (function () {
-        const stops = [
-            {
-                name: 'Calle Tarata',
-                lat: -12.1235,
-                lng: -77.0288,
-                n: 1,
-                url: 'location.html?name=Calle%20Tarata'
-            },
-            {
-                name: 'Calle Varsovia',
-                lat: -12.1136,
-                lng: -77.0110,
-                n: 2,
-                url: 'location.html?name=Calle%20Varsovia'
-            },
-            {
-                name: 'Puente de los Suspiros',
-                lat: -12.1492,
-                lng: -77.0218,
-                n: 3,
-                url: 'location.html?name=Bridge%20of%20Sighs%20-%20Puente%20de%20Los%20Suspiros'
-            }
-        ];
-
-        const m = L.map('map-conflict').setView([-12.133, -77.021], 13);
-        tileLayer().addTo(m);
-        maps['conflict'] = m;
-
-        const latlngs = stops.map(s => [s.lat, s.lng]);
-        L.polyline(latlngs, {
-            color: '#1a1a1a',
-            weight: 2,
-            dashArray: '5,6',
-            opacity: 0.6
-        }).addTo(m);
-
-        stops.forEach(s => {
-            L.marker([s.lat, s.lng], { icon: numIcon(s.n) })
-              .addTo(m)
-              .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
-        });
-    })();
-    </script>
+    <script src="javascript/itineraries.js"></script>
 </body>
 </html>
