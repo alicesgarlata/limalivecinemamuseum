@@ -99,6 +99,7 @@ body[data-era] :where(
     .card-list,
     .card,
     .film-card,
+    .location-film-lightbox,
     .site-footer,
     .narrative-transition,
     .custom-popup .leaflet-popup-content-wrapper,
@@ -148,7 +149,7 @@ body[data-era] :where(.loc-scheda, .prev-next-bar, .card-prev-next, .film-profil
     border-color: var(--era-border);
 }
 
-body[data-era] :where(.card, .film-card, .location-header, .itinerary-map, .loc-photo) {
+body[data-era] :where(.card, .film-card, .location-film-lightbox, .location-header, .itinerary-map, .loc-photo) {
     border-radius: var(--era-card-radius);
 }
 
@@ -182,6 +183,7 @@ body[data-era] :where(
     .difficulty-btn,
     .scheda-tab-btn,
     .hero-cta,
+    .location-film-lightbox-close,
     .narrative-tab
 ) {
     border-radius: var(--era-control-radius);
@@ -212,7 +214,7 @@ body[data-era] :where(.btn-more, .btn-evenmore, .difficulty-btn, .scheda-tab-btn
     border-color: var(--era-accent);
 }
 
-body[data-era] :where(.back-link, .film-wiki, .scheda-tab-content a, .prev-next-btn, .prev-next-home, .timeline-location a, .itinerary-text a, .map-legend a) {
+body[data-era] :where(.back-link, .film-wiki, .location-film-record-link, .locations-film-link, .scheda-tab-content a, .prev-next-btn, .prev-next-home, .timeline-location a, .itinerary-text a, .map-legend a) {
     color: var(--era-accent);
     text-decoration-color: color-mix(in srgb, var(--era-accent) 48%, transparent);
 }
@@ -1239,7 +1241,7 @@ body[data-era='early-web'] .navbar .nav-link.active {
     text-decoration: none;
 }
 
-body[data-era='early-web'] :where(.back-link, .film-wiki, .scheda-tab-content a, .prev-next-btn, .prev-next-home, .timeline-location a, .itinerary-text a, .map-legend a) {
+body[data-era='early-web'] :where(.back-link, .film-wiki, .location-film-record-link, .locations-film-link, .scheda-tab-content a, .prev-next-btn, .prev-next-home, .timeline-location a, .itinerary-text a, .map-legend a) {
     color: #0000cc;
     text-decoration: underline;
 }
@@ -1252,7 +1254,7 @@ body[data-era='early-web'] :where(.card h2, .film-title, .narrative-chapter h2) 
     color: #003399;
 }
 
-body[data-era='early-web'] :where(.pill, .btn-more, .btn-evenmore, .difficulty-btn, .scheda-tab-btn, .hero-cta) {
+body[data-era='early-web'] :where(.pill, .btn-more, .btn-evenmore, .difficulty-btn, .scheda-tab-btn, .hero-cta, .location-film-lightbox-close) {
     border: 1px solid;
     border-color: #ffffff #555555 #555555 #ffffff;
     box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #999999;
@@ -1309,7 +1311,7 @@ body[data-era='early-web'] .theme-current-period {
     color: #ffdd33;
 }
 
-body[data-era='early-web'] :where(.loc-photo, .popup-img, .film-card img, .card img) {
+body[data-era='early-web'] :where(.loc-photo, .popup-img, .film-card img, .card img, .location-film-lightbox-figure img) {
     image-rendering: pixelated;
     filter: saturate(0.82) contrast(1.14);
     border: 1px solid #777777;
@@ -1812,7 +1814,7 @@ body[data-era] .film-collage-frame {
     box-shadow: var(--era-shadow);
 }
 
-body[data-era] :where(.film-collage-frame img, .film-card-visual img, .film-dialog-visual img, .film-dialog-gallery-grid img) {
+body[data-era] :where(.film-collage-frame img, .film-card-visual img, .film-dialog-visual img, .film-dialog-gallery-grid img, .location-film-lightbox-figure img) {
     filter: var(--era-image-filter);
 }
 
@@ -1949,12 +1951,12 @@ body[data-era='early-web'] :where(.film-collection-jump, .film-dialog-location-l
     text-decoration: underline;
 }
 
-body[data-era='future'] :where(.film-collection-hero, .film-catalogue, .film-dialog) {
+body[data-era='future'] :where(.film-collection-hero, .film-catalogue, .film-dialog, .location-film-lightbox) {
     color: #f4f7fa;
     background-color: #090b11;
 }
 
-body[data-era='future'] .film-dialog {
+body[data-era='future'] :where(.film-dialog, .location-film-lightbox) {
     border-color: rgba(131, 242, 207, 0.5);
     box-shadow: 0 35px 100px rgba(0, 0, 0, 0.64), 0 0 0 1px rgba(131, 242, 207, 0.12);
 }
@@ -2179,6 +2181,83 @@ body[data-era] .film-card :where(.film-profile, .film-profile-toggle) {
 body[data-era] .film-card .film-profile-toggle:hover,
 body[data-era] .film-card .film-profile-toggle.open {
     color: var(--era-ink);
+}
+
+/* The enlarged film image and its controls remain part of every editorial era. */
+body[data-era] .location-film-lightbox {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    border-radius: var(--era-card-radius);
+    box-shadow: var(--era-shadow);
+}
+
+body[data-era] .location-film-lightbox-figure figcaption {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-top: 1px var(--era-rule-style) var(--era-border);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .location-film-lightbox-close {
+    color: var(--era-ink);
+    background: var(--era-surface);
+    border-color: var(--era-border);
+    border-radius: var(--era-control-radius);
+    font-family: var(--era-font-ui);
+}
+
+body[data-era] .location-film-lightbox-close:hover,
+body[data-era] .location-film-lightbox-close:focus-visible {
+    color: var(--era-surface);
+    background: var(--era-accent);
+    border-color: var(--era-accent);
+}
+
+body[data-era] .location-film-image-button:focus-visible {
+    outline-color: var(--era-accent);
+}
+
+body[data-era='early-print'] .location-film-lightbox {
+    background-color: var(--era-surface);
+    background-image:
+        repeating-linear-gradient(0deg, rgba(59, 41, 24, 0.028) 0 1px, transparent 1px 5px),
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.2), transparent 38%);
+    border: 3px double var(--era-border);
+}
+
+body[data-era='early-print'] .location-film-lightbox-figure figcaption {
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+}
+
+body[data-era='modern-print'] .location-film-lightbox-figure figcaption {
+    border-top: 4px double var(--era-ink);
+    font-family: var(--era-font-display);
+}
+
+body[data-era='editorial-print'] .location-film-lightbox-figure figcaption {
+    font-family: var(--era-font-display);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+body[data-era='early-web'] .location-film-lightbox {
+    border: 2px solid;
+    border-color: #ffffff #555555 #555555 #ffffff;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.36);
+}
+
+body[data-era='early-web'] .location-film-lightbox-close {
+    background: linear-gradient(#ffffff, #d1d1d1);
+    border-color: #ffffff #555555 #555555 #ffffff;
+    box-shadow: inset 1px 1px 0 #fefefe, inset -1px -1px 0 #999999;
+}
+
+body[data-era='future'] .location-film-lightbox {
+    background: rgba(9, 11, 17, 0.97);
+    border-color: rgba(131, 242, 207, 0.5);
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.64), 0 0 0 1px rgba(131, 242, 207, 0.12);
 }
 
 body[data-era='editorial-print'] main.documentation-page > .about-section:first-child,
