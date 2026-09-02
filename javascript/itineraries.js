@@ -1,17 +1,33 @@
 // ── tab switcher ──────────────────────────────────────────────────────
 const maps = {};
+const narrativeTabs = Array.from(document.querySelectorAll('.narrative-tab'));
+const narrativeKeys = new Set(narrativeTabs.map(tab => tab.dataset.narrative));
 
-document.querySelectorAll('.narrative-tab').forEach(tab => {
-    tab.addEventListener('click', function () {
-        document.querySelectorAll('.narrative-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.narrative-content').forEach(c => c.classList.remove('active'));
-        this.classList.add('active');
-        const id = 'narrative-' + this.dataset.narrative;
-        document.getElementById(id).classList.add('active');
+function activateNarrative(key, options = {}) {
+    if (!narrativeKeys.has(key)) return;
+
+    const settings = Object.assign({ scroll: false, updateUrl: false }, options);
+    narrativeTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.narrative === key);
+    });
+    document.querySelectorAll('.narrative-content').forEach(content => {
+        content.classList.toggle('active', content.id === `narrative-${key}`);
+    });
+
+    if (settings.updateUrl) {
+        window.history.replaceState(null, '', `#${key}`);
+    }
+    if (settings.scroll) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        // invalidate map size after display: block
-        const mapKey = this.dataset.narrative;
-        if (maps[mapKey]) setTimeout(() => maps[mapKey].invalidateSize(), 100);
+    }
+    if (maps[key]) {
+        setTimeout(() => maps[key].invalidateSize(), 100);
+    }
+}
+
+narrativeTabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+        activateNarrative(this.dataset.narrative, { scroll: true, updateUrl: true });
     });
 });
 
@@ -176,3 +192,13 @@ function numIcon(n, color) {
           .bindPopup(`<strong>${s.name}</strong><br><a href="${s.url}" style="font-size:11px;">Open location →</a>`);
     });
 })();
+
+const requestedNarrative = window.location.hash.slice(1);
+if (narrativeKeys.has(requestedNarrative)) {
+    activateNarrative(requestedNarrative);
+}
+
+window.addEventListener('hashchange', function () {
+    const key = window.location.hash.slice(1);
+    if (narrativeKeys.has(key)) activateNarrative(key);
+});
