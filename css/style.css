@@ -3530,6 +3530,70 @@ main.about-page > .about-section:first-child h1 {
 }
 .map-legend a { color: #1a1a1a; }
 
+/* ── Home collection: mobile map and card carousel ─────────────────────── */
+
+@media (max-width: 760px) {
+    .locations-section .main {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(360px, 56svh) auto;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .locations-section .map {
+        width: 100%;
+        height: 56svh;
+        min-height: 360px;
+        max-height: 560px;
+        flex: none;
+    }
+
+    .locations-section .card-list {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        max-height: none;
+        padding: 14px 16px 18px;
+        flex-direction: row;
+        align-items: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-top: 1px solid var(--era-border, var(--museum-rule));
+        border-left: 0;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 16px;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .locations-section .card-list > .card {
+        width: min(84vw, 340px);
+        flex: 0 0 min(84vw, 340px);
+        margin: 0;
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 420px) {
+    .locations-section .main {
+        grid-template-rows: minmax(320px, 52svh) auto;
+    }
+
+    .locations-section .map {
+        height: 52svh;
+        min-height: 320px;
+    }
+
+    .locations-section .card-list > .card {
+        width: calc(100vw - 48px);
+        flex-basis: calc(100vw - 48px);
+    }
+}
+
 /* Inline location photos */
 .loc-photo {
     width: 100%; border-radius: 10px;
